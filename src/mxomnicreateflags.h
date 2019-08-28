@@ -1,0 +1,4 @@
+class MxOmniCreateFlags {
+public:
+    MxOmniCreateFlags();
+}

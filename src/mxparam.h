@@ -1,0 +1,3 @@
+class MxParam {
+    MxParam();
+};

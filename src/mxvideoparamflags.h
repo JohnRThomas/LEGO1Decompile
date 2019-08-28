@@ -1,0 +1,4 @@
+class MxVideoParamFlags {
+public:
+    MxVideoParamFlags();
+};

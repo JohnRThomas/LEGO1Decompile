@@ -1,0 +1,4 @@
+class MxStreamController {
+public:
+    MxStreamController();
+};
