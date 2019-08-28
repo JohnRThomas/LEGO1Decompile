@@ -12,7 +12,7 @@ MxCore::~MxCore()
     FIXME("Stub");
 }
 
-long Notify(MxParam&)
+long MxCore::Notify(MxParam&)
 {
     FIXME("Stub");
 
