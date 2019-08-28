@@ -15,4 +15,6 @@ MxCore::~MxCore()
 long Notify(MxParam&)
 {
     FIXME("Stub");
+
+    return 0;
 }
