@@ -66,7 +66,9 @@ set(LEGO1_SRC
 
 set(LEGO1_TARGET "lego1")
 
-add_library(${LEGO1_TARGET}
+add_library(
+    ${LEGO1_TARGET}
+    SHARED
     ${LEGO1_SRC}
 )
 
