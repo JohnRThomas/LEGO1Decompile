@@ -6,3 +6,8 @@ MxCore::MxCore()
 {
     FIXME("Stub");
 }
+
+MxCore::~MxCore()
+{
+    FIXME("Stub");
+}
