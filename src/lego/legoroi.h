@@ -1,10 +1,10 @@
 class LegoROI {
 public:
-    LegoROI();
+    __declspec(dllexport) LegoROI();
 
-    static void configureLegoROI(int);
+    __declspec(dllexport) static void configureLegoROI(int);
 
-    void SetDisplayBB(int);
+    __declspec(dllexport) void SetDisplayBB(int);
 };
 
-LegoROI* PickROI(long, long);
+__declspec(dllexport) LegoROI* PickROI(long, long);

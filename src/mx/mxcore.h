@@ -2,8 +2,8 @@
 
 class MxCore {
 public:
-    MxCore();
-    virtual ~MxCore();
+    __declspec(dllexport) MxCore();
+    __declspec(dllexport) virtual ~MxCore();
 
-    virtual long Notify(MxParam&);
+    __declspec(dllexport) virtual long Notify(MxParam&);
 };

@@ -1,4 +1,6 @@
 class LegoModelPresenter {
 public:
-    static void configureLegoModelPresenter(int);
-}
+    __declspec(dllexport) LegoModelPresenter();
+
+    __declspec(dllexport) static void configureLegoModelPresenter(int);
+};

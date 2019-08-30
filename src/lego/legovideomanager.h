@@ -1,12 +1,12 @@
 class LegoVideoManager {
 public:
-    LegoVideoManager();
+    __declspec(dllexport) LegoVideoManager();
 
-    void MoveCursor(int, int);
-    void EnableFullScreenMovie(unsigned char, unsigned char);
+    __declspec(dllexport) void MoveCursor(int x, int y);
+    __declspec(dllexport) void EnableFullScreenMovie(unsigned char, unsigned char);
 
-    int EnableRMDevice();
-    int DisableRMDevice();
+    __declspec(dllexport) int EnableRMDevice();
+    __declspec(dllexport) int DisableRMDevice();
 };
 
-LegoVideoManager* VideoManager();
+__declspec(dllexport) LegoVideoManager* VideoManager();

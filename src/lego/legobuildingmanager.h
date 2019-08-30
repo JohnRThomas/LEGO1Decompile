@@ -2,5 +2,5 @@ class LegoBuildingManager {
 public:
     LegoBuildingManager();
 
-    static void configureLegoBuildingManager(int);
+    __declspec(dllexport) static void configureLegoBuildingManager(int);
 };

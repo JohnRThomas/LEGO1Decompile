@@ -1,16 +1,16 @@
 class LegoGameState {
 public:
-    LegoGameState();
-    ~LegoGameState();
+    __declspec(dllexport) LegoGameState();
+    __declspec(dllexport) ~LegoGameState();
 
-    long Save(unsigned long);
-    long Load(unsigned long);
+    __declspec(dllexport) long Save(unsigned long);
+    __declspec(dllexport) long Load(unsigned long);
 
-    void SetSavePath(char*);
+    __declspec(dllexport) void SetSavePath(char*);
 
-    void SerializePlayersInfo(short);
+    __declspec(dllexport) void SerializePlayersInfo(short);
 
-    void SerializeScoreHistory(short);
+    __declspec(dllexport) void SerializeScoreHistory(short);
 };
 
-LegoGameState* GameState();
+__declspec(dllexport) LegoGameState* GameState();

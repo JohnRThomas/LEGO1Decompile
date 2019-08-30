@@ -1,4 +1,9 @@
+#include <Windows.h>
+
+#include "mxomnicreateflags.h"
+#include "mxvideoparam.h"
+
 class MxOmniCreateParam {
 public:
-    MxOmniCreateParam(const char*, HWND*, MxVideoParam&, MxOmniCreateFlags);
+    __declspec(dllexport) MxOmniCreateParam(char const *, HWND__ *, MxVideoParam &, MxOmniCreateFlags);
 };

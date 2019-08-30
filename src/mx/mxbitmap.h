@@ -1,8 +1,10 @@
+#include "mxpalette.h"
+
 class MxBitmap {
 public:
-    MxBitmap();
-    virtual ~MxBitmap();
+    __declspec(dllexport) MxBitmap();
+    __declspec(dllexport) virtual ~MxBitmap();
 
-    long Read(const char *);
-    MxPalette* CreatePalette();
+    __declspec(dllexport) long Read(const char *);
+    __declspec(dllexport) MxPalette* CreatePalette();
 };

@@ -1,11 +1,13 @@
+#include "mxvariable.h"
+
 class MxVariableTable {
 public:
-    MxVariableTable();
+    __declspec(dllexport) MxVariableTable();
 
-    void SetVariable(const char*, const char*);
-    void SetVariable(MxVariable*);
+    __declspec(dllexport) void SetVariable(const char*, const char*);
+    __declspec(dllexport) void SetVariable(MxVariable*);
 
-    const char* GetVariable(const char*);
+    __declspec(dllexport) const char* GetVariable(const char*);
 };
 
-MxVariableTable* VariableTable();
+__declspec(dllexport) MxVariableTable* VariableTable();

@@ -1,17 +1,18 @@
 class MxOmni {
 public:
-    MxOmni();
+    __declspec(dllexport) MxOmni();
 
-    static MxOmni* GetInstance();
-    static void DestroyInstance();
+    __declspec(dllexport) static MxOmni* GetInstance();
+    __declspec(dllexport) static void DestroyInstance();
 
-    static const char *GetHD();
-    static void SetHD(const char *);
+    __declspec(dllexport) static const char *GetHD();
+    __declspec(dllexport) static void SetHD(const char *);
 
-    static const char *GetCD();
-    static void SetCD(const char *);
+    __declspec(dllexport) static const char *GetCD();
+    __declspec(dllexport) static void SetCD(const char *);
 
-    static unsigned char IsSound3D();
+    __declspec(dllexport) static unsigned char IsSound3D();
+    __declspec(dllexport) static void SetSound3D(unsigned char);
 };
 
-void SetOmniUserMessage(void(func*)(const char *, int));
+__declspec(dllexport) void SetOmniUserMessage(void(const char *, int));

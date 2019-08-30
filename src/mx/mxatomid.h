@@ -1,7 +1,12 @@
+enum LookupMode
+{
+
+};
+
 class MxAtomId {
 public:
-    MxAtomId(char const*, LookupMode);
-    ~MxAtomId();
+    __declspec(dllexport) MxAtomId(char const*, enum LookupMode);
+    __declspec(dllexport) ~MxAtomId();
 
-    MxAtomId& operator=(const MxAtomId &);
+    __declspec(dllexport) MxAtomId& operator=(const MxAtomId &);
 };

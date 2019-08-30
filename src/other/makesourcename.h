@@ -1,1 +1,1 @@
-void MakeSourceName(char*, const char*);
+__declspec(dllexport) void MakeSourceName(char* output, const char* input);

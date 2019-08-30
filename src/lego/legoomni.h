@@ -1,16 +1,20 @@
+#include "mx/mxatomid.h"
+
+#include "legopathboundary.h"
+
 class LegoOmni {
 public:
-    LegoOmni();
-    ~LegoOmni();
+    __declspec(dllexport) LegoOmni();
+    __declspec(dllexport) ~LegoOmni();
 
-    static void CreateInstance();
-    static LegoOmni* GetInstance();
+    __declspec(dllexport) static void CreateInstance();
+    __declspec(dllexport) static LegoOmni* GetInstance();
 
-    void RemoveWorld(MxAtomId const &, long);
+    __declspec(dllexport) void RemoveWorld(MxAtomId const &, long);
 
-    static int GetCurrPathInfo(LegoPathBoundary**, int&);
+    __declspec(dllexport) static int GetCurrPathInfo(LegoPathBoundary**, int&);
 
-    void CreateBackgroundAudio();
+    __declspec(dllexport) void CreateBackgroundAudio();
 };
 
-LegoOmni* Lego();
+__declspec(dllexport) LegoOmni* Lego();

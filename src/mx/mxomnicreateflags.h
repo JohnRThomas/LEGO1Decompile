@@ -1,4 +1,4 @@
 class MxOmniCreateFlags {
 public:
-    MxOmniCreateFlags();
-}
+    __declspec(dllexport) MxOmniCreateFlags();
+};

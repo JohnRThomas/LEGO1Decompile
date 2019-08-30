@@ -1,8 +1,8 @@
 class MxBackgroundAudioManager {
 public:
-    MxBackgroundAudioManager();
+    __declspec(dllexport) MxBackgroundAudioManager();
 
-    void Enable(unsigned char);
+    __declspec(dllexport) void Enable(unsigned char);
 };
 
-MxBackgroundAudioManager* BackgroundAudioManager();
+__declspec(dllexport) MxBackgroundAudioManager* BackgroundAudioManager();

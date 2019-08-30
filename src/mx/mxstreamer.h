@@ -1,9 +1,11 @@
+#include "mxstreamcontroller.h"
+
 class MxStreamer {
 public:
-    MxStreamer();
+    __declspec(dllexport) MxStreamer();
 
-    MxStreamController* Open(const char*, unsigned short);
-    long Close(const char*);
+    __declspec(dllexport) MxStreamController* Open(const char*, unsigned short);
+    __declspec(dllexport) long Close(const char*);
 };
 
-MxStreamer* Streamer();
+__declspec(dllexport) MxStreamer* Streamer();

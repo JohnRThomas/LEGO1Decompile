@@ -5,4 +5,4 @@ public:
     void Detach();
 
     unsigned char operator==(MxPalette&);
-}
+};

@@ -1,7 +1,7 @@
 class MxDSAction {
 public:
-    MxDSAction();
-    virtual ~MxDSAction();
+    __declspec(dllexport) MxDSAction();
+    __declspec(dllexport) virtual ~MxDSAction();
 };
 
-long Start(MxDSAction*);
+__declspec(dllexport) long Start(class MxDSAction*);

@@ -1,5 +1,8 @@
 class MxString {
-    MxString(const MxString&);
-    virtual ~MxString();
-    const MxString& operator=(char const*);
-}
+public:
+    __declspec(dllexport) MxString(const MxString&);
+
+    __declspec(dllexport) virtual ~MxString();
+
+    __declspec(dllexport) const MxString& operator=(char const*);
+};
