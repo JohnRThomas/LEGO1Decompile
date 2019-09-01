@@ -1,6 +1,15 @@
 #include "mxomni.h"
 
+#include <string.h>
+
 #include "custom/debug.h"
+
+// Arbitrary maximum path length
+const int kMaximumPathLength = 255;
+
+char MxOmni::cd_path_[kMaximumPathLength];
+char MxOmni::hd_path_[kMaximumPathLength];
+unsigned char MxOmni::sound_is_3d_ = 0;
 
 MxOmni::MxOmni()
 {
@@ -21,36 +30,30 @@ void MxOmni::DestroyInstance()
 
 const char *MxOmni::GetHD()
 {
-    FIXME("Stub");
-
-    return nullptr;
+    return hd_path_;
 }
 
-void MxOmni::SetHD(const char *)
+void MxOmni::SetHD(const char *hd)
 {
-    FIXME("Stub");
+    strcpy_s(hd_path_, kMaximumPathLength, hd);
 }
 
 const char *MxOmni::GetCD()
 {
-    FIXME("Stub");
-
-    return nullptr;
+    return cd_path_;
 }
 
-void MxOmni::SetCD(const char *)
+void MxOmni::SetCD(const char *cd)
 {
-    FIXME("Stub");
+    strcpy_s(cd_path_, kMaximumPathLength, cd);
 }
 
 unsigned char MxOmni::IsSound3D()
 {
-    FIXME("Stub");
-
-    return 0;
+    return sound_is_3d_;
 }
 
-void MxOmni::SetSound3D(unsigned char)
+void MxOmni::SetSound3D(unsigned char c)
 {
-    FIXME("Stub");
+    sound_is_3d_ = c;
 }
