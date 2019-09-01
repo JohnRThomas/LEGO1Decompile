@@ -1,5 +1,7 @@
 #include "mxdirectdraw.h"
 
+#include <ddraw.h>
+
 #include "custom/debug.h"
 
 MxDirectDraw::MxDirectDraw()
@@ -9,9 +11,24 @@ MxDirectDraw::MxDirectDraw()
 
 int MxDirectDraw::GetPrimaryBitDepth()
 {
-    FIXME("Stub");
+    /*const int bit_depth = 8;
 
-    return 0;
+    IDirectDraw* direct_draw;
+    DDSURFACEDESC   ddsd;
+
+    if (!DirectDrawCreate(NULL, &direct_draw, NULL))
+    {
+        memset(&ddsd, 0, sizeof(ddsd));
+        ddsd.dwSize = sizeof(ddsd);
+
+        direct_draw->GetDisplayMode(&ddsd);
+        direct_draw->Release();
+    }
+
+    return 0;*/
+    FIXME("Partial stub");
+
+    return 8;
 }
 
 int MxDirectDraw::Pause(int)
