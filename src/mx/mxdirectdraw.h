@@ -1,11 +1,9 @@
 class MxDirectDraw {
 public:
-    MxDirectDraw();
+    __declspec(dllexport) MxDirectDraw();
 
-    static int GetPrimaryBitDepth();
+    __declspec(dllexport) static int GetPrimaryBitDepth();
 
-    int Pause(int);
-    int FlipToGDISurface();
-
-    
-}
+    __declspec(dllexport) int Pause(int);
+    __declspec(dllexport) int FlipToGDISurface();
+};

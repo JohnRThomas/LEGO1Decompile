@@ -40,3 +40,10 @@ void LegoOmni::CreateBackgroundAudio()
 {
     FIXME("Stub");
 }
+
+LegoOmni* Lego()
+{
+    FIXME("Stub");
+
+    return nullptr;
+}

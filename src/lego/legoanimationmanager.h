@@ -1,9 +1,9 @@
 class LegoAnimationManager {
 public:
-    LegoAnimationManager();
+    __declspec(dllexport) LegoAnimationManager();
 
-    static void configureLegoAnimationManager(int);
-    static void configureLegoWorldPresenter(int);
+    __declspec(dllexport) static void configureLegoAnimationManager(int);
+    __declspec(dllexport) static void configureLegoWorldPresenter(int);
 
 
 };

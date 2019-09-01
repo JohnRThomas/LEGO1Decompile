@@ -1,6 +1,6 @@
 class MxTickleManager {
 public:
-    MxTickleManager();
+    __declspec(dllexport) MxTickleManager();
 };
 
-MxTickleManager* TickleManager();
+__declspec(dllexport) MxTickleManager* TickleManager();

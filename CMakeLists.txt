@@ -13,6 +13,7 @@ set(LEGO1_SRC
     src/custom/debug.cpp
     src/custom/debug.h
     src/lego/legoanimationmanager.h
+    src/lego/legoanimationmanager.cpp
     src/lego/legobackgroundcolor.h
     src/lego/legobuildingmanager.h
     src/lego/legobuildingmanager.cpp
@@ -20,6 +21,7 @@ set(LEGO1_SRC
     src/lego/legogamestate.h
     src/lego/legogamestate.cpp
     src/lego/legoinputmanager.h
+    src/lego/legoinputmanager.cpp
     src/lego/legomodelpresenter.h
     src/lego/legomodelpresenter.cpp
     src/lego/legonavcontroller.h
@@ -46,6 +48,7 @@ set(LEGO1_SRC
     src/mx/mxcore.cpp
     src/mx/mxcriticalsection.h
     src/mx/mxdirectdraw.h
+    src/mx/mxdirectdraw.cpp
     src/mx/mxdsaction.h
     src/mx/mxdsaction.cpp
     src/mx/mxdsfile.h
@@ -72,13 +75,17 @@ set(LEGO1_SRC
     src/mx/mxstring.h
     src/mx/mxstring.cpp
     src/mx/mxticklemanager.h
+    src/mx/mxticklemanager.cpp
     src/mx/mxtimer.h
+    src/mx/mxtimer.cpp
     src/mx/mxtransitionmanager.h
+    src/mx/mxtransitionmanager.cpp
     src/mx/mxvariable.h
     src/mx/mxvariabletable.h
     src/mx/mxvariabletable.cpp
     src/mx/mxvideomanager.h
     src/mx/mxvideoparamflags.h
+    src/mx/mxvideoparamflags.cpp
     src/mx/mxvideoparam.h
     src/mx/mxvideoparam.cpp
     src/other/makesourcename.h
@@ -86,6 +93,7 @@ set(LEGO1_SRC
     src/other/nocd.cpp
     src/other/realtimeview.h
     src/other/viewmanager.h
+    src/other/viewmanager.cpp
     src/other/viewroi.h
 )
 

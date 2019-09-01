@@ -30,3 +30,10 @@ int LegoVideoManager::DisableRMDevice()
 
     return 0;
 }
+
+LegoVideoManager* VideoManager()
+{
+    FIXME("Stub");
+
+    return nullptr;
+}

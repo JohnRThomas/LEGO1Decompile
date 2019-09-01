@@ -1,11 +1,18 @@
-class LegoInputManager {
-public:
-    LegoInputManager();
+#include "mx/mxcore.h"
 
-    void Register(MxCore*);
-    void UnRegister(MxCore*);
+enum NotificationId
+{
 
-    void QueueEvent(NoticationId, unsigned char, long, long, unsigned char);
 };
 
-LegoInputManager* InputManager();
+class LegoInputManager {
+public:
+    __declspec(dllexport) LegoInputManager();
+
+    __declspec(dllexport) void Register(MxCore*);
+    __declspec(dllexport) void UnRegister(MxCore*);
+
+    __declspec(dllexport) void QueueEvent(NotificationId, unsigned char, long, long, unsigned char);
+};
+
+__declspec(dllexport) LegoInputManager* InputManager();

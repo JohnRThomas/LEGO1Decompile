@@ -36,3 +36,10 @@ void LegoGameState::SerializeScoreHistory(short)
 {
     FIXME("Stub");
 }
+
+LegoGameState* GameState()
+{
+    FIXME("Stub");
+
+    return nullptr;
+}

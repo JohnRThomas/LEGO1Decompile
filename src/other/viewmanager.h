@@ -1,6 +1,8 @@
+#include "viewroi.h"
+
 class ViewManager {
 public:
-    ViewManager();
+    __declspec(dllexport) ViewManager();
 
-    void RemoveAll(ViewROI*);
+    __declspec(dllexport) void RemoveAll(ViewROI*);
 };

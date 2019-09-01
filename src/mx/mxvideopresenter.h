@@ -1,0 +1,4 @@
+class MxVideoPresenter {
+public:
+    MxVideoPresenter();    
+};

@@ -1,4 +1,4 @@
 class MxVideoParamFlags {
 public:
-    MxVideoParamFlags();
+    __declspec(dllexport) MxVideoParamFlags();
 };

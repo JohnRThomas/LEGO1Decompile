@@ -1,8 +1,10 @@
+#include "mxvideopresenter.h"
+
 class MxTransitionManager {
 public:
-    MxTransitionManager();
+    __declspec(dllexport) MxTransitionManager();
 
-    void SetWaitIndicator(MxVideoPresenter*);
+    __declspec(dllexport) void SetWaitIndicator(MxVideoPresenter*);
 };
 
-MxTransitionManager* TransitionManager();
+__declspec(dllexport) MxTransitionManager* TransitionManager();

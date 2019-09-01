@@ -1,8 +1,8 @@
 class MxTimer {
 public:
-    MxTimer();
+    __declspec(dllexport) MxTimer();
 
-    long GetRealTime();
-}
+    __declspec(dllexport) long GetRealTime();
+};
 
-MxTimer* Timer();
+__declspec(dllexport) MxTimer* Timer();
