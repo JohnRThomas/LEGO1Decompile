@@ -2,7 +2,7 @@
 
 #include "custom/debug.h"
 
-MxOmniCreateParam::MxOmniCreateParam(char const *, HWND__ *, MxVideoParam &, MxOmniCreateFlags)
+MxOmniCreateParam::MxOmniCreateParam(const char *, HWND__ *, MxVideoParam &, MxOmniCreateFlags)
 {
     FIXME("Stub");
 }

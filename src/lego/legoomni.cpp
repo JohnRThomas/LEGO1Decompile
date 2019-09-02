@@ -14,17 +14,16 @@ LegoOmni::~LegoOmni()
 
 void LegoOmni::CreateInstance()
 {
-    FIXME("Stub");
+    DestroyInstance();
+    SetInstance(new LegoOmni());
 }
 
 LegoOmni* LegoOmni::GetInstance()
 {
-    FIXME("Stub");
-
-    return nullptr;
+    return static_cast<LegoOmni*>(MxOmni::GetInstance());
 }
 
-void LegoOmni::RemoveWorld(MxAtomId const &, long)
+void LegoOmni::RemoveWorld(const MxAtomId &, long)
 {
     FIXME("Stub");
 }
@@ -43,7 +42,5 @@ void LegoOmni::CreateBackgroundAudio()
 
 LegoOmni* Lego()
 {
-    FIXME("Stub");
-
-    return nullptr;
+    return LegoOmni::GetInstance();
 }

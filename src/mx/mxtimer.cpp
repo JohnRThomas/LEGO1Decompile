@@ -1,5 +1,7 @@
 #include "mxtimer.h"
 
+#include <windows.h>
+
 #include "custom/debug.h"
 
 MxTimer::MxTimer()
@@ -9,9 +11,9 @@ MxTimer::MxTimer()
 
 long MxTimer::GetRealTime()
 {
-    FIXME("Stub");
+    // FIXME: Original seems to store the result of timeGetTime() in a static variable for some reason
 
-    return 0;
+    return timeGetTime() - start_time_;
 }
 
 MxTimer* Timer()

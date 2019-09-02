@@ -21,8 +21,8 @@ MxVideoParam::MxVideoParam() :
 MxVideoParam::MxVideoParam(MxRect32& rect, MxPalette* pal, unsigned long u1, MxVideoParamFlags& flags) :
     x_(rect.x()),
     y_(rect.y()),
-    width_(rect.width()),    // Width defaults to 640
-    height_(rect.height()),   // Height defaults to 480
+    width_(rect.width()),
+    height_(rect.height()),
     palette_(pal),
     unknown1_(u1),
     flags_(flags),

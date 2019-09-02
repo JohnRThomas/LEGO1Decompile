@@ -11,6 +11,8 @@ char MxOmni::cd_path_[kMaximumPathLength];
 char MxOmni::hd_path_[kMaximumPathLength];
 unsigned char MxOmni::sound_is_3d_ = 0;
 
+MxOmni* MxOmni::instance_ = nullptr;
+
 MxOmni::MxOmni()
 {
     FIXME("Stub");
@@ -18,14 +20,13 @@ MxOmni::MxOmni()
 
 MxOmni* MxOmni::GetInstance()
 {
-    FIXME("Stub");
-
-    return nullptr;
+    return instance_;
 }
 
 void MxOmni::DestroyInstance()
 {
-    FIXME("Stub");
+    delete instance_;
+    instance_ = nullptr;
 }
 
 const char *MxOmni::GetHD()
@@ -56,4 +57,9 @@ unsigned char MxOmni::IsSound3D()
 void MxOmni::SetSound3D(unsigned char c)
 {
     sound_is_3d_ = c;
+}
+
+void MxOmni::SetInstance(MxOmni* instance)
+{
+    instance_ = instance;
 }

@@ -5,5 +5,5 @@
 
 class MxOmniCreateParam {
 public:
-    __declspec(dllexport) MxOmniCreateParam(char const *, HWND__ *, MxVideoParam &, MxOmniCreateFlags);
+    __declspec(dllexport) MxOmniCreateParam(const char *, HWND__ *, MxVideoParam &, MxOmniCreateFlags);
 };
