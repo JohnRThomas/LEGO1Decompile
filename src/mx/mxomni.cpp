@@ -15,7 +15,21 @@ MxOmni* MxOmni::instance_ = nullptr;
 
 MxOmni::MxOmni()
 {
-    FIXME("Stub");
+    // FIXME: Accurate but undocumented behavior
+    unknown2_[1] = 0;
+    unknown2_[2] = 0;
+    unknown2_[3] = 0;
+    unknown2_[4] = 0;
+    unknown2_[5] = 0;
+    unknown2_[6] = 0;
+    unknown2_[7] = 0;
+    unknown2_[8] = 0;
+    unknown2_[9] = 0;
+    unknown2_[10] = 0;
+    unknown2_[11] = 0;
+    unknown2_[12] = 0;
+
+    unknown3_ = 0;
 }
 
 MxOmni* MxOmni::GetInstance()
@@ -62,4 +76,17 @@ void MxOmni::SetSound3D(unsigned char c)
 void MxOmni::SetInstance(MxOmni* instance)
 {
     instance_ = instance;
+}
+
+MxOmniUnknownStruct1::MxOmniUnknownStruct1()
+{
+    // FIXME: Accurate, but undocumented behavior
+    unknown1_ = new unsigned char[1];
+    unknown1_[0] = 1;
+}
+
+MxOmniUnknownStruct1::~MxOmniUnknownStruct1()
+{
+    // FIXME: Assumed behavior
+    delete [] unknown1_;
 }

@@ -29,9 +29,6 @@ MxVideoParam::MxVideoParam(MxRect32& rect, MxPalette* pal, unsigned long u1, MxV
     unknown2_(0),
     device_name_(nullptr)
 {
-    char val[200];
-    sprintf_s(val, "Unknown value: %i", u1);
-    FIXME(val);
 }
 
 MxVideoParam::MxVideoParam(MxVideoParam& other)

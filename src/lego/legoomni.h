@@ -1,6 +1,7 @@
 #include "mx/mxatomid.h"
 
 #include "legopathboundary.h"
+#include "mx/mxdsaction.h"
 #include "mx/mxomni.h"
 
 class LegoOmni : public MxOmni {
@@ -18,6 +19,13 @@ public:
     __declspec(dllexport) void CreateBackgroundAudio();
 
 private:
+    DWORD unknown1_[6];
+
+    unsigned char unknown2_;
+
+    DWORD unknown3_[7];
+
+    MxDSAction action_;
 };
 
 __declspec(dllexport) LegoOmni* Lego();

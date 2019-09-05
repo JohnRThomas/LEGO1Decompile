@@ -5,10 +5,12 @@ public:
     __declspec(dllexport) long GetRealTime();
 
 private:
+    static int last_time_calculated_;
+
     int unknown1_;
 
     int unknown2_;
-    
+
     int start_time_;
 };
 

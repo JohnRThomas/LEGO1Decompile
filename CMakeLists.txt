@@ -47,6 +47,7 @@ set(LEGO1_SRC
     src/mx/mxcore.h
     src/mx/mxcore.cpp
     src/mx/mxcriticalsection.h
+    src/mx/mxcriticalsection.cpp
     src/mx/mxdirectdraw.h
     src/mx/mxdirectdraw.cpp
     src/mx/mxdsaction.h

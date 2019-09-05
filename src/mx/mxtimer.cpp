@@ -4,6 +4,8 @@
 
 #include "custom/debug.h"
 
+int MxTimer::last_time_calculated_; // FIXME: Default value?
+
 MxTimer::MxTimer()
 {
     FIXME("Stub");
@@ -11,9 +13,9 @@ MxTimer::MxTimer()
 
 long MxTimer::GetRealTime()
 {
-    // FIXME: Original seems to store the result of timeGetTime() in a static variable for some reason
+    last_time_calculated_ = timeGetTime();
 
-    return timeGetTime() - start_time_;
+    return last_time_calculated_ - start_time_;
 }
 
 MxTimer* Timer()

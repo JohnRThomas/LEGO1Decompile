@@ -4,5 +4,8 @@
 
 MxOmniCreateFlags::MxOmniCreateFlags()
 {
-    FIXME("Stub");
+    // FIXME: Unknown behavior
+
+    unknown1_ = 0xFF;
+    unknown2_ |= 0x6;
 }

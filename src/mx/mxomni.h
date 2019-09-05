@@ -1,3 +1,19 @@
+#include "mxcore.h"
+#include "mxcriticalsection.h"
+
+class MxOmniUnknownStruct1 {
+public:
+    MxOmniUnknownStruct1();
+
+    ~MxOmniUnknownStruct1();
+
+private:
+    MxCore core_;
+
+    unsigned char* unknown1_;
+
+};
+
 class MxOmni {
 public:
     __declspec(dllexport) MxOmni();
@@ -23,6 +39,17 @@ private:
     static unsigned char sound_is_3d_;
 
     static MxOmni* instance_;
+
+    MxCore core_;
+
+    MxOmniUnknownStruct1 unknown1_;
+
+    DWORD unknown2_[13];
+
+    MxCriticalSection critical_section_;
+
+    unsigned char unknown3_;
+
 };
 
 __declspec(dllexport) void SetOmniUserMessage(void(const char *, int));
