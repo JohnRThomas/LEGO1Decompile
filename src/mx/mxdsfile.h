@@ -1,3 +1,6 @@
+#ifndef MXDSFILE_H
+#define MXDSFILE_H
+
 class MxDSFile {
 public:
     MxDSFile(const char*, unsigned long);
@@ -13,3 +16,5 @@ public:
 }
 
 MxDSObject* CreateStreamObject(MxDSFile*, short);
+
+#endif // MXDSFILE_H

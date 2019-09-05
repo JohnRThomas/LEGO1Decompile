@@ -1,3 +1,6 @@
+#ifndef MXVIDEOPARAM_H
+#define MXVIDEOPARAM_H
+
 #include "mxpalette.h"
 #include "mxrect32.h"
 #include "mxvideoparamflags.h"
@@ -32,3 +35,5 @@ private:
 
     char* device_name_;
 };
+
+#endif // MXVIDEOPARAM_H

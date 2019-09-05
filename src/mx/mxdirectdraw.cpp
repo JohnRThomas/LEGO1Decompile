@@ -26,9 +26,9 @@ int MxDirectDraw::GetPrimaryBitDepth()
     }
 
     return 0;*/
-    FIXME("Partial stub");
+    FIXME("Partial stub (always returns 32)");
 
-    return 8;
+    return 32;
 }
 
 int MxDirectDraw::Pause(int)

@@ -1,3 +1,6 @@
+#ifndef MXRECT32_H
+#define MXRECT32_H
+
 class MxRect32 {
 public:
     MxRect32();
@@ -13,3 +16,5 @@ private:
     int width_;
     int height_;
 };
+
+#endif // MXRECT32_H

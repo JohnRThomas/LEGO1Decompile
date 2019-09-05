@@ -1,3 +1,6 @@
+#ifndef MXATOMID_H
+#define MXATOMID_H
+
 enum LookupMode
 {
 
@@ -10,3 +13,5 @@ public:
 
     __declspec(dllexport) MxAtomId& operator=(const MxAtomId &);
 };
+
+#endif // MXATOMID_H

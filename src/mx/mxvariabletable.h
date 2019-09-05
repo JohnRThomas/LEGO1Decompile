@@ -1,3 +1,6 @@
+#ifndef MXVARIABLETABLE_H
+#define MXVARIABLETABLE_H
+
 #include "mxvariable.h"
 
 class MxVariableTable {
@@ -11,3 +14,5 @@ public:
 };
 
 __declspec(dllexport) MxVariableTable* VariableTable();
+
+#endif // MXVARIABLETABLE_H

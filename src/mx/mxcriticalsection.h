@@ -1,3 +1,6 @@
+#ifndef MXCRITICALSECTION_H
+#define MXCRITICALSECTION_H
+
 #include <windows.h>
 
 class MxCriticalSection {
@@ -12,3 +15,5 @@ private:
 
     HANDLE mutex_;
 };
+
+#endif // MXCRITICALSECTION_H

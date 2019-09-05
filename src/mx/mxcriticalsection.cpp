@@ -1,7 +1,5 @@
 #include "mxcriticalsection.h"
 
-#include <stdio.h>
-
 #include "custom/debug.h"
 
 MxCriticalSection::MxCriticalSection()

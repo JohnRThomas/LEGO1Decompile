@@ -1,3 +1,6 @@
+#ifndef MXTIMER_H
+#define MXTIMER_H
+
 class MxTimer {
 public:
     __declspec(dllexport) MxTimer();
@@ -15,3 +18,5 @@ private:
 };
 
 __declspec(dllexport) MxTimer* Timer();
+
+#endif // MXTIMER_H

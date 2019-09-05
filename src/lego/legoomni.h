@@ -1,3 +1,6 @@
+#ifndef LEGOOMNI_H
+#define LEGOOMNI_H
+
 #include "mx/mxatomid.h"
 
 #include "legopathboundary.h"
@@ -19,13 +22,28 @@ public:
     __declspec(dllexport) void CreateBackgroundAudio();
 
 private:
-    DWORD unknown1_[6];
-
-    unsigned char unknown2_;
-
-    DWORD unknown3_[7];
+    int unknown1_; // [esi+68]
+    int unknown2_; // [esi+6C]
+    int unknown3_; // [esi+70]
+    int unknown4_; // [esi+74]
+    int unknown5_; // [esi+78]
+    int unknown6_; // [esi+7C]
+    unsigned char unknown7_; // [esi+80]
+    int unknown8_; // [esi+84]
+    int unknown9_; // [esi+88]
+    int unknown10_; // [esi+8C]
+    int unknown11_; // [esi+90]
+    int unknown12_; // [esi+94]
+    int unknown13_; // [esi+98]
+    int unknown14_; // [esi+9C]
 
     MxDSAction action_;
+
+    int unknown15_; // [esi+134]
+    int unknown16_; // [esi+138]
+    unsigned char unknown17_; // [esi+13C]
 };
 
 __declspec(dllexport) LegoOmni* Lego();
+
+#endif // LEGOOMNI_H

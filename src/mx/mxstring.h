@@ -1,3 +1,6 @@
+#ifndef MXSTRING_H
+#define MXSTRING_H
+
 class MxString {
 public:
     __declspec(dllexport) MxString(const MxString&);
@@ -6,3 +9,5 @@ public:
 
     __declspec(dllexport) const MxString& operator=(char const*);
 };
+
+#endif // MXSTRING_H

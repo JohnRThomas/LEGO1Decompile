@@ -1,3 +1,6 @@
+#ifndef LEGOINPUTMANAGER_H
+#define LEGOINPUTMANAGER_H
+
 #include "mx/mxcore.h"
 
 enum NotificationId
@@ -16,3 +19,5 @@ public:
 };
 
 __declspec(dllexport) LegoInputManager* InputManager();
+
+#endif // LEGOINPUTMANAGER_H

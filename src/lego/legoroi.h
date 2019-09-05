@@ -1,3 +1,6 @@
+#ifndef LEGOROI_H
+#define LEGOROI_H
+
 class LegoROI {
 public:
     __declspec(dllexport) LegoROI();
@@ -8,3 +11,5 @@ public:
 };
 
 __declspec(dllexport) LegoROI* PickROI(long, long);
+
+#endif // LEGOROI_H

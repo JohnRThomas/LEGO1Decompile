@@ -1,3 +1,6 @@
+#ifndef LEGOANIMATIONMANAGER_H
+#define LEGOANIMATIONMANAGER_H
+
 class LegoAnimationManager {
 public:
     __declspec(dllexport) LegoAnimationManager();
@@ -7,3 +10,5 @@ public:
 
 
 };
+
+#endif // LEGOANIMATIONMANAGER_H

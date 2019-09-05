@@ -1,3 +1,6 @@
+#ifndef MXBACKGROUNDAUDIOMANAGER_H
+#define MXBACKGROUNDAUDIOMANAGER_H
+
 class MxBackgroundAudioManager {
 public:
     __declspec(dllexport) MxBackgroundAudioManager();
@@ -6,3 +9,5 @@ public:
 };
 
 __declspec(dllexport) MxBackgroundAudioManager* BackgroundAudioManager();
+
+#endif // MXBACKGROUNDAUDIOMANAGER_H

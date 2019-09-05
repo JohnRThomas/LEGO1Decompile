@@ -4,7 +4,22 @@
 
 LegoOmni::LegoOmni()
 {
-    FIXME("Stub");
+    unknown1_ = 0;
+    unknown2_ = 0;
+    unknown3_ = 0;
+    unknown4_ = 0;
+    unknown5_ = 0;
+    unknown6_ = 0;
+    unknown7_ = 0;
+    unknown9_ = 0;
+    unknown10_ = 0;
+    unknown11_ = 0;
+    unknown12_ = 0;
+    unknown13_ = 0;
+    unknown14_ = 0;
+    unknown15_ = 0;
+    unknown16_ = 0;
+    unknown17_ = 1;
 }
 
 LegoOmni::~LegoOmni()

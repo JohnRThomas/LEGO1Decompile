@@ -1,3 +1,6 @@
+#ifndef LEGOGAMESTATE_H
+#define LEGOGAMESTATE_H
+
 class LegoGameState {
 public:
     __declspec(dllexport) LegoGameState();
@@ -14,3 +17,5 @@ public:
 };
 
 __declspec(dllexport) LegoGameState* GameState();
+
+#endif // LEGOGAMESTATE_H

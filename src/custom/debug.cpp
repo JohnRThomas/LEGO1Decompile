@@ -10,3 +10,11 @@ void FIXMEINTERNAL(const char* caller, const char* str) {
 
     MessageBox(0, message, "FIXME", 0);
 }
+
+void PRINTSIZE(const char* name, size_t sz) {
+    char message[200];
+
+    sprintf_s(message, "Size of %s: %i", name, sz);
+
+    MessageBox(0, message, "FIXME", 0);
+}

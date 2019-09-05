@@ -1,3 +1,6 @@
+#ifndef LEGOVIDEOMANAGER_H
+#define LEGOVIDEOMANAGER_H
+
 class LegoVideoManager {
 public:
     __declspec(dllexport) LegoVideoManager();
@@ -10,3 +13,5 @@ public:
 };
 
 __declspec(dllexport) LegoVideoManager* VideoManager();
+
+#endif // LEGOVIDEOMANAGER_H

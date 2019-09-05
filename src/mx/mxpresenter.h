@@ -1,3 +1,6 @@
+#ifndef MXPRESENTER_H
+#define MXPRESENTER_H
+
 class MxPresenter {
 public:
     MxPresenter();
@@ -15,3 +18,5 @@ protected:
 
     void Init();
 };
+
+#endif // MXPRESENTER_H

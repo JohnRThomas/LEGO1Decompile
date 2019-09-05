@@ -1,6 +1,5 @@
 #include "mxvideoparam.h"
 
-#include <stdio.h>
 #include <string>
 
 #include "custom/debug.h"

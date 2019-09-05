@@ -1,3 +1,6 @@
+#ifndef MXOMNI_H
+#define MXOMNI_H
+
 #include "mxcore.h"
 #include "mxcriticalsection.h"
 
@@ -49,3 +52,5 @@ private:
 };
 
 __declspec(dllexport) void SetOmniUserMessage(void(const char *, int));
+
+#endif // MXOMNI_H
