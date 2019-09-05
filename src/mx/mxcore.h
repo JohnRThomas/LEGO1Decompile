@@ -10,7 +10,7 @@ public:
 private:
     static int core_count_;
 
-    int unknown_1;
+    int unknown1_;
 
     int id_;
 

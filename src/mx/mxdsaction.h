@@ -1,36 +1,38 @@
-class MxDSActionUnknownStruct1 {
+#include "mxcore.h"
+
+class MxDSActionUnknownStruct1 : public MxCore {
 public:
     MxDSActionUnknownStruct1();
 
 private:
-    MxCore core_;
+    int unknown2_;
 
-    DWORD unknown1_;
+    short unknown3_;
 
-    short unknown2_;
-
-    DWORD unknown3_;
+    int unknown4_;
     
-    DWORD unknown4_;
+    int unknown5_;
     
-    DWORD unknown5_;
+    int unknown6_;
     
-    DWORD unknown6_;
+    int unknown7_;
 
-    DWORD unknown7_;
+    int unknown8_;
 
-    short unknown8_;
+    short unknown9_;
 
-    DWORD unknown9_;
-}
+    int unknown10_;
+};
 
-class MxDSAction {
+class MxDSAction : public MxDSActionUnknownStruct1 {
 public:
     __declspec(dllexport) MxDSAction();
     __declspec(dllexport) virtual ~MxDSAction();
 
 private:
-    MxDSActionUnknownStruct1 unknown1_;
+    MxDSActionUnknownStruct1 unknown11_;
+
+
 };
 
 __declspec(dllexport) long Start(class MxDSAction*);

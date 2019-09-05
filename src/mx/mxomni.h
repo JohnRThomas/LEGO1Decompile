@@ -1,20 +1,18 @@
 #include "mxcore.h"
 #include "mxcriticalsection.h"
 
-class MxOmniUnknownStruct1 {
+class MxOmniUnknownStruct1 : public MxCore {
 public:
     MxOmniUnknownStruct1();
 
     ~MxOmniUnknownStruct1();
 
 private:
-    MxCore core_;
-
     unsigned char* unknown1_;
 
 };
 
-class MxOmni {
+class MxOmni : public MxCore {
 public:
     __declspec(dllexport) MxOmni();
 
@@ -39,8 +37,6 @@ private:
     static unsigned char sound_is_3d_;
 
     static MxOmni* instance_;
-
-    MxCore core_;
 
     MxOmniUnknownStruct1 unknown1_;
 
