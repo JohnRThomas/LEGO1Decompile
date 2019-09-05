@@ -8,7 +8,7 @@ LEGO Island was initially written in Microsoft Visual C++ in 1995-1997, but no s
 
 The goals of this project are as follows:
 
-* Produce clean, "human readable" C++ code that can be compiled with Microsoft Visual C++ 2005 (last to support Windows 95).
+* Produce clean, "human readable" C++ code that can be compiled with Microsoft Visual C++ 2005 (last to support Windows 95) or MinGW GCC.
 * Code compiles to a drop-in replacement for the retail LEGO1.DLL.
 * Code is cleaned up or optimized where possible, provided the results remain accurate to the original functionality.
 

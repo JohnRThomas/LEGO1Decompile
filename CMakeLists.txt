@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.9 FATAL_ERROR)
 project(lego1)
 enable_language(CXX)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 98)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -107,11 +107,11 @@ add_library(
     ${LEGO1_SRC}
 )
 
-target_compile_options(
-    ${LEGO1_TARGET}
-    PRIVATE
-    $<$<CXX_COMPILER_ID:GNU>:-Werror -Wuninitialized -pedantic-errors -Wall -Wextra -Wconversion -Wsign-conversion>
-)
+if(MSVC)
+  target_compile_options(${LEGO1_TARGET} PRIVATE /W4 /WX)
+else()
+  target_compile_options(${LEGO1_TARGET} PRIVATE -Wall -Wextra -pedantic -Werror)
+endif()
 
 target_include_directories(
     ${LEGO1_TARGET}
