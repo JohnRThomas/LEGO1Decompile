@@ -121,4 +121,4 @@ target_include_directories(
 
 set_target_properties(${LEGO1_TARGET} PROPERTIES LINKER_LANGUAGE CXX)
 
-target_link_libraries(${LEGO1_TARGET} winmm.lib)
+target_link_libraries(${LEGO1_TARGET} winmm.lib ddraw.lib)

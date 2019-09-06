@@ -11,10 +11,8 @@ MxDirectDraw::MxDirectDraw()
 
 int MxDirectDraw::GetPrimaryBitDepth()
 {
-    /*const int bit_depth = 8;
-
     IDirectDraw* direct_draw;
-    DDSURFACEDESC   ddsd;
+    DDSURFACEDESC ddsd;
 
     if (!DirectDrawCreate(NULL, &direct_draw, NULL))
     {
@@ -22,13 +20,13 @@ int MxDirectDraw::GetPrimaryBitDepth()
         ddsd.dwSize = sizeof(ddsd);
 
         direct_draw->GetDisplayMode(&ddsd);
+
         direct_draw->Release();
+
+        return ddsd.ddpfPixelFormat.dwRGBBitCount;
     }
 
-    return 0;*/
-    FIXME("Partial stub (always returns 32)");
-
-    return 32;
+    return 0;
 }
 
 int MxDirectDraw::Pause(int)

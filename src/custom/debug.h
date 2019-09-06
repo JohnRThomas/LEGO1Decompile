@@ -5,6 +5,6 @@
 
 void FIXMEINTERNAL(const char* caller, const char* str);
 
-void PRINTSIZE(const char* name, size_t sz);
+void PRINTNUMBER(const char* name, size_t sz);
 
 #endif // DEBUG_H
