@@ -10,8 +10,9 @@ public:
 
     ~MxOmniUnknownStruct1();
 
+    // FIXME: Is actually an MxString object
+    char* unknown1_;
 private:
-    unsigned char* unknown1_;
 
 };
 
