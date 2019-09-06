@@ -33,3 +33,5 @@ const MxString& MxString::operator=(const char* s)
 
     return *this;
 }
+
+

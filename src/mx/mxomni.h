@@ -11,7 +11,7 @@ public:
 
     ~MxOmniUnknownStruct1();
 
-    MxString string_;
+    char* string_;
 private:
 
 };
@@ -42,12 +42,16 @@ private:
 
     static MxOmni* instance_;
 
+    // esi+8
     MxOmniUnknownStruct1 unknown1_;
 
+    // esi+14
     DWORD unknown2_[13];
 
+    // esi+48
     MxCriticalSection critical_section_;
 
+    // esi+64
     unsigned char unknown3_;
 
 };

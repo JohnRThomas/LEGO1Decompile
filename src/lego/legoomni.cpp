@@ -59,3 +59,25 @@ LegoOmni* Lego()
 {
     return LegoOmni::GetInstance();
 }
+
+void LegoOmni::unk_func01(){
+    FIXME("Stub");
+}
+
+void LegoOmni::unk_func02(){
+    FIXME("Stub");
+}
+
+void LegoOmni::unk_func03(){
+    FIXME("Stub");
+}
+
+void LegoOmni::unk_func04(){
+    FIXME("Stub");
+}
+
+int LegoOmni::unk_func05(){
+    FIXME("Stub");
+
+    return 0;
+}

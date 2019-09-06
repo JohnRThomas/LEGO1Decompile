@@ -21,6 +21,12 @@ public:
 
     __declspec(dllexport) void CreateBackgroundAudio();
 
+    virtual void unk_func01();
+    virtual void unk_func02();
+    virtual void unk_func03();
+    virtual void unk_func04();
+    virtual int unk_func05();
+
 private:
     int unknown1_; // [esi+68]
     int unknown2_; // [esi+6C]
