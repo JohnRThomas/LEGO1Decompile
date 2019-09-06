@@ -80,13 +80,9 @@ void MxOmni::SetInstance(MxOmni* instance)
 
 MxOmniUnknownStruct1::MxOmniUnknownStruct1()
 {
-    // FIXME: Accurate, but undocumented behavior
-    unknown1_ = new char[1];
-    unknown1_[0] = 1;
+    string_ = "";
 }
 
 MxOmniUnknownStruct1::~MxOmniUnknownStruct1()
 {
-    // FIXME: Assumed behavior
-    delete [] unknown1_;
 }

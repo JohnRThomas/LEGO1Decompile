@@ -1,20 +1,35 @@
 #include "mxstring.h"
 
+#include <string>
+
 #include "custom/debug.h"
 
-MxString::MxString(const MxString&)
+MxString::MxString() :
+    string_(nullptr)
 {
-    FIXME("Stub");
+}
+
+MxString::MxString(const MxString& s)
+{
+    delete [] string_;
+
+    int str_length = strlen(s.string_)+1;
+    string_ = new char[str_length];
+    strcpy_s(string_, str_length, s.string_);
 }
 
 MxString::~MxString()
 {
-    FIXME("Stub");
+    delete [] string_;
 }
 
-const MxString& MxString::operator=(char const*)
+const MxString& MxString::operator=(const char* s)
 {
-    FIXME("Stub");
+    delete [] string_;
+
+    int str_length = strlen(s)+1;
+    string_ = new char[str_length];
+    strcpy_s(string_, str_length, s);
 
     return *this;
 }

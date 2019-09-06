@@ -3,6 +3,7 @@
 
 #include "mxcore.h"
 #include "mxcriticalsection.h"
+#include "mxstring.h"
 
 class MxOmniUnknownStruct1 : public MxCore {
 public:
@@ -10,8 +11,7 @@ public:
 
     ~MxOmniUnknownStruct1();
 
-    // FIXME: Is actually an MxString object
-    char* unknown1_;
+    MxString string_;
 private:
 
 };
