@@ -24,7 +24,7 @@ public:
 private:
     int unknown1_; // [esi+68]
     int unknown2_; // [esi+6C]
-    int unknown3_; // [esi+70]
+    int unknown3_; // [esi+70]  // Seems to be a LegoInputManager object
     int unknown4_; // [esi+74]
     int unknown5_; // [esi+78]
     int unknown6_; // [esi+7C]

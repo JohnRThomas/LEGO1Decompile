@@ -7,7 +7,7 @@ LegoVideoManager::LegoVideoManager()
     FIXME("Stub");
 }
 
-void LegoVideoManager::MoveCursor(int x, int y)
+void LegoVideoManager::MoveCursor(int /*x*/, int /*y*/)
 {
     FIXME("Stub");
 }
