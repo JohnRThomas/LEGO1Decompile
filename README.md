@@ -15,6 +15,6 @@ The goals of this project are as follows:
 This project is intended to be a pure, faithful decompile. Therefore, the following are NOT goals of this project, but may be done in a separate fork once this code is viable:
 
 * Platform independence. LEGO Island is heavily integrated with DirectX and Win32 APIs. Porting away from these would require substantial modifications to the code.
-* Improvements to gameplay, or other mods, hacks, trainers, loaders, etc. 
+* Improvements to gameplay, bug fixes, or other mods, hacks, trainers, loaders, etc. As aforementioned, this is intended as a faithful decompile, from which projects that improve or alter it can be made.
 
 This project has just begun and will not produce any usable binaries yet. Please check back later.
