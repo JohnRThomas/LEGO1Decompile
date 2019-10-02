@@ -1,0 +1,7 @@
+version: "{build}"
+image: Visual Studio 2015
+build_script:
+- cmd: appveyor-build.bat
+artifacts:
+- path: lego1.dll
+  name: Recompiled LEGO1.DLL
