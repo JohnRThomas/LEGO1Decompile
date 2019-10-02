@@ -4,36 +4,36 @@
 
 LegoVideoManager::LegoVideoManager()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 void LegoVideoManager::MoveCursor(int /*x*/, int /*y*/)
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 void LegoVideoManager::EnableFullScreenMovie(unsigned char, unsigned char)
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 int LegoVideoManager::EnableRMDevice()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 
     return 0;
 }
 
 int LegoVideoManager::DisableRMDevice()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 
     return 0;
 }
 
 LegoVideoManager* VideoManager()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 
     return nullptr;
 }

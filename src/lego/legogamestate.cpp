@@ -4,12 +4,12 @@
 
 LegoGameState::LegoGameState()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 LegoGameState::~LegoGameState()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 long LegoGameState::Save(unsigned long)
@@ -24,22 +24,22 @@ long LegoGameState::Load(unsigned long)
 
 void LegoGameState::SetSavePath(char*)
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 void LegoGameState::SerializePlayersInfo(short)
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 void LegoGameState::SerializeScoreHistory(short)
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 LegoGameState* GameState()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 
     return nullptr;
 }

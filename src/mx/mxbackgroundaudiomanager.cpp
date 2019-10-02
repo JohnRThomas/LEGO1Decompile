@@ -4,16 +4,16 @@
 
 MxBackgroundAudioManager::MxBackgroundAudioManager()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 void MxBackgroundAudioManager::Enable(unsigned char)
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 MxBackgroundAudioManager* BackgroundAudioManager(){
-    FIXME("Stub");
+    ALERT("Stub");
 
     return nullptr;
 }

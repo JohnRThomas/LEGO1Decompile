@@ -11,6 +11,11 @@
 #include "mxvariabletable.h"
 #include "mxvideomanager.h"
 
+/**
+ * @brief Main game controller (base)
+ *
+ * This class is 0x68 bytes in size.
+ */
 class MxOmni : public MxCore {
 protected:
     static void SetInstance(MxOmni* instance);
@@ -69,8 +74,11 @@ protected:
     // +64
     unsigned char unknown15_;
 
-public:
     __declspec(dllexport) MxOmni();
+    virtual ~MxOmni();
+
+    virtual void Init();
+public:
 
     __declspec(dllexport) static MxOmni* GetInstance();
     __declspec(dllexport) static void DestroyInstance();

@@ -4,10 +4,10 @@
 
 ViewManager::ViewManager()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 void ViewManager::RemoveAll(ViewROI*)
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }

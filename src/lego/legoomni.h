@@ -9,12 +9,20 @@
 #include "mx/mxbackgroundaudiomanager.h"
 #include "mx/mxdsaction.h"
 #include "mx/mxomni.h"
+#include "mx/mxomnicreateparam.h"
 
+/**
+ * @brief The LegoOmni class
+ *
+ * The central game controller. Its members are largely "subcontrollers" handling different aspects of the game.
+ *
+ * It is 0x140 bytes in size.
+ */
 class LegoOmni : public MxOmni {
 protected:
-    int unknown68_;
-    int unknown6C_;
-    LegoInputManager* input_manager_;
+    int unknown68_; // [esi+68]
+    int unknown6C_; // [esi+6C]
+    LegoInputManager* input_manager_; // [esi+70]
     int unknown74_; // [esi+74]
     int unknown78_; // [esi+78]
     int unknown7C_; // [esi+7C]
@@ -34,15 +42,16 @@ protected:
     unsigned char unknown13C_; // [esi+13C]
 
     __declspec(dllexport) LegoOmni();
-    __declspec(dllexport) virtual ~LegoOmni();
-    virtual void Init();
+    __declspec(dllexport) virtual ~LegoOmni() override;
+    virtual void Init() override;
 
 public:
     virtual void unk_func03();
     virtual void unk_func04();
 
     virtual void Destroy();
-    virtual int Create();
+    virtual int Create(MxOmniCreateParam &param);
+
 
     __declspec(dllexport) static void CreateInstance();
     __declspec(dllexport) static LegoOmni* GetInstance();

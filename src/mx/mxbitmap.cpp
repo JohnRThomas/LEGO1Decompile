@@ -4,10 +4,10 @@
 
 MxBitmap::MxBitmap()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 MxBitmap::~MxBitmap()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }

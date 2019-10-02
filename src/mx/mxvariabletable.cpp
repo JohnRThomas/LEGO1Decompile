@@ -5,29 +5,25 @@
 
 MxVariableTable::MxVariableTable()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 void MxVariableTable::SetVariable(const char* key, const char* value)
 {
-    char buffer[100];
-    sprintf_s(buffer, "Stub (const char*, const char*)\n\nKey: \"%s\"\nValue: \"%s\"", key, value);
-    FIXME(buffer);
+    ALERT("Stub (const char*, const char*)\n\nKey: \"%s\"\nValue: \"%s\"", key, value);
 
     MxString key_str = key;
     MxString val_str = value;
-
-
 }
 
 void MxVariableTable::SetVariable(MxVariable*)
 {
-    FIXME("Stub (MxVariable*)");
+    ALERT("Stub (MxVariable*)");
 }
 
-const char* MxVariableTable::GetVariable(const char*)
+const char* MxVariableTable::GetVariable(const char* key)
 {
-    FIXME("Stub");
+    ALERT("Stub\n\nRequested key: %s", key);
 
     return nullptr;
 }

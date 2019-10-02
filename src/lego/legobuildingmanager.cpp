@@ -4,5 +4,5 @@
 
 void LegoBuildingManager::configureLegoBuildingManager(int)
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }

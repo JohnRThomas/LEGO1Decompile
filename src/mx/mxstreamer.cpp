@@ -4,26 +4,26 @@
 
 MxStreamer::MxStreamer()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 MxStreamController* MxStreamer::Open(const char*, unsigned short)
 {
-    FIXME("Stub");
+    ALERT("Stub");
 
     return nullptr;
 }
 
 long MxStreamer::Close(const char*)
 {
-    FIXME("Stub");
+    ALERT("Stub");
 
     return 0;
 }
 
 MxStreamer* Streamer()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 
     return nullptr;
 }

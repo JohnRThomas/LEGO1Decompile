@@ -16,3 +16,13 @@ MxOmniCreateFlags::MxOmniCreateFlags()
     flags_ |= 0x200;
     flags_ |= 0x400;
 }
+
+/*void MxOmniCreateFlags::operator|=(const unsigned short &flag)
+{
+    flags_ |= flag;
+}*/
+
+MxOmniCreateFlags::operator unsigned short&()
+{
+    return flags_;
+}

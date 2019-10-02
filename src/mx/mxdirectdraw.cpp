@@ -6,7 +6,7 @@
 
 MxDirectDraw::MxDirectDraw()
 {
-    FIXME("Stub");
+    ALERT("Stub")
 }
 
 int MxDirectDraw::GetPrimaryBitDepth()
@@ -14,7 +14,7 @@ int MxDirectDraw::GetPrimaryBitDepth()
     IDirectDraw* direct_draw;
     DDSURFACEDESC ddsd;
 
-    if (!DirectDrawCreate(NULL, &direct_draw, NULL))
+    if (!DirectDrawCreate(nullptr, &direct_draw, nullptr))
     {
         memset(&ddsd, 0, sizeof(ddsd));
         ddsd.dwSize = sizeof(ddsd);
@@ -23,7 +23,7 @@ int MxDirectDraw::GetPrimaryBitDepth()
 
         direct_draw->Release();
 
-        return ddsd.ddpfPixelFormat.dwRGBBitCount;
+        return static_cast<int>(ddsd.ddpfPixelFormat.dwRGBBitCount);
     }
 
     return 0;
@@ -31,14 +31,14 @@ int MxDirectDraw::GetPrimaryBitDepth()
 
 int MxDirectDraw::Pause(int)
 {
-    FIXME("Stub");
+    ALERT("Stub")
 
     return 0;
 }
 
 int MxDirectDraw::FlipToGDISurface()
 {
-    FIXME("Stub");
+    ALERT("Stub")
 
     return 0;
 }

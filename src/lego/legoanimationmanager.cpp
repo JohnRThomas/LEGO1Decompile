@@ -4,15 +4,15 @@
 
 LegoAnimationManager::LegoAnimationManager()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 void LegoAnimationManager::configureLegoAnimationManager(int)
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 void LegoAnimationManager::configureLegoWorldPresenter(int)
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }

@@ -11,6 +11,10 @@ class MxOmniCreateParam {
 public:
     __declspec(dllexport) MxOmniCreateParam(const char *, HWND__* handle, MxVideoParam &, MxOmniCreateFlags);
 
+    MxOmniCreateFlags& flags();
+
+    const MxVideoParam& video_params();
+
 private:
     // FIXME: vtable? this class must have virtual functions...
     int unknown0_;

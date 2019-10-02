@@ -4,15 +4,15 @@
 
 LegoROI::LegoROI()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 void LegoROI::configureLegoROI(int)
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 void LegoROI::SetDisplayBB(int)
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }

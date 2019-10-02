@@ -16,23 +16,37 @@ public:
 
     __declspec(dllexport) void SetDeviceName(char*);
 
+    const int& x() const;
+    const int& y() const;
+    const int& width() const;
+    const int& height() const;
+
 private:
+    // +0
     int x_;
+
+    // +4
     int y_;
+
+    // +8
     int width_;
+
+    // +C
     int height_;
 
+    // +10
     MxPalette* palette_;
 
-    // FIXME: Unknown variables
-    int unknown1_;
+    // +14
+    unsigned long unknown1_;
 
-    // FIXME: Should be MxVideoParamFlags rather than int
+    // +18
     MxVideoParamFlags flags_;
 
-    // FIXME: Unknown variables
+    // +1C
     int unknown2_;
 
+    // +20
     char* device_name_;
 };
 

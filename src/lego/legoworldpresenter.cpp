@@ -4,10 +4,10 @@
 
 LegoWorldPresenter::LegoWorldPresenter()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 void LegoWorldPresenter::configureLegoWorldPresenter(int)
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }

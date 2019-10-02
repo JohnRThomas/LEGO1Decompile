@@ -4,5 +4,5 @@
 
 MxTickleManager::MxTickleManager()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }

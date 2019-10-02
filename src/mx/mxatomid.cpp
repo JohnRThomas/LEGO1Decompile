@@ -4,17 +4,17 @@
 
 MxAtomId::MxAtomId(char const*, enum LookupMode)
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 MxAtomId::~MxAtomId()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 MxAtomId& MxAtomId::operator=(const MxAtomId &)
 {
-    FIXME("Stub");
+    ALERT("Stub");
 
     return *this;
 }

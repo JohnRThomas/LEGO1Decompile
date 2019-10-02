@@ -4,10 +4,10 @@
 
 LegoModelPresenter::LegoModelPresenter()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 void LegoModelPresenter::configureLegoModelPresenter(int)
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }

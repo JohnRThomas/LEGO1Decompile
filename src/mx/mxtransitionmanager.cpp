@@ -4,17 +4,17 @@
 
 MxTransitionManager::MxTransitionManager()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 void MxTransitionManager::SetWaitIndicator(MxVideoPresenter*)
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 MxTransitionManager* TransitionManager()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 
     return nullptr;
 }

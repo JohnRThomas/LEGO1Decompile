@@ -26,12 +26,12 @@ MxDSAction::MxDSAction()
 
 MxDSAction::~MxDSAction()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 long Start(MxDSAction*)
 {
-    FIXME("Stub");
+    ALERT("Stub");
 
     return 0;
 }

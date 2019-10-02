@@ -8,7 +8,7 @@ int MxTimer::last_time_calculated_; // FIXME: Default value?
 
 MxTimer::MxTimer()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 long MxTimer::GetRealTime()
@@ -20,7 +20,7 @@ long MxTimer::GetRealTime()
 
 MxTimer* Timer()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 
     return nullptr;
 }

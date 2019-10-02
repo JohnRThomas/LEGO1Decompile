@@ -4,21 +4,21 @@
 
 LegoInputManager::LegoInputManager()
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 void LegoInputManager::Register(MxCore*)
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 void LegoInputManager::UnRegister(MxCore*)
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }
 
 
 void LegoInputManager::QueueEvent(NotificationId, unsigned char, long, long, unsigned char)
 {
-    FIXME("Stub");
+    ALERT("Stub");
 }

@@ -5,6 +5,8 @@ class MxOmniCreateFlags {
 public:
     __declspec(dllexport) MxOmniCreateFlags();
 
+    operator unsigned short&();
+
 private:
     unsigned short flags_;
 };

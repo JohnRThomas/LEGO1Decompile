@@ -11,7 +11,6 @@ MxVideoParam::MxVideoParam() :
     height_(480),   // Height defaults to 480
     palette_(nullptr),
     unknown1_(0),
-    //flags_(0), // FIXME: How to set default value for this?
     unknown2_(0),
     device_name_(nullptr)
 {
@@ -84,4 +83,24 @@ void MxVideoParam::SetDeviceName(char* device)
     size_t device_name_len = strlen(device) + 1;
     device_name_ = new char[device_name_len];
     strcpy_s(device_name_, device_name_len, device);
+}
+
+const int &MxVideoParam::x() const
+{
+    return x_;
+}
+
+const int &MxVideoParam::y() const
+{
+    return y_;
+}
+
+const int &MxVideoParam::width() const
+{
+    return width_;
+}
+
+const int &MxVideoParam::height() const
+{
+    return height_;
 }

@@ -15,20 +15,28 @@ MxOmni* MxOmni::instance_ = nullptr;
 
 MxOmni::MxOmni()
 {
-    // FIXME: Accurate but undocumented behavior
-    unknown2_ = 0;
+    Init();
+}
+
+MxOmni::~MxOmni()
+{
+    ALERT("Stub");
+}
+
+void MxOmni::Init()
+{
     unknown3_ = 0;
     unknown4_ = 0;
     variable_table_ = nullptr;
     tickle_manager_ = nullptr;
     notification_manager_ = nullptr;
-    video_manager_ = 0;
-    sound_manager_ = 0;
+    video_manager_ = nullptr;
+    sound_manager_ = nullptr;
     unknown10_ = 0;
     unknown11_ = 0;
     unknown12_ = 0;
     unknown13_ = nullptr;
-
+    unknown14_ = 0;
     unknown15_ = 0;
 }
 

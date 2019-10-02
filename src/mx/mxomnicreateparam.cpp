@@ -12,3 +12,13 @@ MxOmniCreateParam::MxOmniCreateParam(const char* str, HWND__* handle, MxVideoPar
 
     flags_ = flags;
 }
+
+MxOmniCreateFlags &MxOmniCreateParam::flags()
+{
+    return flags_;
+}
+
+const MxVideoParam &MxOmniCreateParam::video_params()
+{
+    return video_params_;
+}
