@@ -6,10 +6,3 @@ MxTickleManager::MxTickleManager()
 {
     FIXME("Stub");
 }
-
-MxTickleManager* TickleManager()
-{
-    FIXME("Stub");
-
-    return nullptr;
-}

@@ -6,9 +6,7 @@ public:
     __declspec(dllexport) MxOmniCreateFlags();
 
 private:
-    unsigned char unknown1_;
-    
-    unsigned char unknown2_;
+    unsigned short flags_;
 };
 
 #endif // MXOMNICREATEFLAGS_H

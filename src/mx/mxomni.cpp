@@ -16,20 +16,20 @@ MxOmni* MxOmni::instance_ = nullptr;
 MxOmni::MxOmni()
 {
     // FIXME: Accurate but undocumented behavior
-    unknown2_[1] = 0;
-    unknown2_[2] = 0;
-    unknown2_[3] = 0;
-    unknown2_[4] = 0;
-    unknown2_[5] = 0;
-    unknown2_[6] = 0;
-    unknown2_[7] = 0;
-    unknown2_[8] = 0;
-    unknown2_[9] = 0;
-    unknown2_[10] = 0;
-    unknown2_[11] = 0;
-    unknown2_[12] = 0;
-
+    unknown2_ = 0;
     unknown3_ = 0;
+    unknown4_ = 0;
+    variable_table_ = nullptr;
+    tickle_manager_ = nullptr;
+    notification_manager_ = nullptr;
+    video_manager_ = 0;
+    sound_manager_ = 0;
+    unknown10_ = 0;
+    unknown11_ = 0;
+    unknown12_ = 0;
+    unknown13_ = nullptr;
+
+    unknown15_ = 0;
 }
 
 MxOmni* MxOmni::GetInstance()
@@ -73,16 +73,27 @@ void MxOmni::SetSound3D(unsigned char c)
     sound_is_3d_ = c;
 }
 
+MxVariableTable *MxOmni::GetVariableTable()
+{
+    return variable_table_;
+}
+
+MxTickleManager *MxOmni::GetTickleManager()
+{
+    return tickle_manager_;
+}
+
 void MxOmni::SetInstance(MxOmni* instance)
 {
     instance_ = instance;
 }
 
-MxOmniUnknownStruct1::MxOmniUnknownStruct1()
+MxVariableTable *VariableTable()
 {
-    string_ = "";
+    return MxOmni::GetInstance()->GetVariableTable();
 }
 
-MxOmniUnknownStruct1::~MxOmniUnknownStruct1()
+MxTickleManager* TickleManager()
 {
+    return MxOmni::GetInstance()->GetTickleManager();
 }

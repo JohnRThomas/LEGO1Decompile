@@ -22,10 +22,3 @@ void LegoInputManager::QueueEvent(NotificationId, unsigned char, long, long, uns
 {
     FIXME("Stub");
 }
-
-LegoInputManager* InputManager()
-{
-    FIXME("Stub");
-
-    return nullptr;
-}

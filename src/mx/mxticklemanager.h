@@ -6,6 +6,4 @@ public:
     __declspec(dllexport) MxTickleManager();
 };
 
-__declspec(dllexport) MxTickleManager* TickleManager();
-
 #endif // MXTICKLEMANAGER_H

@@ -18,6 +18,4 @@ public:
     __declspec(dllexport) void QueueEvent(NotificationId, unsigned char, long, long, unsigned char);
 };
 
-__declspec(dllexport) LegoInputManager* InputManager();
-
 #endif // LEGOINPUTMANAGER_H

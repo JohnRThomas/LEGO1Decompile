@@ -1,6 +1,5 @@
 #include "debug.h"
 
-#include <stdio.h>
 #include <windows.h>
 
 void FIXMEINTERNAL(const char* caller, const char* str) {
