@@ -20,13 +20,13 @@ MxOmni::MxOmni()
 
 MxOmni::~MxOmni()
 {
-    ALERT("Stub");
+    ALERT("Stub")
 }
 
 void MxOmni::Init()
 {
     unknown3_ = 0;
-    unknown4_ = 0;
+    unknown4_ = nullptr;
     variable_table_ = nullptr;
     tickle_manager_ = nullptr;
     notification_manager_ = nullptr;
@@ -38,6 +38,15 @@ void MxOmni::Init()
     unknown13_ = nullptr;
     unknown14_ = 0;
     unknown15_ = 0;
+}
+
+int MxOmni::Create()
+{
+    ALERT("Stub")
+
+    variable_table_ = new MxVariableTable();
+
+    return 0;
 }
 
 MxOmni* MxOmni::GetInstance()
@@ -91,6 +100,11 @@ MxTickleManager *MxOmni::GetTickleManager()
     return tickle_manager_;
 }
 
+MxSoundManager* MxOmni::GetSoundManager()
+{
+    return sound_manager_;
+}
+
 void MxOmni::SetInstance(MxOmni* instance)
 {
     instance_ = instance;
@@ -104,4 +118,14 @@ MxVariableTable *VariableTable()
 MxTickleManager* TickleManager()
 {
     return MxOmni::GetInstance()->GetTickleManager();
+}
+
+MxUnknownManager1::MxUnknownManager1()
+{
+    ALERT("Stub\n\nSize of MxUnknownManager1: %x", sizeof(MxUnknownManager1))
+}
+
+MxSoundManager *MSoundManager()
+{
+    return MxOmni::GetInstance()->GetSoundManager();
 }

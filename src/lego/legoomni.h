@@ -6,10 +6,128 @@
 #include "legogamestate.h"
 #include "legoinputmanager.h"
 #include "legopathboundary.h"
+#include "legosoundmanager.h"
+#include "legovideomanager.h"
 #include "mx/mxbackgroundaudiomanager.h"
 #include "mx/mxdsaction.h"
 #include "mx/mxomni.h"
 #include "mx/mxomnicreateparam.h"
+#include "mx/mxtransitionmanager.h"
+
+/**
+ * @brief The LegoUnknownManager2 class
+ *
+ * 0x14 bytes in size. Some other unknown manager. Accessible at LegoOmni+6C, alloc'd at ****3480
+ */
+class LegoUnknownManager2 {
+public:
+    LegoUnknownManager2();
+
+private:
+    char unk_[0x14];
+};
+
+/**
+ * @brief The LegoUnknownManager3 class
+ *
+ * Some other unknown manager.
+ *
+ * 0x24 bytes in size.
+ * Accessible at LegoOmni+74,
+ * alloc'd at ****3B00
+ */
+class LegoUnknownManager3 {
+public:
+    LegoUnknownManager3();
+
+private:
+    char unk_[0x24];
+};
+
+/**
+ * @brief The LegoUnknownManager4 class
+ *
+ * Some other unknown manager.
+ *
+ * 0x8 bytes in size.
+ * Accessible at LegoOmni+8C
+ * Alloc'd at ****34D8
+ */
+class LegoUnknownManager4 {
+public:
+    LegoUnknownManager4();
+
+private:
+    char unk_[0x8];
+};
+
+/**
+ * @brief The LegoUnknownManager5 class
+ *
+ * Some other unknown manager.
+ *
+ * 0x2C bytes in size.
+ * Accessible at LegoOmni+90
+ * Alloc'd at ****3500
+ */
+class LegoUnknownManager5 {
+public:
+    LegoUnknownManager5();
+
+private:
+    char unk_[0x2C];
+};
+
+/**
+ * @brief The LegoUnknownManager6 class
+ *
+ * Some other unknown manager.
+ *
+ * 0x500 bytes in size.
+ * Accessible at LegoOmni+94
+ * Alloc'd at 009F1060
+ */
+class LegoUnknownManager6 {
+public:
+    LegoUnknownManager6();
+
+private:
+    char unk_[0x500];
+};
+
+/**
+ * @brief The LegoUnknownManager7 class
+ *
+ * Some other unknown manager.
+ *
+ * 0x30 bytes in size.
+ * Accessible at LegoOmni+98
+ * Alloc'd at ****33E0
+ */
+class LegoUnknownManager7 {
+public:
+    LegoUnknownManager7();
+
+private:
+    char unk_[0x30];
+};
+
+/**
+ * @brief The LegoUnknownManager8 class
+ *
+ * Some other unknown manager.
+ *
+ * 0x18 bytes in size.
+ * Accessible at LegoOmni+78
+ * Alloc'd at ****4B58
+ */
+class LegoUnknownManager8 {
+public:
+    LegoUnknownManager8();
+
+private:
+    char unk_[0x18];
+};
 
 /**
  * @brief The LegoOmni class
@@ -21,24 +139,24 @@
 class LegoOmni : public MxOmni {
 protected:
     int unknown68_; // [esi+68]
-    int unknown6C_; // [esi+6C]
+    LegoUnknownManager2* unknown6C_; // [esi+6C]
     LegoInputManager* input_manager_; // [esi+70]
-    int unknown74_; // [esi+74]
-    int unknown78_; // [esi+78]
+    LegoUnknownManager3* unknown74_; // [esi+74]
+    LegoUnknownManager8* unknown78_; // [esi+78]
     int unknown7C_; // [esi+7C]
     unsigned char unknown80_; // [esi+80]
     int unknown84_; // [esi+84]
     int unknown88_; // [esi+88]
-    int unknown8C_; // [esi+8C]
-    int unknown90_; // [esi+90]
-    int unknown94_; // [esi+94]
-    int unknown98_; // [esi+98]
+    LegoUnknownManager4* unknown8C_; // [esi+8C]
+    LegoUnknownManager5* unknown90_; // [esi+90]
+    LegoUnknownManager6* unknown94_; // [esi+94]
+    LegoUnknownManager7* unknown98_; // [esi+98]
     LegoGameState* game_state_; // [esi+9C]
 
     MxDSAction action_;
 
     MxBackgroundAudioManager* background_audio_manager_; // [esi+134]
-    int unknown138_; // [esi+138]
+    MxTransitionManager* transition_manager_; // [esi+138]
     unsigned char unknown13C_; // [esi+13C]
 
     __declspec(dllexport) LegoOmni();
@@ -64,6 +182,8 @@ public:
 
     LegoInputManager* GetInputManager();
 
+    LegoVideoManager* GetVideoManager();
+
 private:
 
 };
@@ -71,5 +191,9 @@ private:
 __declspec(dllexport) LegoOmni* Lego();
 
 __declspec(dllexport) LegoInputManager* InputManager();
+
+__declspec(dllexport) LegoSoundManager* SoundManager();
+
+__declspec(dllexport) LegoVideoManager* VideoManager();
 
 #endif // LEGOOMNI_H

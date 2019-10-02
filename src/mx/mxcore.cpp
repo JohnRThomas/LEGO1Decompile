@@ -16,7 +16,7 @@ MxCore::~MxCore()
 
 long MxCore::Notify(MxParam&)
 {
-    ALERT("Stub");
+    ALERT("Stub")
 
     return 0;
 }

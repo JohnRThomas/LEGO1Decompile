@@ -1,6 +1,11 @@
 #ifndef LEGOGAMESTATE_H
 #define LEGOGAMESTATE_H
 
+/**
+ * @brief Class that presumably holds the game state
+ *
+ * This class is 0x430 bytes in size
+ */
 class LegoGameState {
 public:
     __declspec(dllexport) LegoGameState();
@@ -14,6 +19,9 @@ public:
     __declspec(dllexport) void SerializePlayersInfo(short);
 
     __declspec(dllexport) void SerializeScoreHistory(short);
+
+private:
+    char unk_[0x430];
 };
 
 __declspec(dllexport) LegoGameState* GameState();

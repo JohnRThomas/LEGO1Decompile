@@ -4,17 +4,17 @@
 
 MxAtomId::MxAtomId(char const*, enum LookupMode)
 {
-    ALERT("Stub");
+    ALERT("Stub")
 }
 
 MxAtomId::~MxAtomId()
 {
-    ALERT("Stub");
+    ALERT("Stub")
 }
 
 MxAtomId& MxAtomId::operator=(const MxAtomId &)
 {
-    ALERT("Stub");
+    ALERT("Stub")
 
     return *this;
 }

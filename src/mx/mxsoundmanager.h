@@ -1,11 +1,16 @@
 #ifndef MXSOUNDMANAGER_H
 #define MXSOUNDMANAGER_H
 
-class MxSoundManager {
+#include "mxcore.h"
+
+/**
+ * @brief Game engine sound manager
+ *
+ * FIXME: Seems to have a much more complicated derivation tree than just MxCore.
+ */
+class MxSoundManager : public MxCore {
 public:
     MxSoundManager();
 };
-
-MxSoundManager* MSoundManager();
 
 #endif // MXSOUNDMANAGER_H

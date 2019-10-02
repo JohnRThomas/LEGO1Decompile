@@ -8,6 +8,11 @@ enum NotificationId
 
 };
 
+/**
+ * @brief The LegoInputManager class
+ *
+ * 0x338 bytes in size.
+ */
 class LegoInputManager {
 public:
     __declspec(dllexport) LegoInputManager();
@@ -16,6 +21,7 @@ public:
     __declspec(dllexport) void UnRegister(MxCore*);
 
     __declspec(dllexport) void QueueEvent(NotificationId, unsigned char, long, long, unsigned char);
+
 };
 
 #endif // LEGOINPUTMANAGER_H

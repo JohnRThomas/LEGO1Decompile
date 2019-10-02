@@ -1,12 +1,15 @@
 #ifndef MXVIDEOMANAGER_H
 #define MXVIDEOMANAGER_H
 
+#include "mxcore.h"
 #include "mxpalette.h"
 #include "mxrect32.h"
 
-class MxVideoManager {
+class MxVideoManager : public MxCore {
 public:
     MxVideoManager();
+
+    virtual ~MxVideoManager();
 
     void InvalidateRect(MxRect32&);
 

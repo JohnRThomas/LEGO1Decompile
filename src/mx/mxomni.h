@@ -12,6 +12,19 @@
 #include "mxvideomanager.h"
 
 /**
+ * @brief One of many unknown managers
+ *
+ * This class is a whopping 0x1C8 bytes in size, stored in MxOmni+1C, allocated at ****3CE0.
+ */
+class MxUnknownManager1 {
+public:
+    MxUnknownManager1();
+
+private:
+    char unk_[0x1C8];
+};
+
+/**
  * @brief Main game controller (base)
  *
  * This class is 0x68 bytes in size.
@@ -36,7 +49,7 @@ protected:
     DWORD unknown3_;
 
     // +1C
-    DWORD unknown4_;
+    MxUnknownManager1* unknown4_;
 
     // +20
     MxVariableTable* variable_table_;
@@ -78,6 +91,8 @@ protected:
     virtual ~MxOmni();
 
     virtual void Init();
+
+    int Create();
 public:
 
     __declspec(dllexport) static MxOmni* GetInstance();
@@ -94,6 +109,7 @@ public:
 
     MxVariableTable* GetVariableTable();
     MxTickleManager* GetTickleManager();
+    MxSoundManager* GetSoundManager();
 
 };
 
@@ -102,5 +118,7 @@ __declspec(dllexport) void SetOmniUserMessage(void(const char *, int));
 __declspec(dllexport) MxVariableTable* VariableTable();
 
 __declspec(dllexport) MxTickleManager* TickleManager();
+
+__declspec(dllexport) MxSoundManager* MSoundManager();
 
 #endif // MXOMNI_H

@@ -47,4 +47,14 @@ bool MxString::operator==(const MxString &other) const
     return (!strcmp(string_, other.string_));
 }
 
+const char &MxString::operator[](int i) const
+{
+    return string_[i];
+}
+
+MxString::operator const char *() const
+{
+    return string_;
+}
+
 

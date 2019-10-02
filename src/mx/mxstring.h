@@ -26,6 +26,10 @@ public:
 
     bool operator==(const MxString& other) const;
 
+    const char& operator[](int i) const;
+
+    operator const char*() const;
+
 private:
     char* string_;
 };

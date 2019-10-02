@@ -33,6 +33,7 @@ set(LEGO1_SRC
     src/lego/legoroi.h
     src/lego/legoroi.cpp
     src/lego/legosoundmanager.h
+    src/lego/legosoundmanager.cpp
     src/lego/legovideomanager.h
     src/lego/legovideomanager.cpp
     src/lego/legoworld.h
@@ -71,6 +72,7 @@ set(LEGO1_SRC
     src/mx/mxrect32.cpp
     src/mx/mxscheduler.h
     src/mx/mxsoundmanager.h
+    src/mx/mxsoundmanager.cpp
     src/mx/mxstreamcontroller.h
     src/mx/mxstreamer.h
     src/mx/mxstreamer.cpp
@@ -83,9 +85,11 @@ set(LEGO1_SRC
     src/mx/mxtransitionmanager.h
     src/mx/mxtransitionmanager.cpp
     src/mx/mxvariable.h
+    src/mx/mxvariable.cpp
     src/mx/mxvariabletable.h
     src/mx/mxvariabletable.cpp
     src/mx/mxvideomanager.h
+    src/mx/mxvideomanager.cpp
     src/mx/mxvideoparamflags.h
     src/mx/mxvideoparamflags.cpp
     src/mx/mxvideoparam.h
