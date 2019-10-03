@@ -5,6 +5,11 @@
 #include "mxrect32.h"
 #include "mxvideoparamflags.h"
 
+/**
+ * @brief The MxVideoParam class
+ *
+ * SEEMS to be 0x24 bytes in size
+ */
 class MxVideoParam {
 public:
     __declspec(dllexport) MxVideoParam();
@@ -15,6 +20,7 @@ public:
     __declspec(dllexport) MxVideoParam& operator=(const MxVideoParam&);
 
     __declspec(dllexport) void SetDeviceName(char*);
+    void SetPalette(MxPalette* palette);
 
     const int& x() const;
     const int& y() const;

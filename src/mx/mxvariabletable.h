@@ -26,15 +26,15 @@ private:
      */
     class TableRef {
     public:
-        MxVariable* unk0_;
-        unsigned int unk4_;
+        MxVariable* variable_;
+        unsigned int code_;
         int unk8_;
         TableRef** parent_;
     };
 
     unsigned int AddLetterCodesInKey(MxVariable* v);
 
-    int unk8_;
+    int entry_count_;
 
     int unkC_;
 

@@ -4,5 +4,11 @@
 
 MxSoundManager::MxSoundManager()
 {
-    ALERT("Stub")
+    Init();
+}
+
+void MxSoundManager::Init()
+{
+    unk30_ = 0;
+    unk34_ = 0;
 }

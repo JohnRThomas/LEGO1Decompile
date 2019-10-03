@@ -8,22 +8,27 @@ MxString::MxString()
 {
     string_ = new char[1];
     string_[0] = 0;
+    length_ = 0;
 }
 
 MxString::MxString(const char *s)
 {
-    unsigned int str_length = strlen(s)+1;
-    string_ = new char[str_length];
-    strcpy_s(string_, str_length, s);
+    length_ = static_cast<unsigned short>(strlen(s));
+
+    unsigned int array_length = length_+1;
+    string_ = new char[array_length];
+    strcpy_s(string_, array_length, s);
 }
 
-MxString::MxString(const MxString& s)
+MxString::MxString(const MxString& other)
 {
     delete [] string_;
 
-    unsigned int str_length = strlen(s.string_)+1;
-    string_ = new char[str_length];
-    strcpy_s(string_, str_length, s.string_);
+    length_ = other.length_;
+
+    unsigned int array_length = length_+1;
+    string_ = new char[array_length];
+    strcpy_s(string_, array_length, other.string_);
 }
 
 MxString::~MxString()
@@ -35,9 +40,11 @@ const MxString& MxString::operator=(const char* s)
 {
     delete [] string_;
 
-    unsigned int str_length = strlen(s)+1;
-    string_ = new char[str_length];
-    strcpy_s(string_, str_length, s);
+    length_ = static_cast<unsigned short>(strlen(s));
+
+    unsigned int array_length = length_+1;
+    string_ = new char[array_length];
+    strcpy_s(string_, array_length, s);
 
     return *this;
 }

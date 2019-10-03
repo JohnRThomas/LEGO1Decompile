@@ -3,14 +3,12 @@
 
 #include "mxcore.h"
 
-// This class is 0xC bytes in size
-
 /**
  * @brief String type abstract
  *
  * A wrapper around char* that handles memory de/allocation.
  *
- * This class is 0xC bytes in size.
+ * This class is 0x10 bytes in size.
  */
 class MxString : public MxCore {
 public:
@@ -32,6 +30,8 @@ public:
 
 private:
     char* string_;
+
+    unsigned short length_;
 };
 
 #endif // MXSTRING_H

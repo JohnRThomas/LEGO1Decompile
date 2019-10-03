@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <windows.h>
 
-#define REDIRECT_ALERTS_TO_CONSOLE
+//#define REDIRECT_ALERTS_TO_CONSOLE
 
 #ifdef REDIRECT_ALERTS_TO_CONSOLE
 #define ALERT(x, ...)   { \

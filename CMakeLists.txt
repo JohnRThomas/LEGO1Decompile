@@ -25,6 +25,8 @@ set(LEGO1_SRC
     src/lego/legomodelpresenter.h
     src/lego/legomodelpresenter.cpp
     src/lego/legonavcontroller.h
+    src/lego/legoobjectfactory.h
+    src/lego/legoobjectfactory.cpp
     src/lego/legoomni.h
     src/lego/legoomni.cpp
     src/lego/legopartpresenter.h
@@ -32,6 +34,8 @@ set(LEGO1_SRC
     src/lego/legopathboundary.h
     src/lego/legoroi.h
     src/lego/legoroi.cpp
+    src/lego/legoscripts.h
+    src/lego/legoscripts.cpp
     src/lego/legosoundmanager.h
     src/lego/legosoundmanager.cpp
     src/lego/legovideomanager.h
@@ -39,8 +43,12 @@ set(LEGO1_SRC
     src/lego/legoworld.h
     src/lego/legoworldpresenter.h
     src/lego/legoworldpresenter.cpp
+    src/mx/mxatom.h
+    src/mx/mxatom.cpp
     src/mx/mxatomid.h
     src/mx/mxatomid.cpp
+    src/mx/mxatommanager.h
+    src/mx/mxatommanager.cpp
     src/mx/mxbackgroundaudiomanager.h
     src/mx/mxbackgroundaudiomanager.cpp
     src/mx/mxbitmap.h
@@ -58,7 +66,12 @@ set(LEGO1_SRC
     src/mx/mxeventmanager.h
     src/mx/mxioinfo.h
     src/mx/mxmusicmanager.h
+    src/mx/mxmidipresenter.h
+    src/mx/mxmidipresenter.cpp
     src/mx/mxnotificationmanager.h
+    src/mx/mxnotificationmanager.cpp
+    src/mx/mxobjectfactory.h
+    src/mx/mxobjectfactory.cpp
     src/mx/mxomnicreateflags.h
     src/mx/mxomnicreateflags.cpp
     src/mx/mxomnicreateparam.h
@@ -68,6 +81,7 @@ set(LEGO1_SRC
     src/mx/mxpalette.h
     src/mx/mxparam.h
     src/mx/mxpresenter.h
+    src/mx/mxpresenter.cpp
     src/mx/mxrect32.h
     src/mx/mxrect32.cpp
     src/mx/mxscheduler.h
@@ -101,6 +115,20 @@ set(LEGO1_SRC
     src/other/viewmanager.h
     src/other/viewmanager.cpp
     src/other/viewroi.h
+    src/unknown/mxunknownmanager4.h
+    src/unknown/mxunknownmanager4.cpp
+    src/unknown/mxunknownmanager5.h
+    src/unknown/mxunknownmanager5.cpp
+    src/unknown/mxunknownmanager6.h
+    src/unknown/mxunknownmanager6.cpp
+    src/unknown/legounknownmanager2.h
+    src/unknown/legounknownmanager2.cpp
+    src/unknown/legounknownmanager3.h
+    src/unknown/legounknownmanager3.cpp
+    src/unknown/legounknownmanager4.h
+    src/unknown/legounknownmanager4.cpp
+    src/unknown/legounknownmanager8.h
+    src/unknown/legounknownmanager8.cpp
 )
 
 set(LEGO1_TARGET "lego1")

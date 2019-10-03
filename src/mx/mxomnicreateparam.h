@@ -1,19 +1,26 @@
 #ifndef MXOMNICREATEPARAM_H
 #define MXOMNICREATEPARAM_H
 
-#include <windows.h>
+#include <Windows.h>
 
-#include "mxomni.h"
 #include "mxomnicreateflags.h"
+#include "mxstring.h"
 #include "mxvideoparam.h"
 
+/**
+ * @brief The MxOmniCreateParam class
+ *
+ * Usually alloc at 0019FCAC
+ */
 class MxOmniCreateParam {
 public:
     __declspec(dllexport) MxOmniCreateParam(const char *, HWND__* handle, MxVideoParam &, MxOmniCreateFlags);
 
-    MxOmniCreateFlags& flags();
+    HWND__ * window_handle();
 
     const MxVideoParam& video_params();
+
+    MxOmniCreateFlags& flags();
 
 private:
     // FIXME: vtable? this class must have virtual functions...
@@ -21,9 +28,6 @@ private:
 
     // +4
     MxString unknown1_;
-
-    // +10
-    int unknown4_;
 
     // +14
     HWND__ * window_handle_;

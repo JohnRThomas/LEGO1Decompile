@@ -1,26 +1,38 @@
 #include "mxtimer.h"
 
-#include <windows.h>
-
 #include "custom/debug.h"
 
-int MxTimer::last_time_calculated_; // FIXME: Default value?
+DWORD MxTimer::last_time_calculated_ = 0;
 
-MxTimer::MxTimer()
+long MxTimer::timer_time_ = 0;
+
+MxTimer::MxTimer() :
+    running_(false)
 {
-    ALERT("Stub");
+    start_time_ = timeGetTime();
+    last_time_calculated_ = start_time_;
 }
 
 long MxTimer::GetRealTime()
 {
     last_time_calculated_ = timeGetTime();
 
-    return last_time_calculated_ - start_time_;
+    return static_cast<long>(last_time_calculated_ - start_time_);
 }
 
-MxTimer* Timer()
+void MxTimer::sub_100AE160()
 {
-    ALERT("Stub");
+    timer_time_ = GetRealTime();
+    running_ = true;
+}
 
-    return nullptr;
+void MxTimer::sub_100AE180()
+{
+    long now = GetRealTime();
+
+    now -= timer_time_;
+    now -= 0x5;
+    start_time_ += static_cast<DWORD>(now);
+
+    running_ = false;
 }

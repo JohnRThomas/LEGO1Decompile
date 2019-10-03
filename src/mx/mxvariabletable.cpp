@@ -5,9 +5,7 @@
 
 MxVariableTable::MxVariableTable()
 {
-    ALERT("Stub\n\nSize: %x", sizeof(MxVariableTable))
-
-    unk8_ = 0;
+    entry_count_ = 0;
     // unkC_ = vtable something?
     table_size_ = 80;
     table_ = new TableRef*[table_size_];
@@ -41,14 +39,14 @@ void MxVariableTable::SetVariable(MxVariable* variable)
 
     if (table_[table_index] == nullptr) {
         if (unk1C_ == 0) {
-            TableRef* unksc = new TableRef();
+            TableRef* ref = new TableRef();
 
-            unksc->unk0_ = variable;
-            unksc->unk4_ = letter_code;
-            unksc->unk8_ = 0;
-            unksc->parent_ = table_;
+            ref->variable_ = variable;
+            ref->code_ = letter_code;
+            ref->unk8_ = 0;
+            ref->parent_ = table_;
 
-            unk8_++;
+            entry_count_++;
 
             // call 0x100B78E7
         } else {

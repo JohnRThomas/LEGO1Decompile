@@ -13,7 +13,9 @@ public:
     LegoSoundManager();
 
 private:
-    char unk_[0x3C];
+    int unk3C_;
+
+    int unk40_;
 };
 
 #endif // LEGOSOUNDMANAGER_H

@@ -10,7 +10,6 @@ MxVariable::MxVariable(const char *key, const char *value) :
 
 MxVariable::~MxVariable()
 {
-    ALERT("Stub")
 }
 
 const MxString &MxVariable::key()

@@ -2,7 +2,8 @@
 
 #include "custom/debug.h"
 
-LegoSoundManager::LegoSoundManager()
+LegoSoundManager::LegoSoundManager() :
+    unk3C_(0),
+    unk40_(0)
 {
-    ALERT("Stub\n\nSize of LegoSoundManager: %x", sizeof(LegoSoundManager))
 }

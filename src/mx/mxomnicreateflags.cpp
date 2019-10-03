@@ -4,23 +4,17 @@
 
 MxOmniCreateFlags::MxOmniCreateFlags()
 {
-    // FIXME: No idea what this enum is, but it appears to be hardcoded behavior nonetheless
-    flags_ |= 0x1;
-    flags_ |= 0x2;
-    flags_ |= 0x4;
-    flags_ |= 0x8;
-    flags_ |= 0x10;
-    flags_ |= 0x20;
-    flags_ |= 0x40;
-    flags_ |= 0x80;
-    flags_ |= 0x200;
-    flags_ |= 0x400;
+    flags_ |= CreateObjectFactory;
+    flags_ |= CreateVariableTable;
+    flags_ |= CreateTickleManager;
+    flags_ |= CreateNotificationManager;
+    flags_ |= CreateVideoManager;
+    flags_ |= CreateSoundManager;
+    flags_ |= CreateMxUnknownManager3;
+    flags_ |= CreateMxUnknownManager4;
+    flags_ |= CreateTimer;
+    flags_ |= CreateStreamer;
 }
-
-/*void MxOmniCreateFlags::operator|=(const unsigned short &flag)
-{
-    flags_ |= flag;
-}*/
 
 MxOmniCreateFlags::operator unsigned short&()
 {

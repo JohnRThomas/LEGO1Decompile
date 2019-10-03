@@ -13,53 +13,10 @@
 #include "mx/mxomni.h"
 #include "mx/mxomnicreateparam.h"
 #include "mx/mxtransitionmanager.h"
-
-/**
- * @brief The LegoUnknownManager2 class
- *
- * 0x14 bytes in size. Some other unknown manager. Accessible at LegoOmni+6C, alloc'd at ****3480
- */
-class LegoUnknownManager2 {
-public:
-    LegoUnknownManager2();
-
-private:
-    char unk_[0x14];
-};
-
-/**
- * @brief The LegoUnknownManager3 class
- *
- * Some other unknown manager.
- *
- * 0x24 bytes in size.
- * Accessible at LegoOmni+74,
- * alloc'd at ****3B00
- */
-class LegoUnknownManager3 {
-public:
-    LegoUnknownManager3();
-
-private:
-    char unk_[0x24];
-};
-
-/**
- * @brief The LegoUnknownManager4 class
- *
- * Some other unknown manager.
- *
- * 0x8 bytes in size.
- * Accessible at LegoOmni+8C
- * Alloc'd at ****34D8
- */
-class LegoUnknownManager4 {
-public:
-    LegoUnknownManager4();
-
-private:
-    char unk_[0x8];
-};
+#include "unknown/legounknownmanager2.h"
+#include "unknown/legounknownmanager3.h"
+#include "unknown/legounknownmanager4.h"
+#include "unknown/legounknownmanager8.h"
 
 /**
  * @brief The LegoUnknownManager5 class
@@ -110,23 +67,6 @@ public:
 
 private:
     char unk_[0x30];
-};
-
-/**
- * @brief The LegoUnknownManager8 class
- *
- * Some other unknown manager.
- *
- * 0x18 bytes in size.
- * Accessible at LegoOmni+78
- * Alloc'd at ****4B58
- */
-class LegoUnknownManager8 {
-public:
-    LegoUnknownManager8();
-
-private:
-    char unk_[0x18];
 };
 
 /**
@@ -185,7 +125,6 @@ public:
     LegoVideoManager* GetVideoManager();
 
 private:
-
 };
 
 __declspec(dllexport) LegoOmni* Lego();

@@ -11,8 +11,9 @@
 class MxTickleUnknownSubclass1 {
 public:
     MxTickleUnknownSubclass1();
+    virtual ~MxTickleUnknownSubclass1();
+
 private:
-    int unk1_;
     int unk2_;
     int unk3_;
 };
@@ -26,7 +27,7 @@ private:
  */
 class MxTickleManager : public MxCore {
 public:
-    __declspec(dllexport) MxTickleManager();
+    __declspec(dllexport) MxTickleManager(unsigned char u);
     virtual ~MxTickleManager() override;
 
     virtual void unk_func1();
@@ -42,7 +43,7 @@ public:
     virtual void unk_func6();
 
 private:
-    int unknown08_; // +8
+    unsigned char unknown08_; // +8
     MxTickleUnknownSubclass1* unknown0C_; // +C
     int unknown10_; // +10
 };

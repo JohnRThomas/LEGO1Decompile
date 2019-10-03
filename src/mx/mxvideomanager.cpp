@@ -4,12 +4,22 @@
 
 MxVideoManager::MxVideoManager()
 {
-    ALERT("Stub")
+    Init();
 }
 
 MxVideoManager::~MxVideoManager()
 {
     ALERT("Stub")
+}
+
+void MxVideoManager::Init()
+{
+    unk50_ = 0;
+    unk54_ = 0;
+    unk58_ = 0;
+    unk5C_ = 0;
+    video_param_.SetPalette(nullptr);
+    unk60_ = 0;
 }
 
 void MxVideoManager::InvalidateRect(MxRect32 &)

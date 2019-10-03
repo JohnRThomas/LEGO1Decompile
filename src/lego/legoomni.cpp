@@ -1,6 +1,8 @@
 #include "legoomni.h"
 
 #include "custom/debug.h"
+#include "legoobjectfactory.h"
+#include "legoscripts.h"
 
 LegoOmni::LegoOmni()
 {
@@ -83,34 +85,43 @@ void LegoOmni::Destroy()
 
 int LegoOmni::Create(MxOmniCreateParam& param)
 {
-    ALERT("Stub\n\n")
+    ALERT("Partial Stub")
 
     critical_section_.Lock();
 
-    // FIXME: Seems like these flags are used to modify the behavior of MxOmni::Create called later on. This may help
-    //        determine their meaning.
-    param.flags() |= 0xFE;
-    param.flags() |= 0xEF;
-    param.flags() |= 0xDF;
-    param.flags() |= 0xFB;
+    // Prevent MxOmni::Create() from creating objects that we create later
+    param.flags() &= ~MxOmniCreateFlags::CreateObjectFactory;
+    param.flags() &= ~MxOmniCreateFlags::CreateVideoManager;
+    param.flags() &= ~MxOmniCreateFlags::CreateSoundManager;
+    param.flags() &= ~MxOmniCreateFlags::CreateTickleManager;
 
-    tickle_manager_ = new MxTickleManager();
+    tickle_manager_ = new MxTickleManager(0xFF);
 
-    MxOmni::Create();
+    // Likely MxTickleManager::Create()
 
-    unknown4_ = new MxUnknownManager1();
+    MxOmni::Create(param);
+
+    object_factory_ = new LegoObjectFactory();
 
     sound_manager_ = new LegoSoundManager();
 
+    // Likely LegoSoundManager::Create()
+
     video_manager_ = new LegoVideoManager();
 
+    // Likely LegoVideoManager::Create()
+
     input_manager_ = new LegoInputManager();
+
+    // Likely LegoInputManager::Create()
 
     unknown6C_ = new LegoUnknownManager2();
 
     unknown74_ = new LegoUnknownManager3();
+    unknown74_->SetUnknown4(0);
 
-    // FIXME: We skipped a LOT of asm here
+    // FIXME: This function likely doesn't belong to LegoUnknownManager3
+    LegoUnknownManager3::sub_10046C10();
 
     unknown8C_ = new LegoUnknownManager4();
 
@@ -129,7 +140,8 @@ int LegoOmni::Create(MxOmniCreateParam& param)
     variable_table_->SetVariable(new MxVariable("CURSOR", ""));
     variable_table_->SetVariable(new MxVariable("WHO_AM_I", ""));
 
-    // Call 100528E0
+    LegoScripts::Load();
+
     // Call 1001A700
     // Call 1005A5F0
 
@@ -144,10 +156,6 @@ int LegoOmni::Create(MxOmniCreateParam& param)
     // call 0x1003EF40
 
     // Run function on LegoGameState
-
-    // call 0x100598C0
-
-
 
     critical_section_.Unlock();
 
@@ -177,26 +185,6 @@ LegoSoundManager *SoundManager()
 LegoVideoManager* VideoManager()
 {
     return LegoOmni::GetInstance()->GetVideoManager();
-}
-
-LegoUnknownManager2::LegoUnknownManager2()
-{
-    ALERT("Stub\n\nSize: %x", sizeof(LegoUnknownManager2))
-}
-
-LegoUnknownManager8::LegoUnknownManager8()
-{
-    ALERT("Stub (constructor is in the asm for LegoOmni::Create())\n\nSize: %x", sizeof(LegoUnknownManager8))
-}
-
-LegoUnknownManager3::LegoUnknownManager3()
-{
-    ALERT("Stub\n\nSize: %x", sizeof(LegoUnknownManager3))
-}
-
-LegoUnknownManager4::LegoUnknownManager4()
-{
-    ALERT("Stub\n\nSize: %x", sizeof(LegoUnknownManager4))
 }
 
 LegoUnknownManager5::LegoUnknownManager5()

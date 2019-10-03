@@ -2,7 +2,8 @@
 
 #include "custom/debug.h"
 
-MxTickleManager::MxTickleManager() :
+MxTickleManager::MxTickleManager(unsigned char u) :
+    unknown08_(u),
     unknown0C_(new MxTickleUnknownSubclass1()),
     unknown10_(0)
 {
@@ -45,5 +46,8 @@ void MxTickleManager::unk_func6()
 
 MxTickleUnknownSubclass1::MxTickleUnknownSubclass1()
 {
-    ALERT("Stub")
+}
+
+MxTickleUnknownSubclass1::~MxTickleUnknownSubclass1()
+{
 }

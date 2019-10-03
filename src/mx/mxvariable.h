@@ -18,14 +18,8 @@ private:
     // +4
     MxString key_;
 
-    // +10
-    int unk10_;
-
     // +14
     MxString value_;
-
-    // +20
-    int unk20_;
 };
 
 #endif // MXVARIABLE_H

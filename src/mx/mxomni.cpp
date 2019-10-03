@@ -25,26 +25,82 @@ MxOmni::~MxOmni()
 
 void MxOmni::Init()
 {
-    unknown3_ = 0;
-    unknown4_ = nullptr;
+    window_handle_ = nullptr;
+    object_factory_ = nullptr;
     variable_table_ = nullptr;
     tickle_manager_ = nullptr;
     notification_manager_ = nullptr;
     video_manager_ = nullptr;
     sound_manager_ = nullptr;
-    unknown10_ = 0;
-    unknown11_ = 0;
-    unknown12_ = 0;
-    unknown13_ = nullptr;
-    unknown14_ = 0;
-    unknown15_ = 0;
+    unknown34_ = nullptr;
+    unknown38_ = nullptr;
+    timer_ = nullptr;
+    streamer_ = nullptr;
+    atom_manager_ = nullptr;
+    unknown64_ = 0;
 }
 
-int MxOmni::Create()
+unsigned int MxOmni::Create(MxOmniCreateParam& param)
 {
-    ALERT("Stub")
+    ALERT("Partial Stub\n\nFlags: %x", static_cast<unsigned short>(param.flags()))
 
-    variable_table_ = new MxVariableTable();
+    atom_manager_ = new MxAtomManager();
+
+    // call 0x100AE4B0
+
+    window_handle_ = param.window_handle();
+
+    if (param.flags() & MxOmniCreateFlags::CreateObjectFactory) {
+        object_factory_ = new MxObjectFactory();
+    }
+
+    if (param.flags() & MxOmniCreateFlags::CreateVariableTable) {
+        variable_table_ = new MxVariableTable();
+    }
+
+    if (param.flags() & MxOmniCreateFlags::CreateTimer) {
+        timer_ = new MxTimer();
+    }
+
+    if (param.flags() & MxOmniCreateFlags::CreateTickleManager) {
+        tickle_manager_ = new MxTickleManager(0);
+    }
+
+    if (param.flags() & MxOmniCreateFlags::CreateNotificationManager) {
+        notification_manager_ = new MxNotificationManager();
+
+        // call 100AC600(64, 0) - definitely virtual function
+    }
+
+    if (param.flags() & MxOmniCreateFlags::CreateStreamer) {
+        streamer_ = new MxStreamer();
+
+        // call function on streamer_
+    }
+
+    if (param.flags() & MxOmniCreateFlags::CreateVideoManager) {
+        video_manager_ = new MxVideoManager();
+
+        // call function on video_manager_
+    }
+
+    if (param.flags() & MxOmniCreateFlags::CreateSoundManager) {
+        sound_manager_ = new MxSoundManager();
+
+        // function on sound manager
+    }
+
+    if (param.flags() & MxOmniCreateFlags::CreateMxUnknownManager3) {
+        unknown34_ = new MxMIDIPresenter();
+
+        // function on unknown34_
+    }
+
+    if (param.flags() & MxOmniCreateFlags::CreateMxUnknownManager4) {
+        unknown38_ = new MxUnknownManager4();
+
+        // function on unknown38_(32, 0)
+    }
 
     return 0;
 }
@@ -105,6 +161,21 @@ MxSoundManager* MxOmni::GetSoundManager()
     return sound_manager_;
 }
 
+MxAtomManager *MxOmni::GetAtomManager()
+{
+    return atom_manager_;
+}
+
+MxNotificationManager *MxOmni::GetNotificationManager()
+{
+    return notification_manager_;
+}
+
+MxTimer *MxOmni::GetTimer()
+{
+    return timer_;
+}
+
 void MxOmni::SetInstance(MxOmni* instance)
 {
     instance_ = instance;
@@ -120,12 +191,22 @@ MxTickleManager* TickleManager()
     return MxOmni::GetInstance()->GetTickleManager();
 }
 
-MxUnknownManager1::MxUnknownManager1()
-{
-    ALERT("Stub\n\nSize of MxUnknownManager1: %x", sizeof(MxUnknownManager1))
-}
-
 MxSoundManager *MSoundManager()
 {
     return MxOmni::GetInstance()->GetSoundManager();
+}
+
+MxAtomManager *AtomManager()
+{
+    return MxOmni::GetInstance()->GetAtomManager();
+}
+
+MxNotificationManager *NotificationManager()
+{
+    return MxOmni::GetInstance()->GetNotificationManager();
+}
+
+MxTimer* Timer()
+{
+    return MxOmni::GetInstance()->GetTimer();
 }

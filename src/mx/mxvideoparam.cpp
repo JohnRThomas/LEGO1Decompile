@@ -85,6 +85,11 @@ void MxVideoParam::SetDeviceName(char* device)
     strcpy_s(device_name_, device_name_len, device);
 }
 
+void MxVideoParam::SetPalette(MxPalette *palette)
+{
+    palette_ = palette;
+}
+
 const int &MxVideoParam::x() const
 {
     return x_;
