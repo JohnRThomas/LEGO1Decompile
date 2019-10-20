@@ -17,31 +17,22 @@ MxAtomManager::MxAtomManager() :
     unk4_ = new MxAtomManagerUnknown2(addr_101013F0);
 }
 
-MxAtom *MxAtomManager::sub_100AD210(const char *str, LookupMode mode)
+MxAtomManagerUnknown2 *MxAtomManager::unk_mamu2()
 {
-    ALERT("Partial Stub")
-
-    MxAtom* atom = new MxAtom(str);
-
-    switch (mode) {
-    case Unk_LookupMode0:
-        AtomManager()->sub_100AD780(/* eax */);
-
-        break;
-    case Unk_LookupMode1:
-        break;
-    case Unk_LookupMode2:
-        break;
-    case Unk_LookupMode3:
-        break;
-    }
-
-    return atom;
+    return unk4_;
 }
 
-void MxAtomManager::sub_100AD780()
+MxAtomManagerUnknown2 *MxAtomManager::sub_100AD780(int unkp1)
 {
-    ALERT("Stub")
+    if (unk4_->unk4_ == addr_101013F0) {
+        return unk4_;
+    }
+
+    (void)unkp1;
+    ALERT("Partial stub")
+
+    // FIXME: This is not correct behavior
+    return nullptr;
 }
 
 MxAtomManagerUnknown2::MxAtomManagerUnknown2(MxAtomManagerUnknown1* mamu1) :

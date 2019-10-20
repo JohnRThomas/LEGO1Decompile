@@ -29,12 +29,12 @@ private:
  * @brief The MxAtomManagerUnknown2 class
  *
  * 0x14 bytes in size
- * Alloc at ****0A00
+ * Alloc at ****0AA0
  */
 class MxAtomManagerUnknown2 {
 public:
     MxAtomManagerUnknown2(MxAtomManagerUnknown1* mamu1);
-private:
+
     int unk0_;
 
     MxAtomManagerUnknown1* unk4_;
@@ -50,16 +50,16 @@ private:
  * @brief The MxAtomManager class
  *
  * 0x10 bytes in size
- * Alloc at ****0A50
+ * Alloc at ****0A70
  */
 class MxAtomManager
 {
 public:
     MxAtomManager();
 
-    MxAtom* sub_100AD210(const char* str, LookupMode mode);
+    MxAtomManagerUnknown2* unk_mamu2();
 
-    void sub_100AD780();
+    MxAtomManagerUnknown2* sub_100AD780(int unkp1);
 
 private:
     static MxAtomManagerUnknown1* addr_101013F0;

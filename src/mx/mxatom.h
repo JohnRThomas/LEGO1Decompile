@@ -12,7 +12,7 @@ enum LookupMode
 };
 
 /**
- * @brief The MxAtomSubclass1 class
+ * @brief The MxAtom class
  *
  * 0x14 bytes in size
  */
