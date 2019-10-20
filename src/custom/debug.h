@@ -2,7 +2,7 @@
 #define DEBUG_H
 
 #include <stdio.h>
-#include <windows.h>
+#include <Windows.h>
 
 //#define REDIRECT_ALERTS_TO_CONSOLE
 
