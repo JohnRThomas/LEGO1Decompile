@@ -29,7 +29,7 @@ private:
  * @brief The MxAtomManagerUnknown2 class
  *
  * 0x14 bytes in size
- * Alloc at ****0A80
+ * Alloc at ****0A00
  */
 class MxAtomManagerUnknown2 {
 public:

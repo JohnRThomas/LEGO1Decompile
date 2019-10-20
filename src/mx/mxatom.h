@@ -5,10 +5,10 @@
 
 enum LookupMode
 {
-    Unk_LookupMode0,
-    Unk_LookupMode1,
-    Unk_LookupMode2,
-    Unk_LookupMode3,
+    Unk_LookupMode0, // 0
+    Unk_LookupMode1, // 1
+    Unk_LookupMode2, // 2
+    Unk_LookupMode3, // 3
 };
 
 /**

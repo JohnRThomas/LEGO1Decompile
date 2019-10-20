@@ -74,7 +74,7 @@ private:
  *
  * The central game controller. Its members are largely "subcontrollers" handling different aspects of the game.
  *
- * It is 0x140 bytes in size.
+ * It is 0x140 bytes in size. Allocated at ****3EB0.
  */
 class LegoOmni : public MxOmni {
 protected:
