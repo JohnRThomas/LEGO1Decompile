@@ -33,13 +33,13 @@ private:
  */
 class MxAtomManagerUnknown2 {
 public:
-    MxAtomManagerUnknown2(MxAtomManagerUnknown1* mamu1);
+    MxAtomManagerUnknown2();
 
-    int unk0_;
+    MxAtomManagerUnknown2* unk0_;
 
     MxAtomManagerUnknown1* unk4_;
 
-    int unk8_;
+    MxAtomManagerUnknown2* unk8_;
 
     int unkC_;
 
@@ -55,14 +55,16 @@ public:
 class MxAtomManager
 {
 public:
+    // 100AF105
     MxAtomManager();
 
-    MxAtomManagerUnknown2* unk_mamu2();
+    MxAtomManagerUnknown2* unk4();
+    const int &unk8();
 
-    MxAtomManagerUnknown2* sub_100AD780(int unkp1);
+    MxAtomManagerUnknown2* sub_100AD780(MxAtom **unkp1);
 
-private:
     static MxAtomManagerUnknown1* addr_101013F0;
+private:
 
     unsigned short unk0_;
 

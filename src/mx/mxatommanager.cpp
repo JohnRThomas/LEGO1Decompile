@@ -14,15 +14,26 @@ MxAtomManager::MxAtomManager() :
         addr_101013F0 = new MxAtomManagerUnknown1();
     }
 
-    unk4_ = new MxAtomManagerUnknown2(addr_101013F0);
+    MxAtomManagerUnknown2* eax_1 = new MxAtomManagerUnknown2();
+    eax_1->unk4_ = addr_101013F0;
+    eax_1->unk10_ = 0;
+    unk4_ = eax_1;
+
+    unk4()->unk0_ = unk4();
+    unk4()->unk8_ = unk4();
 }
 
-MxAtomManagerUnknown2 *MxAtomManager::unk_mamu2()
+MxAtomManagerUnknown2 *MxAtomManager::unk4()
 {
     return unk4_;
 }
 
-MxAtomManagerUnknown2 *MxAtomManager::sub_100AD780(int unkp1)
+const int& MxAtomManager::unk8()
+{
+    return unk8_;
+}
+
+MxAtomManagerUnknown2 *MxAtomManager::sub_100AD780(MxAtom **unkp1)
 {
     if (unk4_->unk4_ == addr_101013F0) {
         return unk4_;
@@ -35,9 +46,7 @@ MxAtomManagerUnknown2 *MxAtomManager::sub_100AD780(int unkp1)
     return nullptr;
 }
 
-MxAtomManagerUnknown2::MxAtomManagerUnknown2(MxAtomManagerUnknown1* mamu1) :
-    unk4_(mamu1),
-    unk10_(0)
+MxAtomManagerUnknown2::MxAtomManagerUnknown2()
 {
 }
 
