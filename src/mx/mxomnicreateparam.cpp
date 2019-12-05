@@ -18,6 +18,11 @@ HWND__ *MxOmniCreateParam::window_handle()
     return window_handle_;
 }
 
+const MxString &MxOmniCreateParam::unknown1()
+{
+    return unknown1_;
+}
+
 MxOmniCreateFlags &MxOmniCreateParam::flags()
 {
     return flags_;

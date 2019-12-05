@@ -36,6 +36,19 @@ MxString::~MxString()
     delete [] string_;
 }
 
+const MxString &MxString::operator=(const MxString &s)
+{
+    delete [] string_;
+
+    length_ = s.length_;
+
+    unsigned int array_length = length_+1;
+    string_ = new char[array_length];
+    strcpy_s(string_, array_length, s.string_);
+
+    return *this;
+}
+
 const MxString& MxString::operator=(const char* s)
 {
     delete [] string_;

@@ -109,3 +109,8 @@ const int &MxVideoParam::height() const
 {
     return height_;
 }
+
+const char *MxVideoParam::device_name() const
+{
+    return device_name_;
+}

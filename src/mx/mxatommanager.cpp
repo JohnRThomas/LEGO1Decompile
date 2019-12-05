@@ -3,7 +3,7 @@
 #include "custom/debug.h"
 #include "mxomni.h"
 
-MxAtomManagerUnknown1* MxAtomManager::addr_101013F0 = nullptr;
+MxAtomItem* MxAtomManager::addr_101013F0 = nullptr;
 
 MxAtomManager::MxAtomManager() :
     unk0_(0),
@@ -11,19 +11,15 @@ MxAtomManager::MxAtomManager() :
     unkC_(0)
 {
     if (addr_101013F0 == nullptr) {
-        addr_101013F0 = new MxAtomManagerUnknown1();
+        addr_101013F0 = new MxAtomItem(nullptr, true);
     }
 
-    MxAtomManagerUnknown1* eax_1 = new MxAtomManagerUnknown1();
-    eax_1->unk4_ = addr_101013F0;
-    eax_1->unk10_ = 0;
-    unk4_ = eax_1;
-
-    unk4()->unk0_ = unk4();
-    unk4()->unk8_ = unk4();
+    unk4_ = new MxAtomItem(addr_101013F0, false);
+    unk4_->set_unk0(unk4_);
+    unk4_->set_unk8(unk4_);
 }
 
-MxAtomManagerUnknown1 *MxAtomManager::unk4()
+MxAtomItem *MxAtomManager::unk4()
 {
     return unk4_;
 }
@@ -33,35 +29,62 @@ const int& MxAtomManager::unk8()
     return unk8_;
 }
 
-MxAtomManagerUnknown1 *MxAtomManager::sub_100AD780(MxAtom *atom)
+MxAtomItem *MxAtomManager::sub_100AD780(MxAtom *atom)
 {
-    MxAtomManagerUnknown1* esi_1 = unk4_->unk4_;
-    MxAtomManagerUnknown1* ret = unk4_;
+    MxAtomItem* esi_1 = unk4_->parent();
+    MxAtomItem* ret = unk4_;
 
     while (esi_1 != addr_101013F0) {
-        MxAtom* ecx_1 = esi_1->unkC_;
+        MxAtom* ecx_1 = esi_1->unkC();
 
         if (ecx_1->string() == atom->string()) {
             ret = esi_1;
-            esi_1 = esi_1->unk0_;
+            esi_1 = esi_1->unk0();
         } else {
-            esi_1 = esi_1->unk8_;
+            esi_1 = esi_1->unk8();
         }
     }
 
-    // FIXME: This is not correct behavior
     return ret;
 }
 
-void MxAtomManager::sub_100AD4D0(int*, MxAtomManagerUnknown1 *, MxAtomManagerUnknown1 *, MxAtom **)
+void MxAtomManager::sub_100AD4D0(int*, MxAtomItem *, MxAtomItem *, MxAtom **)
 {
     ALERT("Stub")
 }
 
-MxAtomManagerUnknown1::MxAtomManagerUnknown1() :
+MxAtomItem::MxAtomItem(MxAtomItem *parent, bool root) :
     unk0_(nullptr),
-    unk4_(nullptr),
+    parent_(parent),
     unk8_(nullptr),
-    unk10_(1)
+    root_(root)
 {
+}
+
+void MxAtomItem::sub_100AD480()
+{
+    if (!unk0()->root_ && unk0()->parent()->parent() == unk0()) {
+        unk0_ = unk0()->unk8();
+    } else if (unk0()->unk0() == MxAtomManager::addr_101013F0) {
+        MxAtomItem* edx = unk0()->parent();
+
+        if (edx->unk0() == unk0()) {
+            MxAtomItem* eax;
+            do {
+                unk0_ = edx;
+                eax = edx;
+                edx = edx->parent();
+            } while (edx->unk0() == eax);
+        }
+
+        unk0_ = edx;
+    } else {
+        MxAtomItem* edx = unk0()->unk0();
+
+        while (edx->unk8() != MxAtomManager::addr_101013F0) {
+            edx = edx->unk8();
+        }
+
+        unk0_ = edx;
+    }
 }

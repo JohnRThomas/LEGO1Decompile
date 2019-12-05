@@ -6,8 +6,6 @@ int MxCore::core_count_ = 0;
 
 MxCore::MxCore()
 {
-    ALERT("Size: %x", sizeof(MxCore))
-
     id_ = core_count_;
     core_count_++;
 }

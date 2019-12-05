@@ -18,6 +18,8 @@ public:
 
     HWND__ * window_handle();
 
+    const MxString& unknown1();
+
     const MxVideoParam& video_params();
 
     MxOmniCreateFlags& flags();

@@ -22,6 +22,8 @@ public:
 
     __declspec(dllexport) const MxString& operator=(const char* s);
 
+    const MxString& operator=(const MxString& s);
+
     bool operator==(const MxString& other) const;
 
     const char& operator[](int i) const;

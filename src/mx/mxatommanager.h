@@ -6,27 +6,45 @@
 /**
  * @brief The MxAtomManagerUnknown1 class
  *
+ * Might be some kind of LinkedList item?
+ *
  * 0x14 bytes in size
  * Alloc at ****0A68
  */
-class MxAtomManagerUnknown1 {
+class MxAtomItem {
 public:
-    MxAtomManagerUnknown1();
+    MxAtomItem(MxAtomItem* parent, bool root);
 
-    MxAtomManagerUnknown1* unk0_;
+    MxAtomItem* unk0(){return unk0_;}
+    void set_unk0(MxAtomItem* item){unk0_ = item;}
 
-    MxAtomManagerUnknown1* unk4_;
+    MxAtomItem* parent(){return parent_;}
 
-    MxAtomManagerUnknown1* unk8_;
+    MxAtomItem* unk8(){return unk8_;}
+    void set_unk8(MxAtomItem* item){unk8_ = item;}
 
-    // FIXME: Not confident
+    MxAtom* unkC(){return unkC_;}
+
+    bool root(){return root_;}
+
+    void sub_100AD480();
+
+private:
+    MxAtomItem* unk0_;
+
+    MxAtomItem* parent_;
+
+    MxAtomItem* unk8_;
+
     MxAtom* unkC_;
 
-    int unk10_;
+    bool root_;
 };
 
 /**
  * @brief The MxAtomManager class
+ *
+ * Likely not its real name.
  *
  * 0x10 bytes in size
  * Alloc at ****0A70
@@ -37,19 +55,19 @@ public:
     // 100AF105
     MxAtomManager();
 
-    MxAtomManagerUnknown1* unk4();
+    MxAtomItem* unk4();
     const int &unk8();
 
-    MxAtomManagerUnknown1* sub_100AD780(MxAtom *atom);
+    MxAtomItem* sub_100AD780(MxAtom *atom);
 
-    void sub_100AD4D0(int *unkp1, MxAtomManagerUnknown1*, MxAtomManagerUnknown1*, MxAtom**);
+    void sub_100AD4D0(int *unkp1, MxAtomItem*, MxAtomItem*, MxAtom**);
 
-    static MxAtomManagerUnknown1* addr_101013F0;
+    static MxAtomItem* addr_101013F0;
 private:
 
     unsigned short unk0_;
 
-    MxAtomManagerUnknown1* unk4_;
+    MxAtomItem* unk4_;
 
     int unk8_;
 

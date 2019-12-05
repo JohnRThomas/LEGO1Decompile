@@ -27,6 +27,8 @@ public:
     const int& width() const;
     const int& height() const;
 
+    const char* device_name() const;
+
 private:
     // +0
     int x_;

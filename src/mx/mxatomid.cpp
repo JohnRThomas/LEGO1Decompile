@@ -57,55 +57,72 @@ MxAtom *MxAtomId::sub_100AD210(const char *str, LookupMode mode)
 
     if (mode == Unk_LookupMode1 || mode == Unk_LookupMode3) {
         // Call 100AE4A0
+        ALERT("Stub")
     } else if (mode == Unk_LookupMode2) {
         // Call MxString operator ==
+        ALERT("Stub")
     }
 
-    MxAtomManagerUnknown1* ebp_18 = AtomManager()->sub_100AD780(ebp_14);
+    MxAtomItem* ebp_18 = AtomManager()->sub_100AD780(ebp_14);
 
-    // 100AD2B6
-    if (ebp_18 != AtomManager()->unk4()) {
-        // 100AD2BB
+    MxAtomItem* ebp_10;
+
+    if (ebp_18 != AtomManager()->unk4() // 100AD2B6
+        || ebp_18->unkC()->string() != ebp_14->string()) { // 100AD2BB
+        ebp_10 = AtomManager()->unk4();
+    } else {
+        ebp_10 = ebp_18->unk0();
     }
-
-    // 100AD2F3
-    MxAtomManagerUnknown1* ebp_10 = AtomManager()->unk4();
 
     // 100AD309
-    if (ebp_10 != AtomManager()->unk4()) {
-
-    }
-
-    // 100AD345
-    MxAtomManagerUnknown1* edi_1 = AtomManager()->unk4();
-    bool eax_1 = true;
-    if (edi_1->unk4_ != MxAtomManager::addr_101013F0) {
-
-    }
-
-    int ebp_20, ebp_28;
-
-    // 100AD3B0
-    if (AtomManager()->unk8() != 0) {
-        AtomManager()->sub_100AD4D0(&ebp_20, edi_1->unk4_, edi_1, &ebp_14);
+    if (ebp_10 != AtomManager()->unk4() && ebp_14 != nullptr) {
+        delete ebp_14;
+        ebp_14 = ebp_10->unkC();
     } else {
-        // 100AD3C1
-        ebp_10 = edi_1;
+        // 100AD345
+        MxAtomItem* edi_1 = AtomManager()->unk4();
+        MxAtomItem* esi_1 = edi_1->parent();
 
-        // 100AD3C4
-        if (eax_1) {
-            if (AtomManager()->unk4()->unk0_ == edi_1) {
-                AtomManager()->sub_100AD4D0(&ebp_28, edi_1->unk4_, edi_1, &ebp_14);
+        // FIXME: Unsure if this codepath is accurate
+        bool eax_1 = true;
+
+        while (esi_1 != MxAtomManager::addr_101013F0) {
+            edi_1 = esi_1;
+
+            if (ebp_14->string() != esi_1->unkC()->string()) {
+                esi_1 = esi_1->unk8();
+                eax_1 = false;
             } else {
-                // Call 100AD480
+                esi_1 = esi_1->unk0();
+                eax_1 = true;
             }
         }
+
+        int ebp_20, ebp_28;
+
+        // 100AD3B0
+        if (AtomManager()->unk8() == 0) {
+
+            // 100AD3C1
+            ebp_10 = edi_1;
+
+            // 100AD3C4
+            if (eax_1) {
+                if (AtomManager()->unk4()->unk0() == edi_1) {
+                    AtomManager()->sub_100AD4D0(&ebp_28, esi_1, edi_1, &ebp_14);
+                } else {
+                    ebp_10->sub_100AD480();
+                }
+            }
+
+            if (ebp_10->unkC()->string() != ebp_14->string()) {
+                AtomManager()->sub_100AD4D0(&ebp_20, esi_1, edi_1, &ebp_14);
+            }
+
+        } else {
+            AtomManager()->sub_100AD4D0(&ebp_20, esi_1, edi_1, &ebp_14);
+        }
     }
-
-    // 100AD424
-    //AtomManager()->sub_100AD4D0();
-
-    // Call 100AD46A
 
     return ebp_14;
 }

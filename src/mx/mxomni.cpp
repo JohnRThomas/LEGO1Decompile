@@ -42,11 +42,11 @@ void MxOmni::Init()
 
 unsigned int MxOmni::Create(MxOmniCreateParam& param)
 {
-    ALERT("Partial Stub\n\nFlags: %x", static_cast<unsigned short>(param.flags()))
+    ALERT("Partial Stub")
 
     atom_manager_ = new MxAtomManager();
 
-    // call 0x100AE4B0
+    unknown8_ = param.unknown1();
 
     window_handle_ = param.window_handle();
 

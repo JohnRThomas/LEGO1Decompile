@@ -7,14 +7,38 @@
 class MxStreamer;
 
 /**
- * @brief The MxNotificationManagerUnknown class
+ * @brief The MxNotificationManagerUnknown1 class
  *
  * 0xC bytes in size
  */
-class MxNotificationManagerUnknown {
+class MxNotificationManagerUnknown1 {
 public:
     int unk0_;
     int unk4_;
+    int unk8_;
+};
+
+/**
+ * @brief The MxNotificationManagerUnknown3 class
+ *
+ * 0xC bytes in size
+ */
+class MxNotificationManagerUnknown3 {
+public:
+    MxNotificationManagerUnknown3* unk0_;
+    MxNotificationManagerUnknown3* unk4_;
+    int unk8_;
+};
+
+/**
+ * @brief The MxNotificationManagerUnknown2 class
+ *
+ * 0xC bytes in size
+ */
+class MxNotificationManagerUnknown2 {
+public:
+    unsigned char unk0_;
+    MxNotificationManagerUnknown3* unk4_;
     int unk8_;
 };
 
@@ -27,17 +51,19 @@ class MxNotificationManager : public MxCore {
 public:
     MxNotificationManager();
 
+    void sub_100AC600(int unkp1, int unkp2);
+
     void sub_100ACD20(MxStreamer* streamer);
 
 private:
-    int unk8_;
+    MxNotificationManagerUnknown2* unk8_;
     int unkC_;
 
     MxCriticalSection critical_section_;
 
     int unk2C_;
     unsigned char unk30_;
-    MxNotificationManagerUnknown* unk34_;
+    MxNotificationManagerUnknown1* unk34_;
     int unk38_;
     unsigned char unk3C_;
 };

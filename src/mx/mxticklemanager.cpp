@@ -44,6 +44,11 @@ void MxTickleManager::unk_func6()
     ALERT("Stub")
 }
 
+void MxTickleManager::sub_100BDE80(MxNotificationManager *, int)
+{
+    ALERT("Stub")
+}
+
 MxTickleUnknownSubclass1::MxTickleUnknownSubclass1()
 {
 }

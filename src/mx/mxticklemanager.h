@@ -2,6 +2,7 @@
 #define MXTICKLEMANAGER_H
 
 #include "mxcore.h"
+#include "mxnotificationmanager.h"
 
 /**
  * @brief Unknown class that's a subclass of MxTickleManager
@@ -41,6 +42,8 @@ public:
     virtual void unk_func5();
 
     virtual void unk_func6();
+
+    void sub_100BDE80(MxNotificationManager*, int);
 
 private:
     unsigned char unknown08_; // +8
