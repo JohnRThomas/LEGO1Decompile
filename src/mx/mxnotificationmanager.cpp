@@ -41,8 +41,10 @@ void MxNotificationManager::sub_100ACD20(MxStreamer *streamer)
 {
     critical_section_.Lock();
 
-    (void)streamer;
-    ALERT("Stub")
+    int ebp_4 = 0;
+
+    MxNotificationManagerUnknown1* ebp_14 = unk34_;
+
 
     critical_section_.Unlock();
 }
