@@ -6,9 +6,7 @@ BOOL MxCriticalSection::do_mutex_ = FALSE;
 
 MxCriticalSection::MxCriticalSection()
 {
-  ALERT("MxCriticalSection::MxCriticalSection()", "Stub");
-  if (do_mutex_)
-  {
+  if (do_mutex_) {
     mutex_ = CreateMutexA(NULL, 0, NULL);
   } else {
     InitializeCriticalSection(&critical_section_);
