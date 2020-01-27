@@ -1,6 +1,6 @@
 #include "legoscripts.h"
 
-#include "custom/debug.h"S
+#include "custom/debug.h"
 
 MxAtomId* LegoScripts::script_copter_;
 MxAtomId* LegoScripts::script_dunecar_;
