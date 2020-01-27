@@ -15,7 +15,6 @@ MxOmni* MxOmni::instance_ = NULL;
 
 MxOmni::MxOmni()
 {
-  ALERT("MxOmni::MxOmni()", "Stub");
   Init();
 }
 
