@@ -25,7 +25,6 @@ MxOmni::~MxOmni()
 
 void MxOmni::Init()
 {
-  ALERT("void MxOmni::Init()", "Stub");
   window_handle_ = NULL;
   object_factory_ = NULL;
   variable_table_ = NULL;
