@@ -4,6 +4,8 @@
 
 #include "custom/debug.h"
 
+DWORD MxDirectDraw::dd_surface_flags_;
+
 MxDirectDraw::MxDirectDraw()
 {
   ALERT("MxDirectDraw::MxDirectDraw()", "Stub");
@@ -11,9 +13,12 @@ MxDirectDraw::MxDirectDraw()
 
 int MxDirectDraw::GetPrimaryBitDepth()
 {
-  ALERT("int MxDirectDraw::GetPrimaryBitDepth()", "Stub");
+  // Perfect
+
   IDirectDraw* direct_draw;
   DDSURFACEDESC ddsd;
+
+  int bit_depth = 8;
 
   if (!DirectDrawCreate(NULL, &direct_draw, NULL))
   {
@@ -22,12 +27,15 @@ int MxDirectDraw::GetPrimaryBitDepth()
 
     direct_draw->GetDisplayMode(&ddsd);
 
+    bit_depth = ddsd.ddpfPixelFormat.dwRGBBitCount;
+
+    dd_surface_flags_ = (ddsd.ddpfPixelFormat.dwFlags & 0x20) >> 5;
+
     direct_draw->Release();
 
-    return static_cast<int>(ddsd.ddpfPixelFormat.dwRGBBitCount);
   }
 
-  return 0;
+  return bit_depth;
 }
 
 int MxDirectDraw::Pause(int)
