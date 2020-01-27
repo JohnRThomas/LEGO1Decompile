@@ -24,8 +24,6 @@ void LegoOmni::CreateInstance()
 
 LegoOmni* LegoOmni::GetInstance()
 {
-  ALERT("LegoOmni::GetInstance", "Stub");
-
   return static_cast<LegoOmni*>(MxOmni::GetInstance());
 }
 
