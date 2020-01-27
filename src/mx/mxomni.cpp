@@ -115,9 +115,12 @@ MxOmni* MxOmni::GetInstance()
 
 void MxOmni::DestroyInstance()
 {
-  ALERT("void MxOmni::DestroyInstance()", "Stub");
-  delete instance_;
-  instance_ = NULL;
+  // Perfect
+
+  if (instance_ != 0) {
+    delete instance_;
+    instance_ = NULL;
+  }
 }
 
 const char *MxOmni::GetHD()
