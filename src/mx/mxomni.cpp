@@ -109,14 +109,11 @@ unsigned int MxOmni::Create(MxOmniCreateParam& param)
 
 MxOmni* MxOmni::GetInstance()
 {
-  ALERT("MxOmni* MxOmni::GetInstance()", "Stub");
   return instance_;
 }
 
 void MxOmni::DestroyInstance()
 {
-  // Perfect
-
   if (instance_ != 0) {
     delete instance_;
     instance_ = NULL;
@@ -191,8 +188,6 @@ MxTimer *MxOmni::GetTimer()
 
 void MxOmni::SetInstance(MxOmni* instance)
 {
-  // Perfect
-
   instance_ = instance;
 }
 

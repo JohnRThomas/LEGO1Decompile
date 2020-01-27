@@ -18,8 +18,6 @@ LegoOmni::~LegoOmni()
 
 void LegoOmni::CreateInstance()
 {
-  // Perfect
-
   DestroyInstance();
   SetInstance(new LegoOmni());
 }

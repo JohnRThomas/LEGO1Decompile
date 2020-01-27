@@ -13,8 +13,6 @@ MxDirectDraw::MxDirectDraw()
 
 int MxDirectDraw::GetPrimaryBitDepth()
 {
-  // Perfect
-
   IDirectDraw* direct_draw;
   DDSURFACEDESC ddsd;
 

@@ -4,9 +4,6 @@
 
 MxVideoParamFlags::MxVideoParamFlags()
 {
-  // Perfect
-
-  // FIXME: No idea what this enum is, but it appears to be hardcoded behavior nonetheless
   flags1_ &= 0xFE;
   flags1_ &= 0xFD;
   flags1_ &= 0xFB;
