@@ -4,7 +4,7 @@
 #include <STDIO.H>
 #include <WINDOWS.H>
 
-void ALERT(const char* str, ...);
+void ALERT(const char* source, const char* str, ...);
 
 /**
  * Use exactly like printf(), displays console output for printing simple debug info

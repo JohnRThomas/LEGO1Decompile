@@ -3,7 +3,8 @@
 #include "custom/debug.h"
 
 LegoSoundManager::LegoSoundManager() :
-    unk3C_(0),
-    unk40_(0)
+  unk3C_(0),
+  unk40_(0)
 {
+  ALERT("LegoSoundManager::LegoSoundManager()", "Stub");
 }

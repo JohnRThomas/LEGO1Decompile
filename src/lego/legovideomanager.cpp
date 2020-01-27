@@ -4,6 +4,8 @@
 
 LegoVideoManager::LegoVideoManager()
 {
+  ALERT("LegoVideoManager::LegoVideoManager()", "Stub");
+
   unk64_ = 0;
   unk68_ = 0;
   unk6C_ = 0;
@@ -43,24 +45,24 @@ LegoVideoManager::LegoVideoManager()
 
 void LegoVideoManager::MoveCursor(int /*x*/, int /*y*/)
 {
-  ALERT("Stub");
+  ALERT("void LegoVideoManager::MoveCursor(int /*x*/, int /*y*/)", "Stub");
 }
 
 void LegoVideoManager::EnableFullScreenMovie(unsigned char, unsigned char)
 {
-  ALERT("Stub");
+  ALERT("void LegoVideoManager::EnableFullScreenMovie(unsigned char, unsigned char)", "Stub");
 }
 
 int LegoVideoManager::EnableRMDevice()
 {
-  ALERT("Stub");
+  ALERT("int LegoVideoManager::EnableRMDevice()", "Stub");
 
   return 0;
 }
 
 int LegoVideoManager::DisableRMDevice()
 {
-  ALERT("Stub");
+  ALERT("int LegoVideoManager::DisableRMDevice()", "Stub");
 
   return 0;
 }

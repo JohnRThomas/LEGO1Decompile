@@ -6,10 +6,12 @@
 MxAtomId::MxAtomId() :
   str_(NULL)
 {
+  ALERT("MxAtomId::MxAtomId()", "Stub");
 }
 
 MxAtomId::MxAtomId(const char* str, LookupMode mode)
 {
+  ALERT("MxAtomId::MxAtomId(const char* str, LookupMode mode)", "Stub");
   if (MxOmni::GetInstance() != NULL && AtomManager() != NULL) {
     MxAtom* atom = sub_100AD210(str, mode);
 
@@ -21,15 +23,16 @@ MxAtomId::MxAtomId(const char* str, LookupMode mode)
 
 MxAtomId::~MxAtomId()
 {
+  ALERT("MxAtomId::~MxAtomId()", "Stub");
   if (str_ != NULL
       && MxOmni::GetInstance() != NULL
       && AtomManager() != NULL) {
-    ALERT("Partial Stub");
   }
 }
 
 MxAtomId& MxAtomId::operator=(const MxAtomId &other)
 {
+  ALERT("MxAtomId& MxAtomId::operator=(const MxAtomId &other)", "Stub");
   if (str_ != NULL) {
     sub_100ACFE0();
   }
@@ -51,16 +54,16 @@ MxAtomId& MxAtomId::operator=(const MxAtomId &other)
 
 MxAtom *MxAtomId::sub_100AD210(const char *str, LookupMode mode)
 {
-  ALERT("Partial Stub");
+  ALERT("MxAtom *MxAtomId::sub_100AD210(const char *str, LookupMode mode)", "Partial Stub");
 
   MxAtom* ebp_14 = new MxAtom(str);
 
   if (mode == Unk_LookupMode1 || mode == Unk_LookupMode3) {
     // Call 100AE4A0
-    ALERT("Stub");
+    ALERT("MxAtom *MxAtomId::sub_100AD210(const char *str, LookupMode mode)", "Stub 1");
   } else if (mode == Unk_LookupMode2) {
     // Call MxString operator ==
-    ALERT("Stub");
+    ALERT("MxAtom *MxAtomId::sub_100AD210(const char *str, LookupMode mode)", "Stub 2");
   }
 
   MxAtomItem* ebp_18 = AtomManager()->sub_100AD780(ebp_14);
@@ -129,5 +132,5 @@ MxAtom *MxAtomId::sub_100AD210(const char *str, LookupMode mode)
 
 void MxAtomId::sub_100ACFE0()
 {
-  ALERT("Stub");
+  ALERT("void MxAtomId::sub_100ACFE0()", "Stub");
 }

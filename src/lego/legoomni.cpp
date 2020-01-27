@@ -6,58 +6,72 @@
 
 LegoOmni::LegoOmni()
 {
+  ALERT("LegoOmni::LegoOmni", "Stub");
+
   Init();
 }
 
 LegoOmni::~LegoOmni()
 {
-  ALERT("Stub");
+  ALERT("LegoOmni::~LegoOmni", "Stub");
 }
 
 void LegoOmni::CreateInstance()
 {
+  ALERT("LegoOmni::CreateInstance", "Stub");
+
   DestroyInstance();
   SetInstance(new LegoOmni());
 }
 
 LegoOmni* LegoOmni::GetInstance()
 {
+  ALERT("LegoOmni::GetInstance", "Stub");
+
   return static_cast<LegoOmni*>(MxOmni::GetInstance());
 }
 
 void LegoOmni::RemoveWorld(const MxAtomId &, long)
 {
-  ALERT("Stub");
+  ALERT("LegoOmni::RemoveWorld", "Stub");
 }
 
 int LegoOmni::GetCurrPathInfo(LegoPathBoundary**, int&)
 {
-  ALERT("Stub");
+  ALERT("LegoOmni::GetCurrPathInfo", "Stub");
 
   return 0;
 }
 
 void LegoOmni::CreateBackgroundAudio()
 {
-  ALERT("Stub");
+  ALERT("LegoOmni::CreateBackgroundAudio", "Stub");
 }
 
 LegoInputManager *LegoOmni::GetInputManager()
 {
+  ALERT("LegoOmni::GetInputManager", "Stub");
+
   return input_manager_;
 }
 
 LegoVideoManager *LegoOmni::GetVideoManager()
 {
+  ALERT("LegoOmni::GetVideoManager", "Stub");
+
   return static_cast<LegoVideoManager*>(video_manager_);
 }
 
 LegoOmni* Lego()
 {
+  ALERT("Lego", "Stub");
+
   return LegoOmni::GetInstance();
 }
 
 void LegoOmni::Init(){
+  ALERT("LegoOmni::Init", "Stub");
+
   MxOmni::Init();
 
   unknown68_ = 0;
@@ -80,12 +94,12 @@ void LegoOmni::Init(){
 
 void LegoOmni::Destroy()
 {
-  ALERT("Stub");
+  ALERT("LegoOmni::Destroy", "Stub");
 }
 
 int LegoOmni::Create(MxOmniCreateParam& param)
 {
-  ALERT("Partial Stub");
+  ALERT("LegoOmni::Create", "Partial Stub");
 
   critical_section_.Lock();
 
@@ -164,40 +178,46 @@ int LegoOmni::Create(MxOmniCreateParam& param)
 
 void LegoOmni::unk_func03()
 {
-  ALERT("Stub");
+  ALERT("LegoOmni::unk_func03", "Stub");
 }
 
 void LegoOmni::unk_func04()
 {
-  ALERT("Stub");
+  ALERT("LegoOmni::unk_func04", "Stub");
 }
 
 LegoInputManager* InputManager()
 {
+  ALERT("InputManager", "Stub");
+
   return LegoOmni::GetInstance()->GetInputManager();
 }
 
 LegoSoundManager *SoundManager()
 {
+  ALERT("SoundManager", "Stub");
+
   return static_cast<LegoSoundManager*>(LegoOmni::GetInstance()->GetSoundManager());
 }
 
 LegoVideoManager* VideoManager()
 {
+  ALERT("VideoManager", "Stub");
+
   return LegoOmni::GetInstance()->GetVideoManager();
 }
 
 LegoUnknownManager5::LegoUnknownManager5()
 {
-  ALERT("Stub\n\nSize: %x", sizeof(LegoUnknownManager5));
+  ALERT("LegoUnknownManager5", "Stub\n\nSize: %x", sizeof(LegoUnknownManager5));
 }
 
 LegoUnknownManager6::LegoUnknownManager6()
 {
-  ALERT("Stub\n\nSize: %x", sizeof(LegoUnknownManager6));
+  ALERT("LegoUnknownManager6", "Stub\n\nSize: %x", sizeof(LegoUnknownManager6));
 }
 
 LegoUnknownManager7::LegoUnknownManager7()
 {
-  ALERT("Stub\n\nSize: %x", sizeof(LegoUnknownManager7));
+  ALERT("LegoUnknownManager7", "Stub\n\nSize: %x", sizeof(LegoUnknownManager7));
 }

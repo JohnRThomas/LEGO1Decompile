@@ -15,16 +15,18 @@ MxOmni* MxOmni::instance_ = NULL;
 
 MxOmni::MxOmni()
 {
+  ALERT("MxOmni::MxOmni()", "Stub");
   Init();
 }
 
 MxOmni::~MxOmni()
 {
-  ALERT("Stub");
+  ALERT("MxOmni::~MxOmni()", "Stub");
 }
 
 void MxOmni::Init()
 {
+  ALERT("void MxOmni::Init()", "Stub");
   window_handle_ = NULL;
   object_factory_ = NULL;
   variable_table_ = NULL;
@@ -42,7 +44,7 @@ void MxOmni::Init()
 
 unsigned int MxOmni::Create(MxOmniCreateParam& param)
 {
-  ALERT("Partial Stub");
+  ALERT("unsigned int MxOmni::Create(MxOmniCreateParam& param)", "Partial Stub");
 
   atom_manager_ = new MxAtomManager();
 
@@ -107,42 +109,50 @@ unsigned int MxOmni::Create(MxOmniCreateParam& param)
 
 MxOmni* MxOmni::GetInstance()
 {
+  ALERT("MxOmni* MxOmni::GetInstance()", "Stub");
   return instance_;
 }
 
 void MxOmni::DestroyInstance()
 {
+  ALERT("void MxOmni::DestroyInstance()", "Stub");
   delete instance_;
   instance_ = NULL;
 }
 
 const char *MxOmni::GetHD()
 {
+  ALERT("const char *MxOmni::GetHD()", "Stub");
   return hd_path_;
 }
 
 void MxOmni::SetHD(const char *hd)
 {
+  ALERT("void MxOmni::SetHD(const char *hd)", "Stub");
   strcpy(hd_path_, hd);
 }
 
 const char *MxOmni::GetCD()
 {
+  ALERT("const char *MxOmni::GetCD()", "Stub");
   return cd_path_;
 }
 
 void MxOmni::SetCD(const char *cd)
 {
+  ALERT("void MxOmni::SetCD(const char *cd)", "Stub");
   strcpy(cd_path_, cd);
 }
 
 unsigned char MxOmni::IsSound3D()
 {
+  ALERT("unsigned char MxOmni::IsSound3D()", "Stub");
   return sound_is_3d_;
 }
 
 void MxOmni::SetSound3D(unsigned char c)
 {
+  ALERT("void MxOmni::SetSound3D(unsigned char c)", "Stub");
   sound_is_3d_ = c;
 }
 
@@ -178,35 +188,42 @@ MxTimer *MxOmni::GetTimer()
 
 void MxOmni::SetInstance(MxOmni* instance)
 {
+  ALERT("void MxOmni::SetInstance(MxOmni* instance)", "Stub");
   instance_ = instance;
 }
 
 MxVariableTable *VariableTable()
 {
+  ALERT("MxVariableTable *VariableTable()", "Stub");
   return MxOmni::GetInstance()->GetVariableTable();
 }
 
 MxTickleManager* TickleManager()
 {
+  ALERT("MxTickleManager* TickleManager()", "Stub");
   return MxOmni::GetInstance()->GetTickleManager();
 }
 
 MxSoundManager *MSoundManager()
 {
+  ALERT("MxSoundManager *MSoundManager()", "Stub");
   return MxOmni::GetInstance()->GetSoundManager();
 }
 
 MxAtomManager *AtomManager()
 {
+  ALERT("MxAtomManager *AtomManager()", "Stub");
   return MxOmni::GetInstance()->GetAtomManager();
 }
 
 MxNotificationManager *NotificationManager()
 {
+  ALERT("MxNotificationManager *NotificationManager()", "Stub");
   return MxOmni::GetInstance()->GetNotificationManager();
 }
 
 MxTimer* Timer()
 {
+  ALERT("MxTimer* Timer()", "Stub");
   return MxOmni::GetInstance()->GetTimer();
 }

@@ -4,10 +4,10 @@
 
 LegoWorldPresenter::LegoWorldPresenter()
 {
-    ALERT("Stub");
+  ALERT("LegoWorldPresenter::LegoWorldPresenter()", "Stub");
 }
 
 void LegoWorldPresenter::configureLegoWorldPresenter(int)
 {
-    ALERT("Stub");
+  ALERT("void LegoWorldPresenter::configureLegoWorldPresenter(int)", "Stub");
 }

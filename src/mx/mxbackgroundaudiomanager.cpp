@@ -4,16 +4,16 @@
 
 MxBackgroundAudioManager::MxBackgroundAudioManager()
 {
-    ALERT("Stub");
+  ALERT("MxBackgroundAudioManager::MxBackgroundAudioManager()", "Stub");
 }
 
 void MxBackgroundAudioManager::Enable(unsigned char)
 {
-    ALERT("Stub");
+  ALERT("void MxBackgroundAudioManager::Enable(unsigned char)", "Stub");
 }
 
-MxBackgroundAudioManager* BackgroundAudioManager(){
-    ALERT("Stub");
+MxBackgroundAudioManager* BackgroundAudioManager() {
+  ALERT("MxBackgroundAudioManager* BackgroundAudioManager()", "Stub");
 
-    return NULL;
+  return NULL;
 }

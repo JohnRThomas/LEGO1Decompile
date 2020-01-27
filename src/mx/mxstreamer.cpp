@@ -13,26 +13,27 @@ MxStreamer::MxStreamer() :
   unk24_(0x80),
   unk28_(0)
 {
+  ALERT("MxStreamer::MxStreamer()", "Stub");
   NotificationManager()->sub_100ACD20(this);
 }
 
 MxStreamController* MxStreamer::Open(const char*, unsigned short)
 {
-  ALERT("Stub");
+  ALERT("MxStreamController* MxStreamer::Open(const char*, unsigned short)", "Stub");
 
   return NULL;
 }
 
 long MxStreamer::Close(const char*)
 {
-  ALERT("Stub");
+  ALERT("long MxStreamer::Close(const char*)", "Stub");
 
   return 0;
 }
 
 MxStreamer* Streamer()
 {
-  ALERT("Stub");
+  ALERT("MxStreamer* Streamer()", "Stub");
 
   return NULL;
 }

@@ -1,6 +1,6 @@
 #include "debug.h"
 
-void ALERT(const char* str, ...) {
+void ALERT(const char* source, const char* str, ...) {
   char __msg[200];
 
   va_list argList;
@@ -9,6 +9,6 @@ void ALERT(const char* str, ...) {
   va_end(argList);
 
   char __buffer[300];
-  sprintf(__buffer, "%s\n\n%s", __FILE__, __msg);
+  sprintf(__buffer, "%s\n\n%s", source, __msg);
   MessageBox(NULL, __buffer, "Alert", 0);
 }

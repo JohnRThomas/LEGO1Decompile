@@ -4,50 +4,52 @@
 
 MxPresenter::MxPresenter()
 {
+  ALERT("MxPresenter::MxPresenter()", "Stub");
   Init();
 }
 
 MxPresenter::~MxPresenter()
 {
-  ALERT("Stub");
+  ALERT("MxPresenter::~MxPresenter()", "Stub");
 }
 
 long MxPresenter::StartAction(MxStreamController *, MxDSAction *)
 {
-  ALERT("Stub");
+  ALERT("MxPresenter::~MxPresenter()", "Stub");
 
   return 0;
 }
 
 void MxPresenter::EndAction()
 {
-  ALERT("Stub");
+  ALERT("void MxPresenter::EndAction()", "Stub");
 }
 
 long MxPresenter::Tickle()
 {
-  ALERT("Stub");
+  ALERT("long MxPresenter::Tickle()", "Stub");
 
   return 0;
 }
 
 void MxPresenter::Enable(unsigned char)
 {
-  ALERT("Stub");
+  ALERT("void MxPresenter::Enable(unsigned char)", "Stub");
 }
 
 void MxPresenter::DoneTickle()
 {
-  ALERT("Stub");
+  ALERT("void MxPresenter::DoneTickle()", "Stub");
 }
 
 void MxPresenter::ParseExtra()
 {
-  ALERT("Stub");
+  ALERT("void MxPresenter::ParseExtra()", "Stub");
 }
 
 void MxPresenter::Init()
 {
+  ALERT("void MxPresenter::Init()", "Stub");
   unk8_ = 0;
   unk1C_ = 0;
   unk18_ = 0;

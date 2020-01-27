@@ -14,6 +14,7 @@ MxVideoParam::MxVideoParam() :
   unknown2_(0),
   device_name_(NULL)
 {
+  ALERT("MxVideoParam::MxVideoParam", "Stub");
 }
 
 MxVideoParam::MxVideoParam(MxRect32& rect, MxPalette* pal, unsigned long u1, MxVideoParamFlags& flags) :
@@ -27,10 +28,12 @@ MxVideoParam::MxVideoParam(MxRect32& rect, MxPalette* pal, unsigned long u1, MxV
   unknown2_(0),
   device_name_(NULL)
 {
+  ALERT("MxVideoParam::MxVideoParam(MxRect32& rect, MxPalette* pal, unsigned long u1, MxVideoParamFlags& flags)", "Stub");
 }
 
 MxVideoParam::MxVideoParam(MxVideoParam& other)
 {
+  ALERT("MxVideoParam::MxVideoParam", "Stub");
   // Copy all parameters
   x_ = other.x_;
   y_ = other.y_;
@@ -47,11 +50,13 @@ MxVideoParam::MxVideoParam(MxVideoParam& other)
 
 MxVideoParam::~MxVideoParam()
 {
+  ALERT("MxVideoParam::~MxVideoParam", "Stub");
   delete [] device_name_;
 }
 
 MxVideoParam& MxVideoParam::operator=(const MxVideoParam& other)
 {
+  ALERT("MxVideoParam& MxVideoParam::operator=(const MxVideoParam& other)", "Stub");
   // Copy all parameters
   x_ = other.x_;
   y_ = other.y_;
@@ -70,6 +75,7 @@ MxVideoParam& MxVideoParam::operator=(const MxVideoParam& other)
 
 void MxVideoParam::SetDeviceName(char* device)
 {
+  ALERT("void MxVideoParam::SetDeviceName(char* device)", "Stub");
   // Delete device string if it already exists
   delete [] device_name_;
 
@@ -87,6 +93,7 @@ void MxVideoParam::SetDeviceName(char* device)
 
 void MxVideoParam::SetPalette(MxPalette *palette)
 {
+  ALERT("void MxVideoParam::SetPalette(MxPalette *palette)", "Stub");
   palette_ = palette;
 }
 

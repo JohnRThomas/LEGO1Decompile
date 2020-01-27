@@ -23,20 +23,20 @@ LegoInputManager::LegoInputManager() :
   unk19C_(0),
   unk334_(0) // ASM actually asks for chars at +334, +335, and +336
 {
+  ALERT("LegoInputManager::LegoInputManager", "Stub");
 }
 
 void LegoInputManager::Register(MxCore*)
 {
-  ALERT("Stub");
+  ALERT("LegoInputManager::Register", "Stub");
 }
 
 void LegoInputManager::UnRegister(MxCore*)
 {
-  ALERT("Stub");
+  ALERT("LegoInputManager::UnRegister", "Stub");
 }
-
 
 void LegoInputManager::QueueEvent(NotificationId, unsigned char, long, long, unsigned char)
 {
-  ALERT("Stub");
+  ALERT("LegoInputManager::QueueEvent", "Stub");
 }

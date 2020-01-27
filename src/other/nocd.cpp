@@ -1,5 +1,8 @@
 #include "nocd.h"
 
+#include "custom/debug.h"
+
 char const* GetNoCD_SourceName(void) {
-    return "\\lego\\scripts\\nocd";
+  ALERT("GetNoCD_SourceName", "Stub");
+  return "\\lego\\scripts\\nocd";
 }

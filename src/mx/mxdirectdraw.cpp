@@ -6,11 +6,12 @@
 
 MxDirectDraw::MxDirectDraw()
 {
-  ALERT("Stub");
+  ALERT("MxDirectDraw::MxDirectDraw()", "Stub");
 }
 
 int MxDirectDraw::GetPrimaryBitDepth()
 {
+  ALERT("int MxDirectDraw::GetPrimaryBitDepth()", "Stub");
   IDirectDraw* direct_draw;
   DDSURFACEDESC ddsd;
 
@@ -31,14 +32,14 @@ int MxDirectDraw::GetPrimaryBitDepth()
 
 int MxDirectDraw::Pause(int)
 {
-  ALERT("Stub");
+  ALERT("int MxDirectDraw::Pause(int)", "Stub");
 
   return 0;
 }
 
 int MxDirectDraw::FlipToGDISurface()
 {
-  ALERT("Stub");
+  ALERT("int MxDirectDraw::FlipToGDISurface()", "Stub");
 
   return 0;
 }

@@ -5,6 +5,7 @@
 
 MxVariableTable::MxVariableTable()
 {
+  ALERT("MxVariableTable::MxVariableTable()", "Stub");
   entry_count_ = 0;
   // unkC_ = vtable something?
   table_size_ = 80;
@@ -18,12 +19,13 @@ MxVariableTable::MxVariableTable()
 
 MxVariableTable::~MxVariableTable()
 {
+  ALERT("MxVariableTable::~MxVariableTable()", "Stub");
   delete [] table_;
 }
 
 void MxVariableTable::SetVariable(const char* key, const char* value)
 {
-  ALERT("Stub (const char*, const char*)\n\nKey: \"%s\"\nValue: \"%s\"", key, value);
+  ALERT("void MxVariableTable::SetVariable(const char* key, const char* value)", "Stub (const char*, const char*)\n\nKey: \"%s\"\nValue: \"%s\"", key, value);
 
   MxString key_str = key;
   MxString val_str = value;
@@ -31,7 +33,7 @@ void MxVariableTable::SetVariable(const char* key, const char* value)
 
 void MxVariableTable::SetVariable(MxVariable* variable)
 {
-  ALERT("Partial stub (MxVariable*)\n\nKey: %s", static_cast<const char*>(variable->key()));
+  ALERT("void MxVariableTable::SetVariable(MxVariable* variable)", "Partial stub (MxVariable*)\n\nKey: %s", static_cast<const char*>(variable->key()));
 
   unsigned int letter_code = AddLetterCodesInKey(variable);
 
@@ -50,15 +52,16 @@ void MxVariableTable::SetVariable(MxVariable* variable)
 
       // call 0x100B78E7
     } else {
-      ALERT("Unhandled behavior (unk1C != 0");
+      ALERT("void MxVariableTable::SetVariable(MxVariable* variable)", "Unhandled behavior (unk1C != 0");
     }
   } else {
-    ALERT("Unhandled behavior (table_[table_index] != NULL");
+    ALERT("void MxVariableTable::SetVariable(MxVariable* variable)", "Unhandled behavior (table_[table_index] != NULL");
   }
 }
 
 unsigned int MxVariableTable::AddLetterCodesInKey(MxVariable* v)
 {
+  ALERT("unsigned int MxVariableTable::AddLetterCodesInKey(MxVariable* v)", "Stub");
   unsigned int counter = 0;
 
   const MxString& variable_key = v->key();
@@ -72,7 +75,7 @@ unsigned int MxVariableTable::AddLetterCodesInKey(MxVariable* v)
 
 const char* MxVariableTable::GetVariable(const char* key)
 {
-  ALERT("Stub\n\nRequested key: %s", key);
+  ALERT("const char* MxVariableTable::GetVariable(const char* key)", "Stub\n\nRequested key: %s", key);
 
   return NULL;
 }

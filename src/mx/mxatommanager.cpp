@@ -10,6 +10,7 @@ MxAtomManager::MxAtomManager() :
   unk8_(0),
   unkC_(0)
 {
+  ALERT("MxAtomManager::MxAtomManager()", "Stub");
   if (addr_101013F0 == NULL) {
     addr_101013F0 = new MxAtomItem(NULL, TRUE);
   }
@@ -21,16 +22,19 @@ MxAtomManager::MxAtomManager() :
 
 MxAtomItem *MxAtomManager::unk4()
 {
+  ALERT("MxAtomItem *MxAtomManager::unk4()", "Stub");
   return unk4_;
 }
 
 const int& MxAtomManager::unk8()
 {
+  ALERT("const int& MxAtomManager::unk8()", "Stub");
   return unk8_;
 }
 
 MxAtomItem *MxAtomManager::sub_100AD780(MxAtom *atom)
 {
+  ALERT("MxAtomItem *MxAtomManager::sub_100AD780(MxAtom *atom)", "Stub");
   MxAtomItem* esi_1 = unk4_->parent();
   MxAtomItem* ret = unk4_;
 
@@ -50,7 +54,7 @@ MxAtomItem *MxAtomManager::sub_100AD780(MxAtom *atom)
 
 void MxAtomManager::sub_100AD4D0(int*, MxAtomItem *, MxAtomItem *, MxAtom **)
 {
-  ALERT("Stub");
+  ALERT("void MxAtomManager::sub_100AD4D0(int*, MxAtomItem *, MxAtomItem *, MxAtom **)", "Stub");
 }
 
 MxAtomItem::MxAtomItem(MxAtomItem *parent, BOOL root) :
@@ -59,10 +63,12 @@ MxAtomItem::MxAtomItem(MxAtomItem *parent, BOOL root) :
   unk8_(NULL),
   root_(root)
 {
+  ALERT("MxAtomItem::MxAtomItem(MxAtomItem *parent, BOOL root)", "Stub");
 }
 
 void MxAtomItem::sub_100AD480()
 {
+  ALERT("void MxAtomItem::sub_100AD480()", "Stub");
   if (!unk0()->root_ && unk0()->parent()->parent() == unk0()) {
     unk0_ = unk0()->unk8();
   } else if (unk0()->unk0() == MxAtomManager::addr_101013F0) {

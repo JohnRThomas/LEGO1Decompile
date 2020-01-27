@@ -4,15 +4,15 @@
 
 LegoROI::LegoROI()
 {
-    ALERT("Stub");
+  ALERT("LegoROI::LegoROI()", "Stub");
 }
 
 void LegoROI::configureLegoROI(int)
 {
-    ALERT("Stub");
+  ALERT("void LegoROI::configureLegoROI(int)", "Stub");
 }
 
 void LegoROI::SetDisplayBB(int)
 {
-    ALERT("Stub");
+  ALERT("void LegoROI::SetDisplayBB(int)", "Stub");
 }

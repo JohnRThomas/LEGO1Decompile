@@ -4,10 +4,10 @@
 
 MxBitmap::MxBitmap()
 {
-    ALERT("Stub");
+  ALERT("MxBitmap::MxBitmap()", "Stub");
 }
 
 MxBitmap::~MxBitmap()
 {
-    ALERT("Stub");
+  ALERT("MxBitmap::~MxBitmap()", "Stub");
 }

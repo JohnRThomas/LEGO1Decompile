@@ -4,10 +4,10 @@
 
 ViewManager::ViewManager()
 {
-    ALERT("Stub");
+  ALERT("ViewManager::ViewManager", "Stub");
 }
 
 void ViewManager::RemoveAll(ViewROI*)
 {
-    ALERT("Stub");
+  ALERT("ViewManager::RemoveAll", "Stub");
 }

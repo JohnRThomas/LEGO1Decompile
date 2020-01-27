@@ -4,16 +4,18 @@
 
 MxVideoManager::MxVideoManager()
 {
+  ALERT("MxVideoManager::MxVideoManager()", "Stub");
   Init();
 }
 
 MxVideoManager::~MxVideoManager()
 {
-  ALERT("Stub");
+  ALERT("MxVideoManager::~MxVideoManager()", "Stub");
 }
 
 void MxVideoManager::Init()
 {
+  ALERT("void MxVideoManager::Init()", "Stub");
   unk50_ = 0;
   unk54_ = 0;
   unk58_ = 0;
@@ -24,12 +26,12 @@ void MxVideoManager::Init()
 
 void MxVideoManager::InvalidateRect(MxRect32 &)
 {
-  ALERT("Stub");
+  ALERT("void MxVideoManager::InvalidateRect(MxRect32 &)", "Stub");
 }
 
 long MxVideoManager::RealizePalette(MxPalette *)
 {
-  ALERT("Stub");
+  ALERT("long MxVideoManager::RealizePalette(MxPalette *)", "Stub");
 
   return 0;
 }
