@@ -16,18 +16,17 @@ MxVideoParam::MxVideoParam()
   device_name_ = NULL;
 }
 
-MxVideoParam::MxVideoParam(MxRect32& rect, MxPalette* pal, unsigned long u1, MxVideoParamFlags& flags) :
-  x_(rect.x()),
-  y_(rect.y()),
-  width_(rect.width()),
-  height_(rect.height()),
-  palette_(pal),
-  unknown1_(u1),
-  flags_(flags),
-  unknown2_(0),
-  device_name_(NULL)
+MxVideoParam::MxVideoParam(MxRect32& rect, MxPalette* pal, unsigned long u1, MxVideoParamFlags& flags)
 {
-  ALERT("MxVideoParam::MxVideoParam(MxRect32& rect, MxPalette* pal, unsigned long u1, MxVideoParamFlags& flags)", "Stub");
+  x_ = rect.x;
+  y_ = rect.y;
+  width_ = rect.width;
+  height_ = rect.height;
+  palette_ = pal;
+  unknown1_ = u1;
+  flags_ = flags;
+  unknown2_ = 0;
+  device_name_ = NULL;
 }
 
 MxVideoParam::MxVideoParam(MxVideoParam& other)

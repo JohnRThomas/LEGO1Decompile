@@ -3,18 +3,12 @@
 
 class MxRect32 {
 public:
-    MxRect32();
+  MxRect32();
 
-    const int& x();
-    const int& y();
-    const int& width();
-    const int& height();
-
-private:
-    int x_;
-    int y_;
-    int width_;
-    int height_;
+  int x;
+  int y;
+  int width;
+  int height;
 };
 
 #endif // MXRECT32_H
