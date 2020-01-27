@@ -19,9 +19,10 @@ public:
     virtual long Notify(MxParam&);
 
 private:
-    static int core_count_;
+    // addr_1010141C
+    static unsigned int core_count_;
 
-    int id_;
+    unsigned int id_;
 
 };
 

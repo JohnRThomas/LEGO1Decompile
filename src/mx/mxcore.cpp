@@ -2,11 +2,10 @@
 
 #include "custom/debug.h"
 
-int MxCore::core_count_ = 0;
+unsigned int MxCore::core_count_ = 0;
 
 MxCore::MxCore()
 {
-  ALERT("MxCore::MxCore()", "Stub");
   id_ = core_count_;
   core_count_++;
 }
