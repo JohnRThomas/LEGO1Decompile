@@ -5,9 +5,9 @@
 
 class ViewManager {
 public:
-    __declspec(dllexport) ViewManager();
+    ViewManager();
 
-    __declspec(dllexport) void RemoveAll(ViewROI*);
+    void RemoveAll(ViewROI*);
 };
 
 #endif // VIEWMANAGER_H

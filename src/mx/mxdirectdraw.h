@@ -3,12 +3,12 @@
 
 class MxDirectDraw {
 public:
-    __declspec(dllexport) MxDirectDraw();
+    MxDirectDraw();
 
-    __declspec(dllexport) static int GetPrimaryBitDepth();
+    static int GetPrimaryBitDepth();
 
-    __declspec(dllexport) int Pause(int);
-    __declspec(dllexport) int FlipToGDISurface();
+    int Pause(int);
+    int FlipToGDISurface();
 };
 
 #endif // MXDIRECTDRAW_H

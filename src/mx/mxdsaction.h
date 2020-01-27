@@ -43,8 +43,8 @@ private:
 
 class MxDSAction : public MxDSActionBase {
 public:
-    __declspec(dllexport) MxDSAction();
-    __declspec(dllexport) virtual ~MxDSAction();
+    MxDSAction();
+    virtual ~MxDSAction();
 
 private:
     int unknown11_; // esi+2C
@@ -65,6 +65,6 @@ private:
 
 };
 
-__declspec(dllexport) long Start(class MxDSAction*);
+long Start(class MxDSAction*);
 
 #endif // MXDSACTION_H

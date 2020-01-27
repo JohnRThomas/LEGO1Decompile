@@ -14,7 +14,7 @@
  */
 class MxOmniCreateParam {
 public:
-    __declspec(dllexport) MxOmniCreateParam(const char *, struct HWND__* handle, MxVideoParam &, MxOmniCreateFlags);
+    MxOmniCreateParam(const char *, struct HWND__* handle, MxVideoParam &, MxOmniCreateFlags);
 
     struct HWND__ * window_handle();
 

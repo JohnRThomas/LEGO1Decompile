@@ -3,9 +3,11 @@
 
 #include "mxatommanager.h"
 #include "mxcore.h"
+#include "mxeventmanager.h"
 #include "mxomnicreateparam.h"
 #include "mxcriticalsection.h"
 #include "mxmidipresenter.h"
+#include "mxmusicmanager.h"
 #include "mxnotificationmanager.h"
 #include "mxobjectfactory.h"
 #include "mxsoundmanager.h"
@@ -77,24 +79,24 @@ protected:
   // +64
   unsigned char unknown64_;
 
-  __declspec(dllexport) MxOmni();
+  MxOmni();
   virtual ~MxOmni();
 
   virtual void Init();
 
   unsigned int Create(MxOmniCreateParam& param);
 public:
-  __declspec(dllexport) static MxOmni* GetInstance();
-  __declspec(dllexport) static void DestroyInstance();
+  static MxOmni* GetInstance();
+  static void DestroyInstance();
 
-  __declspec(dllexport) static const char *GetHD();
-  __declspec(dllexport) static void SetHD(const char *);
+  static const char *GetHD();
+  static void SetHD(const char *);
 
-  __declspec(dllexport) static const char *GetCD();
-  __declspec(dllexport) static void SetCD(const char *);
+  static const char *GetCD();
+  static void SetCD(const char *);
 
-  __declspec(dllexport) static unsigned char IsSound3D();
-  __declspec(dllexport) static void SetSound3D(unsigned char);
+  static unsigned char IsSound3D();
+  static void SetSound3D(unsigned char);
 
   MxVariableTable* GetVariableTable();
   MxTickleManager* GetTickleManager();
@@ -105,18 +107,22 @@ public:
 
 };
 
-__declspec(dllexport) void SetOmniUserMessage(void (__cdecl*)(const char*, int));
+void SetOmniUserMessage(void (__cdecl*)(const char*, int));
 
-__declspec(dllexport) MxVariableTable* VariableTable();
+MxVariableTable* VariableTable();
 
-__declspec(dllexport) MxTickleManager* TickleManager();
+MxTickleManager* TickleManager();
 
-__declspec(dllexport) MxSoundManager* MSoundManager();
+MxSoundManager* MSoundManager();
 
-__declspec(dllexport) MxTimer* Timer();
+MxTimer* Timer();
 
 MxNotificationManager* NotificationManager();
 
 MxAtomManager* AtomManager();
+
+MxEventManager* EventManager();
+
+MxMusicManager* MusicManager();
 
 #endif // MXOMNI_H

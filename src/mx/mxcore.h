@@ -13,10 +13,10 @@
  */
 class MxCore {
 public:
-    __declspec(dllexport) MxCore();
-    __declspec(dllexport) virtual ~MxCore();
+    MxCore();
+    virtual ~MxCore();
 
-    __declspec(dllexport) virtual long Notify(MxParam&);
+    virtual long Notify(MxParam&);
 
 private:
     static int core_count_;

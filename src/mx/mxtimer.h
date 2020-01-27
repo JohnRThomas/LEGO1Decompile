@@ -12,9 +12,9 @@
  */
 class MxTimer : public MxCore {
 public:
-    __declspec(dllexport) MxTimer();
+    MxTimer();
 
-    __declspec(dllexport) long GetRealTime();
+    long GetRealTime();
 
     // Start?
     void sub_100AE160();

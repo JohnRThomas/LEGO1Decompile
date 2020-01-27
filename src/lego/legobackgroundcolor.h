@@ -3,7 +3,7 @@
 
 class LegoBackgroundColor {
 public:
-    LegoBackgroundColor(char const *, char const *);
+  LegoBackgroundColor(char const *, char const *);
 };
 
 #endif // LEGOBACKGROUNDCOLOR_H

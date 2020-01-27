@@ -3,10 +3,10 @@
 
 class LegoNavController {
 public:
-    LegoNavController();
+  LegoNavController();
 
-    static void GetDefaults(int*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned char*);
-    static void SetDefaults(int, float, float, float, float, float, float, float, float, float, unsigned char);
+  static void GetDefaults(int*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned char*);
+  static void SetDefaults(int, float, float, float, float, float, float, float, float, float, unsigned char);
 
 };
 

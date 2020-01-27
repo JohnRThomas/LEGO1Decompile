@@ -3,11 +3,11 @@
 
 class MxPalette {
 public:
-    MxPalette();
+  MxPalette();
 
-    void Detach();
+  void Detach();
 
-    unsigned char operator==(MxPalette&);
+  unsigned char operator==(MxPalette&);
 };
 
 #endif // MXPALETTE_H

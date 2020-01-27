@@ -8,11 +8,11 @@
  */
 class MxBackgroundAudioManager {
 public:
-    __declspec(dllexport) MxBackgroundAudioManager();
+    MxBackgroundAudioManager();
 
-    __declspec(dllexport) void Enable(unsigned char);
+    void Enable(unsigned char);
 };
 
-__declspec(dllexport) MxBackgroundAudioManager* BackgroundAudioManager();
+MxBackgroundAudioManager* BackgroundAudioManager();
 
 #endif // MXBACKGROUNDAUDIOMANAGER_H

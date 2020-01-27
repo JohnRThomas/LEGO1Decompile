@@ -12,14 +12,14 @@
  */
 class MxVideoParam {
 public:
-    __declspec(dllexport) MxVideoParam();
-    __declspec(dllexport) MxVideoParam(MxRect32&, MxPalette*, unsigned long, MxVideoParamFlags&);
-    __declspec(dllexport) MxVideoParam(MxVideoParam&);
-    __declspec(dllexport) ~MxVideoParam();
+    MxVideoParam();
+    MxVideoParam(MxRect32&, MxPalette*, unsigned long, MxVideoParamFlags&);
+    MxVideoParam(MxVideoParam&);
+    ~MxVideoParam();
 
-    __declspec(dllexport) MxVideoParam& operator=(const MxVideoParam&);
+    MxVideoParam& operator=(const MxVideoParam&);
 
-    __declspec(dllexport) void SetDeviceName(char*);
+    void SetDeviceName(char*);
     void SetPalette(MxPalette* palette);
 
     const int& x() const;

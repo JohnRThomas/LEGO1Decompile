@@ -3,12 +3,12 @@
 
 class MxScheduler {
 public:
-    MxScheduler();
+  MxScheduler();
 
-    static MxScheduler* GetInstance();
+  static MxScheduler* GetInstance();
 
-    void StartMultiTasking(unsigned long);
+  void StartMultiTasking(unsigned long);
 
-}
+};
 
 #endif // MXSCHEDULER_H

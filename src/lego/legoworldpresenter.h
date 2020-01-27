@@ -5,7 +5,7 @@ class LegoWorldPresenter {
 public:
     LegoWorldPresenter();
 
-    __declspec(dllexport) static void configureLegoWorldPresenter(int);
+    static void configureLegoWorldPresenter(int);
 };
 
 #endif // LEGOWORLDPRESENTER_H

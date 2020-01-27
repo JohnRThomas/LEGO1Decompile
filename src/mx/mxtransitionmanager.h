@@ -12,14 +12,14 @@
  */
 class MxTransitionManager {
 public:
-    __declspec(dllexport) MxTransitionManager();
+    MxTransitionManager();
 
-    __declspec(dllexport) void SetWaitIndicator(MxVideoPresenter*);
+    void SetWaitIndicator(MxVideoPresenter*);
 
 private:
     char unk_[0x900];
 };
 
-__declspec(dllexport) MxTransitionManager* TransitionManager();
+MxTransitionManager* TransitionManager();
 
 #endif // MXTRANSITIONMANAGER_H

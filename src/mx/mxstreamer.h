@@ -23,10 +23,10 @@ public:
  */
 class MxStreamer : public MxCore {
 public:
-    __declspec(dllexport) MxStreamer();
+    MxStreamer();
 
-    __declspec(dllexport) MxStreamController* Open(const char*, unsigned short);
-    __declspec(dllexport) long Close(const char*);
+    MxStreamController* Open(const char*, unsigned short);
+    long Close(const char*);
 
 private:
     unsigned char unk8_;
@@ -40,6 +40,6 @@ private:
     int unk28_;
 };
 
-__declspec(dllexport) MxStreamer* Streamer();
+MxStreamer* Streamer();
 
 #endif // MXSTREAMER_H

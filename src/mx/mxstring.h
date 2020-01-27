@@ -18,11 +18,11 @@ public:
 
     MxString(const char* s);
 
-    __declspec(dllexport) MxString(const MxString&);
+    MxString(const MxString&);
 
-    __declspec(dllexport) virtual ~MxString();
+    virtual ~MxString();
 
-    __declspec(dllexport) const MxString& operator=(const char* s);
+    const MxString& operator=(const char* s);
 
     const MxString& operator=(const MxString& s);
 

@@ -18,7 +18,7 @@ public:
 
     };
 
-    __declspec(dllexport) MxOmniCreateFlags();
+    MxOmniCreateFlags();
 
     operator unsigned short&();
 

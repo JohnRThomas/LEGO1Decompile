@@ -3,13 +3,13 @@
 
 class LegoROI {
 public:
-    __declspec(dllexport) LegoROI();
+    LegoROI();
 
-    __declspec(dllexport) static void configureLegoROI(int);
+    static void configureLegoROI(int);
 
-    __declspec(dllexport) void SetDisplayBB(int);
+    void SetDisplayBB(int);
 };
 
-__declspec(dllexport) LegoROI* PickROI(long, long);
+LegoROI* PickROI(long, long);
 
 #endif // LEGOROI_H

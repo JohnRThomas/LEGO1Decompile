@@ -16,12 +16,12 @@ enum NotificationId
  */
 class LegoInputManager : public MxPresenter {
 public:
-    __declspec(dllexport) LegoInputManager();
+    LegoInputManager();
 
-    __declspec(dllexport) void Register(MxCore*);
-    __declspec(dllexport) void UnRegister(MxCore*);
+    void Register(MxCore*);
+    void UnRegister(MxCore*);
 
-    __declspec(dllexport) void QueueEvent(NotificationId, unsigned char, long, long, unsigned char);
+    void QueueEvent(NotificationId, unsigned char, long, long, unsigned char);
 
 private:
     // +40

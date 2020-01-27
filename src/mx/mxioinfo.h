@@ -3,8 +3,8 @@
 
 class MXIOINFO {
 public:
-    MXIOINFO();
-    ~MXIOINFO();
-}
+  MXIOINFO();
+  ~MXIOINFO();
+};
 
 #endif // MXIOINFO_H

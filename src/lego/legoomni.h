@@ -99,8 +99,8 @@ protected:
     MxTransitionManager* transition_manager_; // [esi+138]
     unsigned char unknown13C_; // [esi+13C]
 
-    __declspec(dllexport) LegoOmni();
-    __declspec(dllexport) virtual ~LegoOmni();
+    LegoOmni();
+    virtual ~LegoOmni();
     virtual void Init();
 
 public:
@@ -111,14 +111,14 @@ public:
     virtual int Create(MxOmniCreateParam &param);
 
 
-    __declspec(dllexport) static void CreateInstance();
-    __declspec(dllexport) static LegoOmni* GetInstance();
+    static void CreateInstance();
+    static LegoOmni* GetInstance();
 
-    __declspec(dllexport) void RemoveWorld(const MxAtomId&, long);
+    void RemoveWorld(const MxAtomId&, long);
 
-    __declspec(dllexport) static int GetCurrPathInfo(LegoPathBoundary**, int&);
+    static int GetCurrPathInfo(LegoPathBoundary**, int&);
 
-    __declspec(dllexport) void CreateBackgroundAudio();
+    void CreateBackgroundAudio();
 
     LegoInputManager* GetInputManager();
 
@@ -127,12 +127,12 @@ public:
 private:
 };
 
-__declspec(dllexport) LegoOmni* Lego();
+LegoOmni* Lego();
 
-__declspec(dllexport) LegoInputManager* InputManager();
+LegoInputManager* InputManager();
 
-__declspec(dllexport) LegoSoundManager* SoundManager();
+LegoSoundManager* SoundManager();
 
-__declspec(dllexport) LegoVideoManager* VideoManager();
+LegoVideoManager* VideoManager();
 
 #endif // LEGOOMNI_H

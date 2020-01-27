@@ -3,7 +3,7 @@
 
 class MxVideoParamFlags {
 public:
-    __declspec(dllexport) MxVideoParamFlags();
+    MxVideoParamFlags();
 
 private:
     unsigned char flags1_;

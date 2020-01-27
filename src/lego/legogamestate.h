@@ -8,22 +8,22 @@
  */
 class LegoGameState {
 public:
-    __declspec(dllexport) LegoGameState();
-    __declspec(dllexport) ~LegoGameState();
+    LegoGameState();
+    ~LegoGameState();
 
-    __declspec(dllexport) long Save(unsigned long);
-    __declspec(dllexport) long Load(unsigned long);
+    long Save(unsigned long);
+    long Load(unsigned long);
 
-    __declspec(dllexport) void SetSavePath(char*);
+    void SetSavePath(char*);
 
-    __declspec(dllexport) void SerializePlayersInfo(short);
+    void SerializePlayersInfo(short);
 
-    __declspec(dllexport) void SerializeScoreHistory(short);
+    void SerializeScoreHistory(short);
 
 private:
     char unk_[0x430];
 };
 
-__declspec(dllexport) LegoGameState* GameState();
+LegoGameState* GameState();
 
 #endif // LEGOGAMESTATE_H

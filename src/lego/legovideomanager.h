@@ -10,13 +10,13 @@
  */
 class LegoVideoManager : public MxVideoManager {
 public:
-    __declspec(dllexport) LegoVideoManager();
+    LegoVideoManager();
 
-    __declspec(dllexport) void MoveCursor(int x, int y);
-    __declspec(dllexport) void EnableFullScreenMovie(unsigned char, unsigned char);
+    void MoveCursor(int x, int y);
+    void EnableFullScreenMovie(unsigned char, unsigned char);
 
-    __declspec(dllexport) int EnableRMDevice();
-    __declspec(dllexport) int DisableRMDevice();
+    int EnableRMDevice();
+    int DisableRMDevice();
 
 private:
     int unk64_;

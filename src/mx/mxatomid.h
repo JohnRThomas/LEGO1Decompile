@@ -11,10 +11,10 @@
 class MxAtomId {
 public:
     MxAtomId();
-    __declspec(dllexport) MxAtomId(const char* str, LookupMode mode);
-    __declspec(dllexport) ~MxAtomId();
+    MxAtomId(const char* str, LookupMode mode);
+    ~MxAtomId();
 
-    __declspec(dllexport) MxAtomId& operator=(const MxAtomId &);
+    MxAtomId& operator=(const MxAtomId &);
 
 private:
     MxAtom* sub_100AD210(const char* str, LookupMode mode);

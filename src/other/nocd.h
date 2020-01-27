@@ -7,6 +7,6 @@
  * @return Always returns "\lego\scripts
 ocd"
  */
-__declspec(dllexport) char const* GetNoCD_SourceName(void);
+char const* GetNoCD_SourceName(void);
 
 #endif // NOCD_H

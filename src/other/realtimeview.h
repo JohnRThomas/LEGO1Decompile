@@ -3,13 +3,13 @@
 
 class RealtimeView {
 public:
-    RealtimeView();
+  RealtimeView();
 
-    static void SetUserMaxLOD(float);
-    static void SetPartsThreshold(float);
+  static void SetUserMaxLOD(float);
+  static void SetPartsThreshold(float);
 
-    static float GetUseMaxLOD();
-    static float GetPartsThreshold();
-}
+  static float GetUserMaxLOD();
+  static float GetPartsThreshold();
+};
 
 #endif // REALTIMEVIEW_H

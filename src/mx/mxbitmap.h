@@ -5,11 +5,11 @@
 
 class MxBitmap {
 public:
-    __declspec(dllexport) MxBitmap();
-    __declspec(dllexport) virtual ~MxBitmap();
+    MxBitmap();
+    virtual ~MxBitmap();
 
-    __declspec(dllexport) long Read(const char *);
-    __declspec(dllexport) MxPalette* CreatePalette();
+    virtual long Read(const char *);
+    virtual MxPalette* CreatePalette();
 };
 
 #endif // MXBITMAP_H

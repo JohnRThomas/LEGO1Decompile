@@ -13,10 +13,10 @@ public:
     MxVariableTable();
     virtual ~MxVariableTable();
 
-    __declspec(dllexport) void SetVariable(const char* key, const char* value);
-    __declspec(dllexport) void SetVariable(MxVariable*);
+    void SetVariable(const char* key, const char* value);
+    void SetVariable(MxVariable*);
 
-    __declspec(dllexport) const char* GetVariable(const char*);
+    const char* GetVariable(const char*);
 
 private:
     /**

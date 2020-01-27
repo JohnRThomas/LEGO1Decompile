@@ -28,7 +28,7 @@ private:
  */
 class MxTickleManager : public MxCore {
 public:
-    __declspec(dllexport) MxTickleManager(unsigned char u);
+    MxTickleManager(unsigned char u);
     virtual ~MxTickleManager();
 
     virtual void unk_func1();

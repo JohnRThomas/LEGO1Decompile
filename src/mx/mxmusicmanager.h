@@ -3,9 +3,7 @@
 
 class MxMusicManager {
 public:
-    MxMusicManager();
+  MxMusicManager();
 };
-
-MxMusicManager* MusicManager();
 
 #endif // MXMUSICMANAGER_H

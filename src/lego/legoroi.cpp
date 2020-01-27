@@ -16,3 +16,9 @@ void LegoROI::SetDisplayBB(int)
 {
   ALERT("void LegoROI::SetDisplayBB(int)", "Stub");
 }
+
+LegoROI *PickROI(long, long)
+{
+  ALERT("LegoROI *PickROI(long, long)", "Stub");
+  return NULL;
+}

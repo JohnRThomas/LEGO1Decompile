@@ -227,3 +227,20 @@ MxTimer* Timer()
   ALERT("MxTimer* Timer()", "Stub");
   return MxOmni::GetInstance()->GetTimer();
 }
+
+MxEventManager *EventManager()
+{
+  ALERT("MxEventManager *EventManager()", "Stub");
+  return NULL;
+}
+
+MxMusicManager *MusicManager()
+{
+  ALERT("MxMusicManaer *MusicManager()", "Stub");
+  return NULL;
+}
+
+void SetOmniUserMessage(void (*)(const char *, int))
+{
+  ALERT("void SetOmniUserMessage(void (*)(const char *, int))", "Stub");
+}
