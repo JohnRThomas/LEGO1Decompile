@@ -5,10 +5,10 @@ class MxVideoParamFlags {
 public:
     __declspec(dllexport) MxVideoParamFlags();
 
-    operator unsigned short&();
-
 private:
-    unsigned short flags_;
+    unsigned char flags1_;
+    unsigned char flags2_;
+
 };
 
 #endif // MXVIDEOPARAMFLAGS_H
