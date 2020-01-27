@@ -53,12 +53,17 @@ MxVideoParam::MxVideoParam(MxVideoParam& other)
 
 MxVideoParam::~MxVideoParam()
 {
-  ALERT("MxVideoParam::~MxVideoParam", "Stub");
-  delete [] device_name_;
+  // Perfect
+
+  if (device_name_) {
+    delete [] device_name_;
+  }
 }
 
 MxVideoParam& MxVideoParam::operator=(const MxVideoParam& other)
 {
+  // Perfect
+
   // Copy all parameters
   x_ = other.x_;
   y_ = other.y_;
