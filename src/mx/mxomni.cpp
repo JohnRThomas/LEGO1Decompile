@@ -188,7 +188,8 @@ MxTimer *MxOmni::GetTimer()
 
 void MxOmni::SetInstance(MxOmni* instance)
 {
-  ALERT("void MxOmni::SetInstance(MxOmni* instance)", "Stub");
+  // Perfect
+
   instance_ = instance;
 }
 
