@@ -4,17 +4,16 @@
 
 #include "custom/debug.h"
 
-MxVideoParam::MxVideoParam() :
-  x_(0),
-  y_(0),
-  width_(640),    // Width defaults to 640
-  height_(480),   // Height defaults to 480
-  palette_(NULL),
-  unknown1_(0),
-  unknown2_(0),
-  device_name_(NULL)
+MxVideoParam::MxVideoParam()
 {
-  ALERT("MxVideoParam::MxVideoParam", "Stub");
+  x_ = 0;
+  y_ = 0;
+  width_ = 640;
+  height_ = 480;
+  palette_ = NULL;
+  unknown1_ = 0;
+  unknown2_ = 0;
+  device_name_ = NULL;
 }
 
 MxVideoParam::MxVideoParam(MxRect32& rect, MxPalette* pal, unsigned long u1, MxVideoParamFlags& flags) :
@@ -46,6 +45,8 @@ MxVideoParam::MxVideoParam(MxVideoParam& other)
 
   // Set device name correctly
   SetDeviceName(other.device_name_);
+
+  ALERT("MxVideoParam::MxVideoParam(MxVideoParam& other)", "Stub");
 }
 
 MxVideoParam::~MxVideoParam()
