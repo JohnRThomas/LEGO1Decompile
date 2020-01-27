@@ -6,7 +6,6 @@
 
 MxString::MxString()
 {
-  ALERT("MxString::MxString()", "Stub");
   string_ = new char[1];
   string_[0] = 0;
   length_ = 0;
