@@ -18,7 +18,7 @@ LegoOmni::~LegoOmni()
 
 void LegoOmni::CreateInstance()
 {
-  ALERT("LegoOmni::CreateInstance", "Stub");
+  // Perfect
 
   DestroyInstance();
   SetInstance(new LegoOmni());
