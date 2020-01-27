@@ -29,7 +29,7 @@ private:
 class MxTickleManager : public MxCore {
 public:
     __declspec(dllexport) MxTickleManager(unsigned char u);
-    virtual ~MxTickleManager() override;
+    virtual ~MxTickleManager();
 
     virtual void unk_func1();
 

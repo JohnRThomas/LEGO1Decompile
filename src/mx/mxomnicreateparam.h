@@ -1,7 +1,7 @@
 #ifndef MXOMNICREATEPARAM_H
 #define MXOMNICREATEPARAM_H
 
-#include <Windows.h>
+#include <WINDOWS.H>
 
 #include "mxomnicreateflags.h"
 #include "mxstring.h"
@@ -14,9 +14,9 @@
  */
 class MxOmniCreateParam {
 public:
-    __declspec(dllexport) MxOmniCreateParam(const char *, HWND__* handle, MxVideoParam &, MxOmniCreateFlags);
+    __declspec(dllexport) MxOmniCreateParam(const char *, struct HWND__* handle, MxVideoParam &, MxOmniCreateFlags);
 
-    HWND__ * window_handle();
+    struct HWND__ * window_handle();
 
     const MxString& unknown1();
 
@@ -32,7 +32,7 @@ private:
     MxString unknown1_;
 
     // +14
-    HWND__ * window_handle_;
+    struct HWND__ * window_handle_;
 
     // +18
     MxVideoParam video_params_;

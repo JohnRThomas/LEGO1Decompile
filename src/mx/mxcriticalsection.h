@@ -15,21 +15,21 @@
  */
 class MxCriticalSection {
 public:
-    MxCriticalSection();
-    ~MxCriticalSection();
+  MxCriticalSection();
+  ~MxCriticalSection();
 
-    void Lock();
+  void Lock();
 
-    void Unlock();
+  void Unlock();
 
-    static void SetDoMutex();
+  static void SetDoMutex();
 
 private:
-    static bool do_mutex_;
+  static BOOL do_mutex_;
 
-    CRITICAL_SECTION critical_section_;
+  CRITICAL_SECTION critical_section_;
 
-    HANDLE mutex_;
+  HANDLE mutex_;
 };
 
 #endif // MXCRITICALSECTION_H

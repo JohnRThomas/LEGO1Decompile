@@ -6,8 +6,8 @@ int MxCore::core_count_ = 0;
 
 MxCore::MxCore()
 {
-    id_ = core_count_;
-    core_count_++;
+  id_ = core_count_;
+  core_count_++;
 }
 
 MxCore::~MxCore()
@@ -16,7 +16,7 @@ MxCore::~MxCore()
 
 long MxCore::Notify(MxParam&)
 {
-    ALERT("Stub")
+  ALERT("Stub");
 
-    return 0;
+  return 0;
 }

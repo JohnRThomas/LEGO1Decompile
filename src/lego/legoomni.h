@@ -100,8 +100,8 @@ protected:
     unsigned char unknown13C_; // [esi+13C]
 
     __declspec(dllexport) LegoOmni();
-    __declspec(dllexport) virtual ~LegoOmni() override;
-    virtual void Init() override;
+    __declspec(dllexport) virtual ~LegoOmni();
+    virtual void Init();
 
 public:
     virtual void unk_func03();

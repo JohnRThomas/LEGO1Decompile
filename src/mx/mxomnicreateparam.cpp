@@ -2,7 +2,7 @@
 
 #include "custom/debug.h"
 
-MxOmniCreateParam::MxOmniCreateParam(const char* str, HWND__* handle, MxVideoParam & vparams, MxOmniCreateFlags flags)
+MxOmniCreateParam::MxOmniCreateParam(const char* str, struct HWND__ *handle, MxVideoParam & vparams, MxOmniCreateFlags flags)
 {
     unknown1_ = str;
 
@@ -13,7 +13,7 @@ MxOmniCreateParam::MxOmniCreateParam(const char* str, HWND__* handle, MxVideoPar
     flags_ = flags;
 }
 
-HWND__ *MxOmniCreateParam::window_handle()
+struct HWND__ *MxOmniCreateParam::window_handle()
 {
     return window_handle_;
 }

@@ -1,7 +1,7 @@
 #ifndef LEGOUNKNOWNMANAGER3_H
 #define LEGOUNKNOWNMANAGER3_H
 
-#include <Windows.h>
+#include <WINDOWS.H>
 
 /**
  * @brief Unknown class used in LegoUnknownManager3
@@ -76,10 +76,10 @@ private:
 
     // FIXME: This may not be a member of this class
     // Some kind of buffer?
-    static long long* addr_100F42E8;
-    static long long* addr_100F42EC;
-    static long long* addr_100F4358;
-    static long long* addr_100F435C;
+    static __int64* addr_100F42E8;
+    static __int64* addr_100F42EC;
+    static __int64* addr_100F4358;
+    static __int64* addr_100F435C;
 
     unsigned int unk0_;
     unsigned char unk4_;

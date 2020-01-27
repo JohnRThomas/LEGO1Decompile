@@ -15,5 +15,5 @@ void MxBackgroundAudioManager::Enable(unsigned char)
 MxBackgroundAudioManager* BackgroundAudioManager(){
     ALERT("Stub");
 
-    return nullptr;
+    return NULL;
 }

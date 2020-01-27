@@ -1,5 +1,5 @@
-#include <Windows.h>
+#include <WINDOWS.H>
 
-__declspec(dllexport)  BOOL WINAPI DllMain(HINSTANCE /*hDllHandle*/, DWORD /*nReason*/, LPVOID /*Reserved*/) {
-    return TRUE;
+__declspec(dllexport) BOOL WINAPI DllMain(HINSTANCE, DWORD, LPVOID) {
+  return TRUE;
 }

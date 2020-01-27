@@ -33,7 +33,7 @@ private:
     DWORD start_time_;
 
     // +C
-    bool running_;
+    BOOL running_;
 };
 
 #endif // MXTIMER_H

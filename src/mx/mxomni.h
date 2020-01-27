@@ -36,7 +36,7 @@ protected:
     MxString unknown8_;
 
     // +18
-    HWND__* window_handle_;
+    struct HWND__* window_handle_;
 
     // +1C
     MxObjectFactory* object_factory_;
@@ -105,7 +105,7 @@ public:
 
 };
 
-__declspec(dllexport) void SetOmniUserMessage(void(const char *, int));
+__declspec(dllexport) void SetOmniUserMessage(void (__cdecl*)(const char*, int));
 
 __declspec(dllexport) MxVariableTable* VariableTable();
 

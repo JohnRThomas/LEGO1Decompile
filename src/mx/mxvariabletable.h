@@ -11,7 +11,7 @@
 class MxVariableTable : public MxCore {
 public:
     MxVariableTable();
-    virtual ~MxVariableTable() override;
+    virtual ~MxVariableTable();
 
     __declspec(dllexport) void SetVariable(const char* key, const char* value);
     __declspec(dllexport) void SetVariable(MxVariable*);

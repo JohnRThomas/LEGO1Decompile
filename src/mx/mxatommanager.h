@@ -13,7 +13,7 @@
  */
 class MxAtomItem {
 public:
-    MxAtomItem(MxAtomItem* parent, bool root);
+    MxAtomItem(MxAtomItem* parent, BOOL root);
 
     MxAtomItem* unk0(){return unk0_;}
     void set_unk0(MxAtomItem* item){unk0_ = item;}
@@ -25,7 +25,7 @@ public:
 
     MxAtom* unkC(){return unkC_;}
 
-    bool root(){return root_;}
+    BOOL root(){return root_;}
 
     void sub_100AD480();
 
@@ -38,7 +38,7 @@ private:
 
     MxAtom* unkC_;
 
-    bool root_;
+    BOOL root_;
 };
 
 /**

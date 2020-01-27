@@ -1,6 +1,6 @@
 #include "mxstring.h"
 
-#include <string>
+#include <STRING.H>
 
 #include "custom/debug.h"
 
@@ -17,7 +17,7 @@ MxString::MxString(const char *s)
 
     unsigned int array_length = length_+1;
     string_ = new char[array_length];
-    strcpy_s(string_, array_length, s);
+    strcpy(string_, s);
 }
 
 MxString::MxString(const MxString& other)
@@ -28,7 +28,7 @@ MxString::MxString(const MxString& other)
 
     unsigned int array_length = length_+1;
     string_ = new char[array_length];
-    strcpy_s(string_, array_length, other.string_);
+    strcpy(string_, other.string_);
 }
 
 MxString::~MxString()
@@ -44,7 +44,7 @@ const MxString &MxString::operator=(const MxString &s)
 
     unsigned int array_length = length_+1;
     string_ = new char[array_length];
-    strcpy_s(string_, array_length, s.string_);
+    strcpy(string_, s.string_);
 
     return *this;
 }
@@ -57,12 +57,12 @@ const MxString& MxString::operator=(const char* s)
 
     unsigned int array_length = length_+1;
     string_ = new char[array_length];
-    strcpy_s(string_, array_length, s);
+    strcpy(string_, s);
 
     return *this;
 }
 
-bool MxString::operator==(const MxString &other) const
+BOOL MxString::operator==(const MxString &other) const
 {
     return (!strcmp(string_, other.string_));
 }

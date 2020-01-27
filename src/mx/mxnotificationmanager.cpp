@@ -5,7 +5,7 @@
 #include "mxstreamer.h"
 
 MxNotificationManager::MxNotificationManager() :
-    unk8_(nullptr),
+    unk8_(NULL),
     unkC_(0),
     unk2C_(0),
     unk30_(0x10),
@@ -31,7 +31,7 @@ void MxNotificationManager::sub_100AC600(int, int)
 
     unk8_ = ebp_14;
 
-    if (unk8_ != nullptr) {
+    if (unk8_ != NULL) {
         // Virtual
         TickleManager()->sub_100BDE80(this, 0xA);
     }

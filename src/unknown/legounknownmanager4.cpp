@@ -4,5 +4,5 @@
 
 LegoUnknownManager4::LegoUnknownManager4()
 {
-    ALERT("Stub\n\nSize: %x", sizeof(LegoUnknownManager4))
+  ALERT("Stub\n\nSize: %x", sizeof(LegoUnknownManager4));
 }

@@ -4,17 +4,17 @@
 
 MxTransitionManager::MxTransitionManager()
 {
-    ALERT("Stub\n\nSize: %x", sizeof(MxTransitionManager))
+  ALERT("Stub\n\nSize: %x", sizeof(MxTransitionManager));
 }
 
 void MxTransitionManager::SetWaitIndicator(MxVideoPresenter*)
 {
-    ALERT("Stub")
+  ALERT("Stub");
 }
 
 MxTransitionManager* TransitionManager()
 {
-    ALERT("Stub")
+  ALERT("Stub");
 
-    return nullptr;
+  return NULL;
 }

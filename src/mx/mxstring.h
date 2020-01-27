@@ -1,6 +1,8 @@
 #ifndef MXSTRING_H
 #define MXSTRING_H
 
+#include <WINDOWS.H>
+
 #include "mxcore.h"
 
 /**
@@ -24,7 +26,7 @@ public:
 
     const MxString& operator=(const MxString& s);
 
-    bool operator==(const MxString& other) const;
+    BOOL operator==(const MxString& other) const;
 
     const char& operator[](int i) const;
 
