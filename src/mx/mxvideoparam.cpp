@@ -31,7 +31,8 @@ MxVideoParam::MxVideoParam(MxRect32& rect, MxPalette* pal, unsigned long u1, MxV
 
 MxVideoParam::MxVideoParam(MxVideoParam& other)
 {
-  ALERT("MxVideoParam::MxVideoParam", "Stub");
+  ALERT("MxVideoParam::MxVideoParam(MxVideoParam& other)", "Stub");
+
   // Copy all parameters
   x_ = other.x_;
   y_ = other.y_;
@@ -44,8 +45,6 @@ MxVideoParam::MxVideoParam(MxVideoParam& other)
 
   // Set device name correctly
   SetDeviceName(other.device_name_);
-
-  ALERT("MxVideoParam::MxVideoParam(MxVideoParam& other)", "Stub");
 }
 
 MxVideoParam::~MxVideoParam()
@@ -57,6 +56,7 @@ MxVideoParam::~MxVideoParam()
 MxVideoParam& MxVideoParam::operator=(const MxVideoParam& other)
 {
   ALERT("MxVideoParam& MxVideoParam::operator=(const MxVideoParam& other)", "Stub");
+
   // Copy all parameters
   x_ = other.x_;
   y_ = other.y_;
@@ -75,20 +75,20 @@ MxVideoParam& MxVideoParam::operator=(const MxVideoParam& other)
 
 void MxVideoParam::SetDeviceName(char* device)
 {
-  ALERT("void MxVideoParam::SetDeviceName(char* device)", "Stub");
-  // Delete device string if it already exists
-  delete [] device_name_;
-
-  // If no device was specified, set to null
-  if (!device) {
-    device_name_ = NULL;
-    return;
+  if (device_name_) {
+    // Delete device string if it already exists
+    delete [] device_name_;
   }
 
-  // Otherwise, copy the string here
-  size_t device_name_len = strlen(device) + 1;
-  device_name_ = new char[device_name_len];
-  strcpy(device_name_, device);
+  // If no device was specified, set to null
+  if (device) {
+    // Otherwise, copy the string here
+    if ((device_name_ = new char[strlen(device) + 1])) {
+      strcpy(device_name_, device);
+    }
+  } else {
+    device_name_ = NULL;
+  }
 }
 
 void MxVideoParam::SetPalette(MxPalette *palette)
