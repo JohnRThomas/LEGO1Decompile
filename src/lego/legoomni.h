@@ -29,10 +29,10 @@
  */
 class LegoUnknownManager5 {
 public:
-    LegoUnknownManager5();
+  LegoUnknownManager5();
 
 private:
-    char unk_[0x2C];
+  char unk_[0x2C];
 };
 
 /**
@@ -46,10 +46,10 @@ private:
  */
 class LegoUnknownManager6 {
 public:
-    LegoUnknownManager6();
+  LegoUnknownManager6();
 
 private:
-    char unk_[0x500];
+  char unk_[0x500];
 };
 
 /**
@@ -63,10 +63,10 @@ private:
  */
 class LegoUnknownManager7 {
 public:
-    LegoUnknownManager7();
+  LegoUnknownManager7();
 
 private:
-    char unk_[0x30];
+  char unk_[0x30];
 };
 
 /**
@@ -78,51 +78,51 @@ private:
  */
 class LegoOmni : public MxOmni {
 protected:
-    int unknown68_; // [esi+68]
-    LegoUnknownManager2* unknown6C_; // [esi+6C]
-    LegoInputManager* input_manager_; // [esi+70]
-    LegoUnknownManager3* unknown74_; // [esi+74]
-    LegoUnknownManager8* unknown78_; // [esi+78]
-    int unknown7C_; // [esi+7C]
-    unsigned char unknown80_; // [esi+80]
-    int unknown84_; // [esi+84]
-    int unknown88_; // [esi+88]
-    LegoUnknownManager4* unknown8C_; // [esi+8C]
-    LegoUnknownManager5* unknown90_; // [esi+90]
-    LegoUnknownManager6* unknown94_; // [esi+94]
-    LegoUnknownManager7* unknown98_; // [esi+98]
-    LegoGameState* game_state_; // [esi+9C]
+  int unknown68_; // [esi+68]
+  LegoUnknownManager2* unknown6C_; // [esi+6C]
+  LegoInputManager* input_manager_; // [esi+70]
+  LegoUnknownManager3* unknown74_; // [esi+74]
+  LegoUnknownManager8* unknown78_; // [esi+78]
+  int unknown7C_; // [esi+7C]
+  unsigned char unknown80_; // [esi+80]
+  int unknown84_; // [esi+84]
+  int unknown88_; // [esi+88]
+  LegoUnknownManager4* unknown8C_; // [esi+8C]
+  LegoUnknownManager5* unknown90_; // [esi+90]
+  LegoUnknownManager6* unknown94_; // [esi+94]
+  LegoUnknownManager7* unknown98_; // [esi+98]
+  LegoGameState* game_state_; // [esi+9C]
 
-    MxDSAction action_;
+  MxDSAction action_; // [esi+A0]
 
-    MxBackgroundAudioManager* background_audio_manager_; // [esi+134]
-    MxTransitionManager* transition_manager_; // [esi+138]
-    unsigned char unknown13C_; // [esi+13C]
+  MxBackgroundAudioManager* background_audio_manager_; // [esi+134]
+  MxTransitionManager* transition_manager_; // [esi+138]
+  unsigned char unknown13C_; // [esi+13C]
 
-    LegoOmni();
-    virtual ~LegoOmni();
-    virtual void Init();
+  LegoOmni();
+  virtual ~LegoOmni();
+  virtual void Init();
 
 public:
-    virtual void unk_func03();
-    virtual void unk_func04();
+  virtual void unk_func03();
+  virtual void unk_func04();
 
-    virtual void Destroy();
-    virtual int Create(MxOmniCreateParam &param);
+  virtual void Destroy();
+  virtual int Create(MxOmniCreateParam &param);
 
 
-    static void CreateInstance();
-    static LegoOmni* GetInstance();
+  static void CreateInstance();
+  static LegoOmni* GetInstance();
 
-    void RemoveWorld(const MxAtomId&, long);
+  void RemoveWorld(const MxAtomId&, long);
 
-    static int GetCurrPathInfo(LegoPathBoundary**, int&);
+  static int GetCurrPathInfo(LegoPathBoundary**, int&);
 
-    void CreateBackgroundAudio();
+  void CreateBackgroundAudio();
 
-    LegoInputManager* GetInputManager();
+  LegoInputManager* GetInputManager();
 
-    LegoVideoManager* GetVideoManager();
+  LegoVideoManager* GetVideoManager();
 
 private:
 };
