@@ -15,7 +15,7 @@ MxDSAction::MxDSAction()
   unknown21_.Set(0x7f7fffff);
   unknown26_.Set(0x7f7fffff);
 
-  unknown3_ = 1;
+  unkC_ = 1;
 
   unknown31_ = 0;
   unknown32_ = 0;
@@ -40,14 +40,21 @@ long Start(MxDSAction*)
 MxDSActionBase::MxDSActionBase()
 {
   ALERT("MxDSActionBase::MxDSActionBase()", "Stub");
-  unknown3_ = 0;
-  unknown4_ = 0;
-  unknown5_ = 0;
-  unknown6_ = 0;
-  unknown7_ = 0xFFFFFFFF;
-  unknown8_ = 0;
-  unknown9_ = 0xFFFF;
-  unknown10_ = 0;
+
+  unsigned int ebp_4 = 0;
+  ebp_4 = 1;
+
+  unkC_ = 0;
+  unk20_ = 0;
+
+  unk24_ = 0xFFFF;
+  unk10_ = 0;
+  unk14_ = 0;
+  unk18_ = 0;
+  unk1C_ = 0xFFFFFFFF;
+  unk28_ = 0;
+
+  ebp_4 = 0xFFFFFFFF;
 }
 
 MxDSSubclass::MxDSSubclass()
