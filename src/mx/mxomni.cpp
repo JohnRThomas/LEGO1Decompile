@@ -131,7 +131,6 @@ void MxOmni::SetHD(const char *hd)
 
 const char *MxOmni::GetCD()
 {
-  ALERT("const char *MxOmni::GetCD()", "Stub");
   return cd_path_;
 }
 
