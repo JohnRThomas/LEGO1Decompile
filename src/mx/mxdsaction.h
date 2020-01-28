@@ -7,7 +7,6 @@ class MxDSActionBase : public MxCore {
 public:
   MxDSActionBase();
 
-protected:
   int unk8_;
 
   short unkC_;
@@ -25,20 +24,57 @@ protected:
   unsigned short unk24_;
 
   int unk28_;
+
 };
 
-class MxDSSubclass {
+class MxDSActionSubclass
+{
 public:
-  MxDSSubclass();
+  virtual ~MxDSActionSubclass(){}
 
-  void Set(int value);
+  virtual void vtable4(){}
+  virtual void vtable8(){}
+  virtual void vtableC(){}
+  virtual void vtable10(){}
+  virtual void vtable14(){}
+  virtual void vtable18(){}
+  virtual void vtable1C(){}
+  virtual void vtable20(){}
+  virtual void vtable24(){}
+  virtual void vtable28(){}
+  virtual void vtable2C(){}
+  virtual void vtable30(){}
+  virtual void vtable34(){}
+  virtual void vtable38(){}
+  virtual void vtable3C(){}
+  virtual void vtable40(){}
+  virtual void vtable44(){}
+  virtual void vtable48(){}
+  virtual void vtable4C(){}
+  virtual void vtable50(){}
+  virtual void vtable54(){}
+  virtual void vtable58(){}
+  virtual void vtable5C(){}
+  virtual void vtable60(){}
+  virtual void vtable64(){}
+  virtual void vtable68(){}
+  virtual void vtable6C(){}
+  virtual void vtable70(){}
+  virtual void vtable74(){}
+  virtual void vtable78(){}
+  virtual void vtable7C(){}
+  virtual void vtable80(){}
 
-private:
-  int unknown1_;
-  int unknown2_;
-  int unknown3_;
-  int unknown4_;
-  int unknown5_;
+  // vtable 84
+  virtual void sub_10003BF0(int* esp_8);
+
+  int* unk4_;
+  int unk8_[3];
+};
+
+class MxDSActionSubclass2 : public MxDSActionSubclass
+{
+public:
 };
 
 class MxDSAction : public MxDSActionBase {
@@ -47,20 +83,20 @@ public:
   virtual ~MxDSAction();
 
 private:
-  int unknown11_; // esi+2C
-  int unknown12_; // esi+30
-  int unknown13_; // esi+34
-  int unknown14_; // esi+38
-  int unknown15_; // esi+3C
-  MxDSSubclass unknown16_; // esi+40
-  MxDSSubclass unknown21_; // esi+54
-  MxDSSubclass unknown26_; // esi+68
-  int unknown31_; // esi+7C
-  short unknown32_; // esi+80
-  int unknown33_; // esi+84
-  int unknown34_; // esi+88
-  int unknown35_; // esi+8C
-  int unknown36_; // esi+90
+  int unk2C_;
+  int unk30_;
+  unsigned int unk34_;
+  unsigned int unk38_;
+  unsigned int unk3C_;
+  MxDSActionSubclass unk40_;
+  MxDSActionSubclass unk54_;
+  MxDSActionSubclass unk68_;
+  int unk7C_;
+  short unk80_;
+  int unk84_;
+  int unk88_;
+  int unk8C_;
+  unsigned int unk90_;
 
 
 };
