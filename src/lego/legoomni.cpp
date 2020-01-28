@@ -58,8 +58,6 @@ LegoVideoManager *LegoOmni::GetVideoManager()
 
 LegoOmni* Lego()
 {
-  ALERT("Lego", "Stub");
-
   return LegoOmni::GetInstance();
 }
 
