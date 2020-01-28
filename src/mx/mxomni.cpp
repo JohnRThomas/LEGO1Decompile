@@ -44,6 +44,7 @@ unsigned int MxOmni::Create(MxOmniCreateParam& param)
 {
   ALERT("unsigned int MxOmni::Create(MxOmniCreateParam& param)", "Partial Stub");
 
+  /*
   atom_manager_ = new MxAtomManager();
 
   unknown8_ = param.unknown1();
@@ -101,6 +102,7 @@ unsigned int MxOmni::Create(MxOmniCreateParam& param)
 
     // function on unknown38_(32, 0)
   }
+  */
 
   return 0;
 }

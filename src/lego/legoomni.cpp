@@ -91,6 +91,8 @@ int LegoOmni::Create(MxOmniCreateParam& param)
 {
   ALERT("LegoOmni::Create", "Partial Stub");
 
+  /*
+
   critical_section_.Lock();
 
   // Prevent MxOmni::Create() from creating objects that we create later
@@ -162,6 +164,8 @@ int LegoOmni::Create(MxOmniCreateParam& param)
   // Run function on LegoGameState
 
   critical_section_.Unlock();
+
+  */
 
   return 0;
 }

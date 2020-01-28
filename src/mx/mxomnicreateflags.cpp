@@ -4,21 +4,14 @@
 
 MxOmniCreateFlags::MxOmniCreateFlags()
 {
-  ALERT("MxOmniCreateFlags::MxOmniCreateFlags()", "Stub");
-  flags_ |= CreateObjectFactory;
-  flags_ |= CreateVariableTable;
-  flags_ |= CreateTickleManager;
-  flags_ |= CreateNotificationManager;
-  flags_ |= CreateVideoManager;
-  flags_ |= CreateSoundManager;
-  flags_ |= CreateMxUnknownManager3;
-  flags_ |= CreateMxUnknownManager4;
-  flags_ |= CreateTimer;
-  flags_ |= CreateStreamer;
-}
-
-MxOmniCreateFlags::operator unsigned short&()
-{
-  ALERT("MxOmniCreateFlags::operator unsigned short&()", "Stub");
-  return flags_;
+  flags1_ |= CreateObjectFactory;
+  flags1_ |= CreateVariableTable;
+  flags1_ |= CreateTickleManager;
+  flags1_ |= CreateNotificationManager;
+  flags1_ |= CreateVideoManager;
+  flags1_ |= CreateSoundManager;
+  flags1_ |= CreateMxUnknownManager3;
+  flags1_ |= CreateMxUnknownManager4;
+  flags2_ |= CreateTimer;
+  flags2_ |= CreateStreamer;
 }

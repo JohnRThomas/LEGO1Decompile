@@ -1,29 +1,33 @@
 #ifndef MXOMNICREATEFLAGS_H
 #define MXOMNICREATEFLAGS_H
 
+#include <WINDOWS.H>
+
 class MxOmniCreateFlags {
 public:
-    enum Flags {
-        CreateObjectFactory = 0x1,
-        CreateVariableTable = 0x2,
-        CreateTickleManager = 0x4,
-        CreateNotificationManager = 0x8,
-        CreateVideoManager = 0x10,
-        CreateSoundManager = 0x20,
-        CreateMxUnknownManager3 = 0x40,
-        CreateMxUnknownManager4 = 0x80,
-        // 0x100 - never seems to be used,
-        CreateTimer = 0x200,
-        CreateStreamer = 0x400,
+  enum Flags {
+    CreateObjectFactory = 0x1,
+    CreateVariableTable = 0x2,
+    CreateTickleManager = 0x4,
+    CreateNotificationManager = 0x8,
+    CreateVideoManager = 0x10,
+    CreateSoundManager = 0x20,
+    CreateMxUnknownManager3 = 0x40,
+    CreateMxUnknownManager4 = 0x80,
+  };
 
-    };
+  enum Flags2 {
+    CreateTimer = 0x2,
+    CreateStreamer = 0x4
+  };
 
-    MxOmniCreateFlags();
-
-    operator unsigned short&();
+  MxOmniCreateFlags();
 
 private:
-    unsigned short flags_;
+  unsigned char flags1_;
+
+  unsigned char flags2_;
+
 };
 
 #endif // MXOMNICREATEFLAGS_H
