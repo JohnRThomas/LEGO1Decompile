@@ -6,8 +6,6 @@
 
 LegoOmni::LegoOmni()
 {
-  ALERT("LegoOmni::LegoOmni", "Stub");
-
   Init();
 }
 
