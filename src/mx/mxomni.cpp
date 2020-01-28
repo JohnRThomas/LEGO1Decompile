@@ -137,7 +137,6 @@ const char *MxOmni::GetCD()
 
 void MxOmni::SetCD(const char *cd)
 {
-  ALERT("void MxOmni::SetCD(const char *cd)", "Stub");
   strcpy(cd_path_, cd);
 }
 
