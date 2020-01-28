@@ -145,7 +145,6 @@ unsigned char MxOmni::IsSound3D()
 
 void MxOmni::SetSound3D(unsigned char c)
 {
-  ALERT("void MxOmni::SetSound3D(unsigned char c)", "Stub");
   sound_is_3d_ = c;
 }
 
