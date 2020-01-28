@@ -140,7 +140,6 @@ void MxOmni::SetCD(const char *cd)
 
 unsigned char MxOmni::IsSound3D()
 {
-  ALERT("unsigned char MxOmni::IsSound3D()", "Stub");
   return sound_is_3d_;
 }
 
