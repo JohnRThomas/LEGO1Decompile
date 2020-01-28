@@ -63,14 +63,12 @@ LegoOmni* Lego()
   return LegoOmni::GetInstance();
 }
 
-void LegoOmni::Init(){
-  ALERT("LegoOmni::Init", "Stub");
-
+void LegoOmni::Init() {
   MxOmni::Init();
 
   unknown68_ = 0;
-  unknown6C_ = NULL;
   input_manager_ = NULL;
+  unknown6C_ = NULL;
   unknown74_ = NULL;
   unknown78_ = NULL;
   unknown7C_ = 0;
@@ -78,9 +76,9 @@ void LegoOmni::Init(){
   unknown88_ = 0;
   unknown8C_ = NULL;
   unknown90_ = NULL;
+  game_state_ = NULL;
   unknown94_ = NULL;
   unknown98_ = NULL;
-  game_state_ = NULL;
   background_audio_manager_ = NULL;
   transition_manager_ = NULL;
   unknown13C_ = 1;
