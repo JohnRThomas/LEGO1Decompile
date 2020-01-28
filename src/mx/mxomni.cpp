@@ -4,7 +4,7 @@
 
 #include "custom/debug.h"
 
-// Arbitrary maximum path length
+// FIXME: Don't actually know yet how large these buffers are
 const int kMaximumPathLength = 255;
 
 char MxOmni::cd_path_[kMaximumPathLength];
@@ -126,7 +126,6 @@ const char *MxOmni::GetHD()
 
 void MxOmni::SetHD(const char *hd)
 {
-  ALERT("void MxOmni::SetHD(const char *hd)", "Stub");
   strcpy(hd_path_, hd);
 }
 
