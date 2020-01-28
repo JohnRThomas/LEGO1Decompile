@@ -120,7 +120,6 @@ void MxOmni::DestroyInstance()
 
 const char *MxOmni::GetHD()
 {
-  ALERT("const char *MxOmni::GetHD()", "Stub");
   return hd_path_;
 }
 
