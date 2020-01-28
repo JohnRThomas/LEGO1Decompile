@@ -151,7 +151,7 @@ add_library(
 )
 
 #target_compile_options(${LEGO1_TARGET} PRIVATE /W4 /WX)
-target_compile_options(${LEGO1_TARGET} PRIVATE /MT /GX /O2 /Ob0 /D"NDEBUG" /D"WIN32" /D"_WINDOWS" /D"STRICT" /c)
+target_compile_options(${LEGO1_TARGET} PRIVATE /O2 /Ob1 /D"NDEBUG" /D"WIN32" /D"_WINDOWS" /D"STRICT")
 
 target_include_directories(
     ${LEGO1_TARGET}
