@@ -32,4 +32,15 @@ private:
   HANDLE mutex_;
 };
 
+class MxCriticalSectionAutoLock {
+public:
+  MxCriticalSectionAutoLock(MxCriticalSection* critical_section);
+  ~MxCriticalSectionAutoLock();
+
+private:
+  MxCriticalSection* critical_section_;
+};
+
+#define AUTOLOCK(x) MxCriticalSectionAutoLock __auto_locker(x)
+
 #endif // MXCRITICALSECTION_H

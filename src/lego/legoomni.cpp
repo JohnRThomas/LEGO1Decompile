@@ -89,17 +89,14 @@ void LegoOmni::Destroy()
 
 int LegoOmni::Create(MxOmniCreateParam& param)
 {
-  ALERT("LegoOmni::Create", "Partial Stub");
-
-  /*
-
-  critical_section_.Lock();
+  AUTOLOCK(&critical_section_);
 
   // Prevent MxOmni::Create() from creating objects that we create later
-  param.flags() &= ~MxOmniCreateFlags::CreateObjectFactory;
+  /*param.flags() &= ~MxOmniCreateFlags::CreateObjectFactory;
   param.flags() &= ~MxOmniCreateFlags::CreateVideoManager;
   param.flags() &= ~MxOmniCreateFlags::CreateSoundManager;
-  param.flags() &= ~MxOmniCreateFlags::CreateTickleManager;
+  param.flags() &= ~MxOmniCreateFlags::CreateTickleManager;*/
+  param.flags().SetCreateObjectFactory(FALSE);
 
   tickle_manager_ = new MxTickleManager(0xFF);
 
@@ -162,10 +159,6 @@ int LegoOmni::Create(MxOmniCreateParam& param)
   // call 0x1003EF40
 
   // Run function on LegoGameState
-
-  critical_section_.Unlock();
-
-  */
 
   return 0;
 }

@@ -59,3 +59,18 @@ void MxCriticalSection::SetDoMutex()
   ALERT("void MxCriticalSection::SetDoMutex()", "Stub");
   do_mutex_ = TRUE;
 }
+
+MxCriticalSectionAutoLock::MxCriticalSectionAutoLock(MxCriticalSection* critical_section) :
+  critical_section_(critical_section)
+{
+  if (critical_section_) {
+    critical_section_->Lock();
+  }
+}
+
+MxCriticalSectionAutoLock::~MxCriticalSectionAutoLock()
+{
+  if (critical_section_) {
+    critical_section_->Unlock();
+  }
+}
