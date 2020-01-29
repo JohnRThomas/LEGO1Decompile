@@ -55,14 +55,17 @@ const MxString &MxString::operator=(const MxString &s)
 
 const MxString& MxString::operator=(const char* s)
 {
-  ALERT("const MxString& MxString::operator=(const char* s)", "Stub");
-  delete [] string_;
+  // FIXME: Imperfect, but literally the only inaccuracy is the cmp is the wrong way around
+  //        (i.e. original is `cmp eax,esi` and this compiles to `cmp esi,eax`)
 
-  length_ = static_cast<unsigned short>(strlen(s));
+  if (string_ != s) {
+    delete [] string_;
 
-  unsigned int array_length = length_+1;
-  string_ = new char[array_length];
-  strcpy(string_, s);
+    length_ = static_cast<unsigned short>(strlen(s));
+
+    string_ = new char[length_+1];
+    strcpy(string_, s);
+  }
 
   return *this;
 }
