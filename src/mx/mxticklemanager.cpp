@@ -2,12 +2,13 @@
 
 #include "custom/debug.h"
 
-MxTickleManager::MxTickleManager(unsigned char u) :
-  unknown08_(u),
-  unknown0C_(new MxTickleUnknownSubclass1()),
-  unknown10_(0)
+MxTickleManager::MxTickleManager(unsigned char u)
 {
   ALERT("MxTickleManager::MxTickleManager(unsigned char u)", "Stub");
+
+  unknown08_ = u;
+  unknown0C_ = new MxTickleUnknownSubclass1();
+  unknown10_ = 0;
 }
 
 MxTickleManager::~MxTickleManager()
@@ -16,34 +17,34 @@ MxTickleManager::~MxTickleManager()
   delete unknown0C_;
 }
 
-void MxTickleManager::unk_func1()
+void MxTickleManager::vtable4()
 {
-  ALERT("void MxTickleManager::unk_func1()", "Stub");
+  ALERT("void MxTickleManager::vtable4()", "Stub");
 }
 
-void MxTickleManager::unk_func2()
+void MxTickleManager::vtable8()
 {
-  ALERT("void MxTickleManager::unk_func2()", "Stub");
+  ALERT("void MxTickleManager::vtable8()", "Stub");
 }
 
-void MxTickleManager::unk_func3()
+void MxTickleManager::vtableC()
 {
-  ALERT("void MxTickleManager::unk_func3()", "Stub");
+  ALERT("void MxTickleManager::vtableC()", "Stub");
 }
 
-void MxTickleManager::unk_func4()
+void MxTickleManager::vtable10()
 {
-  ALERT("void MxTickleManager::unk_func4()", "Stub");
+  ALERT("void MxTickleManager::vtable10()", "Stub");
 }
 
-void MxTickleManager::unk_func5()
+void MxTickleManager::vtable14()
 {
-  ALERT("void MxTickleManager::unk_func5()", "Stub");
+  ALERT("void MxTickleManager::vtable14()", "Stub");
 }
 
-void MxTickleManager::unk_func6()
+void MxTickleManager::vtable18()
 {
-  ALERT("void MxTickleManager::unk_func6()", "Stub");
+  ALERT("void MxTickleManager::vtable18()", "Stub");
 }
 
 void MxTickleManager::sub_100BDE80(MxNotificationManager *, int)
@@ -54,9 +55,4 @@ void MxTickleManager::sub_100BDE80(MxNotificationManager *, int)
 MxTickleUnknownSubclass1::MxTickleUnknownSubclass1()
 {
   ALERT("MxTickleUnknownSubclass1::MxTickleUnknownSubclass1()", "Stub");
-}
-
-MxTickleUnknownSubclass1::~MxTickleUnknownSubclass1()
-{
-  ALERT("MxTickleUnknownSubclass1::~MxTickleUnknownSubclass1()", "Stub");
 }

@@ -5,11 +5,6 @@
 
 class MxOmniCreateFlags {
 public:
-  MxOmniCreateFlags();
-
-  void SetCreateObjectFactory(BOOL enabled);
-
-private:
   enum Flags {
     CreateObjectFactory = 0x1,
     CreateVariableTable = 0x2,
@@ -18,7 +13,7 @@ private:
     CreateVideoManager = 0x10,
     CreateSoundManager = 0x20,
     CreateMxUnknownManager3 = 0x40,
-    CreateMxUnknownManager4 = 0x80,
+    CreateMxUnknownManager4 = 0x80
   };
 
   enum Flags2 {
@@ -26,6 +21,11 @@ private:
     CreateStreamer = 0x4
   };
 
+  MxOmniCreateFlags();
+
+  unsigned char& flags1() { return flags1_; }
+
+private:
   unsigned char flags1_;
 
   unsigned char flags2_;

@@ -92,73 +92,72 @@ int LegoOmni::Create(MxOmniCreateParam& param)
   AUTOLOCK(&critical_section_);
 
   // Prevent MxOmni::Create() from creating objects that we create later
-  /*param.flags() &= ~MxOmniCreateFlags::CreateObjectFactory;
-  param.flags() &= ~MxOmniCreateFlags::CreateVideoManager;
-  param.flags() &= ~MxOmniCreateFlags::CreateSoundManager;
-  param.flags() &= ~MxOmniCreateFlags::CreateTickleManager;*/
-  param.flags().SetCreateObjectFactory(FALSE);
+  param.flags().flags1() &= ~MxOmniCreateFlags::CreateObjectFactory;
+  param.flags().flags1() &= ~MxOmniCreateFlags::CreateVideoManager;
+  param.flags().flags1() &= ~MxOmniCreateFlags::CreateSoundManager;
+  param.flags().flags1() &= ~MxOmniCreateFlags::CreateTickleManager;
 
-  tickle_manager_ = new MxTickleManager(0xFF);
+  if ((tickle_manager_ = new MxTickleManager(0xFF))) {
+    // Likely MxTickleManager::Create()
 
-  // Likely MxTickleManager::Create()
+    MxOmni::Create(param);
 
-  MxOmni::Create(param);
+    object_factory_ = new LegoObjectFactory();
 
-  object_factory_ = new LegoObjectFactory();
+    sound_manager_ = new LegoSoundManager();
 
-  sound_manager_ = new LegoSoundManager();
+    // Likely LegoSoundManager::Create()
 
-  // Likely LegoSoundManager::Create()
+    video_manager_ = new LegoVideoManager();
 
-  video_manager_ = new LegoVideoManager();
+    // Likely LegoVideoManager::Create()
 
-  // Likely LegoVideoManager::Create()
+    input_manager_ = new LegoInputManager();
 
-  input_manager_ = new LegoInputManager();
+    // Likely LegoInputManager::Create()
 
-  // Likely LegoInputManager::Create()
+    unknown6C_ = new LegoUnknownManager2();
 
-  unknown6C_ = new LegoUnknownManager2();
+    unknown74_ = new LegoUnknownManager3();
+    unknown74_->SetUnknown4(0);
 
-  unknown74_ = new LegoUnknownManager3();
-  unknown74_->SetUnknown4(0);
+    // FIXME: This function likely doesn't belong to LegoUnknownManager3
+    LegoUnknownManager3::sub_10046C10();
 
-  // FIXME: This function likely doesn't belong to LegoUnknownManager3
-  LegoUnknownManager3::sub_10046C10();
+    unknown8C_ = new LegoUnknownManager4();
 
-  unknown8C_ = new LegoUnknownManager4();
+    unknown90_ = new LegoUnknownManager5();
 
-  unknown90_ = new LegoUnknownManager5();
+    unknown94_ = new LegoUnknownManager6();
 
-  unknown94_ = new LegoUnknownManager6();
+    unknown98_ = new LegoUnknownManager7();
 
-  unknown98_ = new LegoUnknownManager7();
+    game_state_ = new LegoGameState();
 
-  game_state_ = new LegoGameState();
+    unknown78_ = new LegoUnknownManager8();
 
-  unknown78_ = new LegoUnknownManager8();
+    variable_table_->SetVariable(new MxVariable("VISIBILITY", ""));
+    variable_table_->SetVariable(new MxVariable("CAMERA_LOCATION", ""));
+    variable_table_->SetVariable(new MxVariable("CURSOR", ""));
+    variable_table_->SetVariable(new MxVariable("WHO_AM_I", ""));
 
-  variable_table_->SetVariable(new MxVariable("VISIBILITY", ""));
-  variable_table_->SetVariable(new MxVariable("CAMERA_LOCATION", ""));
-  variable_table_->SetVariable(new MxVariable("CURSOR", ""));
-  variable_table_->SetVariable(new MxVariable("WHO_AM_I", ""));
+    LegoScripts::Load();
 
-  LegoScripts::Load();
+    // Call 1001A700
+    // Call 1005A5F0
 
-  // Call 1001A700
-  // Call 1005A5F0
+    background_audio_manager_ = new MxBackgroundAudioManager();
 
-  background_audio_manager_ = new MxBackgroundAudioManager();
+    transition_manager_ = new MxTransitionManager();
 
-  transition_manager_ = new MxTransitionManager();
+    // Run some kind of virtual function on LegoUnknownManager9
 
-  // Run some kind of virtual function on LegoUnknownManager9
+    // Run some function on `notification_manager_`
 
-  // Run some function on `notification_manager_`
+    // call 0x1003EF40
 
-  // call 0x1003EF40
-
-  // Run function on LegoGameState
+    // Run function on LegoGameState
+  }
 
   return 0;
 }

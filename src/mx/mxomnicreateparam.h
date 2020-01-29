@@ -27,7 +27,9 @@ public:
 
   const MxVideoParam& video_params();
 
-  MxOmniCreateFlags& flags();
+  inline MxOmniCreateFlags& flags() {
+    return flags_;
+  }
 
 private:
   /// +4

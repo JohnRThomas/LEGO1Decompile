@@ -11,12 +11,11 @@
  */
 class MxTickleUnknownSubclass1 {
 public:
-    MxTickleUnknownSubclass1();
-    virtual ~MxTickleUnknownSubclass1();
+  MxTickleUnknownSubclass1();
 
 private:
-    int unk2_;
-    int unk3_;
+  int unk2_;
+  int unk3_;
 };
 
 /**
@@ -28,27 +27,27 @@ private:
  */
 class MxTickleManager : public MxCore {
 public:
-    MxTickleManager(unsigned char u);
-    virtual ~MxTickleManager();
+  MxTickleManager(unsigned char u);
+  virtual ~MxTickleManager();
 
-    virtual void unk_func1();
+  virtual void vtable4();
 
-    virtual void unk_func2();
+  virtual void vtable8();
 
-    virtual void unk_func3();
+  virtual void vtableC();
 
-    virtual void unk_func4();
+  virtual void vtable10();
 
-    virtual void unk_func5();
+  virtual void vtable14();
 
-    virtual void unk_func6();
+  virtual void vtable18();
 
-    void sub_100BDE80(MxNotificationManager*, int);
+  void sub_100BDE80(MxNotificationManager*, int);
 
 private:
-    unsigned char unknown08_; // +8
-    MxTickleUnknownSubclass1* unknown0C_; // +C
-    int unknown10_; // +10
+  unsigned char unknown08_; // +8
+  MxTickleUnknownSubclass1* unknown0C_; // +C
+  int unknown10_; // +10
 };
 
 #endif // MXTICKLEMANAGER_H

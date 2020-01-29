@@ -23,11 +23,6 @@ const MxString &MxOmniCreateParam::unknown1()
   return unknown1_;
 }
 
-MxOmniCreateFlags &MxOmniCreateParam::flags()
-{
-  return flags_;
-}
-
 const MxVideoParam &MxOmniCreateParam::video_params()
 {
   return video_params_;

@@ -15,12 +15,3 @@ MxOmniCreateFlags::MxOmniCreateFlags()
   flags2_ |= CreateTimer;
   flags2_ |= CreateStreamer;
 }
-
-void MxOmniCreateFlags::SetCreateObjectFactory(BOOL enabled)
-{
-  if (enabled) {
-    flags1_ |= CreateObjectFactory;
-  } else {
-    flags1_ &= ~CreateObjectFactory;
-  }
-}
