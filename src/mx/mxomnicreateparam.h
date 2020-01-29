@@ -7,38 +7,40 @@
 #include "mxstring.h"
 #include "mxvideoparam.h"
 
+class MxOmniCreateParamBase {
+public:
+  virtual ~MxOmniCreateParamBase();
+};
+
 /**
  * @brief The MxOmniCreateParam class
  *
  * Usually alloc at 0019FCAC
  */
-class MxOmniCreateParam {
+class MxOmniCreateParam : public MxOmniCreateParamBase {
 public:
-    MxOmniCreateParam(const char *, struct HWND__* handle, MxVideoParam &, MxOmniCreateFlags);
+  MxOmniCreateParam(const char *, struct HWND__* handle, MxVideoParam &, MxOmniCreateFlags);
 
-    struct HWND__ * window_handle();
+  struct HWND__ * window_handle();
 
-    const MxString& unknown1();
+  const MxString& unknown1();
 
-    const MxVideoParam& video_params();
+  const MxVideoParam& video_params();
 
-    MxOmniCreateFlags& flags();
+  MxOmniCreateFlags& flags();
 
 private:
-    // FIXME: vtable? this class must have virtual functions...
-    int unknown0_;
+  /// +4
+  MxString unknown1_;
 
-    // +4
-    MxString unknown1_;
+  /// +14
+  struct HWND__ * window_handle_;
 
-    // +14
-    struct HWND__ * window_handle_;
+  /// +18
+  MxVideoParam video_params_;
 
-    // +18
-    MxVideoParam video_params_;
-
-    // +3C
-    MxOmniCreateFlags flags_;
+  /// +3C
+  MxOmniCreateFlags flags_;
 
 
 };
