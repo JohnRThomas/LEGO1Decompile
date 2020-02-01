@@ -91,6 +91,7 @@ set(LEGO1_SRC
     src/mx/mxpresenter.cpp
     src/mx/mxrect32.h
     src/mx/mxrect32.cpp
+    src/mx/mxresult.h
     src/mx/mxscheduler.h
     src/mx/mxscheduler.cpp
     src/mx/mxsoundmanager.h

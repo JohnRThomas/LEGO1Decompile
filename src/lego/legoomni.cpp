@@ -87,8 +87,10 @@ void LegoOmni::Destroy()
   ALERT("LegoOmni::Destroy", "Stub");
 }
 
-int LegoOmni::Create(MxOmniCreateParam& param)
+MxResult LegoOmni::Create(MxOmniCreateParam& param)
 {
+  MxResult result = FAILURE;
+
   AUTOLOCK(&critical_section_);
 
   // Prevent MxOmni::Create() from creating objects that we create later
@@ -97,69 +99,90 @@ int LegoOmni::Create(MxOmniCreateParam& param)
   param.flags().flags1() &= ~MxOmniCreateFlags::CreateSoundManager;
   param.flags().flags1() &= ~MxOmniCreateFlags::CreateTickleManager;
 
-  if ((tickle_manager_ = new MxTickleManager(0xFF))) {
-    // Likely MxTickleManager::Create()
-
-    MxOmni::Create(param);
-
-    object_factory_ = new LegoObjectFactory();
-
-    sound_manager_ = new LegoSoundManager();
-
-    // Likely LegoSoundManager::Create()
-
-    video_manager_ = new LegoVideoManager();
-
-    // Likely LegoVideoManager::Create()
-
-    input_manager_ = new LegoInputManager();
-
-    // Likely LegoInputManager::Create()
-
-    unknown6C_ = new LegoUnknownManager2();
-
-    unknown74_ = new LegoUnknownManager3();
-    unknown74_->SetUnknown4(0);
-
-    // FIXME: This function likely doesn't belong to LegoUnknownManager3
-    LegoUnknownManager3::sub_10046C10();
-
-    unknown8C_ = new LegoUnknownManager4();
-
-    unknown90_ = new LegoUnknownManager5();
-
-    unknown94_ = new LegoUnknownManager6();
-
-    unknown98_ = new LegoUnknownManager7();
-
-    game_state_ = new LegoGameState();
-
-    unknown78_ = new LegoUnknownManager8();
-
-    variable_table_->SetVariable(new MxVariable("VISIBILITY", ""));
-    variable_table_->SetVariable(new MxVariable("CAMERA_LOCATION", ""));
-    variable_table_->SetVariable(new MxVariable("CURSOR", ""));
-    variable_table_->SetVariable(new MxVariable("WHO_AM_I", ""));
-
-    LegoScripts::Load();
-
-    // Call 1001A700
-    // Call 1005A5F0
-
-    background_audio_manager_ = new MxBackgroundAudioManager();
-
-    transition_manager_ = new MxTransitionManager();
-
-    // Run some kind of virtual function on LegoUnknownManager9
-
-    // Run some function on `notification_manager_`
-
-    // call 0x1003EF40
-
-    // Run function on LegoGameState
+  if ((tickle_manager_ = new MxTickleManager())) {
+    if (tickle_manager_->Create(0xFF) != SUCCESS) {
+      delete tickle_manager_;
+      tickle_manager_ = NULL;
+    }
   }
 
-  return 0;
+  if (MxOmni::Create(param) != SUCCESS) {
+    goto done;
+  }
+
+  if (!(object_factory_ = new LegoObjectFactory())) {
+    goto done;
+  }
+
+
+
+
+  sound_manager_ = new LegoSoundManager();
+
+  // Likely LegoSoundManager::Create()
+
+  if ((video_manager_ = new LegoVideoManager())) {
+    if (video_manager_->Create(param.video_params()) != SUCCESS) {
+      delete video_manager_;
+      video_manager_ = NULL;
+    }
+  }
+
+  if ((input_manager_ = new LegoInputManager())) {
+    if (input_manager_->Create() != SUCCESS) {
+      delete input_manager_;
+      input_manager_ = NULL;
+    }
+  }
+
+  // Likely LegoInputManager::Create()
+
+  unknown6C_ = new LegoUnknownManager2();
+
+  unknown74_ = new LegoUnknownManager3();
+  unknown74_->SetUnknown4(0);
+
+  // FIXME: This function likely doesn't belong to LegoUnknownManager3
+  LegoUnknownManager3::sub_10046C10();
+
+  unknown8C_ = new LegoUnknownManager4();
+
+  unknown90_ = new LegoUnknownManager5();
+
+  unknown94_ = new LegoUnknownManager6();
+
+  unknown98_ = new LegoUnknownManager7();
+
+  game_state_ = new LegoGameState();
+
+  unknown78_ = new LegoUnknownManager8();
+
+  variable_table_->SetVariable(new MxVariable("VISIBILITY", ""));
+  variable_table_->SetVariable(new MxVariable("CAMERA_LOCATION", ""));
+  variable_table_->SetVariable(new MxVariable("CURSOR", ""));
+  variable_table_->SetVariable(new MxVariable("WHO_AM_I", ""));
+
+  LegoScripts::Load();
+
+  // Call 1001A700
+  // Call 1005A5F0
+
+  background_audio_manager_ = new MxBackgroundAudioManager();
+
+  transition_manager_ = new MxTransitionManager();
+
+  // Run some kind of virtual function on LegoUnknownManager9
+
+  // Run some function on `notification_manager_`
+
+  // call 0x1003EF40
+
+  // Run function on LegoGameState
+
+  result = SUCCESS;
+
+done:
+  return result;
 }
 
 void LegoOmni::unk_func03()

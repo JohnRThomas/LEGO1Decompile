@@ -40,3 +40,10 @@ void LegoInputManager::QueueEvent(NotificationId, unsigned char, long, long, uns
 {
   ALERT("LegoInputManager::QueueEvent", "Stub");
 }
+
+MxResult LegoInputManager::Create()
+{
+  ALERT("LegoInputManager::Create", "Stub");
+
+  return SUCCESS;
+}

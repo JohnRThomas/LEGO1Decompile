@@ -2,19 +2,25 @@
 
 #include "custom/debug.h"
 
-MxTickleManager::MxTickleManager(unsigned char u)
+MxTickleManager::MxTickleManager()
 {
-  ALERT("MxTickleManager::MxTickleManager(unsigned char u)", "Stub");
-
-  unknown08_ = u;
-  unknown0C_ = new MxTickleUnknownSubclass1();
-  unknown10_ = 0;
 }
 
 MxTickleManager::~MxTickleManager()
 {
   ALERT("MxTickleManager::~MxTickleManager()", "Stub");
   delete unknown0C_;
+}
+
+MxResult MxTickleManager::Create(unsigned char u)
+{
+  ALERT("MxTickleManager::Create()", "Stub");
+
+  unknown08_ = u;
+  unknown0C_ = new MxTickleUnknownSubclass1();
+  unknown10_ = 0;
+
+  return SUCCESS;
 }
 
 void MxTickleManager::vtable4()

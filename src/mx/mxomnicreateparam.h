@@ -25,7 +25,7 @@ public:
 
   const MxString& unknown1();
 
-  const MxVideoParam& video_params();
+  MxVideoParam &video_params();
 
   inline MxOmniCreateFlags& flags() {
     return flags_;

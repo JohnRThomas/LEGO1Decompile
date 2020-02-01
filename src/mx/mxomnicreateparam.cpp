@@ -23,7 +23,7 @@ const MxString &MxOmniCreateParam::unknown1()
   return unknown1_;
 }
 
-const MxVideoParam &MxOmniCreateParam::video_params()
+MxVideoParam &MxOmniCreateParam::video_params()
 {
   return video_params_;
 }

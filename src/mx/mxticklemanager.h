@@ -3,6 +3,7 @@
 
 #include "mxcore.h"
 #include "mxnotificationmanager.h"
+#include "mxresult.h"
 
 /**
  * @brief Unknown class that's a subclass of MxTickleManager
@@ -27,8 +28,10 @@ private:
  */
 class MxTickleManager : public MxCore {
 public:
-  MxTickleManager(unsigned char u);
+  MxTickleManager();
   virtual ~MxTickleManager();
+
+  MxResult Create(unsigned char u);
 
   virtual void vtable4();
 

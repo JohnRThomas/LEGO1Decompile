@@ -10,6 +10,7 @@
 #include "legovideomanager.h"
 #include "mx/mxbackgroundaudiomanager.h"
 #include "mx/mxdsaction.h"
+#include "mx/mxresult.h"
 #include "mx/mxomni.h"
 #include "mx/mxomnicreateparam.h"
 #include "mx/mxtransitionmanager.h"
@@ -108,7 +109,7 @@ public:
   virtual void unk_func04();
 
   virtual void Destroy();
-  virtual int Create(MxOmniCreateParam &param);
+  virtual MxResult Create(MxOmniCreateParam &param);
 
 
   static void CreateInstance();

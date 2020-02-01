@@ -2,6 +2,45 @@
 
 #include "custom/debug.h"
 
+void sub_1008EF30(int unk0) {
+  // FIXME: Imperfect
+}
+
+void sub_1008FE70(const char* unk0, const char* unk1, int unk2, int unk3) {
+  // FIXME: Imperfect
+}
+
+int sub_10090080() {
+  // FIXME: Imperfect
+
+  //sub_1008EE30();
+
+  return 0;
+}
+
+int sub_1008BFB0(const char* unk0, const char* unk1, int unk2)
+{
+  // FIXME: Imperfect
+
+  int esi = sub_10090080();
+
+  if (!esi) {
+    return NULL;
+  }
+
+  sub_1008FE70(unk0, unk1, unk2, esi);
+
+  sub_1008EF30(esi);
+
+  return esi;
+}
+
+int sub_1008BFF0(const char* unk0, const char* unk1)
+{
+  // FIXME: Imperfect
+  return sub_1008BFB0(unk0, unk1, 0x40);
+}
+
 BOOL MxCriticalSection::do_mutex_ = FALSE;
 
 MxCriticalSection::MxCriticalSection()
@@ -27,17 +66,13 @@ MxCriticalSection::~MxCriticalSection()
 
 void MxCriticalSection::Lock()
 {
-  ALERT("void MxCriticalSection::Lock()", "Stub");
+  // FIXME: Imperfect
+
   if (mutex_ != NULL) {
-    // 1388 is accurate to the ASM code
-    if (WaitForSingleObject(mutex_, 1388) == WAIT_FAILED) {
+    if (WaitForSingleObject(mutex_, 5000) == WAIT_FAILED) {
+      if (sub_1008BFF0("C:\\DEADLOCK.TXT", "a")) {
 
-      // FIXME: This code will never be run because no code ever runs SetDoMutex() to enable mutexes - the game
-      //        always uses CRITICALSECTIONs. It may be decompiled for completeness sake but for now is an
-      //        extremely low priority and the end result is the same: abort().
-      ALERT("void MxCriticalSection::Lock()", "Mutex failure is a stub");
-      abort();
-
+      }
     }
   } else {
     EnterCriticalSection(&critical_section_);

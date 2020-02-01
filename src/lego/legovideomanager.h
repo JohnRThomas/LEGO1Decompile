@@ -10,61 +10,63 @@
  */
 class LegoVideoManager : public MxVideoManager {
 public:
-    LegoVideoManager();
+  LegoVideoManager();
 
-    void MoveCursor(int x, int y);
-    void EnableFullScreenMovie(unsigned char, unsigned char);
+  void MoveCursor(int x, int y);
+  void EnableFullScreenMovie(unsigned char, unsigned char);
 
-    int EnableRMDevice();
-    int DisableRMDevice();
+  int EnableRMDevice();
+  int DisableRMDevice();
+
+  virtual MxResult Create(MxVideoParam& p_param, int p_tickleInterval = 100, BOOL p_createThread = FALSE);
 
 private:
-    int unk64_;
-    int unk68_;
-    int unk6C_;
-    int unk70_;
-    int unk74_;
+  int unk64_;
+  int unk68_;
+  int unk6C_;
+  int unk70_;
+  int unk74_;
 
-    int unk78_[0x1B];
+  int unk78_[0x1B];
 
-    int unkE4_;
-    int unkE8_;
-    int unkEC_;
+  int unkE4_;
+  int unkE8_;
+  int unkEC_;
 
-    char unkF0_[0x3F8];
+  char unkF0_[0x3F8];
 
-    int unk4E8_;
-    int unk4EC_;
-    int unk4F0_;
-    int unk4F4_;
-    int unk4F8_;
-    int unk4FC_;
-    int unk500_;
-    int unk504_;
-    int unk508_;
-    int unk50C_;
-    int unk510_;
-    int unk514_;
-    int unk518_;
-    int unk51C_;
-    int unk520_;
-    int unk524_;
-    int unk528_;
-    int unk52C_;
-    int unk530_;
-    int unk534_;
-    int unk538_;
-    int unk53C_;
-    int unk540_;
-    int unk544_;
-    int unk548_;
-    int unk54C_;
-    int unk550_;
-    int unk554_;
-    int unk558_;
-    int unk55C_;
+  int unk4E8_;
+  int unk4EC_;
+  int unk4F0_;
+  int unk4F4_;
+  int unk4F8_;
+  int unk4FC_;
+  int unk500_;
+  int unk504_;
+  int unk508_;
+  int unk50C_;
+  int unk510_;
+  int unk514_;
+  int unk518_;
+  int unk51C_;
+  int unk520_;
+  int unk524_;
+  int unk528_;
+  int unk52C_;
+  int unk530_;
+  int unk534_;
+  int unk538_;
+  int unk53C_;
+  int unk540_;
+  int unk544_;
+  int unk548_;
+  int unk54C_;
+  int unk550_;
+  int unk554_;
+  int unk558_;
+  int unk55C_;
 
-    int unk560_[0xC];
+  int unk560_[0xC];
 };
 
 #endif // LEGOVIDEOMANAGER_H

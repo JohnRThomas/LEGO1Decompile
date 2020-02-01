@@ -3,6 +3,7 @@
 
 #include "mx/mxcore.h"
 #include "mx/mxpresenter.h"
+#include "mx/mxresult.h"
 
 enum NotificationId
 {
@@ -16,45 +17,47 @@ enum NotificationId
  */
 class LegoInputManager : public MxPresenter {
 public:
-    LegoInputManager();
+  LegoInputManager();
 
-    void Register(MxCore*);
-    void UnRegister(MxCore*);
+  void Register(MxCore*);
+  void UnRegister(MxCore*);
 
-    void QueueEvent(NotificationId, unsigned char, long, long, unsigned char);
+  void QueueEvent(NotificationId, unsigned char, long, long, unsigned char);
+
+  MxResult Create();
 
 private:
-    // +40
-    MxCriticalSection input_cs_;
+  // +40
+  MxCriticalSection input_cs_;
 
-    int unk5C_;
-    int unk60_;
-    int unk64_;
-    int unk68_;
-    int unk6C_;
-    int unk70_;
-    int unk74_;
-    int unk78_;
-    int unk7C_;
-    unsigned char unk80_;
-    unsigned char unk81_;
-    int unk84_;
-    unsigned char unk88_;
-    int unk8C_;
-    int unk90_;
-    unsigned char unk94_;
-    int unk98_;
-    int unk9C_;
+  int unk5C_;
+  int unk60_;
+  int unk64_;
+  int unk68_;
+  int unk6C_;
+  int unk70_;
+  int unk74_;
+  int unk78_;
+  int unk7C_;
+  unsigned char unk80_;
+  unsigned char unk81_;
+  int unk84_;
+  unsigned char unk88_;
+  int unk8C_;
+  int unk90_;
+  unsigned char unk94_;
+  int unk98_;
+  int unk9C_;
 
-    unsigned char unkA0_[0xF4];
+  unsigned char unkA0_[0xF4];
 
-    int unk194_;
-    int unk198_;
-    int unk19C_;
+  int unk194_;
+  int unk198_;
+  int unk19C_;
 
-    unsigned char unk1A0_[0x194];
+  unsigned char unk1A0_[0x194];
 
-    int unk334_;
+  int unk334_;
 };
 
 #endif // LEGOINPUTMANAGER_H

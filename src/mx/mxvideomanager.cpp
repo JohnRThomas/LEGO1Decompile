@@ -29,6 +29,13 @@ void MxVideoManager::InvalidateRect(MxRect32 &)
   ALERT("void MxVideoManager::InvalidateRect(MxRect32 &)", "Stub");
 }
 
+MxResult MxVideoManager::Create(MxVideoParam &p_param, int p_tickleInterval, BOOL p_createThread)
+{
+  ALERT("MxResult MxVideoManager::Create(MxVideoParam &p_param, int p_tickleInterval, BOOL p_createThread)", "Stub");
+
+  return SUCCESS;
+}
+
 long MxVideoManager::RealizePalette(MxPalette *)
 {
   ALERT("long MxVideoManager::RealizePalette(MxPalette *)", "Stub");

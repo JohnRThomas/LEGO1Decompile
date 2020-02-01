@@ -4,6 +4,7 @@
 #include "mxcore.h"
 #include "mxpalette.h"
 #include "mxrect32.h"
+#include "mxresult.h"
 #include "mxvideoparam.h"
 #include "unknown/mxunknownmanager6.h"
 
@@ -14,27 +15,29 @@
  */
 class MxVideoManager : public MxUnknownManager6 {
 public:
-    // 100BE1F0
-    MxVideoManager();
+  // 100BE1F0
+  MxVideoManager();
 
-    virtual ~MxVideoManager();
+  virtual ~MxVideoManager();
 
-    // 100BE320
-    void Init();
+  // 100BE320
+  void Init();
 
-    void InvalidateRect(MxRect32&);
+  void InvalidateRect(MxRect32&);
 
-    virtual long RealizePalette(MxPalette*);
+  virtual MxResult Create(MxVideoParam& p_param, int p_tickleInterval = 100, BOOL p_createThread = FALSE);
+
+  virtual long RealizePalette(MxPalette*);
 
 private:
-    // +2C
-    MxVideoParam video_param_;
+  // +2C
+  MxVideoParam video_param_;
 
-    int unk50_;
-    int unk54_;
-    int unk58_;
-    int unk5C_;
-    unsigned char unk60_;
+  int unk50_;
+  int unk54_;
+  int unk58_;
+  int unk5C_;
+  unsigned char unk60_;
 };
 
 #endif // MXVIDEOMANAGER_H
