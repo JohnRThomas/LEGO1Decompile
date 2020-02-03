@@ -17,7 +17,6 @@ MxCriticalSection::MxCriticalSection()
 
 MxCriticalSection::~MxCriticalSection()
 {
-  ALERT("MxCriticalSection::~MxCriticalSection()", "Stub");
   if (mutex_ != NULL) {
     CloseHandle(mutex_);
   } else {
