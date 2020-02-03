@@ -54,7 +54,6 @@ void MxCriticalSection::Unlock()
 
 void MxCriticalSection::SetDoMutex()
 {
-  ALERT("void MxCriticalSection::SetDoMutex()", "Stub");
   do_mutex_ = TRUE;
 }
 
