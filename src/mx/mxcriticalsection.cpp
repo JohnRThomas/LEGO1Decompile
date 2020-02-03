@@ -2,45 +2,6 @@
 
 #include "custom/debug.h"
 
-void sub_1008EF30(int unk0) {
-  // FIXME: Imperfect
-}
-
-void sub_1008FE70(const char* unk0, const char* unk1, int unk2, int unk3) {
-  // FIXME: Imperfect
-}
-
-int sub_10090080() {
-  // FIXME: Imperfect
-
-  //sub_1008EE30();
-
-  return 0;
-}
-
-int sub_1008BFB0(const char* unk0, const char* unk1, int unk2)
-{
-  // FIXME: Imperfect
-
-  int esi = sub_10090080();
-
-  if (!esi) {
-    return NULL;
-  }
-
-  sub_1008FE70(unk0, unk1, unk2, esi);
-
-  sub_1008EF30(esi);
-
-  return esi;
-}
-
-int sub_1008BFF0(const char* unk0, const char* unk1)
-{
-  // FIXME: Imperfect
-  return sub_1008BFB0(unk0, unk1, 0x40);
-}
-
 BOOL MxCriticalSection::do_mutex_ = FALSE;
 
 MxCriticalSection::MxCriticalSection()
@@ -66,13 +27,16 @@ MxCriticalSection::~MxCriticalSection()
 
 void MxCriticalSection::Lock()
 {
-  // FIXME: Imperfect
-
   if (mutex_ != NULL) {
     if (WaitForSingleObject(mutex_, 5000) == WAIT_FAILED) {
-      if (sub_1008BFF0("C:\\DEADLOCK.TXT", "a")) {
+      FILE* f = _wfopen(L"C:\\DEADLOCK.TXT", L"a");
 
+      if (f) {
+        fprintf(f, "mutex timeout occurred!\n");
+        fclose(f);
       }
+
+      abort();
     }
   } else {
     EnterCriticalSection(&critical_section_);
@@ -81,7 +45,6 @@ void MxCriticalSection::Lock()
 
 void MxCriticalSection::Unlock()
 {
-  ALERT("void MxCriticalSection::Unlock()", "Stub");
   if (mutex_ != NULL) {
     ReleaseMutex(mutex_);
   } else {
