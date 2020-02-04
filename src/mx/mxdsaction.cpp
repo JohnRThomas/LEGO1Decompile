@@ -20,14 +20,9 @@ MxDSAction::MxDSAction()
 
   unkC_ = 1;
 
-  int ebp_10 = 0x7F7FFFFF;
-  unk40_.sub_10003BF0(&ebp_10);
-
-  ebp_10 = 0x7F7FFFFF;
-  unk54_.sub_10003BF0(&ebp_10);
-
-  ebp_10 = 0x7F7FFFFF;
-  unk68_.sub_10003BF0(&ebp_10);
+  unk40_.sub_10003BF0(0x7F7FFFFF);
+  unk54_.sub_10003BF0(0x7F7FFFFF);
+  unk68_.sub_10003BF0(0x7F7FFFFF);
 
   unk84_ = 0;
   unk88_ = 0;
@@ -68,9 +63,9 @@ MxDSActionBase::~MxDSActionBase()
   delete unk10_;
 }
 
-void MxDSActionSubclass::sub_10003BF0(int *esp_8)
+void MxDSActionSubclass::sub_10003BF0(const int &esp_8)
 {
-  unk4_[0] = *esp_8;
-  unk4_[1] = *esp_8;
-  unk4_[2] = *esp_8;
+  unk4_[0] = esp_8;
+  unk4_[1] = esp_8;
+  unk4_[2] = esp_8;
 }

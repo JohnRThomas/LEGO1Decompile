@@ -33,6 +33,7 @@ public:
 class MxDSActionSubclass
 {
 public:
+  virtual void vtable0(){}
   virtual void vtable4(){}
   virtual void vtable8(){}
   virtual void vtableC(){}
@@ -67,7 +68,7 @@ public:
   virtual void vtable80(){}
 
   // vtable 84
-  virtual void sub_10003BF0(int* esp_8);
+  virtual void sub_10003BF0(const int &esp_8);
 
   int* unk4_;
   int unk8_[3];
