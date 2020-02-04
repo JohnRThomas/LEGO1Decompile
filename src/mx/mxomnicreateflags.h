@@ -24,6 +24,7 @@ public:
   MxOmniCreateFlags();
 
   unsigned char& flags1() { return flags1_; }
+  unsigned char& flags2() { return flags2_; }
 
 private:
   unsigned char flags1_;

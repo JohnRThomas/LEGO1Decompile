@@ -12,33 +12,33 @@
  */
 class MxPresenter : public MxCore {
 public:
-    MxPresenter();
-    virtual ~MxPresenter();
+  MxPresenter();
+  virtual ~MxPresenter();
 
-    virtual long StartAction(MxStreamController*, MxDSAction*);
-    virtual void EndAction();
+  virtual long StartAction(MxStreamController*, MxDSAction*);
+  virtual void EndAction();
 
-    virtual long Tickle();
-    virtual void Enable(unsigned char);
+  virtual long Tickle();
+  virtual void Enable(unsigned char);
 
 protected:
-    virtual void DoneTickle();
-    virtual void ParseExtra();
+  virtual void DoneTickle();
+  virtual void ParseExtra();
 
-    void Init();
+  void Init();
 
 private:
-    int unk8_;
-    int unkC_;
-    int unk10_;
-    int unk14_;
-    int unk18_;
-    int unk1C_;
+  int unk8_;
+  int unkC_;
+  int unk10_;
+  int unk14_;
+  int unk18_;
+  int unk1C_;
 
-    // +20
-    MxCriticalSection critical_section_;
+  // +20
+  MxCriticalSection critical_section_;
 
-    int unk3C_;
+  int unk3C_;
 
 
 };

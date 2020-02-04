@@ -40,71 +40,76 @@ void MxOmni::Init()
   unknown64_ = 0;
 }
 
-unsigned int MxOmni::Create(MxOmniCreateParam& param)
+MxResult MxOmni::Create(MxOmniCreateParam& param)
 {
-  ALERT("unsigned int MxOmni::Create(MxOmniCreateParam& param)", "Partial Stub");
+  // FIXME: Imperfect
 
-  /*
-  atom_manager_ = new MxAtomManager();
+  MxResult result = FAILURE;
+
+  if (!(atom_manager_ = new MxAtomTable(0, 0))) {
+    goto done;
+  }
 
   unknown8_ = param.unknown1();
 
   window_handle_ = param.window_handle();
 
-  if (param.flags() & MxOmniCreateFlags::CreateObjectFactory) {
+  if (param.flags().flags1() & MxOmniCreateFlags::CreateObjectFactory) {
     object_factory_ = new MxObjectFactory();
   }
 
-  if (param.flags() & MxOmniCreateFlags::CreateVariableTable) {
+  if (param.flags().flags1() & MxOmniCreateFlags::CreateVariableTable) {
     variable_table_ = new MxVariableTable();
   }
 
-  if (param.flags() & MxOmniCreateFlags::CreateTimer) {
+  if (param.flags().flags2() & MxOmniCreateFlags::CreateTimer) {
     timer_ = new MxTimer();
   }
 
-  if (param.flags() & MxOmniCreateFlags::CreateTickleManager) {
+  if (param.flags().flags1() & MxOmniCreateFlags::CreateTickleManager) {
     tickle_manager_ = new MxTickleManager(0);
   }
 
-  if (param.flags() & MxOmniCreateFlags::CreateNotificationManager) {
+  if (param.flags().flags1() & MxOmniCreateFlags::CreateNotificationManager) {
     notification_manager_ = new MxNotificationManager();
 
     // call 100AC600(64, 0) - definitely virtual function
   }
 
-  if (param.flags() & MxOmniCreateFlags::CreateStreamer) {
+  if (param.flags().flags2() & MxOmniCreateFlags::CreateStreamer) {
     streamer_ = new MxStreamer();
 
     // call function on streamer_
   }
 
-  if (param.flags() & MxOmniCreateFlags::CreateVideoManager) {
+  if (param.flags().flags1() & MxOmniCreateFlags::CreateVideoManager) {
     video_manager_ = new MxVideoManager();
 
     // call function on video_manager_
   }
 
-  if (param.flags() & MxOmniCreateFlags::CreateSoundManager) {
+  if (param.flags().flags1() & MxOmniCreateFlags::CreateSoundManager) {
     sound_manager_ = new MxSoundManager();
 
     // function on sound manager
   }
 
-  if (param.flags() & MxOmniCreateFlags::CreateMxUnknownManager3) {
+  if (param.flags().flags1() & MxOmniCreateFlags::CreateMxUnknownManager3) {
     unknown34_ = new MxMIDIPresenter();
 
     // function on unknown34_
   }
 
-  if (param.flags() & MxOmniCreateFlags::CreateMxUnknownManager4) {
+  if (param.flags().flags1() & MxOmniCreateFlags::CreateMxUnknownManager4) {
     unknown38_ = new MxUnknownManager4();
 
     // function on unknown38_(32, 0)
   }
-  */
 
-  return 0;
+  result = SUCCESS;
+
+done:
+  return result;
 }
 
 MxOmni* MxOmni::GetInstance()
@@ -165,7 +170,7 @@ MxSoundManager* MxOmni::GetSoundManager()
   return sound_manager_;
 }
 
-MxAtomManager *MxOmni::GetAtomManager()
+MxAtomTable *MxOmni::GetAtomManager()
 {
   return atom_manager_;
 }
@@ -203,7 +208,7 @@ MxSoundManager *MSoundManager()
   return MxOmni::GetInstance()->GetSoundManager();
 }
 
-MxAtomManager *AtomManager()
+MxAtomTable *AtomManager()
 {
   ALERT("MxAtomManager *AtomManager()", "Stub");
   return MxOmni::GetInstance()->GetAtomManager();

@@ -20,7 +20,7 @@ void MxVideoManager::Init()
   unk54_ = 0;
   unk58_ = 0;
   unk5C_ = 0;
-  video_param_.SetPalette(NULL);
+  video_param_.palette_ = NULL;
   unk60_ = 0;
 }
 

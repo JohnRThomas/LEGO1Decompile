@@ -3,12 +3,6 @@
 #include "custom/debug.h"
 #include "mxomni.h"
 
-MxAtomId::MxAtomId() :
-  str_(NULL)
-{
-  ALERT("MxAtomId::MxAtomId()", "Stub");
-}
-
 MxAtomId::MxAtomId(const char* str, LookupMode mode)
 {
   ALERT("MxAtomId::MxAtomId(const char* str, LookupMode mode)", "Stub");
@@ -71,32 +65,32 @@ MxAtom *MxAtomId::sub_100AD210(const char *str, LookupMode mode)
   MxAtomItem* ebp_10;
 
   if (ebp_18 != AtomManager()->unk4() // 100AD2B6
-      || ebp_18->unkC()->string() != ebp_14->string()) { // 100AD2BB
+      || ebp_18->unkC_->string() != ebp_14->string()) { // 100AD2BB
     ebp_10 = AtomManager()->unk4();
   } else {
-    ebp_10 = ebp_18->unk0();
+    ebp_10 = ebp_18->unk0_;
   }
 
   // 100AD309
   if (ebp_10 != AtomManager()->unk4() && ebp_14 != NULL) {
     delete ebp_14;
-    ebp_14 = ebp_10->unkC();
+    ebp_14 = ebp_10->unkC_;
   } else {
     // 100AD345
     MxAtomItem* edi_1 = AtomManager()->unk4();
-    MxAtomItem* esi_1 = edi_1->parent();
+    MxAtomItem* esi_1 = edi_1->parent_;
 
     // FIXME: Unsure if this codepath is accurate
     BOOL eax_1 = TRUE;
 
-    while (esi_1 != MxAtomManager::addr_101013F0) {
+    while (esi_1 != MxAtomTable::addr_101013F0) {
       edi_1 = esi_1;
 
-      if (ebp_14->string() != esi_1->unkC()->string()) {
-        esi_1 = esi_1->unk8();
+      if (ebp_14->string() != esi_1->unkC_->string()) {
+        esi_1 = esi_1->unk8_;
         eax_1 = FALSE;
       } else {
-        esi_1 = esi_1->unk0();
+        esi_1 = esi_1->unk0_;
         eax_1 = TRUE;
       }
     }
@@ -111,14 +105,14 @@ MxAtom *MxAtomId::sub_100AD210(const char *str, LookupMode mode)
 
       // 100AD3C4
       if (eax_1) {
-        if (AtomManager()->unk4()->unk0() == edi_1) {
+        if (AtomManager()->unk4()->unk0_ == edi_1) {
           AtomManager()->sub_100AD4D0(&ebp_28, esi_1, edi_1, &ebp_14);
         } else {
           ebp_10->sub_100AD480();
         }
       }
 
-      if (ebp_10->unkC()->string() != ebp_14->string()) {
+      if (ebp_10->unkC_->string() != ebp_14->string()) {
         AtomManager()->sub_100AD4D0(&ebp_20, esi_1, edi_1, &ebp_14);
       }
 

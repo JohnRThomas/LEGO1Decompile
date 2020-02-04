@@ -12,11 +12,10 @@
  */
 class MxTickleUnknownSubclass1 {
 public:
-  MxTickleUnknownSubclass1();
+  MxTickleUnknownSubclass1* unk00_;
+  MxTickleUnknownSubclass1* unk04_;
+  MxTickleUnknownSubclass1* unk08_;
 
-private:
-  int unk2_;
-  int unk3_;
 };
 
 /**
@@ -28,10 +27,21 @@ private:
  */
 class MxTickleManager : public MxCore {
 public:
-  MxTickleManager();
-  virtual ~MxTickleManager();
+  inline MxTickleManager(unsigned char u1)
+  {
+    // FIXME: Imperfect
 
-  MxResult Create(unsigned char u);
+    unknown08_ = u1;
+
+    MxTickleUnknownSubclass1* list_entry = new MxTickleUnknownSubclass1();
+    list_entry->unk00_ = list_entry;
+    list_entry->unk04_ = list_entry;
+    unknown0C_ = list_entry;
+
+    unknown10_ = 0x0;
+  }
+
+  virtual ~MxTickleManager();
 
   virtual void vtable4();
 

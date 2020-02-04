@@ -12,50 +12,48 @@
  */
 class MxVideoParam {
 public:
-    MxVideoParam();
-    MxVideoParam(MxRect32&, MxPalette*, unsigned long, MxVideoParamFlags&);
-    MxVideoParam(MxVideoParam&);
-    ~MxVideoParam();
+  MxVideoParam();
+  MxVideoParam(MxRect32&, MxPalette*, unsigned long, MxVideoParamFlags&);
+  MxVideoParam(MxVideoParam&);
+  ~MxVideoParam();
 
-    MxVideoParam& operator=(const MxVideoParam&);
+  MxVideoParam& operator=(const MxVideoParam&);
 
-    void SetDeviceName(char*);
-    void SetPalette(MxPalette* palette);
+  void SetDeviceName(char*);
 
-    const int& x() const;
-    const int& y() const;
-    const int& width() const;
-    const int& height() const;
+  const int& x() const;
+  const int& y() const;
+  const int& width() const;
+  const int& height() const;
 
-    const char* device_name() const;
+  const char* device_name() const;
 
-private:
-    // +0
-    int x_;
+  // +0
+  int x_;
 
-    // +4
-    int y_;
+  // +4
+  int y_;
 
-    // +8
-    int width_;
+  // +8
+  int width_;
 
-    // +C
-    int height_;
+  // +C
+  int height_;
 
-    // +10
-    MxPalette* palette_;
+  // +10
+  MxPalette* palette_;
 
-    // +14
-    unsigned long unknown1_;
+  // +14
+  unsigned long unknown1_;
 
-    // +18
-    MxVideoParamFlags flags_;
+  // +18
+  MxVideoParamFlags flags_;
 
-    // +1C
-    int unknown2_;
+  // +1C
+  int unknown2_;
 
-    // +20
-    char* device_name_;
+  // +20
+  char* device_name_;
 };
 
 #endif // MXVIDEOPARAM_H

@@ -90,12 +90,6 @@ void MxVideoParam::SetDeviceName(char* device)
   }
 }
 
-void MxVideoParam::SetPalette(MxPalette *palette)
-{
-  ALERT("void MxVideoParam::SetPalette(MxPalette *palette)", "Stub");
-  palette_ = palette;
-}
-
 const int &MxVideoParam::x() const
 {
   return x_;

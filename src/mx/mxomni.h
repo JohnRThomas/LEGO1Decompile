@@ -1,7 +1,7 @@
 #ifndef MXOMNI_H
 #define MXOMNI_H
 
-#include "mxatommanager.h"
+#include "mxatomtable.h"
 #include "mxcore.h"
 #include "mxeventmanager.h"
 #include "mxomnicreateparam.h"
@@ -71,7 +71,7 @@ protected:
   MxStreamer* streamer_;
 
   // +44
-  MxAtomManager* atom_manager_;
+  MxAtomTable* atom_manager_;
 
   // +48
   MxCriticalSection critical_section_;
@@ -84,7 +84,8 @@ protected:
 
   virtual void Init();
 
-  unsigned int Create(MxOmniCreateParam& param);
+  MxResult Create(MxOmniCreateParam& param);
+
 public:
   static MxOmni* GetInstance();
   static void DestroyInstance();
@@ -101,7 +102,7 @@ public:
   MxVariableTable* GetVariableTable();
   MxTickleManager* GetTickleManager();
   MxSoundManager* GetSoundManager();
-  MxAtomManager* GetAtomManager();
+  MxAtomTable* GetAtomManager();
   MxNotificationManager* GetNotificationManager();
   MxTimer* GetTimer();
 
@@ -119,7 +120,7 @@ MxTimer* Timer();
 
 MxNotificationManager* NotificationManager();
 
-MxAtomManager* AtomManager();
+MxAtomTable* AtomManager();
 
 MxEventManager* EventManager();
 

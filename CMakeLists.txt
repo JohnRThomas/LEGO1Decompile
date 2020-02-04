@@ -50,8 +50,8 @@ set(LEGO1_SRC
     src/mx/mxatom.cpp
     src/mx/mxatomid.h
     src/mx/mxatomid.cpp
-    src/mx/mxatommanager.h
-    src/mx/mxatommanager.cpp
+    src/mx/mxatomtable.h
+    src/mx/mxatomtable.cpp
     src/mx/mxbackgroundaudiomanager.h
     src/mx/mxbackgroundaudiomanager.cpp
     src/mx/mxbitmap.h

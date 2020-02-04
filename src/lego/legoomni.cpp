@@ -89,6 +89,9 @@ void LegoOmni::Destroy()
 
 MxResult LegoOmni::Create(MxOmniCreateParam& param)
 {
+  // FIXME: Imperfect
+  ALERT("Create", "Alert");
+
   MxResult result = FAILURE;
 
   AUTOLOCK(&critical_section_);
@@ -99,11 +102,11 @@ MxResult LegoOmni::Create(MxOmniCreateParam& param)
   param.flags().flags1() &= ~MxOmniCreateFlags::CreateSoundManager;
   param.flags().flags1() &= ~MxOmniCreateFlags::CreateTickleManager;
 
-  if ((tickle_manager_ = new MxTickleManager())) {
-    if (tickle_manager_->Create(0xFF) != SUCCESS) {
-      delete tickle_manager_;
-      tickle_manager_ = NULL;
-    }
+  if (!(tickle_manager_ = new MxTickleManager(0xFF))) {
+    delete tickle_manager_;
+    tickle_manager_ = NULL;
+
+    goto done;
   }
 
   if (MxOmni::Create(param) != SUCCESS) {
@@ -113,9 +116,6 @@ MxResult LegoOmni::Create(MxOmniCreateParam& param)
   if (!(object_factory_ = new LegoObjectFactory())) {
     goto done;
   }
-
-
-
 
   sound_manager_ = new LegoSoundManager();
 
