@@ -12,12 +12,9 @@ MxCore::MxCore()
 
 MxCore::~MxCore()
 {
-  ALERT("MxCore::~MxCore()", "Stub");
 }
 
 long MxCore::Notify(MxParam&)
 {
-  ALERT("long MxCore::Notify(MxParam&)", "Stub");
-
   return 0;
 }
