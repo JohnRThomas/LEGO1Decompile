@@ -1,25 +1,28 @@
 #ifndef MXDSACTION_H
 #define MXDSACTION_H
 
+#include "mxatomid.h"
 #include "mxcore.h"
 
 class MxDSActionBase : public MxCore {
 public:
   MxDSActionBase();
 
+  virtual ~MxDSActionBase();
+
   int unk8_;
 
   short unkC_;
 
-  int unk10_;
+  int* unk10_;
 
   int unk14_;
 
-  int unk18_;
+  int* unk18_;
 
   unsigned int unk1C_;
 
-  int unk20_;
+  MxAtomId unk20_;
 
   unsigned short unk24_;
 
@@ -30,8 +33,6 @@ public:
 class MxDSActionSubclass
 {
 public:
-  virtual ~MxDSActionSubclass(){}
-
   virtual void vtable4(){}
   virtual void vtable8(){}
   virtual void vtableC(){}
@@ -74,7 +75,6 @@ public:
 
 class MxDSActionSubclass2 : public MxDSActionSubclass
 {
-public:
 };
 
 class MxDSAction : public MxDSActionBase {
@@ -88,16 +88,15 @@ private:
   unsigned int unk34_;
   unsigned int unk38_;
   unsigned int unk3C_;
-  MxDSActionSubclass unk40_;
-  MxDSActionSubclass unk54_;
-  MxDSActionSubclass unk68_;
-  int unk7C_;
+  MxDSActionSubclass2 unk40_;
+  MxDSActionSubclass2 unk54_;
+  MxDSActionSubclass2 unk68_;
+  int* unk7C_;
   short unk80_;
   int unk84_;
   int unk88_;
   int unk8C_;
   unsigned int unk90_;
-
 
 };
 
