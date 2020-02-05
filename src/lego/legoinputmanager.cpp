@@ -41,7 +41,7 @@ void LegoInputManager::QueueEvent(NotificationId, unsigned char, long, long, uns
   ALERT("LegoInputManager::QueueEvent", "Stub");
 }
 
-MxResult LegoInputManager::Create()
+MxResult LegoInputManager::Create(HWND__ *window_handle)
 {
   ALERT("LegoInputManager::Create", "Stub");
 

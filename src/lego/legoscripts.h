@@ -9,7 +9,7 @@ public:
     LegoScripts();
 
     // sub_100528E0
-    static void Load();
+    static void sub_100528E0();
 
 private:
     static MxAtomId* script_copter_;

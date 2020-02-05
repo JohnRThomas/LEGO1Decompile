@@ -3,6 +3,8 @@
 
 #include <WINDOWS.H>
 
+#include "custom/debug.h"
+
 /**
  * @brief Unknown class used in LegoUnknownManager3
  *
@@ -10,12 +12,12 @@
  */
 class LUM31 {
 public:
-    int unk0_;
-    LUM31* unk4_;
-    LUM31* unk8_;
-    int unkC_;
-    int unk10_;
-    int unk14_;
+  int unk0_;
+  LUM31* unk4_;
+  LUM31* unk8_;
+  int unkC_;
+  int unk10_;
+  int unk14_;
 };
 
 /**
@@ -25,10 +27,10 @@ public:
  */
 class LUM32 {
 public:
-    int unk0_;
-    int unk4_;
-    int unk8_;
-    int unkC_;
+  int unk0_;
+  int unk4_;
+  int unk8_;
+  int unkC_;
 };
 
 /**
@@ -38,7 +40,7 @@ public:
  */
 class LUM33 {
 public:
-    unsigned char unk_[0x80];
+  unsigned char unk_[0x80];
 };
 
 /**
@@ -48,7 +50,7 @@ public:
  */
 class LUM34 {
 public:
-    unsigned char unk_[0x50];
+  unsigned char unk_[0x50];
 };
 
 /**
@@ -62,34 +64,59 @@ public:
  */
 class LegoUnknownManager3 {
 public:
-    LegoUnknownManager3();
-    virtual ~LegoUnknownManager3();
+  inline LegoUnknownManager3() {
+    unk8_ = 0;
+    unk10_ = 0;
 
-    void SetUnknown4(unsigned char u);
+    ALERT("LegoUnknownManager3::LegoUnknownManager3()", "Stub");
 
-    // FIXME: This may not be a member of this class
-    static void sub_10046C10();
+    if (addr_100F0100 == NULL) {
+      addr_100F0100 = new LUM31();
+      addr_100F0100->unk0_ = 0;
+      addr_100F0100->unk4_ = NULL;
+      addr_100F0100->unk8_ = NULL;
+      addr_100F0100->unk14_ = 1;
+    }
+
+    unkC_ = new LUM31();
+    unkC_->unk4_ = addr_100F0100;
+    unkC_->unk8_ = unkC_;
+    unkC_->unk14_ = 0;
+
+    unk14_ = 0;
+
+    unk4_ = 1;
+    unk18_ = 0;
+
+    unk1C_ = new LUM32();
+
+    unk20_ = 0;
+  }
+
+  virtual ~LegoUnknownManager3();
+
+  void sub_10046C10();
 
 private:
-    // Original stores this at 0x100F0100
-    static LUM31* addr_100F0100;
+  // Original stores this at 0x100F0100
+  static LUM31* addr_100F0100;
 
-    // FIXME: This may not be a member of this class
-    // Some kind of buffer?
-    static __int64* addr_100F42E8;
-    static __int64* addr_100F42EC;
-    static __int64* addr_100F4358;
-    static __int64* addr_100F435C;
+  // FIXME: This may not be a member of this class
+  // Some kind of buffer?
+  static __int64* addr_100F42E8;
+  static __int64* addr_100F42EC;
+  static __int64* addr_100F4358;
+  static __int64* addr_100F435C;
 
-    unsigned int unk0_;
-    unsigned char unk4_;
-    unsigned short unk8_;
-    LUM31* unkC_;
-    int unk10_;
-    int unk14_;
-    unsigned char unk18_;
-    LUM32* unk1C_;
-    int unk20_;
+  unsigned int unk0_;
+  unsigned char unk4_;
+  unsigned short unk8_;
+  LUM31* unkC_;
+  int unk10_;
+  int unk14_;
+  unsigned char unk18_;
+  LUM32* unk1C_;
+  int unk20_;
 };
 
 #endif // LEGOUNKNOWNMANAGER3_H

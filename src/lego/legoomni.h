@@ -126,6 +126,8 @@ public:
   LegoVideoManager* GetVideoManager();
 
 private:
+  MxResult sub_1005A5F0();
+
 };
 
 LegoOmni* Lego();
@@ -135,5 +137,9 @@ LegoInputManager* InputManager();
 LegoSoundManager* SoundManager();
 
 LegoVideoManager* VideoManager();
+
+MxBackgroundAudioManager* BackgroundAudioManager();
+
+MxTransitionManager* TransitionManager();
 
 #endif // LEGOOMNI_H

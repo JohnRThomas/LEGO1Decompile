@@ -39,7 +39,7 @@ void MxNotificationManager::sub_100AC600(int, int)
   }
 }
 
-void MxNotificationManager::sub_100ACD20(MxStreamer *streamer)
+void MxNotificationManager::sub_100ACD20(MxCore *core)
 {
   ALERT("void MxNotificationManager::sub_100ACD20(MxStreamer *streamer)", "Stub");
   critical_section_.Lock();

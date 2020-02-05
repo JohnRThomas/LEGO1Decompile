@@ -36,7 +36,7 @@ LegoScripts::LegoScripts()
   ALERT("LegoScripts::LegoScripts()", "Stub");
 }
 
-void LegoScripts::Load()
+void LegoScripts::sub_100528E0()
 {
   ALERT("void LegoScripts::Load()", "Stub");
 

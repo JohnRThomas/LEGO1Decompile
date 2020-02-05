@@ -25,6 +25,16 @@ public:
 
   void InvalidateRect(MxRect32&);
 
+  virtual void vtable8(){}
+  virtual void vtableC(){}
+  virtual void vtable10(){}
+  virtual void vtable14(){}
+  virtual void vtable18(){}
+  virtual void vtable1C(){}
+  virtual void vtable20(){}
+  virtual void vtable24(){}
+  virtual void vtable28(){}
+
   virtual MxResult Create(MxVideoParam& p_param, int p_tickleInterval = 100, BOOL p_createThread = FALSE);
 
   virtual long RealizePalette(MxPalette*);

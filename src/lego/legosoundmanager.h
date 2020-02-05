@@ -10,12 +10,16 @@
  */
 class LegoSoundManager : public MxSoundManager {
 public:
-    LegoSoundManager();
+  LegoSoundManager();
+
+  virtual ~LegoSoundManager(){}
+
+  virtual MxResult vtable30(int punk1, int punk2);
 
 private:
-    int unk3C_;
+  int unk3C_;
 
-    int unk40_;
+  int unk40_;
 };
 
 #endif // LEGOSOUNDMANAGER_H

@@ -43,6 +43,11 @@ LegoVideoManager::LegoVideoManager()
   unk554_ = 0;
 }
 
+LegoVideoManager::~LegoVideoManager()
+{
+  ALERT("LegoVideoManager::~LegoVideoManager()", "Stub");
+}
+
 void LegoVideoManager::MoveCursor(int /*x*/, int /*y*/)
 {
   ALERT("void LegoVideoManager::MoveCursor(int /*x*/, int /*y*/)", "Stub");

@@ -2,13 +2,6 @@
 
 #include "custom/debug.h"
 
-MxVariable::MxVariable(const char *key, const char *value) :
-  key_(key),
-  value_(value)
-{
-  ALERT("MxVariable::MxVariable(const char *key, const char *value)", "Stub");
-}
-
 MxVariable::~MxVariable()
 {
   ALERT("MxVariable::~MxVariable()", "Stub");

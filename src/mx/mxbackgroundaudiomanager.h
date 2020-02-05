@@ -8,11 +8,13 @@
  */
 class MxBackgroundAudioManager {
 public:
-    MxBackgroundAudioManager();
+  MxBackgroundAudioManager();
 
-    void Enable(unsigned char);
+  void Enable(unsigned char);
+
+private:
+  int unk0[0x54];
+
 };
-
-MxBackgroundAudioManager* BackgroundAudioManager();
 
 #endif // MXBACKGROUNDAUDIOMANAGER_H

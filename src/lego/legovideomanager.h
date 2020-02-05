@@ -12,6 +12,8 @@ class LegoVideoManager : public MxVideoManager {
 public:
   LegoVideoManager();
 
+  virtual ~LegoVideoManager();
+
   void MoveCursor(int x, int y);
   void EnableFullScreenMovie(unsigned char, unsigned char);
 

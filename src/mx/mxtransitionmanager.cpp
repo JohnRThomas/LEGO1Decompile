@@ -12,9 +12,9 @@ void MxTransitionManager::SetWaitIndicator(MxVideoPresenter*)
   ALERT("void MxTransitionManager::SetWaitIndicator(MxVideoPresenter*)", "Stub");
 }
 
-MxTransitionManager* TransitionManager()
+MxResult MxTransitionManager::vtable14()
 {
-  ALERT("MxTransitionManager* TransitionManager()", "Stub");
+  ALERT("MxTransitionManager::vtable14()", "Stub");
 
-  return NULL;
+  return SUCCESS;
 }

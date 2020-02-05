@@ -59,7 +59,6 @@ void MxCriticalSection::SetDoMutex()
 MxCriticalSectionAutoLock::MxCriticalSectionAutoLock(MxCriticalSection* critical_section) :
   critical_section_(critical_section)
 {
-  // FIXME: Unverified
   if (critical_section_) {
     critical_section_->Lock();
   }
@@ -67,7 +66,6 @@ MxCriticalSectionAutoLock::MxCriticalSectionAutoLock(MxCriticalSection* critical
 
 MxCriticalSectionAutoLock::~MxCriticalSectionAutoLock()
 {
-  // FIXME: Unverified
   if (critical_section_) {
     critical_section_->Unlock();
   }

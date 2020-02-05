@@ -8,20 +8,22 @@
  */
 class LegoGameState {
 public:
-    LegoGameState();
-    ~LegoGameState();
+  LegoGameState();
+  ~LegoGameState();
 
-    long Save(unsigned long);
-    long Load(unsigned long);
+  long Save(unsigned long);
+  long Load(unsigned long);
 
-    void SetSavePath(char*);
+  void SetSavePath(char*);
 
-    void SerializePlayersInfo(short);
+  void SerializePlayersInfo(short);
 
-    void SerializeScoreHistory(short);
+  void SerializeScoreHistory(short);
+
+  void sub_1003CEA0(int punk1);
 
 private:
-    char unk_[0x430];
+  char unk_[0x430];
 };
 
 LegoGameState* GameState();

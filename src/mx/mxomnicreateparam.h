@@ -21,17 +21,6 @@ class MxOmniCreateParam : public MxOmniCreateParamBase {
 public:
   MxOmniCreateParam(const char *, struct HWND__* handle, MxVideoParam &, MxOmniCreateFlags);
 
-  struct HWND__ * window_handle();
-
-  const MxString& unknown1();
-
-  MxVideoParam &video_params();
-
-  inline MxOmniCreateFlags& flags() {
-    return flags_;
-  }
-
-private:
   /// +4
   MxString unknown1_;
 
@@ -43,7 +32,6 @@ private:
 
   /// +3C
   MxOmniCreateFlags flags_;
-
 
 };
 

@@ -6,20 +6,27 @@
 // This class is 0x24 bytes in size
 class MxVariable {
 public:
-    MxVariable(const char* key, const char* value);
+  MxVariable(const char* key) {
+    key_ = key;
+  }
 
-    virtual ~MxVariable();
+  MxVariable(const char* key, const char* value) {
+    key_ = key;
+    value_ = value;
+  }
 
-    const MxString& key();
+  virtual ~MxVariable();
 
-    const MxString& value();
+  const MxString& key();
+
+  const MxString& value();
 
 private:
-    // +4
-    MxString key_;
+  // +4
+  MxString key_;
 
-    // +14
-    MxString value_;
+  // +14
+  MxString value_;
 };
 
 #endif // MXVARIABLE_H

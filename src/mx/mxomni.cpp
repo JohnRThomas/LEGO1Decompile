@@ -50,57 +50,57 @@ MxResult MxOmni::Create(MxOmniCreateParam& param)
     goto done;
   }
 
-  unknown8_ = param.unknown1();
+  unknown8_ = param.unknown1_;
 
-  window_handle_ = param.window_handle();
+  window_handle_ = param.window_handle_;
 
-  if (param.flags().flags1() & MxOmniCreateFlags::CreateObjectFactory) {
+  if (param.flags_.flags1() & MxOmniCreateFlags::CreateObjectFactory) {
     object_factory_ = new MxObjectFactory();
   }
 
-  if (param.flags().flags1() & MxOmniCreateFlags::CreateVariableTable) {
+  if (param.flags_.flags1() & MxOmniCreateFlags::CreateVariableTable) {
     variable_table_ = new MxVariableTable();
   }
 
-  if (param.flags().flags2() & MxOmniCreateFlags::CreateTimer) {
+  if (param.flags_.flags2() & MxOmniCreateFlags::CreateTimer) {
     timer_ = new MxTimer();
   }
 
-  if (param.flags().flags1() & MxOmniCreateFlags::CreateTickleManager) {
+  if (param.flags_.flags1() & MxOmniCreateFlags::CreateTickleManager) {
     tickle_manager_ = new MxTickleManager(0);
   }
 
-  if (param.flags().flags1() & MxOmniCreateFlags::CreateNotificationManager) {
+  if (param.flags_.flags1() & MxOmniCreateFlags::CreateNotificationManager) {
     notification_manager_ = new MxNotificationManager();
 
     // call 100AC600(64, 0) - definitely virtual function
   }
 
-  if (param.flags().flags2() & MxOmniCreateFlags::CreateStreamer) {
+  if (param.flags_.flags2() & MxOmniCreateFlags::CreateStreamer) {
     streamer_ = new MxStreamer();
 
     // call function on streamer_
   }
 
-  if (param.flags().flags1() & MxOmniCreateFlags::CreateVideoManager) {
+  if (param.flags_.flags1() & MxOmniCreateFlags::CreateVideoManager) {
     video_manager_ = new MxVideoManager();
 
     // call function on video_manager_
   }
 
-  if (param.flags().flags1() & MxOmniCreateFlags::CreateSoundManager) {
+  if (param.flags_.flags1() & MxOmniCreateFlags::CreateSoundManager) {
     sound_manager_ = new MxSoundManager();
 
     // function on sound manager
   }
 
-  if (param.flags().flags1() & MxOmniCreateFlags::CreateMxUnknownManager3) {
+  if (param.flags_.flags1() & MxOmniCreateFlags::CreateMxUnknownManager3) {
     unknown34_ = new MxMIDIPresenter();
 
     // function on unknown34_
   }
 
-  if (param.flags().flags1() & MxOmniCreateFlags::CreateMxUnknownManager4) {
+  if (param.flags_.flags1() & MxOmniCreateFlags::CreateMxUnknownManager4) {
     unknown38_ = new MxUnknownManager4();
 
     // function on unknown38_(32, 0)

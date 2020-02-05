@@ -4,6 +4,16 @@
 #include "legoobjectfactory.h"
 #include "legoscripts.h"
 
+void sub_1001A700()
+{
+  ALERT("void sub_1001A700()", "Stub");
+}
+
+void sub_1003EF40(int punk1)
+{
+  ALERT("void sub_1003EF40()", "Stub");
+}
+
 LegoOmni::LegoOmni()
 {
   Init();
@@ -56,6 +66,13 @@ LegoVideoManager *LegoOmni::GetVideoManager()
   return static_cast<LegoVideoManager*>(video_manager_);
 }
 
+MxResult LegoOmni::sub_1005A5F0()
+{
+  ALERT("LegoOmni::sub_1005A5F0()", "Stub");
+
+  return SUCCESS;
+}
+
 LegoOmni* Lego()
 {
   return LegoOmni::GetInstance();
@@ -90,22 +107,19 @@ void LegoOmni::Destroy()
 MxResult LegoOmni::Create(MxOmniCreateParam& param)
 {
   // FIXME: Imperfect
-  ALERT("Create", "Alert");
 
   MxResult result = FAILURE;
 
   AUTOLOCK(&critical_section_);
 
   // Prevent MxOmni::Create() from creating objects that we create later
-  param.flags().flags1() &= ~MxOmniCreateFlags::CreateObjectFactory;
-  param.flags().flags1() &= ~MxOmniCreateFlags::CreateVideoManager;
-  param.flags().flags1() &= ~MxOmniCreateFlags::CreateSoundManager;
-  param.flags().flags1() &= ~MxOmniCreateFlags::CreateTickleManager;
+  param.flags_.flags1() &= ~MxOmniCreateFlags::CreateObjectFactory;
+  param.flags_.flags1() &= ~MxOmniCreateFlags::CreateVideoManager;
+  param.flags_.flags1() &= ~MxOmniCreateFlags::CreateSoundManager;
+  param.flags_.flags1() &= ~MxOmniCreateFlags::CreateTickleManager;
 
   if (!(tickle_manager_ = new MxTickleManager(0xFF))) {
     delete tickle_manager_;
-    tickle_manager_ = NULL;
-
     goto done;
   }
 
@@ -117,33 +131,30 @@ MxResult LegoOmni::Create(MxOmniCreateParam& param)
     goto done;
   }
 
-  sound_manager_ = new LegoSoundManager();
-
-  // Likely LegoSoundManager::Create()
-
-  if ((video_manager_ = new LegoVideoManager())) {
-    if (video_manager_->Create(param.video_params()) != SUCCESS) {
-      delete video_manager_;
-      video_manager_ = NULL;
-    }
+  if (!(sound_manager_ = new LegoSoundManager())
+      || ((LegoSoundManager*) sound_manager_)->vtable30(10, 0) != SUCCESS) {
+    delete sound_manager_;
+    sound_manager_ = NULL;
+    return FAILURE;
   }
 
-  if ((input_manager_ = new LegoInputManager())) {
-    if (input_manager_->Create() != SUCCESS) {
-      delete input_manager_;
-      input_manager_ = NULL;
-    }
+  if (!(video_manager_ = new LegoVideoManager())
+      || video_manager_->Create(param.video_params_) != SUCCESS) {
+    delete video_manager_;
+    video_manager_ = NULL;
   }
 
-  // Likely LegoInputManager::Create()
+  if (!(input_manager_ = new LegoInputManager())
+      || input_manager_->Create(param.window_handle_) != SUCCESS) {
+    delete input_manager_;
+    input_manager_ = NULL;
+    return FAILURE;
+  }
 
   unknown6C_ = new LegoUnknownManager2();
 
   unknown74_ = new LegoUnknownManager3();
-  unknown74_->SetUnknown4(0);
-
-  // FIXME: This function likely doesn't belong to LegoUnknownManager3
-  LegoUnknownManager3::sub_10046C10();
+  unknown74_->sub_10046C10();
 
   unknown8C_ = new LegoUnknownManager4();
 
@@ -157,27 +168,60 @@ MxResult LegoOmni::Create(MxOmniCreateParam& param)
 
   unknown78_ = new LegoUnknownManager8();
 
-  variable_table_->SetVariable(new MxVariable("VISIBILITY", ""));
-  variable_table_->SetVariable(new MxVariable("CAMERA_LOCATION", ""));
-  variable_table_->SetVariable(new MxVariable("CURSOR", ""));
-  variable_table_->SetVariable(new MxVariable("WHO_AM_I", ""));
+  if (unknown6C_ == NULL) {
+    return FAILURE;
+  }
 
-  LegoScripts::Load();
+  if (unknown74_ == NULL) {
+    return FAILURE;
+  }
 
-  // Call 1001A700
-  // Call 1005A5F0
+  if (unknown8C_ == NULL) {
+    return FAILURE;
+  }
 
-  background_audio_manager_ = new MxBackgroundAudioManager();
+  if (unknown90_ == NULL) {
+    return FAILURE;
+  }
 
-  transition_manager_ = new MxTransitionManager();
+  if (unknown94_ == NULL) {
+    return FAILURE;
+  }
 
-  // Run some kind of virtual function on LegoUnknownManager9
+  if (unknown98_ == NULL) {
+    return FAILURE;
+  }
 
-  // Run some function on `notification_manager_`
+  variable_table_->SetVariable(new MxVariable("VISIBILITY"));
+  variable_table_->SetVariable(new MxVariable("CAMERA_LOCATION"));
+  variable_table_->SetVariable(new MxVariable("CURSOR"));
+  variable_table_->SetVariable(new MxVariable("WHO_AM_I"));
 
-  // call 0x1003EF40
+  LegoScripts::sub_100528E0();
 
-  // Run function on LegoGameState
+  sub_1001A700();
+
+  if (sub_1005A5F0() != SUCCESS) {
+    return FAILURE;
+  }
+
+  if ((background_audio_manager_ = new MxBackgroundAudioManager())) {
+    return FAILURE;
+  }
+
+  if ((transition_manager_ = new MxTransitionManager())) {
+    return FAILURE;
+  }
+
+  if (transition_manager_->vtable14() != SUCCESS) {
+    return FAILURE;
+  }
+
+  notification_manager_->sub_100ACD20(this);
+
+  sub_1003EF40(1);
+
+  game_state_->sub_1003CEA0(0);
 
   result = SUCCESS;
 
@@ -214,6 +258,19 @@ LegoVideoManager* VideoManager()
   ALERT("VideoManager", "Stub");
 
   return LegoOmni::GetInstance()->GetVideoManager();
+}
+
+MxBackgroundAudioManager* BackgroundAudioManager() {
+  ALERT("MxBackgroundAudioManager* BackgroundAudioManager()", "Stub");
+
+  return NULL;
+}
+
+MxTransitionManager* TransitionManager()
+{
+  ALERT("MxTransitionManager* TransitionManager()", "Stub");
+
+  return NULL;
 }
 
 LegoUnknownManager5::LegoUnknownManager5()

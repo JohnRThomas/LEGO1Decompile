@@ -24,7 +24,7 @@ public:
 
   void QueueEvent(NotificationId, unsigned char, long, long, unsigned char);
 
-  MxResult Create();
+  MxResult Create(struct HWND__ * window_handle);
 
 private:
   // +40
