@@ -1,21 +1,6 @@
 #include "mxvariabletable.h"
 
-#include "custom/debug.h"
 #include "mxstring.h"
-
-MxVariableTable::MxVariableTable()
-{
-  ALERT("MxVariableTable::MxVariableTable()", "Stub");
-  entry_count_ = 0;
-  // unkC_ = vtable something?
-  table_size_ = 80;
-  table_ = new TableRef*[table_size_];
-  unk1C_ = 0;
-
-  for (unsigned int i=0;i<table_size_;i++) {
-    table_[i] = NULL;
-  }
-}
 
 MxVariableTable::~MxVariableTable()
 {

@@ -55,23 +55,33 @@ MxResult MxOmni::Create(MxOmniCreateParam& param)
   window_handle_ = param.window_handle_;
 
   if (param.flags_.flags1() & MxOmniCreateFlags::CreateObjectFactory) {
-    object_factory_ = new MxObjectFactory();
+    if (!(object_factory_ = new MxObjectFactory())) {
+      goto done;
+    }
   }
 
   if (param.flags_.flags1() & MxOmniCreateFlags::CreateVariableTable) {
-    variable_table_ = new MxVariableTable();
+    if (!(variable_table_ = new MxVariableTable())) {
+      goto done;
+    }
   }
 
   if (param.flags_.flags2() & MxOmniCreateFlags::CreateTimer) {
-    timer_ = new MxTimer();
+    if (!(timer_ = new MxTimer())) {
+      goto done;
+    }
   }
 
   if (param.flags_.flags1() & MxOmniCreateFlags::CreateTickleManager) {
-    tickle_manager_ = new MxTickleManager(0);
+    if (!(tickle_manager_ = new MxTickleManager(0))) {
+      goto done;
+    }
   }
 
   if (param.flags_.flags1() & MxOmniCreateFlags::CreateNotificationManager) {
-    notification_manager_ = new MxNotificationManager();
+    if (!(notification_manager_ = new MxNotificationManager())) {
+      goto done;
+    }
 
     // call 100AC600(64, 0) - definitely virtual function
   }
