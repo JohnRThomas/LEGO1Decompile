@@ -41,14 +41,15 @@ MxString::~MxString()
 
 const MxString &MxString::operator=(const MxString &s)
 {
-  ALERT("const MxString &MxString::operator=(const MxString &s)", "Stub");
-  delete [] string_;
+  if (s.string_ != string_) {
+    delete [] string_;
 
-  length_ = s.length_;
+    length_ = s.length_;
 
-  unsigned int array_length = length_+1;
-  string_ = new char[array_length];
-  strcpy(string_, s.string_);
+    unsigned int array_length = length_+1;
+    string_ = new char[array_length];
+    strcpy(string_, s.string_);
+  }
 
   return *this;
 }
