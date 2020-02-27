@@ -71,7 +71,7 @@ protected:
   MxStreamer* streamer_;
 
   // +44
-  MxAtomTable* atom_manager_;
+  MxAtomTable* atom_table_;
 
   // +48
   MxCriticalSection critical_section_;
@@ -110,12 +110,12 @@ public:
   static unsigned char IsSound3D();
   static void SetSound3D(unsigned char);
 
-  MxVariableTable* GetVariableTable();
-  MxTickleManager* GetTickleManager();
-  MxSoundManager* GetSoundManager();
-  MxAtomTable* GetAtomManager();
-  MxNotificationManager* GetNotificationManager();
-  MxTimer* GetTimer();
+  inline MxVariableTable* GetVariableTable() {return variable_table_;}
+  inline MxTickleManager* GetTickleManager() {return tickle_manager_;}
+  inline MxSoundManager* GetSoundManager() {return sound_manager_;}
+  inline MxAtomTable* GetAtomTable() {return atom_table_;}
+  inline MxNotificationManager* GetNotificationManager() {return notification_manager_;}
+  inline MxTimer* GetTimer() {return timer_;}
 
 };
 
@@ -131,7 +131,7 @@ MxTimer* Timer();
 
 MxNotificationManager* NotificationManager();
 
-MxAtomTable* AtomManager();
+MxAtomTable* AtomTable();
 
 MxEventManager* EventManager();
 

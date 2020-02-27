@@ -36,7 +36,7 @@ void MxOmni::Init()
   unknown38_ = NULL;
   timer_ = NULL;
   streamer_ = NULL;
-  atom_manager_ = NULL;
+  atom_table_ = NULL;
   unknown64_ = 0;
 }
 
@@ -61,7 +61,7 @@ MxResult MxOmni::Create(MxOmniCreateParam& param)
 
   MxResult result = FAILURE;
 
-  if (!(atom_manager_ = new MxAtomTable(0, 0))) {
+  if (!(atom_table_ = new MxAtomTable(0, 0))) {
     goto done;
   }
 
@@ -205,36 +205,6 @@ void MxOmni::SetSound3D(unsigned char c)
   sound_is_3d_ = c;
 }
 
-MxVariableTable *MxOmni::GetVariableTable()
-{
-  return variable_table_;
-}
-
-MxTickleManager *MxOmni::GetTickleManager()
-{
-  return tickle_manager_;
-}
-
-MxSoundManager* MxOmni::GetSoundManager()
-{
-  return sound_manager_;
-}
-
-MxAtomTable *MxOmni::GetAtomManager()
-{
-  return atom_manager_;
-}
-
-MxNotificationManager *MxOmni::GetNotificationManager()
-{
-  return notification_manager_;
-}
-
-MxTimer *MxOmni::GetTimer()
-{
-  return timer_;
-}
-
 void MxOmni::SetInstance(MxOmni* instance)
 {
   instance_ = instance;
@@ -242,37 +212,31 @@ void MxOmni::SetInstance(MxOmni* instance)
 
 MxVariableTable *VariableTable()
 {
-  ALERT("MxVariableTable *VariableTable()", "Stub");
   return MxOmni::GetInstance()->GetVariableTable();
 }
 
 MxTickleManager* TickleManager()
 {
-  ALERT("MxTickleManager* TickleManager()", "Stub");
   return MxOmni::GetInstance()->GetTickleManager();
 }
 
 MxSoundManager *MSoundManager()
 {
-  ALERT("MxSoundManager *MSoundManager()", "Stub");
   return MxOmni::GetInstance()->GetSoundManager();
 }
 
-MxAtomTable *AtomManager()
+MxAtomTable *AtomTable()
 {
-  ALERT("MxAtomManager *AtomManager()", "Stub");
-  return MxOmni::GetInstance()->GetAtomManager();
+  return MxOmni::GetInstance()->GetAtomTable();
 }
 
 MxNotificationManager *NotificationManager()
 {
-  ALERT("MxNotificationManager *NotificationManager()", "Stub");
   return MxOmni::GetInstance()->GetNotificationManager();
 }
 
 MxTimer* Timer()
 {
-  ALERT("MxTimer* Timer()", "Stub");
   return MxOmni::GetInstance()->GetTimer();
 }
 
