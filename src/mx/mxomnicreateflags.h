@@ -1,6 +1,7 @@
 #ifndef MXOMNICREATEFLAGS_H
 #define MXOMNICREATEFLAGS_H
 
+#include "mxbool.h"
 #include <WINDOWS.H>
 
 class MxOmniCreateFlags {

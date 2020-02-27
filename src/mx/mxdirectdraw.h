@@ -1,6 +1,7 @@
 #ifndef MXDIRECTDRAW_H
 #define MXDIRECTDRAW_H
 
+#include "mxbool.h"
 #include <WINDOWS.H>
 
 class MxDirectDraw {

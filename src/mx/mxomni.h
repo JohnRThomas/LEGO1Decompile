@@ -1,6 +1,7 @@
 #ifndef MXOMNI_H
 #define MXOMNI_H
 
+#include "mxbool.h"
 #include "mxatomtable.h"
 #include "mxcore.h"
 #include "mxeventmanager.h"

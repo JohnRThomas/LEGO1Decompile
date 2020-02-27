@@ -1,10 +1,10 @@
 #ifndef MXSTREAMER_H
 #define MXSTREAMER_H
 
-#include <WINDOWS.H>
-
 #include "mxcore.h"
 #include "mxstreamcontroller.h"
+
+#include <WINDOWS.H>
 
 /**
  * @brief The MxStreamerUnknown class

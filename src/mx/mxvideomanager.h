@@ -1,6 +1,7 @@
 #ifndef MXVIDEOMANAGER_H
 #define MXVIDEOMANAGER_H
 
+#include "mxbool.h"
 #include "mxcore.h"
 #include "mxpalette.h"
 #include "mxrect32.h"

@@ -1,6 +1,8 @@
 #ifndef MXOMNICREATEPARAM_H
 #define MXOMNICREATEPARAM_H
 
+#include "mxbool.h"
+
 #include <WINDOWS.H>
 
 #include "mxomnicreateflags.h"

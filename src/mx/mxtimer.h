@@ -1,9 +1,10 @@
 #ifndef MXTIMER_H
 #define MXTIMER_H
 
-#include <Windows.h>
-
+#include "mxbool.h"
 #include "mxcore.h"
+
+#include <WINDOWS.H>
 
 /**
  * @brief The MxTimer class
@@ -12,28 +13,28 @@
  */
 class MxTimer : public MxCore {
 public:
-    MxTimer();
+  MxTimer();
 
-    long GetRealTime();
+  long GetRealTime();
 
-    // Start?
-    void sub_100AE160();
+  // Start?
+  void sub_100AE160();
 
-    // Stop?
-    void sub_100AE180();
+  // Stop?
+  void sub_100AE180();
 
 private:
-    // 0x10101414
-    static DWORD last_time_calculated_;
+  // 0x10101414
+  static DWORD last_time_calculated_;
 
-    // 0x10101418
-    static long timer_time_;
+  // 0x10101418
+  static long timer_time_;
 
-    // +8
-    DWORD start_time_;
+  // +8
+  DWORD start_time_;
 
-    // +C
-    BOOL running_;
+  // +C
+  MxBool running_;
 };
 
 #endif // MXTIMER_H

@@ -27,6 +27,7 @@ public:
  */
 class MxTickleManager : public MxCore {
 public:
+  // u1 is most likely an MxBool
   inline MxTickleManager(unsigned char u1)
   {
     // FIXME: Imperfect

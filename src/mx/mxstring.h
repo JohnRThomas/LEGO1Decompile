@@ -1,9 +1,9 @@
 #ifndef MXSTRING_H
 #define MXSTRING_H
 
-#include <WINDOWS.H>
-
 #include "mxcore.h"
+
+#include <WINDOWS.H>
 
 /**
  * @brief String type abstract

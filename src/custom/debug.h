@@ -1,6 +1,8 @@
 #ifndef DEBUG_H
 #define DEBUG_H
 
+#include "mx/mxbool.h"
+
 #include <STDIO.H>
 #include <WINDOWS.H>
 

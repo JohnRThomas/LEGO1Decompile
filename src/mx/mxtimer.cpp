@@ -6,10 +6,9 @@ DWORD MxTimer::last_time_calculated_ = 0;
 
 long MxTimer::timer_time_ = 0;
 
-MxTimer::MxTimer() :
-  running_(FALSE)
+MxTimer::MxTimer()
 {
-  ALERT("MxTimer::MxTimer()", "Stub");
+  running_ = FALSE;
   start_time_ = timeGetTime();
   last_time_calculated_ = start_time_;
 }

@@ -1,7 +1,8 @@
 #ifndef MXCRITICALSECTION_H
 #define MXCRITICALSECTION_H
 
-#include <windows.h>
+#include "mxbool.h"
+#include <WINDOWS.H>
 
 /**
  * @brief Functions as a thread synchronization module

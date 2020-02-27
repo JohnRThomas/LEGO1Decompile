@@ -1,6 +1,7 @@
 #ifndef MXCORE_H
 #define MXCORE_H
 
+#include "mxbool.h"
 #include "mxparam.h"
 
 /**

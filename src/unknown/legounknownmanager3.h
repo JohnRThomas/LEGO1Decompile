@@ -1,6 +1,8 @@
 #ifndef LEGOUNKNOWNMANAGER3_H
 #define LEGOUNKNOWNMANAGER3_H
 
+#include "mx/mxbool.h"
+
 #include <WINDOWS.H>
 
 #include "custom/debug.h"
