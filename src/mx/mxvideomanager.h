@@ -37,7 +37,7 @@ public:
   virtual void vtable28(){}
 
   //
-  virtual MxResult Create(MxVideoParam& p_param, int p_tickleInterval = 100, BOOL p_createThread = FALSE);
+  virtual MxResult Create(MxVideoParam& p_param, int p_tickleInterval = 100, MxBool p_createThread = FALSE);
 
   virtual long RealizePalette(MxPalette*);
 

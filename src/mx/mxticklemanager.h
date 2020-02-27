@@ -28,7 +28,7 @@ public:
 class MxTickleManager : public MxCore {
 public:
   // u1 is most likely an MxBool
-  inline MxTickleManager(unsigned char u1)
+  inline MxTickleManager(MxBool u1)
   {
     // FIXME: Imperfect
 
@@ -59,7 +59,7 @@ public:
   void sub_100BDE80(MxNotificationManager*, int);
 
 private:
-  unsigned char unknown08_; // +8
+  MxBool unknown08_; // +8
   MxTickleUnknownSubclass1* unknown0C_; // +C
   int unknown10_; // +10
 };

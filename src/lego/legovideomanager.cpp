@@ -72,7 +72,7 @@ int LegoVideoManager::DisableRMDevice()
   return 0;
 }
 
-MxResult LegoVideoManager::Create(MxVideoParam &p_param, int p_tickleInterval, BOOL p_createThread)
+MxResult LegoVideoManager::Create(MxVideoParam &p_param, int p_tickleInterval, MxBool p_createThread)
 {
   ALERT("MxResult LegoVideoManager::Create(MxVideoParam &p_param, int p_tickleInterval, BOOL p_createThread)", "Stub");
 

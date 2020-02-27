@@ -29,7 +29,7 @@ void MxVideoManager::InvalidateRect(MxRect32 &)
   ALERT("void MxVideoManager::InvalidateRect(MxRect32 &)", "Stub");
 }
 
-MxResult MxVideoManager::Create(MxVideoParam &p_param, int p_tickleInterval, BOOL p_createThread)
+MxResult MxVideoManager::Create(MxVideoParam &p_param, int p_tickleInterval, MxBool p_createThread)
 {
   ALERT("MxResult MxVideoManager::Create(MxVideoParam &p_param, int p_tickleInterval, BOOL p_createThread)", "Stub");
 

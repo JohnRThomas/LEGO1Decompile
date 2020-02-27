@@ -118,7 +118,7 @@ MxResult LegoOmni::Create(MxOmniCreateParam& param)
   param.flags_.flags1() &= ~MxOmniCreateFlags::CreateSoundManager;
   param.flags_.flags1() &= ~MxOmniCreateFlags::CreateTickleManager;
 
-  if (!(tickle_manager_ = new MxTickleManager(0xFF))) {
+  if (!(tickle_manager_ = new MxTickleManager(TRUE))) {
     delete tickle_manager_;
     goto done;
   }

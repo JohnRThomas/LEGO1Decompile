@@ -88,7 +88,7 @@ MxResult MxOmni::Create(MxOmniCreateParam& param)
   }
 
   if (param.flags_.flags1() & MxOmniCreateFlags::CreateTickleManager) {
-    if (!(tickle_manager_ = new MxTickleManager(0))) {
+    if (!(tickle_manager_ = new MxTickleManager(FALSE))) {
       goto done;
     }
   }

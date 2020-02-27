@@ -20,7 +20,7 @@ public:
   int EnableRMDevice();
   int DisableRMDevice();
 
-  virtual MxResult Create(MxVideoParam& p_param, int p_tickleInterval = 100, BOOL p_createThread = FALSE);
+  virtual MxResult Create(MxVideoParam& p_param, int p_tickleInterval = 100, MxBool p_createThread = FALSE);
 
 private:
   int unk64_;
