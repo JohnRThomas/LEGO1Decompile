@@ -117,9 +117,8 @@ public:
 
   void CreateBackgroundAudio();
 
-  LegoInputManager* GetInputManager();
-
-  LegoVideoManager* GetVideoManager();
+  inline LegoInputManager* GetInputManager() {return input_manager_;}
+  inline LegoGameState* GetGameState() {return game_state_;}
 
 private:
   MxResult sub_1005A5F0();
@@ -137,5 +136,7 @@ LegoVideoManager* VideoManager();
 MxBackgroundAudioManager* BackgroundAudioManager();
 
 MxTransitionManager* TransitionManager();
+
+LegoGameState* GameState();
 
 #endif // LEGOOMNI_H

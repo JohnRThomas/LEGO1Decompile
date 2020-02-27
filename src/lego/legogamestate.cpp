@@ -45,10 +45,3 @@ void LegoGameState::sub_1003CEA0(int punk1)
 {
   ALERT("LegoGameState::sub_1003CEA0", "Stub");
 }
-
-LegoGameState* GameState()
-{
-  ALERT("GameState", "Stub");
-
-  return NULL;
-}

@@ -26,6 +26,4 @@ private:
   char unk_[0x430];
 };
 
-LegoGameState* GameState();
-
 #endif // LEGOGAMESTATE_H

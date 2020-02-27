@@ -117,6 +117,7 @@ public:
   inline MxAtomTable* GetAtomTable() {return atom_table_;}
   inline MxNotificationManager* GetNotificationManager() {return notification_manager_;}
   inline MxTimer* GetTimer() {return timer_;}
+  inline MxVideoManager* GetVideoManager() {return video_manager_;}
 
 };
 

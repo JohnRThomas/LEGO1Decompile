@@ -52,20 +52,6 @@ void LegoOmni::CreateBackgroundAudio()
   ALERT("LegoOmni::CreateBackgroundAudio", "Stub");
 }
 
-LegoInputManager *LegoOmni::GetInputManager()
-{
-  ALERT("LegoOmni::GetInputManager", "Stub");
-
-  return input_manager_;
-}
-
-LegoVideoManager *LegoOmni::GetVideoManager()
-{
-  ALERT("LegoOmni::GetVideoManager", "Stub");
-
-  return static_cast<LegoVideoManager*>(video_manager_);
-}
-
 MxResult LegoOmni::sub_1005A5F0()
 {
   ALERT("LegoOmni::sub_1005A5F0()", "Stub");
@@ -231,23 +217,17 @@ done:
 
 LegoInputManager* InputManager()
 {
-  ALERT("InputManager", "Stub");
-
   return LegoOmni::GetInstance()->GetInputManager();
 }
 
 LegoSoundManager *SoundManager()
 {
-  ALERT("SoundManager", "Stub");
-
   return static_cast<LegoSoundManager*>(LegoOmni::GetInstance()->GetSoundManager());
 }
 
 LegoVideoManager* VideoManager()
 {
-  ALERT("VideoManager", "Stub");
-
-  return LegoOmni::GetInstance()->GetVideoManager();
+  return (LegoVideoManager*) LegoOmni::GetInstance()->GetVideoManager();
 }
 
 MxBackgroundAudioManager* BackgroundAudioManager() {
@@ -276,4 +256,9 @@ LegoUnknownManager6::LegoUnknownManager6()
 LegoUnknownManager7::LegoUnknownManager7()
 {
   ALERT("LegoUnknownManager7", "Stub\n\nSize: %x", sizeof(LegoUnknownManager7));
+}
+
+LegoGameState *GameState()
+{
+  return LegoOmni::GetInstance()->GetGameState();
 }
