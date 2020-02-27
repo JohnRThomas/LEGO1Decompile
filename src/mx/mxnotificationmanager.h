@@ -3,6 +3,7 @@
 
 #include "mxcore.h"
 #include "mxcriticalsection.h"
+#include "mxresult.h"
 
 /**
  * @brief The MxNotificationManagerUnknown1 class
@@ -49,7 +50,15 @@ class MxNotificationManager : public MxCore {
 public:
   MxNotificationManager();
 
-  void sub_100AC600(int unkp1, int unkp2);
+  virtual void vtable08(){}
+  virtual void vtable0C(){}
+  virtual void vtable10(){}
+  virtual void vtable14(){}
+  virtual void vtable18(){}
+  virtual void vtable1C(){}
+  virtual void vtable20(){}
+  virtual void vtable24(){}
+  virtual MxResult sub_100AC600(int unkp1, int unkp2);
 
   void sub_100ACD20(MxCore *core);
 

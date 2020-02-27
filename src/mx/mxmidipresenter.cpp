@@ -21,3 +21,10 @@ void MxMIDIPresenter::Init()
   unk48_ = 0;
   unk4C_ = 0;
 }
+
+MxResult MxMIDIPresenter::sub_100C0840(int punk1, int punk2)
+{
+  ALERT("MxResult MxMIDIPresenter::sub_100C0840(int punk1, int punk2)", "Stub");
+
+  return SUCCESS;
+}

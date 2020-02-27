@@ -32,7 +32,7 @@ void MxOmni::Init()
   notification_manager_ = NULL;
   video_manager_ = NULL;
   sound_manager_ = NULL;
-  unknown34_ = NULL;
+  midi_presenter_ = NULL;
   unknown38_ = NULL;
   timer_ = NULL;
   streamer_ = NULL;
@@ -81,45 +81,68 @@ MxResult MxOmni::Create(MxOmniCreateParam& param)
   if (param.flags_.flags1() & MxOmniCreateFlags::CreateNotificationManager) {
     if (!(notification_manager_ = new MxNotificationManager())) {
       goto done;
+    } else {
+      if (notification_manager_->sub_100AC600(0x64, 0) != SUCCESS) {
+        goto done;
+      }
     }
-
-    // call 100AC600(64, 0) - definitely virtual function
   }
 
   if (param.flags_.flags2() & MxOmniCreateFlags::CreateStreamer) {
-    streamer_ = new MxStreamer();
-
-    // call function on streamer_
+    if (!(streamer_ = new MxStreamer()) || !streamer_->sub_100B9190()) {
+      goto done;
+    }
   }
 
   if (param.flags_.flags1() & MxOmniCreateFlags::CreateVideoManager) {
-    video_manager_ = new MxVideoManager();
-
-    // call function on video_manager_
+    if ((video_manager_ = new MxVideoManager())) {
+      if (video_manager_->Create(param.video_params_) != SUCCESS) {
+        delete video_manager_;
+        video_manager_ = NULL;
+      }
+    }
   }
 
   if (param.flags_.flags1() & MxOmniCreateFlags::CreateSoundManager) {
-    sound_manager_ = new MxSoundManager();
-
-    // function on sound manager
+    if ((sound_manager_ = new MxSoundManager())) {
+      if (sound_manager_->sub_100AE8B0(0xA, 0) != SUCCESS) {
+        delete sound_manager_;
+        sound_manager_ = NULL;
+      }
+    }
   }
 
   if (param.flags_.flags1() & MxOmniCreateFlags::CreateMxUnknownManager3) {
-    unknown34_ = new MxMIDIPresenter();
-
-    // function on unknown34_
+    if ((midi_presenter_ = new MxMIDIPresenter())) {
+      if (midi_presenter_->sub_100C0840(0x32, 0x0) != SUCCESS) {
+        delete midi_presenter_;
+        midi_presenter_ = NULL;
+      }
+    }
   }
 
   if (param.flags_.flags1() & MxOmniCreateFlags::CreateMxUnknownManager4) {
-    unknown38_ = new MxUnknownManager4();
-
-    // function on unknown38_(32, 0)
+    if ((unknown38_ = new MxUnknownManager4())) {
+      if (unknown38_->sub_100C04A0(0x32, 0)) {
+        delete unknown38_;
+        unknown38_ = NULL;
+      }
+    }
   }
 
   result = SUCCESS;
 
 done:
+  if (result != SUCCESS) {
+    sub_10058C30();
+  }
+
   return result;
+}
+
+void MxOmni::sub_10058C30()
+{
+  ALERT("void MxOmni::sub_10058C30()", "Stub");
 }
 
 MxOmni* MxOmni::GetInstance()

@@ -1,12 +1,13 @@
 #ifndef MXUNKNOWNMANAGER3_H
 #define MXUNKNOWNMANAGER3_H
 
+#include "mxresult.h"
 #include "unknown/mxunknownmanager5.h"
 
 /**
  * @brief The MxMIDIPresenter class
  *
- * FIXME: MIGHT be MxLoopingMIDIPresenter, making MxUnknownManager5 the real MxMIDIPresenter?
+ * FIXME: MIGHT actually be MxLoopingMIDIPresenter, making MxUnknownManager5 the real MxMIDIPresenter?
  *
  * 0x58 bytes in size
  */
@@ -19,6 +20,18 @@ public:
 
     // sub_100C06A0
     void Init();
+
+    virtual void vtable08(){}
+    virtual void vtable0C(){}
+    virtual void vtable10(){}
+    virtual void vtable14(){}
+    virtual void vtable18(){}
+    virtual void vtable1C(){}
+    virtual void vtable20(){}
+    virtual void vtable24(){}
+    virtual void vtable28(){}
+    virtual void vtable2C(){}
+    virtual MxResult sub_100C0840(int punk1, int punk2);
 
 private:
     int unk30_;

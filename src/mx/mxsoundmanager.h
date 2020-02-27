@@ -30,7 +30,7 @@ public:
   virtual void vtable24(){}
   virtual void vtable28(){}
   virtual void vtable2C(){}
-  virtual MxResult vtable30(int punk1, int punk2){return SUCCESS;}
+  virtual MxResult sub_100AE8B0(int punk1, int punk2);
   virtual void vtable34(){}
   virtual void vtable38(){}
   virtual void vtable3C(){}

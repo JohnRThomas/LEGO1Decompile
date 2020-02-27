@@ -14,7 +14,7 @@ public:
 
   virtual ~LegoSoundManager(){}
 
-  virtual MxResult vtable30(int punk1, int punk2);
+  virtual MxResult sub_100AE8B0(int punk1, int punk2);
 
 private:
   int unk3C_;

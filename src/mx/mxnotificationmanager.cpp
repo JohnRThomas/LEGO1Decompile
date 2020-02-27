@@ -16,7 +16,7 @@ MxNotificationManager::MxNotificationManager() :
   ALERT("MxNotificationManager::MxNotificationManager()", "Stub");
 }
 
-void MxNotificationManager::sub_100AC600(int, int)
+MxResult MxNotificationManager::sub_100AC600(int, int)
 {
   ALERT("void MxNotificationManager::sub_100AC600(int, int)", "Stub");
   MxNotificationManagerUnknown2* ebp_14 = new MxNotificationManagerUnknown2();
@@ -37,6 +37,8 @@ void MxNotificationManager::sub_100AC600(int, int)
     // Virtual
     TickleManager()->sub_100BDE80(this, 0xA);
   }
+
+  return SUCCESS;
 }
 
 void MxNotificationManager::sub_100ACD20(MxCore *core)

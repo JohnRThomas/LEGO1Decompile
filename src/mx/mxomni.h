@@ -59,7 +59,7 @@ protected:
   MxSoundManager* sound_manager_;
 
   // +34
-  MxMIDIPresenter* unknown34_;
+  MxMIDIPresenter* midi_presenter_;
 
   // +38
   MxUnknownManager4* unknown38_;
@@ -85,6 +85,12 @@ protected:
   virtual void Init();
 
   MxResult Create(MxOmniCreateParam& param);
+
+  virtual void vtable0C(){}
+  virtual void vtable10(){}
+  virtual void vtable14(){}
+  virtual void vtable18(){}
+  virtual void sub_10058C30();
 
 public:
   static MxOmni* GetInstance();

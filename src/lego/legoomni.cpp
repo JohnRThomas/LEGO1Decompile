@@ -132,7 +132,7 @@ MxResult LegoOmni::Create(MxOmniCreateParam& param)
   }
 
   if (!(sound_manager_ = new LegoSoundManager())
-      || ((LegoSoundManager*) sound_manager_)->vtable30(10, 0) != SUCCESS) {
+      || ((LegoSoundManager*) sound_manager_)->sub_100AE8B0(10, 0) != SUCCESS) {
     delete sound_manager_;
     sound_manager_ = NULL;
     return FAILURE;
