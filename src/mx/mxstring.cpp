@@ -35,7 +35,6 @@ MxString::MxString(const MxString& other)
 
 MxString::~MxString()
 {
-  ALERT("MxString::~MxString()", "Stub");
   delete [] string_;
 }
 
