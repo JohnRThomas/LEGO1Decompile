@@ -40,6 +40,21 @@ void MxOmni::Init()
   unknown64_ = 0;
 }
 
+void MxOmni::vtableC()
+{
+  ALERT("void MxOmni::vtableC()", "Stub");
+}
+
+void MxOmni::vtable10()
+{
+  ALERT("void MxOmni::vtable10()", "Stub");
+}
+
+void MxOmni::Destroy()
+{
+  ALERT("void MxOmni::Destroy()", "Stub");
+}
+
 MxResult MxOmni::Create(MxOmniCreateParam& param)
 {
   // FIXME: Imperfect
@@ -142,6 +157,8 @@ done:
 
 void MxOmni::sub_10058C30()
 {
+  // FIXME: This might actually be a member of LegoOmni overriding a member of MxOmni
+
   ALERT("void MxOmni::sub_10058C30()", "Stub");
 }
 

@@ -84,12 +84,17 @@ protected:
 
   virtual void Init();
 
-  MxResult Create(MxOmniCreateParam& param);
+  virtual void vtableC();
 
-  virtual void vtable0C(){}
-  virtual void vtable10(){}
-  virtual void vtable14(){}
-  virtual void vtable18(){}
+  virtual void vtable10();
+
+  // vtable14
+  virtual void Destroy();
+
+  // vtable18
+  virtual MxResult Create(MxOmniCreateParam& param);
+
+  // vtable 1C
   virtual void sub_10058C30();
 
 public:

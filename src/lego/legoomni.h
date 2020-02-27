@@ -105,12 +105,8 @@ protected:
   virtual void Init();
 
 public:
-  virtual void unk_func03();
-  virtual void unk_func04();
-
   virtual void Destroy();
   virtual MxResult Create(MxOmniCreateParam &param);
-
 
   static void CreateInstance();
   static LegoOmni* GetInstance();

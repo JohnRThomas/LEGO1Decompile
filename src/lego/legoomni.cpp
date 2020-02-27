@@ -229,16 +229,6 @@ done:
   return result;
 }
 
-void LegoOmni::unk_func03()
-{
-  ALERT("LegoOmni::unk_func03", "Stub");
-}
-
-void LegoOmni::unk_func04()
-{
-  ALERT("LegoOmni::unk_func04", "Stub");
-}
-
 LegoInputManager* InputManager()
 {
   ALERT("InputManager", "Stub");
