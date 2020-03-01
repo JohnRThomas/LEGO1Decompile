@@ -4,34 +4,36 @@
 #include "custom/debug.h"
 #include "mxvariable.h"
 
-/**
- * @brief The MxVariableTable class
- *
- * 0x28 bytes in size
- */
-class MxVariableTable : public MxCore {
+class MxVariableTableBase : public MxCore {
 public:
-  MxVariableTable() {
-    ALERT("MxVariableTable::MxVariableTable()", "Stub");
-    entry_count_ = 0;
-    // unkC_ = vtable something?
-    table_size_ = 80;
-    table_ = new TableRef*[table_size_];
-    unk1C_ = 0;
+  MxVariableTableBase() {
+    // FIXME: Imperfect
 
-    for (unsigned int i=0;i<table_size_;i++) {
-      table_[i] = NULL;
-    }
+    entry_count_ = 0;
   }
 
-  virtual ~MxVariableTable();
+protected:
+  // +8
+  int entry_count_;
 
-  void SetVariable(const char* key, const char* value);
-  void SetVariable(MxVariable*);
+};
 
-  const char* GetVariable(const char*);
+class MxVariableTableBase2 {
+public:
+  MxVariableTableBase2() {
+    // FIXME: Imperfect
 
-private:
+    table_size_ = 0x80;
+    table_ = new TableRef*[table_size_];
+
+    memset(table_, 0, table_size_ * sizeof(TableRef*));
+
+    unk1C_ = 0;
+  }
+
+  virtual ~MxVariableTableBase2(){}
+
+protected:
   /**
      * @brief The MxVariableTableUnknownSubclass1 class
      *
@@ -45,12 +47,6 @@ private:
     TableRef** parent_;
   };
 
-  unsigned int AddLetterCodesInKey(MxVariable* v);
-
-  int entry_count_;
-
-  int unkC_;
-
   TableRef** table_;
 
   unsigned int table_size_;
@@ -58,6 +54,25 @@ private:
   int unk18_;
 
   int unk1C_;
+
+};
+
+/**
+ * @brief The MxVariableTable class
+ *
+ * 0x28 bytes in size
+ */
+class MxVariableTable : public MxVariableTableBase, public MxVariableTableBase2 {
+public:
+  virtual ~MxVariableTable();
+
+  void SetVariable(const char* key, const char* value);
+  void SetVariable(MxVariable*);
+
+  const char* GetVariable(const char*);
+
+private:
+  unsigned int AddLetterCodesInKey(MxVariable* v);
 
   int unk20_;
 
