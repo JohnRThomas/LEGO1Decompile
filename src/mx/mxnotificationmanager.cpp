@@ -6,15 +6,6 @@
 
 MxNotificationManager::MxNotificationManager()
 {
-  unk30_ = 0x10;
-
-  MxNotificationManagerUnknown1* mamu1 = new MxNotificationManagerUnknown1();
-  mamu1->unk0_ = mamu1;
-  mamu1->unk4_ = mamu1;
-  unk34_ = mamu1;
-
-  unk38_ = 0;
-
   unk2C_ = 0;
   unk8_ = NULL;
   unk3C_ = 1;
@@ -53,7 +44,7 @@ void MxNotificationManager::sub_100ACD20(MxCore *core)
 
   int ebp_4 = 0;
 
-  MxNotificationManagerUnknown1* ebp_14 = unk34_;
+  //MxNotificationManagerUnknown1* ebp_14 = unk34_;
 
 
   critical_section_.Unlock();

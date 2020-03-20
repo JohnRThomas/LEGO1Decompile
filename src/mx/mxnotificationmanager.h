@@ -41,6 +41,28 @@ public:
   int unk8_;
 };
 
+class MAMU1Wrapper {
+public:
+  inline MAMU1Wrapper() {
+    unk0_ = 0x10;
+
+    MxNotificationManagerUnknown1* mamu1 = new MxNotificationManagerUnknown1();
+    mamu1->unk0_ = mamu1;
+    mamu1->unk4_ = mamu1;
+    unk4_ = mamu1;
+
+    unk8_ = 0;
+  }
+
+private:
+  unsigned char unk0_;
+
+  MxNotificationManagerUnknown1* unk4_;
+
+  int unk8_;
+
+};
+
 /**
  * @brief The MxNotificationManager class
  *
@@ -69,10 +91,9 @@ private:
   MxCriticalSection critical_section_;
 
   int unk2C_;
-  unsigned char unk30_;
-  MxNotificationManagerUnknown1* unk34_;
-  int unk38_;
+  MAMU1Wrapper unk30_;
   unsigned char unk3C_;
+
 };
 
 #endif // MXNOTIFICATIONMANAGER_H
