@@ -1,6 +1,7 @@
 #ifndef MXNOTIFICATIONMANAGER_H
 #define MXNOTIFICATIONMANAGER_H
 
+#include "custom/debug.h"
 #include "mxcore.h"
 #include "mxcriticalsection.h"
 #include "mxresult.h"
@@ -41,17 +42,22 @@ public:
   int unk8_;
 };
 
-class MAMU1Wrapper {
+class MAMU1WrapperBaseBase {
 public:
-  inline MAMU1Wrapper() {
+  MAMU1WrapperBaseBase(){
     unk0_ = 0x10;
 
     MxNotificationManagerUnknown1* mamu1 = new MxNotificationManagerUnknown1();
+
     mamu1->unk0_ = mamu1;
     mamu1->unk4_ = mamu1;
     unk4_ = mamu1;
 
     unk8_ = 0;
+  }
+
+  ~MAMU1WrapperBaseBase(){
+    ALERT("MAMU1WrapperBaseBase Destructor", "Stub");
   }
 
 private:
@@ -60,6 +66,27 @@ private:
   MxNotificationManagerUnknown1* unk4_;
 
   int unk8_;
+
+};
+
+class MAMU1WrapperBase : public MAMU1WrapperBaseBase {
+public:
+  MAMU1WrapperBase(){}
+
+  ~MAMU1WrapperBase(){
+    ALERT("MAMU1WrapperBase Destructor", "Stub");
+  }
+};
+
+class MAMU1Wrapper : public MAMU1WrapperBase {
+public:
+  MAMU1Wrapper() {
+
+  }
+
+  ~MAMU1Wrapper() {
+    ALERT("MAMU1Wrapper Destructor", "Stub");
+  }
 
 };
 
@@ -91,6 +118,7 @@ private:
   MxCriticalSection critical_section_;
 
   int unk2C_;
+
   MAMU1Wrapper unk30_;
   unsigned char unk3C_;
 

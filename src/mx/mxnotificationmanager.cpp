@@ -1,11 +1,11 @@
 #include "mxnotificationmanager.h"
 
-#include "custom/debug.h"
 #include "mxomni.h"
 #include "mxstreamer.h"
 
 MxNotificationManager::MxNotificationManager()
 {
+  //ALERT("MxNotificationManager::MxNotificationManager()", "Stub");
   unk2C_ = 0;
   unk8_ = NULL;
   unk3C_ = 1;
