@@ -55,8 +55,7 @@ const MxString &MxString::operator=(const MxString &s)
 
 const MxString& MxString::operator=(const char* s)
 {
-  // FIXME: Imperfect, but literally the only inaccuracy is the cmp is the wrong way around
-  //        (i.e. original is `cmp eax,esi` and this compiles to `cmp esi,eax`)
+  // 99%
 
   if (string_ != s) {
     delete [] string_;
