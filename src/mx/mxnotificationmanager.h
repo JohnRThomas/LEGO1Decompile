@@ -12,8 +12,8 @@
  */
 class MxNotificationManagerUnknown1 {
 public:
-  int unk0_;
-  int unk4_;
+  MxNotificationManagerUnknown1* unk0_;
+  MxNotificationManagerUnknown1* unk4_;
   int unk8_;
 };
 

@@ -4,16 +4,21 @@
 #include "mxomni.h"
 #include "mxstreamer.h"
 
-MxNotificationManager::MxNotificationManager() :
-  unk8_(NULL),
-  unkC_(0),
-  unk2C_(0),
-  unk30_(0x10),
-  unk34_(new MxNotificationManagerUnknown1()),
-  unk38_(0),
-  unk3C_(1)
+MxNotificationManager::MxNotificationManager()
 {
-  ALERT("MxNotificationManager::MxNotificationManager()", "Stub");
+  unk30_ = 0x10;
+
+  MxNotificationManagerUnknown1* mamu1 = new MxNotificationManagerUnknown1();
+  mamu1->unk0_ = mamu1;
+  mamu1->unk4_ = mamu1;
+  unk34_ = mamu1;
+
+  unk38_ = 0;
+
+  unk2C_ = 0;
+  unk8_ = NULL;
+  unk3C_ = 1;
+  unkC_ = 0;
 }
 
 MxResult MxNotificationManager::sub_100AC600(int, int)
