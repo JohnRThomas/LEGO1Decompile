@@ -21,9 +21,9 @@ MxResult MxNotificationManager::sub_100AC600(int, int)
   // FIXME: Byte ptr?
   ebp_14->unk0_ = 0;
 
-  MxNotificationManagerUnknown3* mnmu3 = new MxNotificationManagerUnknown3();
-  mnmu3->unk0_ = mnmu3;
-  mnmu3->unk4_ = mnmu3;
+  MxNotificationManagerUnknown1* mnmu3 = new MxNotificationManagerUnknown1();
+  mnmu3->next_ = mnmu3;
+  mnmu3->previous_ = mnmu3;
 
   ebp_14->unk4_ = mnmu3;
   ebp_14->unk8_ = 0;

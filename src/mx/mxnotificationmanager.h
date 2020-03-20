@@ -13,20 +13,8 @@
  */
 class MxNotificationManagerUnknown1 {
 public:
-  MxNotificationManagerUnknown1* unk0_;
-  MxNotificationManagerUnknown1* unk4_;
-  int unk8_;
-};
-
-/**
- * @brief The MxNotificationManagerUnknown3 class
- *
- * 0xC bytes in size
- */
-class MxNotificationManagerUnknown3 {
-public:
-  MxNotificationManagerUnknown3* unk0_;
-  MxNotificationManagerUnknown3* unk4_;
+  MxNotificationManagerUnknown1* next_;
+  MxNotificationManagerUnknown1* previous_;
   int unk8_;
 };
 
@@ -38,34 +26,65 @@ public:
 class MxNotificationManagerUnknown2 {
 public:
   unsigned char unk0_;
-  MxNotificationManagerUnknown3* unk4_;
+  MxNotificationManagerUnknown1* unk4_;
   int unk8_;
 };
 
 class MAMU1WrapperBaseBase {
 public:
+  // Inlined into MxNotificationManager::MxNotificationManager()
   MAMU1WrapperBaseBase(){
     unk0_ = 0x10;
 
     MxNotificationManagerUnknown1* mamu1 = new MxNotificationManagerUnknown1();
 
-    mamu1->unk0_ = mamu1;
-    mamu1->unk4_ = mamu1;
-    unk4_ = mamu1;
+    mamu1->next_ = mamu1;
+    mamu1->previous_ = mamu1;
+    root_ = mamu1;
 
-    unk8_ = 0;
+    count_ = 0;
   }
 
+  // sub_100AC320
   ~MAMU1WrapperBaseBase(){
     ALERT("MAMU1WrapperBaseBase Destructor", "Stub");
+
+    if (root_->next_ != root_) {
+      MxNotificationManagerUnknown1* edi = root_->next_;
+
+      do {
+
+        MxNotificationManagerUnknown1** edx = &edi->previous_;
+        MxNotificationManagerUnknown1* esp_8 = edi;
+        MxNotificationManagerUnknown1* eax = edi;
+        edi = edi->next_;
+        MxNotificationManagerUnknown1* ecx = *edx;
+        eax = eax->next_;
+        ecx->next_ = eax;
+        ecx = *edx;
+        eax = esp_8;
+
+        MxNotificationManagerUnknown1* edx2 = eax->next_;
+        edx2->next_ = ecx;
+
+        delete eax;
+
+        count_--;
+      } while (edi != root_);
+    }
+
+    delete root_;
+    root_ = NULL;
+
+    count_ = 0;
   }
 
 private:
   unsigned char unk0_;
 
-  MxNotificationManagerUnknown1* unk4_;
+  MxNotificationManagerUnknown1* root_;
 
-  int unk8_;
+  int count_;
 
 };
 
