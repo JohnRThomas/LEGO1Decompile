@@ -5,7 +5,8 @@
 
 MxNotificationManager::MxNotificationManager()
 {
-  //ALERT("MxNotificationManager::MxNotificationManager()", "Stub");
+  // FIXME: Imperfect, it appears our code is perfect but the asm differs very slightly because we're not using smartheap
+
   unk2C_ = 0;
   unk8_ = NULL;
   unk3C_ = 1;
