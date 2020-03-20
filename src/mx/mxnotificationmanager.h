@@ -18,23 +18,11 @@ public:
   int unk8_;
 };
 
-/**
- * @brief The MxNotificationManagerUnknown2 class
- *
- * 0xC bytes in size
- */
-class MxNotificationManagerUnknown2 {
-public:
-  unsigned char unk0_;
-  MxNotificationManagerUnknown1* unk4_;
-  int unk8_;
-};
-
 class MAMU1WrapperBaseBase {
 public:
   // Inlined into MxNotificationManager::MxNotificationManager()
-  MAMU1WrapperBaseBase(){
-    unk0_ = 0x10;
+  MAMU1WrapperBaseBase(unsigned char punk1){
+    unk0_ = punk1;
 
     MxNotificationManagerUnknown1* mamu1 = new MxNotificationManagerUnknown1();
 
@@ -90,7 +78,9 @@ private:
 
 class MAMU1WrapperBase : public MAMU1WrapperBaseBase {
 public:
-  MAMU1WrapperBase(){}
+  MAMU1WrapperBase(unsigned char punk1) :
+    MAMU1WrapperBaseBase(punk1)
+  {}
 
   ~MAMU1WrapperBase(){
     ALERT("MAMU1WrapperBase Destructor", "Stub");
@@ -99,9 +89,9 @@ public:
 
 class MAMU1Wrapper : public MAMU1WrapperBase {
 public:
-  MAMU1Wrapper() {
-
-  }
+  MAMU1Wrapper(unsigned char punk1) :
+    MAMU1WrapperBase(punk1)
+  {}
 
   ~MAMU1Wrapper() {
     ALERT("MAMU1Wrapper Destructor", "Stub");
@@ -131,7 +121,7 @@ public:
   void sub_100ACD20(MxCore *core);
 
 private:
-  MxNotificationManagerUnknown2* unk8_;
+  MAMU1Wrapper* unk8_;
   int unkC_;
 
   MxCriticalSection critical_section_;

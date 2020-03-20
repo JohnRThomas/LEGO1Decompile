@@ -8,11 +8,6 @@ MxTickleManager::~MxTickleManager()
   delete unknown0C_;
 }
 
-void MxTickleManager::vtable4()
-{
-  ALERT("void MxTickleManager::vtable4()", "Stub");
-}
-
 void MxTickleManager::vtable8()
 {
   ALERT("void MxTickleManager::vtable8()", "Stub");
@@ -26,11 +21,6 @@ void MxTickleManager::vtableC()
 void MxTickleManager::vtable10()
 {
   ALERT("void MxTickleManager::vtable10()", "Stub");
-}
-
-void MxTickleManager::vtable14()
-{
-  ALERT("void MxTickleManager::vtable14()", "Stub");
 }
 
 void MxTickleManager::vtable18()

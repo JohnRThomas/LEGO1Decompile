@@ -12,6 +12,8 @@
  */
 class MxTickleUnknownSubclass1 {
 public:
+  ~MxTickleUnknownSubclass1();
+
   MxTickleUnknownSubclass1* unk00_;
   MxTickleUnknownSubclass1* unk04_;
   MxTickleUnknownSubclass1* unk08_;
@@ -44,19 +46,15 @@ public:
 
   virtual ~MxTickleManager();
 
-  virtual void vtable4();
-
   virtual void vtable8();
 
   virtual void vtableC();
 
   virtual void vtable10();
 
-  virtual void vtable14();
+  virtual void sub_100BDE80(MxNotificationManager*, int);
 
   virtual void vtable18();
-
-  void sub_100BDE80(MxNotificationManager*, int);
 
 private:
   MxBool unknown08_; // +8
