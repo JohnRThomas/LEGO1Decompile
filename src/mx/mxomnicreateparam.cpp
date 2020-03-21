@@ -4,6 +4,8 @@
 
 MxOmniCreateParam::MxOmniCreateParam(const char* str, struct HWND__ *handle, MxVideoParam & vparams, MxOmniCreateFlags flags)
 {
+  PERFECT;
+
   unknown1_ = str;
 
   window_handle_ = handle;
@@ -15,5 +17,5 @@ MxOmniCreateParam::MxOmniCreateParam(const char* str, struct HWND__ *handle, MxV
 
 MxOmniCreateParamBase::~MxOmniCreateParamBase()
 {
-  ALERT("MxOmniCreateParamBase::~MxOmniCreateParamBase()", "Stub");
+  STUB;
 }

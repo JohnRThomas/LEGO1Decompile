@@ -4,5 +4,5 @@
 
 void LegoBuildingManager::configureLegoBuildingManager(int)
 {
-  ALERT("LegoBuildingManager::configureLegoBuildingManager", "Stub");
+  STUB;
 }

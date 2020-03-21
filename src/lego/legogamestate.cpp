@@ -4,44 +4,44 @@
 
 LegoGameState::LegoGameState()
 {
-  ALERT("LegoGameState::LegoGameState", "Stub\n\nSize: %x", sizeof(LegoGameState));
+  STUB;
 }
 
 LegoGameState::~LegoGameState()
 {
-  ALERT("LegoGameState::~LegoGameState", "Stub");
+  STUB;
 }
 
 long LegoGameState::Save(unsigned long)
 {
-  ALERT("LegoGameState::Save", "Stub");
+  STUB;
 
   return 0;
 }
 
 long LegoGameState::Load(unsigned long)
 {
-  ALERT("LegoGameState::Load", "Stub");
+  STUB;
 
   return 0;
 }
 
 void LegoGameState::SetSavePath(char*)
 {
-  ALERT("LegoGameState::SetSavePath", "Stub");
+  STUB;
 }
 
 void LegoGameState::SerializePlayersInfo(short)
 {
-  ALERT("LegoGameState::SerializePlayersInfo", "Stub");
+  STUB;
 }
 
 void LegoGameState::SerializeScoreHistory(short)
 {
-  ALERT("LegoGameState::SerializeScoreHistory", "Stub");
+  STUB;
 }
 
 void LegoGameState::sub_1003CEA0(int punk1)
 {
-  ALERT("LegoGameState::sub_1003CEA0", "Stub");
+  STUB;
 }

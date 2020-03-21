@@ -4,15 +4,15 @@
 
 LegoAnimationManager::LegoAnimationManager()
 {
-  ALERT("LegoAnimationManager::LegoAnimationManager", "Stub");
+  STUB;
 }
 
 void LegoAnimationManager::configureLegoAnimationManager(int)
 {
-  ALERT("LegoAnimationManager::configureLegoAnimationManager", "Stub");
+  STUB;
 }
 
 void LegoAnimationManager::configureLegoWorldPresenter(int)
 {
-  ALERT("LegoAnimationManager::configureLegoWorldPresenter", "Stub");
+  STUB;
 }

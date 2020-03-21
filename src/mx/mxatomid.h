@@ -1,6 +1,7 @@
 #ifndef MXATOMID_H
 #define MXATOMID_H
 
+#include "custom/debug.h"
 #include "mxatomtable.h"
 
 /**
@@ -10,7 +11,11 @@
  */
 class MxAtomId {
 public:
-  inline MxAtomId() { str_ = NULL; }
+  inline MxAtomId() {
+    IMPERFECT;
+
+    str_ = NULL;
+  }
   MxAtomId(const char* str, LookupMode mode);
   ~MxAtomId();
 

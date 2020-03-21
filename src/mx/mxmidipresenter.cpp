@@ -5,13 +5,13 @@
 MxMIDIPresenter::MxMIDIPresenter() :
   unk50_(64)
 {
-  ALERT("MxMIDIPresenter::MxMIDIPresenter()", "Stub");
+  STUB;
   Init();
 }
 
 void MxMIDIPresenter::Init()
 {
-  ALERT("void MxMIDIPresenter::Init()", "Stub");
+  STUB;
   unk30_ = 0;
   unk34_ = 0;
   unk38_ = 0;
@@ -24,7 +24,7 @@ void MxMIDIPresenter::Init()
 
 MxResult MxMIDIPresenter::sub_100C0840(int punk1, int punk2)
 {
-  ALERT("MxResult MxMIDIPresenter::sub_100C0840(int punk1, int punk2)", "Stub");
+  STUB;
 
   return SUCCESS;
 }

@@ -3,11 +3,10 @@
 
 class LegoAnimationManager {
 public:
-    LegoAnimationManager();
+  LegoAnimationManager();
 
-    static void configureLegoAnimationManager(int);
-    static void configureLegoWorldPresenter(int);
-
+  static void configureLegoAnimationManager(int);
+  static void configureLegoWorldPresenter(int);
 
 };
 

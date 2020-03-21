@@ -4,7 +4,7 @@
 
 LegoVideoManager::LegoVideoManager()
 {
-  ALERT("LegoVideoManager::LegoVideoManager()", "Stub");
+  PARTIAL;
 
   unk64_ = 0;
   unk68_ = 0;
@@ -45,36 +45,36 @@ LegoVideoManager::LegoVideoManager()
 
 LegoVideoManager::~LegoVideoManager()
 {
-  ALERT("LegoVideoManager::~LegoVideoManager()", "Stub");
+  STUB;
 }
 
 void LegoVideoManager::MoveCursor(int /*x*/, int /*y*/)
 {
-  ALERT("void LegoVideoManager::MoveCursor(int /*x*/, int /*y*/)", "Stub");
+  STUB;
 }
 
 void LegoVideoManager::EnableFullScreenMovie(unsigned char, unsigned char)
 {
-  ALERT("void LegoVideoManager::EnableFullScreenMovie(unsigned char, unsigned char)", "Stub");
+  STUB;
 }
 
 int LegoVideoManager::EnableRMDevice()
 {
-  ALERT("int LegoVideoManager::EnableRMDevice()", "Stub");
+  STUB;
 
   return 0;
 }
 
 int LegoVideoManager::DisableRMDevice()
 {
-  ALERT("int LegoVideoManager::DisableRMDevice()", "Stub");
+  STUB;
 
   return 0;
 }
 
 MxResult LegoVideoManager::Create(MxVideoParam &p_param, int p_tickleInterval, MxBool p_createThread)
 {
-  ALERT("MxResult LegoVideoManager::Create(MxVideoParam &p_param, int p_tickleInterval, BOOL p_createThread)", "Stub");
+  STUB;
 
   return SUCCESS;
 }

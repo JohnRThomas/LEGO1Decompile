@@ -4,11 +4,11 @@
 
 MxDSObject *CreateStreamObject(MxDSFile *, short)
 {
-  ALERT("MxDSObject *CreateStreamObject(MxDSFile *, short)", "Stub");
+  STUB;
   return 0;
 }
 
 void MxDSObject::SetObjectName(const char *)
 {
-  ALERT("void MxDSObject::SetObjectName(const char *)", "Stub");
+  STUB;
 }

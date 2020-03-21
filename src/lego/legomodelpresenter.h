@@ -3,9 +3,10 @@
 
 class LegoModelPresenter {
 public:
-    LegoModelPresenter();
+  LegoModelPresenter();
 
-    static void configureLegoModelPresenter(int);
+  static void configureLegoModelPresenter(int);
+
 };
 
 #endif // LEGOMODELPRESENTER_H

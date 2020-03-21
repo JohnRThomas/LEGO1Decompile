@@ -4,5 +4,5 @@
 
 MxRect32::MxRect32()
 {
-  ALERT("MxRect32::MxRect32()", "Stub");
+  STUB;
 }

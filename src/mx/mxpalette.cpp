@@ -4,16 +4,16 @@
 
 MxPalette::MxPalette()
 {
-  ALERT("MxPalette::MxPalette()", "Stub");
+  STUB;
 }
 
 void MxPalette::Detach()
 {
-  ALERT("void MxPalette::Detach()", "Stub");
+  STUB;
 }
 
 unsigned char MxPalette::operator==(MxPalette &)
 {
-  ALERT("unsigned char MxPalette::operator==(MxPalette &)", "Stub");
+  STUB;
   return 0;
 }

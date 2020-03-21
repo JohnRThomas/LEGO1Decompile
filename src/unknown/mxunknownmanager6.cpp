@@ -4,13 +4,13 @@
 
 MxUnknownManager6::MxUnknownManager6()
 {
-  ALERT("MxUnknownManager6::MxUnknownManager6()", "Stub");
+  PARTIAL;
   Init();
 }
 
 void MxUnknownManager6::Init()
 {
-  ALERT("void MxUnknownManager6::Init()", "Stub");
+  PARTIAL;
   unk8_ = 0;
   unkC_ = 0;
 }

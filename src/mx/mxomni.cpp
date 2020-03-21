@@ -15,16 +15,20 @@ MxOmni* MxOmni::instance_ = NULL;
 
 MxOmni::MxOmni()
 {
+  PERFECT;
+
   Init();
 }
 
 MxOmni::~MxOmni()
 {
-  ALERT("MxOmni::~MxOmni()", "Stub");
+  STUB;
 }
 
 void MxOmni::Init()
 {
+  PERFECT;
+
   window_handle_ = NULL;
   object_factory_ = NULL;
   variable_table_ = NULL;
@@ -42,22 +46,22 @@ void MxOmni::Init()
 
 void MxOmni::vtableC()
 {
-  ALERT("void MxOmni::vtableC()", "Stub");
+  STUB;
 }
 
 void MxOmni::vtable10()
 {
-  ALERT("void MxOmni::vtable10()", "Stub");
+  STUB;
 }
 
 void MxOmni::Destroy()
 {
-  ALERT("void MxOmni::Destroy()", "Stub");
+  STUB;
 }
 
 MxResult MxOmni::Create(MxOmniCreateParam& param)
 {
-  // FIXME: Imperfect
+  IMPERFECT;
 
   MxResult result = FAILURE;
 
@@ -158,17 +162,18 @@ done:
 void MxOmni::sub_10058C30()
 {
   // FIXME: This might actually be a member of LegoOmni overriding a member of MxOmni
-
-  ALERT("void MxOmni::sub_10058C30()", "Stub");
+  STUB;
 }
 
 MxOmni* MxOmni::GetInstance()
 {
+  PERFECT;
   return instance_;
 }
 
 void MxOmni::DestroyInstance()
 {
+  PERFECT;
   if (instance_ != 0) {
     delete instance_;
     instance_ = NULL;
@@ -177,82 +182,95 @@ void MxOmni::DestroyInstance()
 
 const char *MxOmni::GetHD()
 {
+  PERFECT;
   return hd_path_;
 }
 
 void MxOmni::SetHD(const char *hd)
 {
+  PERFECT;
   strcpy(hd_path_, hd);
 }
 
 const char *MxOmni::GetCD()
 {
+  PERFECT;
   return cd_path_;
 }
 
 void MxOmni::SetCD(const char *cd)
 {
+  PERFECT;
   strcpy(cd_path_, cd);
 }
 
 unsigned char MxOmni::IsSound3D()
 {
+  PERFECT;
   return sound_is_3d_;
 }
 
 void MxOmni::SetSound3D(unsigned char c)
 {
+  PERFECT;
   sound_is_3d_ = c;
 }
 
 void MxOmni::SetInstance(MxOmni* instance)
 {
+  PERFECT;
   instance_ = instance;
 }
 
 MxVariableTable *VariableTable()
 {
+  PERFECT;
   return MxOmni::GetInstance()->GetVariableTable();
 }
 
 MxTickleManager* TickleManager()
 {
+  PERFECT;
   return MxOmni::GetInstance()->GetTickleManager();
 }
 
 MxSoundManager *MSoundManager()
 {
+  PERFECT;
   return MxOmni::GetInstance()->GetSoundManager();
 }
 
 MxAtomTable *AtomTable()
 {
+  PERFECT;
   return MxOmni::GetInstance()->GetAtomTable();
 }
 
 MxNotificationManager *NotificationManager()
 {
+  PERFECT;
   return MxOmni::GetInstance()->GetNotificationManager();
 }
 
 MxTimer* Timer()
 {
+  PERFECT;
   return MxOmni::GetInstance()->GetTimer();
 }
 
 MxEventManager *EventManager()
 {
-  ALERT("MxEventManager *EventManager()", "Stub");
+  STUB;
   return NULL;
 }
 
 MxMusicManager *MusicManager()
 {
-  ALERT("MxMusicManaer *MusicManager()", "Stub");
+  STUB;
   return NULL;
 }
 
 void SetOmniUserMessage(void (*)(const char *, int))
 {
-  ALERT("void SetOmniUserMessage(void (*)(const char *, int))", "Stub");
+  STUB;
 }

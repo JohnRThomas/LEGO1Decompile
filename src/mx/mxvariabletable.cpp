@@ -4,13 +4,13 @@
 
 MxVariableTable::~MxVariableTable()
 {
-  ALERT("MxVariableTable::~MxVariableTable()", "Stub");
+  PARTIAL;
   delete [] table_;
 }
 
 void MxVariableTable::SetVariable(const char* key, const char* value)
 {
-  ALERT("void MxVariableTable::SetVariable(const char* key, const char* value)", "Stub (const char*, const char*)\n\nKey: \"%s\"\nValue: \"%s\"", key, value);
+  PARTIAL;
 
   MxString key_str = key;
   MxString val_str = value;
@@ -18,7 +18,7 @@ void MxVariableTable::SetVariable(const char* key, const char* value)
 
 void MxVariableTable::SetVariable(MxVariable* variable)
 {
-  ALERT("void MxVariableTable::SetVariable(MxVariable* variable)", "Partial stub (MxVariable*)\n\nKey: %s", static_cast<const char*>(variable->key()));
+  PARTIAL;
 
   unsigned int letter_code = AddLetterCodesInKey(variable);
 
@@ -37,16 +37,17 @@ void MxVariableTable::SetVariable(MxVariable* variable)
 
       // call 0x100B78E7
     } else {
-      ALERT("void MxVariableTable::SetVariable(MxVariable* variable)", "Unhandled behavior (unk1C != 0");
+      STUB;
     }
   } else {
-    ALERT("void MxVariableTable::SetVariable(MxVariable* variable)", "Unhandled behavior (table_[table_index] != NULL");
+    STUB;
   }
 }
 
 unsigned int MxVariableTable::AddLetterCodesInKey(MxVariable* v)
 {
-  ALERT("unsigned int MxVariableTable::AddLetterCodesInKey(MxVariable* v)", "Stub");
+  PARTIAL;
+
   unsigned int counter = 0;
 
   const MxString& variable_key = v->key();
@@ -60,7 +61,7 @@ unsigned int MxVariableTable::AddLetterCodesInKey(MxVariable* v)
 
 const char* MxVariableTable::GetVariable(const char* key)
 {
-  ALERT("const char* MxVariableTable::GetVariable(const char* key)", "Stub\n\nRequested key: %s", key);
+  STUB;
 
   return NULL;
 }

@@ -5,10 +5,10 @@
 
 enum LookupMode
 {
-    Unk_LookupMode0, // 0
-    Unk_LookupMode1, // 1
-    Unk_LookupMode2, // 2
-    Unk_LookupMode3, // 3
+  Unk_LookupMode0, // 0
+  Unk_LookupMode1, // 1
+  Unk_LookupMode2, // 2
+  Unk_LookupMode3, // 3
 };
 
 /**
@@ -18,16 +18,18 @@ enum LookupMode
  */
 class MxAtom {
 public:
-    MxAtom(const char* s);
+  MxAtom(const char* s);
 
-    const MxString& string();
+  inline const MxString& string() {
+    return string_;
+  }
 
-    void sub_100AD7F0();
+  void sub_100AD7F0();
 
 private:
-    MxString string_;
+  MxString string_;
 
-    unsigned short unk10_;
+  unsigned short unk10_;
 };
 
 #endif // MXATOM_H

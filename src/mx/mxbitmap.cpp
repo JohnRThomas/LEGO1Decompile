@@ -4,22 +4,22 @@
 
 MxBitmap::MxBitmap()
 {
-  ALERT("MxBitmap::MxBitmap()", "Stub");
+  STUB;
 }
 
 MxBitmap::~MxBitmap()
 {
-  ALERT("MxBitmap::~MxBitmap()", "Stub");
+  STUB;
 }
 
 long MxBitmap::Read(const char *)
 {
-  ALERT("long MxBitmap::Read(const char *)", "Stub");
+  STUB;
   return 0;
 }
 
 MxPalette *MxBitmap::CreatePalette()
 {
-  ALERT("MxPalette *MxBitmap::CreatePalette()", "Stub");
+  STUB;
   return NULL;
 }

@@ -3,7 +3,7 @@
 
 class MxEventManager {
 public:
-    MxEventManager();
+  MxEventManager();
 };
 
 #endif // MXEVENTMANAGER_H

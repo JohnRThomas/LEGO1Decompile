@@ -4,10 +4,10 @@
 
 LegoPartPresenter::LegoPartPresenter()
 {
-  ALERT("LegoPartPresenter::LegoPartPresenter", "Stub");
+  STUB;
 }
 
 void LegoPartPresenter::configureLegoPartPresenter(int, int)
 {
-  ALERT("LegoPartPresenter::configureLegoPartPresenter", "Stub");
+  STUB;
 }

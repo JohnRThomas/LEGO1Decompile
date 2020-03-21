@@ -3,9 +3,10 @@
 
 class LegoBuildingManager {
 public:
-    LegoBuildingManager();
+  LegoBuildingManager();
 
-    static void configureLegoBuildingManager(int);
+  static void configureLegoBuildingManager(int);
+
 };
 
 #endif // LEGOBUILDINGMANAGER_H

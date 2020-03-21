@@ -3,7 +3,7 @@
 
 class MxVideoPresenter {
 public:
-    MxVideoPresenter();    
+  MxVideoPresenter();
 };
 
 #endif // MXVIDEOPRESENTER_H

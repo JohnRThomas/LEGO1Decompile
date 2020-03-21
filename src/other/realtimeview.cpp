@@ -4,27 +4,27 @@
 
 RealtimeView::RealtimeView()
 {
-  ALERT("RealtimeView::RealtimeView()", "Stub");
+  STUB;
 }
 
 void RealtimeView::SetUserMaxLOD(float)
 {
-  ALERT("void RealtimeView::SetUserMaxLOD(float)", "Stub");
+  STUB;
 }
 
 void RealtimeView::SetPartsThreshold(float)
 {
-  ALERT("void RealtimeView::SetPartsThreshold(float)", "Stub");
+  STUB;
 }
 
 float RealtimeView::GetUserMaxLOD()
 {
-  ALERT("float RealtimeView::GetUseMaxLOD()", "Stub");
+  STUB;
   return 0.0f;
 }
 
 float RealtimeView::GetPartsThreshold()
 {
-  ALERT("float RealtimeView::GetPartsThreshold()", "Stub");
+  STUB;
   return 0.0f;
 }

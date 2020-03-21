@@ -1,25 +1,27 @@
 #include "mxatomtable.h"
 
-#include "custom/debug.h"
 #include "mxomni.h"
 
 MxAtomItem* MxAtomTable::addr_101013F0 = NULL;
 
 MxAtomItem *MxAtomTable::unk4()
 {
-  ALERT("MxAtomItem *MxAtomManager::unk4()", "Stub");
+  PARTIAL;
+
   return unk4_;
 }
 
 const int& MxAtomTable::unk8()
 {
-  ALERT("const int& MxAtomManager::unk8()", "Stub");
+  PARTIAL;
+
   return unk8_;
 }
 
 MxAtomItem *MxAtomTable::sub_100AD780(MxAtom *atom)
 {
-  ALERT("MxAtomItem *MxAtomManager::sub_100AD780(MxAtom *atom)", "Stub");
+  PARTIAL;
+
   MxAtomItem* esi_1 = unk4_->parent_;
   MxAtomItem* ret = unk4_;
 
@@ -39,12 +41,13 @@ MxAtomItem *MxAtomTable::sub_100AD780(MxAtom *atom)
 
 void MxAtomTable::sub_100AD4D0(int*, MxAtomItem *, MxAtomItem *, MxAtom **)
 {
-  ALERT("void MxAtomManager::sub_100AD4D0(int*, MxAtomItem *, MxAtomItem *, MxAtom **)", "Stub");
+  STUB;
 }
 
 void MxAtomItem::sub_100AD480()
 {
-  ALERT("void MxAtomItem::sub_100AD480()", "Stub");
+  PARTIAL;
+
   if (!unk0_->root_ && unk0_->parent_->parent_ == unk0_) {
     unk0_ = unk0_->unk8_;
   } else if (unk0_->unk0_ == MxAtomTable::addr_101013F0) {

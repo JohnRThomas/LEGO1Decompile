@@ -4,5 +4,5 @@
 
 void MakeSourceName(char* output, const char* input)
 {
-  ALERT("void MakeSourceName(char* output, const char* input)", "Stub");
+  STUB;
 }

@@ -6,65 +6,76 @@
 
 void sub_1001A700()
 {
-  ALERT("void sub_1001A700()", "Stub");
+  STUB;
 }
 
 void sub_1003EF40(int punk1)
 {
-  ALERT("void sub_1003EF40()", "Stub");
+  STUB;
 }
 
 LegoOmni::LegoOmni()
 {
+  PERFECT;
+
   Init();
 }
 
 LegoOmni::~LegoOmni()
 {
-  ALERT("LegoOmni::~LegoOmni", "Stub");
+  STUB;
 }
 
 void LegoOmni::CreateInstance()
 {
+  PERFECT;
+
   DestroyInstance();
   SetInstance(new LegoOmni());
 }
 
 LegoOmni* LegoOmni::GetInstance()
 {
+  PERFECT;
+
   return static_cast<LegoOmni*>(MxOmni::GetInstance());
 }
 
 void LegoOmni::RemoveWorld(const MxAtomId &, long)
 {
-  ALERT("LegoOmni::RemoveWorld", "Stub");
+  STUB;
 }
 
 int LegoOmni::GetCurrPathInfo(LegoPathBoundary**, int&)
 {
-  ALERT("LegoOmni::GetCurrPathInfo", "Stub");
+  STUB;
 
   return 0;
 }
 
 void LegoOmni::CreateBackgroundAudio()
 {
-  ALERT("LegoOmni::CreateBackgroundAudio", "Stub");
+  STUB;
 }
 
 MxResult LegoOmni::sub_1005A5F0()
 {
-  ALERT("LegoOmni::sub_1005A5F0()", "Stub");
+  STUB;
 
   return SUCCESS;
 }
 
 LegoOmni* Lego()
 {
+  PERFECT;
+
   return LegoOmni::GetInstance();
 }
 
-void LegoOmni::Init() {
+void LegoOmni::Init()
+{
+  PERFECT;
+
   MxOmni::Init();
 
   unknown68_ = 0;
@@ -87,12 +98,12 @@ void LegoOmni::Init() {
 
 void LegoOmni::Destroy()
 {
-  ALERT("LegoOmni::Destroy", "Stub");
+  STUB;
 }
 
 MxResult LegoOmni::Create(MxOmniCreateParam& param)
 {
-  // FIXME: Imperfect
+  IMPERFECT;
 
   MxResult result = FAILURE;
 
@@ -217,48 +228,56 @@ done:
 
 LegoInputManager* InputManager()
 {
+  PERFECT;
+
   return LegoOmni::GetInstance()->GetInputManager();
 }
 
 LegoSoundManager *SoundManager()
 {
+  PERFECT;
+
   return static_cast<LegoSoundManager*>(LegoOmni::GetInstance()->GetSoundManager());
 }
 
 LegoVideoManager* VideoManager()
 {
+  PERFECT;
+
   return (LegoVideoManager*) LegoOmni::GetInstance()->GetVideoManager();
 }
 
 MxBackgroundAudioManager* BackgroundAudioManager() {
-  ALERT("MxBackgroundAudioManager* BackgroundAudioManager()", "Stub");
+  STUB;
 
   return NULL;
 }
 
 MxTransitionManager* TransitionManager()
 {
-  ALERT("MxTransitionManager* TransitionManager()", "Stub");
+  STUB;
 
   return NULL;
 }
 
 LegoUnknownManager5::LegoUnknownManager5()
 {
-  ALERT("LegoUnknownManager5", "Stub\n\nSize: %x", sizeof(LegoUnknownManager5));
+  STUB;
 }
 
 LegoUnknownManager6::LegoUnknownManager6()
 {
-  ALERT("LegoUnknownManager6", "Stub\n\nSize: %x", sizeof(LegoUnknownManager6));
+  STUB;
 }
 
 LegoUnknownManager7::LegoUnknownManager7()
 {
-  ALERT("LegoUnknownManager7", "Stub\n\nSize: %x", sizeof(LegoUnknownManager7));
+  STUB;
 }
 
 LegoGameState *GameState()
 {
+  PERFECT;
+
   return LegoOmni::GetInstance()->GetGameState();
 }

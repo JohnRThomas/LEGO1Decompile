@@ -8,7 +8,7 @@ LegoUnknownManager2::LegoUnknownManager2() :
   unk4_(0x0810),
   unkC_(0)
 {
-  ALERT("LegoUnknownManager2::LegoUnknownManager2()", "Stub");
+  PARTIAL;
 
   if (addr_10101068 == NULL) {
     addr_10101068 = new LUM21();

@@ -3,7 +3,8 @@
 
 class LegoPathBoundary {
 public:
-    LegoPathBoundary();
+  LegoPathBoundary();
+
 };
 
 #endif // LEGOPATHBOUNDARY_H

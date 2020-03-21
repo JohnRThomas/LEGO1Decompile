@@ -1,6 +1,7 @@
 #ifndef MXATOMMANAGER_H
 #define MXATOMMANAGER_H
 
+#include "custom/debug.h"
 #include "mxatom.h"
 
 /**
@@ -41,7 +42,7 @@ public:
   // 100AF105
   inline MxAtomTable(unsigned char u1, unsigned char u2)
   {
-    // FIXME: Imperfect
+    IMPERFECT;
 
     unk0_ = u1;
     unk1_ = u2;

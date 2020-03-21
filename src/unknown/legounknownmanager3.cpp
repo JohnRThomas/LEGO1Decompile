@@ -9,7 +9,7 @@ __int64* LegoUnknownManager3::addr_100F435C = NULL;
 
 LegoUnknownManager3::~LegoUnknownManager3()
 {
-  ALERT("LegoUnknownManager3::~LegoUnknownManager3()", "Stub");
+  PARTIAL;
 
   // FIXME: Unknown behavior, inferred
   delete unk1C_;
@@ -18,7 +18,7 @@ LegoUnknownManager3::~LegoUnknownManager3()
 
 void LegoUnknownManager3::sub_10046C10()
 {
-  ALERT("void LegoUnknownManager3::sub_10046C10()", "Stub");
+  PARTIAL;
 
   if (addr_100F42E8 != NULL) {
     return;

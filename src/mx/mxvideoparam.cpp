@@ -6,6 +6,8 @@
 
 MxVideoParam::MxVideoParam()
 {
+  PERFECT;
+
   x_ = 0;
   y_ = 0;
   width_ = 640;
@@ -18,6 +20,8 @@ MxVideoParam::MxVideoParam()
 
 MxVideoParam::MxVideoParam(MxRect32& rect, MxPalette* pal, unsigned long u1, MxVideoParamFlags& flags)
 {
+  PERFECT;
+
   x_ = rect.x;
   y_ = rect.y;
   width_ = rect.width;
@@ -31,7 +35,7 @@ MxVideoParam::MxVideoParam(MxRect32& rect, MxPalette* pal, unsigned long u1, MxV
 
 MxVideoParam::MxVideoParam(MxVideoParam& other)
 {
-  ALERT("MxVideoParam::MxVideoParam(MxVideoParam& other)", "Stub");
+  PARTIAL;
 
   // Copy all parameters
   x_ = other.x_;
@@ -49,6 +53,8 @@ MxVideoParam::MxVideoParam(MxVideoParam& other)
 
 MxVideoParam::~MxVideoParam()
 {
+  PERFECT;
+
   if (device_name_) {
     delete [] device_name_;
   }
@@ -56,6 +62,8 @@ MxVideoParam::~MxVideoParam()
 
 MxVideoParam& MxVideoParam::operator=(const MxVideoParam& other)
 {
+  PERFECT;
+
   // Copy all parameters
   x_ = other.x_;
   y_ = other.y_;
@@ -74,6 +82,8 @@ MxVideoParam& MxVideoParam::operator=(const MxVideoParam& other)
 
 void MxVideoParam::SetDeviceName(char* device)
 {
+  PERFECT;
+
   if (device_name_) {
     // Delete device string if it already exists
     delete [] device_name_;
@@ -88,29 +98,4 @@ void MxVideoParam::SetDeviceName(char* device)
   } else {
     device_name_ = NULL;
   }
-}
-
-const int &MxVideoParam::x() const
-{
-  return x_;
-}
-
-const int &MxVideoParam::y() const
-{
-  return y_;
-}
-
-const int &MxVideoParam::width() const
-{
-  return width_;
-}
-
-const int &MxVideoParam::height() const
-{
-  return height_;
-}
-
-const char *MxVideoParam::device_name() const
-{
-  return device_name_;
 }

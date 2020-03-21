@@ -4,16 +4,16 @@
 
 MxScheduler::MxScheduler()
 {
-  ALERT("MxScheduler::MxScheduler()", "Stub");
+  STUB;
 }
 
 MxScheduler *MxScheduler::GetInstance()
 {
-  ALERT("MxScheduler *MxScheduler::GetInstance()", "Stub");
+  STUB;
   return NULL;
 }
 
 void MxScheduler::StartMultiTasking(unsigned long)
 {
-  ALERT("void MxScheduler::StartMultiTasking(unsigned long)", "Stub");
+  STUB;
 }

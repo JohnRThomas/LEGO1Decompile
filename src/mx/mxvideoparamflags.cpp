@@ -4,6 +4,8 @@
 
 MxVideoParamFlags::MxVideoParamFlags()
 {
+  PERFECT;
+
   flags1_ &= 0xFE;
   flags1_ &= 0xFD;
   flags1_ &= 0xFB;

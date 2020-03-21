@@ -3,9 +3,10 @@
 
 class LegoWorldPresenter {
 public:
-    LegoWorldPresenter();
+  LegoWorldPresenter();
 
-    static void configureLegoWorldPresenter(int);
+  static void configureLegoWorldPresenter(int);
+
 };
 
 #endif // LEGOWORLDPRESENTER_H

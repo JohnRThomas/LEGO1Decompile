@@ -4,21 +4,22 @@
 
 LegoROI::LegoROI()
 {
-  ALERT("LegoROI::LegoROI()", "Stub");
+  STUB;
 }
 
 void LegoROI::configureLegoROI(int)
 {
-  ALERT("void LegoROI::configureLegoROI(int)", "Stub");
+  STUB;
 }
 
 void LegoROI::SetDisplayBB(int)
 {
-  ALERT("void LegoROI::SetDisplayBB(int)", "Stub");
+  STUB;
 }
 
 LegoROI *PickROI(long, long)
 {
-  ALERT("LegoROI *PickROI(long, long)", "Stub");
+  STUB;
+
   return NULL;
 }

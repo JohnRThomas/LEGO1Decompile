@@ -15,7 +15,7 @@ MxTimer::MxTimer()
 
 long MxTimer::GetRealTime()
 {
-  ALERT("long MxTimer::GetRealTime()", "Stub");
+  PARTIAL;
   last_time_calculated_ = timeGetTime();
 
   return static_cast<long>(last_time_calculated_ - start_time_);
@@ -23,14 +23,14 @@ long MxTimer::GetRealTime()
 
 void MxTimer::sub_100AE160()
 {
-  ALERT("void MxTimer::sub_100AE160()", "Stub");
+  PARTIAL;
   timer_time_ = GetRealTime();
   running_ = TRUE;
 }
 
 void MxTimer::sub_100AE180()
 {
-  ALERT("void MxTimer::sub_100AE180()", "Stub");
+  PARTIAL;
   long now = GetRealTime();
 
   now -= timer_time_;

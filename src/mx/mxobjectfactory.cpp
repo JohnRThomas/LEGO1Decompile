@@ -4,7 +4,8 @@
 
 MxObjectFactory::MxObjectFactory()
 {
-  ALERT("MxObjectFactory::MxObjectFactory()", "Stub");
+  STUB;
+
   unk8_ = MxAtomId("MxPresenter", Unk_LookupMode0);
   unkC_ = MxAtomId("MxCompositePresenter", Unk_LookupMode0);
   unk10_ = MxAtomId("MxVideoPresenter", Unk_LookupMode0);

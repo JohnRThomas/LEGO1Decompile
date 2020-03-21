@@ -3,8 +3,9 @@
 
 class LegoWorld {
 public:
-    LegoWorld();
-    virtual ~LegoWorld();
+  LegoWorld();
+  virtual ~LegoWorld();
+
 };
 
 #endif // LEGOWORLD_H

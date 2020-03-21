@@ -4,7 +4,7 @@
 
 LegoObjectFactory::LegoObjectFactory()
 {
-  ALERT("LegoObjectFactory::LegoObjectFactory", "Stub. Size check of LegoObjectFactory: %x", sizeof(LegoObjectFactory));
+  PARTIAL;
 
   unk38_ = MxAtomId("LegoEntityPresenter", Unk_LookupMode0);
   unk3C_ = MxAtomId("LegoActorPresenter", Unk_LookupMode0);

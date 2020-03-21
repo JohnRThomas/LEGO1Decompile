@@ -5,9 +5,9 @@
 
 class ViewManager {
 public:
-    ViewManager();
+  ViewManager();
 
-    void RemoveAll(ViewROI*);
+  void RemoveAll(ViewROI*);
 };
 
 #endif // VIEWMANAGER_H

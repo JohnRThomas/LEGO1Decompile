@@ -4,7 +4,7 @@
 
 MxDSAction::MxDSAction()
 {
-  // FIXME: Imperfect
+  IMPERFECT;
 
   unk40_.unk4_ = unk40_.unk8_;
   unk54_.unk4_ = unk54_.unk8_;
@@ -32,19 +32,21 @@ MxDSAction::MxDSAction()
 
 MxDSAction::~MxDSAction()
 {
+  PERFECT;
+
   delete unk7C_;
 }
 
 long Start(MxDSAction*)
 {
-  ALERT("long Start(MxDSAction*)", "Stub");
+  STUB;
 
   return 0;
 }
 
 MxDSActionBase::MxDSActionBase()
 {
-  // FIXME: Imperfect
+  IMPERFECT;
 
   unkC_ = 0;
 
@@ -59,12 +61,16 @@ MxDSActionBase::MxDSActionBase()
 
 MxDSActionBase::~MxDSActionBase()
 {
+  PERFECT;
+
   delete unk18_;
   delete unk10_;
 }
 
 void MxDSActionSubclass::sub_10003BF0(const int &esp_8)
 {
+  PERFECT;
+
   unk4_[0] = esp_8;
   unk4_[1] = esp_8;
   unk4_[2] = esp_8;

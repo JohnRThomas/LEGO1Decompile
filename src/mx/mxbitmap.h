@@ -5,11 +5,12 @@
 
 class MxBitmap {
 public:
-    MxBitmap();
-    virtual ~MxBitmap();
+  MxBitmap();
+  virtual ~MxBitmap();
 
-    virtual long Read(const char *);
-    virtual MxPalette* CreatePalette();
+  virtual long Read(const char *);
+  virtual MxPalette* CreatePalette();
+
 };
 
 #endif // MXBITMAP_H

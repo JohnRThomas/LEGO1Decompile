@@ -6,6 +6,8 @@
 
 MxString::MxString()
 {
+  PERFECT;
+
   string_ = new char[1];
   string_[0] = 0;
   length_ = 0;
@@ -13,7 +15,8 @@ MxString::MxString()
 
 MxString::MxString(const char *s)
 {
-  ALERT("MxString::MxString(const char *s)", "Stub");
+  PARTIAL;
+
   length_ = static_cast<unsigned short>(strlen(s));
 
   unsigned int array_length = length_+1;
@@ -23,7 +26,8 @@ MxString::MxString(const char *s)
 
 MxString::MxString(const MxString& other)
 {
-  ALERT("MxString::MxString(const MxString& other)", "Stub");
+  PARTIAL;
+
   delete [] string_;
 
   length_ = other.length_;
@@ -35,11 +39,15 @@ MxString::MxString(const MxString& other)
 
 MxString::~MxString()
 {
+  PERFECT;
+
   delete [] string_;
 }
 
 const MxString &MxString::operator=(const MxString &s)
 {
+  PERFECT;
+
   if (s.string_ != string_) {
     delete [] string_;
 
@@ -55,7 +63,7 @@ const MxString &MxString::operator=(const MxString &s)
 
 const MxString& MxString::operator=(const char* s)
 {
-  // 99%
+  NEARPERFECT;
 
   if (string_ != s) {
     delete [] string_;
@@ -71,19 +79,19 @@ const MxString& MxString::operator=(const char* s)
 
 BOOL MxString::operator==(const MxString &other) const
 {
-  ALERT("BOOL MxString::operator==(const MxString &other) const", "Stub");
+  PARTIAL;
   return (!strcmp(string_, other.string_));
 }
 
 const char &MxString::operator[](int i) const
 {
-  ALERT("const char &MxString::operator[](int i) const", "Stub");
+  PARTIAL;
   return string_[i];
 }
 
 MxString::operator const char *() const
 {
-  ALERT("MxString::operator const char *() const", "Stub");
+  PARTIAL;
   return string_;
 }
 

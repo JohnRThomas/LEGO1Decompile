@@ -33,12 +33,12 @@ MxAtomId* LegoScripts::script_nocd_;
 
 LegoScripts::LegoScripts()
 {
-  ALERT("LegoScripts::LegoScripts()", "Stub");
+  STUB;
 }
 
 void LegoScripts::sub_100528E0()
 {
-  ALERT("void LegoScripts::Load()", "Stub");
+  STUB;
 
   script_copter_ = new MxAtomId("\\lego\\scripts\\build\\copter", Unk_LookupMode3);
   script_dunecar_ = new MxAtomId("\\lego\\scripts\\build\\dunecar", Unk_LookupMode3);

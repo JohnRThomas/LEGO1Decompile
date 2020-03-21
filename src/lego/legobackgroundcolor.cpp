@@ -4,5 +4,5 @@
 
 LegoBackgroundColor::LegoBackgroundColor(const char *, const char *)
 {
-  ALERT("LegoBackgroundColor::LegoBackgroundColor(const char *, const char *)", "Stub");
+  STUB;
 }

@@ -4,6 +4,8 @@
 
 MxOmniCreateFlags::MxOmniCreateFlags()
 {
+  PERFECT;
+
   flags1_ |= CreateObjectFactory;
   flags1_ |= CreateVariableTable;
   flags1_ |= CreateTickleManager;

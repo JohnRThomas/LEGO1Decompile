@@ -2,7 +2,7 @@
 #define VIEWROI_H
 
 class ViewROI {
-    ViewROI();
+  ViewROI();
 };
 
 #endif // VIEWROI_H

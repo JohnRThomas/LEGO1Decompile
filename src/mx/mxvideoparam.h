@@ -21,13 +21,6 @@ public:
 
   void SetDeviceName(char*);
 
-  const int& x() const;
-  const int& y() const;
-  const int& width() const;
-  const int& height() const;
-
-  const char* device_name() const;
-
   // +0
   int x_;
 

@@ -3,11 +3,11 @@
 
 class MxVideoParamFlags {
 public:
-    MxVideoParamFlags();
+  MxVideoParamFlags();
 
 private:
-    unsigned char flags1_;
-    unsigned char flags2_;
+  unsigned char flags1_;
+  unsigned char flags2_;
 
 };
 

@@ -4,12 +4,12 @@
 
 MxUnknownManager4::MxUnknownManager4()
 {
-  ALERT("MxUnknownManager4::MxUnknownManager4()", "Stub");
+  STUB;
 }
 
 MxResult MxUnknownManager4::sub_100C04A0(int punk1, int punk2)
 {
-  ALERT("MxResult MxUnknownManager4::sub_100C04A0(int punk1, int punk2)", "Stub");
+  STUB;
 
   return SUCCESS;
 }

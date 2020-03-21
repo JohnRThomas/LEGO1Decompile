@@ -13,22 +13,22 @@
  */
 class MxObjectFactory : public MxCore {
 public:
-    // sub_100B0D80
-    MxObjectFactory();
+  // sub_100B0D80
+  MxObjectFactory();
 
 private:
-    MxAtomId unk8_;
-    MxAtomId unkC_;
-    MxAtomId unk10_;
-    MxAtomId unk14_;
-    MxAtomId unk18_;
-    MxAtomId unk1C_;
-    MxAtomId unk20_;
-    MxAtomId unk24_;
-    MxAtomId unk28_;
-    MxAtomId unk2C_;
-    MxAtomId unk30_;
-    MxAtomId unk34_;
+  MxAtomId unk8_;
+  MxAtomId unkC_;
+  MxAtomId unk10_;
+  MxAtomId unk14_;
+  MxAtomId unk18_;
+  MxAtomId unk1C_;
+  MxAtomId unk20_;
+  MxAtomId unk24_;
+  MxAtomId unk28_;
+  MxAtomId unk2C_;
+  MxAtomId unk30_;
+  MxAtomId unk34_;
 
 };
 

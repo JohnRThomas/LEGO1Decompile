@@ -4,42 +4,59 @@
 
 MxTickleManager::~MxTickleManager()
 {
-  ALERT("MxTickleManager::~MxTickleManager()", "Stub");
+  PARTIAL;
   delete unknown0C_;
 }
 
 void MxTickleManager::vtable8()
 {
-  ALERT("void MxTickleManager::vtable8()", "Stub");
+  STUB;
 }
 
 void MxTickleManager::vtableC()
 {
-  ALERT("void MxTickleManager::vtableC()", "Stub");
+  STUB;
 }
 
 void MxTickleManager::vtable10()
 {
-  ALERT("void MxTickleManager::vtable10()", "Stub");
+  STUB;
 }
 
 void MxTickleManager::vtable18()
 {
-  ALERT("void MxTickleManager::vtable18()", "Stub");
+  STUB;
 }
 
 void MxTickleManager::vtable1C()
 {
-  ALERT("void MxTickleManager::vtable1C()", "Stub");
+  STUB;
 }
 
 unsigned int MxTickleManager::vtable20(MxNotificationManager* punk1)
 {
-  ALERT("void MxTickleManager::vtable20()", "Stub");
-  return 0;
+  IMPERFECT; // but I can't see any explicit functionality differences
+
+  MxTickleUnknownSubclass1* edx = unknown0C_;
+  MxTickleUnknownSubclass1* eax = edx->unk00_;
+
+  while (edx != eax) {
+    MxTickleUnknownSubclass2* eax2 = eax->unk08_;
+
+    if (eax2->unk0_ == punk1 && eax2->unkC_ == 1) {
+      return eax2->unk4_;
+    }
+
+    eax = eax->unk00_;
+  }
+
+  return 0x80000000;
 }
 
-MxTickleUnknownSubclass2::MxTickleUnknownSubclass2(MxNotificationManager* punk1, int punk2) {
+MxTickleUnknownSubclass2::MxTickleUnknownSubclass2(MxNotificationManager* punk1, int punk2)
+{
+  PERFECT;
+
   unkC_ = 0;
 
   unk0_ = punk1;
@@ -48,13 +65,14 @@ MxTickleUnknownSubclass2::MxTickleUnknownSubclass2(MxNotificationManager* punk1,
   unk8_ = -punk2;
 }
 
-MxTickleUnknownSubclass2::~MxTickleUnknownSubclass2() {
-  ALERT("MxTickleManagerSub1::~MxTickleManagerSub1()", "Stub");
+MxTickleUnknownSubclass2::~MxTickleUnknownSubclass2()
+{
+  STUB;
 }
 
 void MxTickleManager::sub_100BDE80(MxNotificationManager* punk1, int punk2)
 {
-  // 99%
+  NEARPERFECT;
 
   if (vtable20(punk1) == 0x80000000) {
     MxTickleUnknownSubclass2* ebp_14 = new MxTickleUnknownSubclass2(punk1, punk2);

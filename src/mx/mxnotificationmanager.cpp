@@ -6,7 +6,7 @@
 MxNotificationManager::MxNotificationManager() :
   unk30_(0x10)
 {
-  // 99%, it appears our code is perfect but the asm differs very slightly because we're not using smartheap
+  NEARPERFECT;
 
   unk2C_ = 0;
   unk8_ = NULL;
@@ -16,7 +16,7 @@ MxNotificationManager::MxNotificationManager() :
 
 MxResult MxNotificationManager::sub_100AC600(int, int)
 {
-  // 99%
+  NEARPERFECT;
 
   unk8_ = new MAMU1Wrapper(0);
 
@@ -32,7 +32,8 @@ MxResult MxNotificationManager::sub_100AC600(int, int)
 
 void MxNotificationManager::sub_100ACD20(MxCore *core)
 {
-  ALERT("void MxNotificationManager::sub_100ACD20(MxStreamer *streamer)", "Stub");
+  PARTIAL;
+
   critical_section_.Lock();
 
   int ebp_4 = 0;

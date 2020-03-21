@@ -4,20 +4,20 @@
 
 MxSoundManager::MxSoundManager()
 {
-  ALERT("MxSoundManager::MxSoundManager()", "Stub");
+  STUB;
   Init();
 }
 
 void MxSoundManager::Init()
 {
-  ALERT("void MxSoundManager::Init()", "Stub");
+  STUB;
   unk30_ = 0;
   unk34_ = 0;
 }
 
 MxResult MxSoundManager::sub_100AE8B0(int punk1, int punk2)
 {
-  ALERT("MxResult MxSoundManager::sub_100AE8B0(int punk1, int punk2)", "Stub");
+  STUB;
 
   return SUCCESS;
 }

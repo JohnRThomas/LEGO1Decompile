@@ -1,11 +1,12 @@
 #include "mxatomid.h"
 
-#include "custom/debug.h"
 #include "mxomni.h"
 
 MxAtomId::MxAtomId(const char* str, LookupMode mode)
 {
-  ALERT("MxAtomId::MxAtomId(const char* str, LookupMode mode)", "Stub");
+  // Partial
+  PARTIAL;
+
   if (MxOmni::GetInstance() != NULL && AtomTable() != NULL) {
     MxAtom* atom = sub_100AD210(str, mode);
 
@@ -17,7 +18,9 @@ MxAtomId::MxAtomId(const char* str, LookupMode mode)
 
 MxAtomId::~MxAtomId()
 {
-  ALERT("MxAtomId::~MxAtomId()", "Stub");
+  // Partial
+  PARTIAL;
+
   if (str_ != NULL
       && MxOmni::GetInstance() != NULL
       && AtomTable() != NULL) {
@@ -26,7 +29,9 @@ MxAtomId::~MxAtomId()
 
 MxAtomId& MxAtomId::operator=(const MxAtomId &other)
 {
-  ALERT("MxAtomId& MxAtomId::operator=(const MxAtomId &other)", "Stub");
+  // Partial
+  PARTIAL;
+
   if (str_ != NULL) {
     sub_100ACFE0();
   }
@@ -48,16 +53,16 @@ MxAtomId& MxAtomId::operator=(const MxAtomId &other)
 
 MxAtom *MxAtomId::sub_100AD210(const char *str, LookupMode mode)
 {
-  ALERT("MxAtom *MxAtomId::sub_100AD210(const char *str, LookupMode mode)", "Partial Stub");
+  PARTIAL;
 
   MxAtom* ebp_14 = new MxAtom(str);
 
   if (mode == Unk_LookupMode1 || mode == Unk_LookupMode3) {
     // Call 100AE4A0
-    ALERT("MxAtom *MxAtomId::sub_100AD210(const char *str, LookupMode mode)", "Stub 1");
+    STUB;
   } else if (mode == Unk_LookupMode2) {
     // Call MxString operator ==
-    ALERT("MxAtom *MxAtomId::sub_100AD210(const char *str, LookupMode mode)", "Stub 2");
+    STUB;
   }
 
   MxAtomItem* ebp_18 = AtomTable()->sub_100AD780(ebp_14);
@@ -126,5 +131,5 @@ MxAtom *MxAtomId::sub_100AD210(const char *str, LookupMode mode)
 
 void MxAtomId::sub_100ACFE0()
 {
-  ALERT("void MxAtomId::sub_100ACFE0()", "Stub");
+  PARTIAL;
 }

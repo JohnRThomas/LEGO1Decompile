@@ -2,7 +2,7 @@
 #define MXPARAM_H
 
 class MxParam {
-    MxParam();
+  MxParam();
 };
 
 #endif // MXPARAM_H

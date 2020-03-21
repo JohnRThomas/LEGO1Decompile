@@ -4,10 +4,10 @@
 
 LegoModelPresenter::LegoModelPresenter()
 {
-  ALERT("LegoModelPresenter::LegoModelPresenter", "Stub");
+  STUB;
 }
 
 void LegoModelPresenter::configureLegoModelPresenter(int)
 {
-  ALERT("LegoModelPresenter::configureLegoModelPresenter", "Stub");
+  STUB;
 }

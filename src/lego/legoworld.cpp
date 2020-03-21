@@ -4,10 +4,10 @@
 
 LegoWorld::LegoWorld()
 {
-  ALERT("LegoWorld::LegoWorld()", "Stub");
+  STUB;
 }
 
 LegoWorld::~LegoWorld()
 {
-  ALERT("LegoWorld::~LegoWorld()", "Stub");
+  STUB;
 }

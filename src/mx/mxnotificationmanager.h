@@ -22,6 +22,8 @@ class MAMU1WrapperBaseBase {
 public:
   // Inlined into MxNotificationManager::MxNotificationManager()
   MAMU1WrapperBaseBase(unsigned char punk1){
+    PERFECT;
+
     unk0_ = punk1;
 
     MxNotificationManagerUnknown1* mamu1 = new MxNotificationManagerUnknown1();
@@ -34,8 +36,8 @@ public:
   }
 
   // sub_100AC320
-  ~MAMU1WrapperBaseBase(){
-    ALERT("MAMU1WrapperBaseBase Destructor", "Stub");
+  ~MAMU1WrapperBaseBase() {
+    PARTIAL;
 
     if (root_->next_ != root_) {
       MxNotificationManagerUnknown1* edi = root_->next_;
@@ -80,10 +82,12 @@ class MAMU1WrapperBase : public MAMU1WrapperBaseBase {
 public:
   MAMU1WrapperBase(unsigned char punk1) :
     MAMU1WrapperBaseBase(punk1)
-  {}
+  {
+    PERFECT;
+  }
 
   ~MAMU1WrapperBase(){
-    ALERT("MAMU1WrapperBase Destructor", "Stub");
+    STUB;
   }
 };
 
@@ -91,10 +95,12 @@ class MAMU1Wrapper : public MAMU1WrapperBase {
 public:
   MAMU1Wrapper(unsigned char punk1) :
     MAMU1WrapperBase(punk1)
-  {}
+  {
+    PERFECT;
+  }
 
   ~MAMU1Wrapper() {
-    ALERT("MAMU1Wrapper Destructor", "Stub");
+    STUB;
   }
 
 };
@@ -108,14 +114,14 @@ class MxNotificationManager : public MxCore {
 public:
   MxNotificationManager();
 
-  virtual void vtable08(){}
-  virtual void vtable0C(){}
-  virtual void vtable10(){}
-  virtual void vtable14(){}
-  virtual void vtable18(){}
-  virtual void vtable1C(){}
-  virtual void vtable20(){}
-  virtual void vtable24(){}
+  virtual void vtable08(){STUB;}
+  virtual void vtable0C(){STUB;}
+  virtual void vtable10(){STUB;}
+  virtual void vtable14(){STUB;}
+  virtual void vtable18(){STUB;}
+  virtual void vtable1C(){STUB;}
+  virtual void vtable20(){STUB;}
+  virtual void vtable24(){STUB;}
   virtual MxResult sub_100AC600(int unkp1, int unkp2);
 
   void sub_100ACD20(MxCore *core);

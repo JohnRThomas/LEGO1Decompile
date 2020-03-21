@@ -1,20 +1,18 @@
 #include "mxvariable.h"
 
-#include "custom/debug.h"
-
 MxVariable::~MxVariable()
 {
-  ALERT("MxVariable::~MxVariable()", "Stub");
+  STUB;
 }
 
 const MxString &MxVariable::key()
 {
-  ALERT("const MxString &MxVariable::key()", "Stub");
+  PARTIAL;
   return key_;
 }
 
 const MxString &MxVariable::value()
 {
-  ALERT("const MxString &MxVariable::value()", "Stub");
+  PARTIAL;
   return value_;
 }

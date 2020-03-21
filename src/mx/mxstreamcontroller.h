@@ -3,7 +3,7 @@
 
 class MxStreamController {
 public:
-    MxStreamController();
+  MxStreamController();
 };
 
 #endif // MXSTREAMCONTROLLER_H

@@ -16,7 +16,7 @@
 class LegoUnknownManager8 : public MxCore {
 public:
   inline LegoUnknownManager8() {
-    ALERT("LegoUnknownManager8::LegoUnknownManager8()", "Stub");
+    PARTIAL;
 
     unk8_ = 0;
     unk10_ = 0;

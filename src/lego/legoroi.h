@@ -3,11 +3,11 @@
 
 class LegoROI {
 public:
-    LegoROI();
+  LegoROI();
 
-    static void configureLegoROI(int);
+  static void configureLegoROI(int);
 
-    void SetDisplayBB(int);
+  void SetDisplayBB(int);
 };
 
 LegoROI* PickROI(long, long);

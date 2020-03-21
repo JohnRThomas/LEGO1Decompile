@@ -4,10 +4,10 @@
 
 MXIOINFO::MXIOINFO()
 {
-  ALERT("MXIOINFO::MXIOINFO()", "Stub");
+  STUB;
 }
 
 MXIOINFO::~MXIOINFO()
 {
-  ALERT("MXIOINFO::~MXIOINFO()", "Stub");
+  STUB;
 }

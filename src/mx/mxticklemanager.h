@@ -40,10 +40,10 @@ public:
  */
 class MxTickleManager : public MxCore {
 public:
-  // u1 is most likely an MxBool
+  // u1 is may not be an MxBool
   inline MxTickleManager(MxBool u1)
   {
-    // FIXME: Imperfect
+    IMPERFECT;
 
     unknown08_ = u1;
 
@@ -69,6 +69,7 @@ public:
 
   virtual void vtable1C();
 
+  // sub_100BE000
   virtual unsigned int vtable20(MxNotificationManager* punk1);
 
 private:

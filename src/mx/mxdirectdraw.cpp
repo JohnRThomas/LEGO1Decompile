@@ -8,11 +8,13 @@ DWORD MxDirectDraw::dd_surface_flags_;
 
 MxDirectDraw::MxDirectDraw()
 {
-  ALERT("MxDirectDraw::MxDirectDraw()", "Stub");
+  STUB;
 }
 
 int MxDirectDraw::GetPrimaryBitDepth()
 {
+  PERFECT;
+
   IDirectDraw* direct_draw;
   DDSURFACEDESC ddsd;
 
@@ -38,14 +40,14 @@ int MxDirectDraw::GetPrimaryBitDepth()
 
 int MxDirectDraw::Pause(int)
 {
-  ALERT("int MxDirectDraw::Pause(int)", "Stub");
+  STUB;
 
   return 0;
 }
 
 int MxDirectDraw::FlipToGDISurface()
 {
-  ALERT("int MxDirectDraw::FlipToGDISurface()", "Stub");
+  STUB;
 
   return 0;
 }

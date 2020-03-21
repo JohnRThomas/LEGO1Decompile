@@ -4,12 +4,12 @@
 
 MxUnknownManager5::MxUnknownManager5()
 {
-  ALERT("MxUnknownManager5::MxUnknownManager5()", "Stub");
+  STUB;
 }
 
 void MxUnknownManager5::Init()
 {
-  ALERT("MxUnknownManager5::Init()", "Stub");
+  PARTIAL;
 
   unk2C_ = 0x64;
 }

@@ -3,6 +3,6 @@
 #include "custom/debug.h"
 
 char const* GetNoCD_SourceName(void) {
-  ALERT("GetNoCD_SourceName", "Stub");
+  PARTIAL;
   return "\\lego\\scripts\\nocd";
 }

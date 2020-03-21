@@ -4,17 +4,17 @@
 
 MxTransitionManager::MxTransitionManager()
 {
-  ALERT("MxTransitionManager::MxTransitionManager()", "Stub\n\nSize: %x", sizeof(MxTransitionManager));
+  PARTIAL;
 }
 
 void MxTransitionManager::SetWaitIndicator(MxVideoPresenter*)
 {
-  ALERT("void MxTransitionManager::SetWaitIndicator(MxVideoPresenter*)", "Stub");
+  PARTIAL;
 }
 
 MxResult MxTransitionManager::vtable14()
 {
-  ALERT("MxTransitionManager::vtable14()", "Stub");
+  PARTIAL;
 
   return SUCCESS;
 }

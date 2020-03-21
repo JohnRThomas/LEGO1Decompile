@@ -7,7 +7,7 @@
 class MxVariableTableBase : public MxCore {
 public:
   MxVariableTableBase() {
-    // FIXME: Imperfect
+    IMPERFECT;
 
     entry_count_ = 0;
   }
@@ -21,7 +21,7 @@ protected:
 class MxVariableTableBase2 {
 public:
   MxVariableTableBase2() {
-    // FIXME: Imperfect
+    IMPERFECT;
 
     table_size_ = 0x80;
     table_ = new TableRef*[table_size_];

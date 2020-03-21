@@ -67,10 +67,10 @@ public:
 class LegoUnknownManager3 {
 public:
   inline LegoUnknownManager3() {
+    PARTIAL;
+
     unk8_ = 0;
     unk10_ = 0;
-
-    ALERT("LegoUnknownManager3::LegoUnknownManager3()", "Stub");
 
     if (addr_100F0100 == NULL) {
       addr_100F0100 = new LUM31();

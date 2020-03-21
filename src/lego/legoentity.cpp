@@ -4,16 +4,17 @@
 
 LegoEntity::LegoEntity()
 {
-  ALERT("LegoEntity::LegoEntity()", "Stub");
+  STUB;
 }
 
 LegoEntity::~LegoEntity()
 {
-  ALERT("LegoEntity::~LegoEntity()", "Stub");
+  STUB;
 }
 
 LegoEntity *PickEntity(long, long)
 {
-  ALERT("LegoEntity *PickEntity(long, long)", "Stub");
+  STUB;
+
   return NULL;
 }

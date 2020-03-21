@@ -4,46 +4,46 @@
 
 MxDSFile::MxDSFile(const char *, unsigned long)
 {
-  ALERT("MxDSFile::MxDSFile(const char *, unsigned long)", "Stub");
+  STUB;
 }
 
 MxDSFile::~MxDSFile()
 {
-  ALERT("MxDSFile::~MxDSFile()", "Stub");
+  STUB;
 }
 
 long MxDSFile::Open(unsigned long)
 {
-  ALERT("long MxDSFile::Open(unsigned long)", "Stub");
+  STUB;
   return 0;
 }
 
 long MxDSFile::Close()
 {
-  ALERT("long MxDSFile::Close()", "Stub");
+  STUB;
   return 0;
 }
 
 long MxDSFile::Read(unsigned char *, unsigned long)
 {
-  ALERT("long MxDSFile::Read(unsigned char *, unsigned long)", "Stub");
+  STUB;
   return 0;
 }
 
 long MxDSFile::Seek(long, int)
 {
-  ALERT("long MxDSFile::Seek(long, int)", "Stub");
+  STUB;
   return 0;
 }
 
 unsigned long MxDSFile::GetBufferSize()
 {
-  ALERT("unsigned long MxDSFile::GetBufferSize()", "Stub");
+  STUB;
   return 0;
 }
 
 unsigned long MxDSFile::GetStreamBuffersNum()
 {
-  ALERT("unsigned long MxDSFile::GetStreamBuffersNum()", "Stub");
+  STUB;
   return 0;
 }

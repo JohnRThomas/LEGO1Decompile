@@ -14,28 +14,28 @@
  */
 class MxString : public MxCore {
 public:
-    MxString();
+  MxString();
 
-    MxString(const char* s);
+  MxString(const char* s);
 
-    MxString(const MxString&);
+  MxString(const MxString&);
 
-    virtual ~MxString();
+  virtual ~MxString();
 
-    const MxString& operator=(const char* s);
+  const MxString& operator=(const char* s);
 
-    const MxString& operator=(const MxString& s);
+  const MxString& operator=(const MxString& s);
 
-    BOOL operator==(const MxString& other) const;
+  BOOL operator==(const MxString& other) const;
 
-    const char& operator[](int i) const;
+  const char& operator[](int i) const;
 
-    operator const char*() const;
+  operator const char*() const;
 
 private:
-    char* string_;
+  char* string_;
 
-    unsigned short length_;
+  unsigned short length_;
 };
 
 #endif // MXSTRING_H

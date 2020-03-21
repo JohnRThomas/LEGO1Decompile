@@ -4,10 +4,10 @@
 
 void LegoNavController::GetDefaults(int *, float *, float *, float *, float *, float *, float *, float *, float *, float *, unsigned char *)
 {
-  ALERT("void LegoNavController::GetDefaults", "Stub");
+  STUB;
 }
 
 void LegoNavController::SetDefaults(int, float, float, float, float, float, float, float, float, float, unsigned char)
 {
-  ALERT("void LegoNavController::SetDefaults", "Stub");
+  STUB;
 }
