@@ -5,6 +5,19 @@
 #include "mxnotificationmanager.h"
 #include "mxresult.h"
 
+class MxTickleUnknownSubclass2 {
+public:
+  // sub_100BDD10
+  MxTickleUnknownSubclass2(MxNotificationManager* punk1, int punk2);
+
+  ~MxTickleUnknownSubclass2();
+
+  MxNotificationManager* unk0_;
+  int unk4_;
+  int unk8_;
+  unsigned short unkC_;
+};
+
 /**
  * @brief Unknown class that's a subclass of MxTickleManager
  *
@@ -12,11 +25,9 @@
  */
 class MxTickleUnknownSubclass1 {
 public:
-  ~MxTickleUnknownSubclass1();
-
   MxTickleUnknownSubclass1* unk00_;
   MxTickleUnknownSubclass1* unk04_;
-  MxTickleUnknownSubclass1* unk08_;
+  MxTickleUnknownSubclass2* unk08_;
 
 };
 
@@ -55,6 +66,10 @@ public:
   virtual void sub_100BDE80(MxNotificationManager*, int);
 
   virtual void vtable18();
+
+  virtual void vtable1C();
+
+  virtual unsigned int vtable20(MxNotificationManager* punk1);
 
 private:
   MxBool unknown08_; // +8
