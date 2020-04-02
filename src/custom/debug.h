@@ -13,6 +13,9 @@
 #define STUB ALERT("Stub: %s:%i\n\nThis function has not been decompiled yet and does nothing. This may result in unexpected behavior.", __FILE__, __LINE__)
 //#define STUB
 
+/// INPROGRESS - Function is currently being decompiled.
+#define INPROGRESS
+
 /// PARTIAL - Started, but is missing major functionality. May produce unexpected/undefined results.
 #define PARTIAL ALERT("Partial Stub: %s:%i\n\nThis function has only been partially decompiled. This may result in unexpected behavior.", __FILE__, __LINE__)
 //#define PARTIAL
