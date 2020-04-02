@@ -11,10 +11,10 @@
 class MxUnknownManager5 : public MxUnknownManager6
 {
 public:
-  // 100B8D00
+  /// 100B8D00
   MxUnknownManager5();
 
-  // 100B8DF0
+  /// 100B8DF0
   void Init();
 
 private:

@@ -14,10 +14,10 @@
 class MxUnknownManager6 : public MxCore
 {
 public:
-  // sub_100B84C0
+  /// sub_100B84C0
   MxUnknownManager6();
 
-  // sub_100B8501
+  /// sub_100B8501
   void Init();
 
 private:

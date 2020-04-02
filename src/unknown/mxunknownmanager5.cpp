@@ -4,12 +4,14 @@
 
 MxUnknownManager5::MxUnknownManager5()
 {
-  STUB;
+  PERFECT;
+
+  Init();
 }
 
 void MxUnknownManager5::Init()
 {
-  PARTIAL;
+  PERFECT;
 
   unk2C_ = 0x64;
 }
