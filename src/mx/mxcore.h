@@ -19,6 +19,10 @@ public:
 
   virtual long Notify(MxParam&);
 
+  inline unsigned int id() const {
+    return id_;
+  }
+
 private:
   // addr_1010141C
   static unsigned int core_count_;

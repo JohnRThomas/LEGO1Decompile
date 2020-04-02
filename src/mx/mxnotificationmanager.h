@@ -5,6 +5,7 @@
 #include "mxcore.h"
 #include "mxcriticalsection.h"
 #include "mxresult.h"
+#include "mxstreamer.h"
 
 /**
  * @brief The MxNotificationManagerUnknown1 class
@@ -13,9 +14,14 @@
  */
 class MxNotificationManagerUnknown1 {
 public:
+  /// +0
   MxNotificationManagerUnknown1* next_;
+
+  /// +4
   MxNotificationManagerUnknown1* previous_;
-  int unk8_;
+
+  /// +8
+  unsigned int id_;
 };
 
 class MAMU1WrapperBaseBase {
@@ -69,11 +75,13 @@ public:
     count_ = 0;
   }
 
-private:
+  /// +0
   unsigned char unk0_;
 
+  /// +4
   MxNotificationManagerUnknown1* root_;
 
+  /// +8
   int count_;
 
 };

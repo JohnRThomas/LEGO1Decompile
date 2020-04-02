@@ -73,7 +73,6 @@ public:
     unk8_ = 0x10;
   }
 
-private:
   unsigned char unk8_;
 
 };

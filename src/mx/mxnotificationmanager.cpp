@@ -32,14 +32,52 @@ MxResult MxNotificationManager::sub_100AC600(int, int)
 
 void MxNotificationManager::sub_100ACD20(MxCore *core)
 {
-  PARTIAL;
+  IMPERFECT;
 
-  critical_section_.Lock();
+  AUTOLOCK(&critical_section_);
 
-  int ebp_4 = 0;
+  MxNotificationManagerUnknown1* edi = unk30_.root_;
 
-  //MxNotificationManagerUnknown1* ebp_14 = unk34_;
+  unsigned int core_id = core->id();
 
+  MxNotificationManagerUnknown1* eax2 = edi->next_;
 
-  critical_section_.Unlock();
+  if (eax2 != edi) {
+    do {
+      if (eax2->id_ == core_id) {
+        break;
+      }
+
+      eax2 = eax2->next_;
+    } while (edi != eax2);
+
+    if (eax2 != edi) {
+      return;
+    }
+  }
+
+  MxNotificationManagerUnknown1* ebx = edi->previous_;
+
+  eax2 = new MxNotificationManagerUnknown1();
+
+  if (ebx) {
+    eax2->next_ = edi;
+    eax2->previous_ = ebx;
+  } else {
+    eax2->next_ = eax2;
+    eax2->previous_ = eax2;
+  }
+
+  edi->previous_ = eax2;
+
+  MxNotificationManagerUnknown1* ecx2 = eax2->previous_;
+  ecx2->next_ = eax2;
+
+  // This was the solution to the weird `add eax, 8` then `je` asm
+  unsigned int* id = &eax2->id_;
+  if (id) {
+    *id = core_id;
+  }
+
+  unk30_.count_++;
 }
