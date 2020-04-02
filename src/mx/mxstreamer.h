@@ -3,6 +3,7 @@
 
 #include "custom/debug.h"
 #include "mxcore.h"
+#include "mxresult.h"
 #include "mxstreamcontroller.h"
 
 #include <WINDOWS.H>
@@ -24,7 +25,7 @@ public:
   MxStreamerUnkSub2(int punk1) {
     IMPERFECT;
 
-    unk0_ = 0;
+    unk0_ = NULL;
     unk4_ = punk1;
 
     int* unk8ptr = &unk8_;
@@ -38,7 +39,7 @@ public:
     STUB;
   }
 
-  int unk0_;
+  char* unk0_;
   int unk4_;
   int unk8_;
 
@@ -93,7 +94,7 @@ public:
   virtual void vtable08(){STUB;}
   virtual void vtable0C(){STUB;}
   virtual void vtable10(){STUB;}
-  virtual BOOL sub_100B9190(){STUB;return TRUE;}
+  virtual MxResult sub_100B9190();
 
   MxStreamerUnkSub3 unkC_;
 
