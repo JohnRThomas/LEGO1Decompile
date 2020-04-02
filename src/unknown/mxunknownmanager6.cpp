@@ -4,13 +4,15 @@
 
 MxUnknownManager6::MxUnknownManager6()
 {
-  PARTIAL;
+  PERFECT;
+
   Init();
 }
 
 void MxUnknownManager6::Init()
 {
-  PARTIAL;
+  PERFECT;
+
   unk8_ = 0;
   unkC_ = 0;
 }

@@ -14,18 +14,18 @@
 class MxUnknownManager6 : public MxCore
 {
 public:
-    // sub_100B84C0
-    MxUnknownManager6();
+  // sub_100B84C0
+  MxUnknownManager6();
 
-    // sub_100B8501
-    void Init();
+  // sub_100B8501
+  void Init();
 
 private:
-    int unk8_;
+  int unk8_;
 
-    int unkC_;
+  int unkC_;
 
-    MxCriticalSection critical_section_;
+  MxCriticalSection critical_section_;
 };
 
 #endif // MXUNKNOWNMANAGER6_H
