@@ -2,16 +2,23 @@
 
 #include "custom/debug.h"
 
-MxMIDIPresenter::MxMIDIPresenter() :
-  unk50_(64)
+MxMIDIPresenter::MxMIDIPresenter()
 {
-  STUB;
+  PERFECT;
+
   Init();
 }
 
 void MxMIDIPresenter::Init()
 {
-  STUB;
+  // For some reason, this function is split by a JMP in the asm.
+  // Otherwise perfect.
+  NEARPERFECT;
+
+  // sub_100C0690
+  unk50_ = 0x64;
+
+  // sub_100C06A0
   unk30_ = 0;
   unk34_ = 0;
   unk38_ = 0;

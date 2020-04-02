@@ -14,11 +14,11 @@
 class MxMIDIPresenter : public MxUnknownManager5
 {
 public:
-  // sub_100C05A0
-  // sub_100C0690
+  /// sub_100C05A0
   MxMIDIPresenter();
 
-  // sub_100C06A0
+  /// sub_100C0690
+  /// sub_100C06A0
   void Init();
 
   virtual void vtable08(){}
