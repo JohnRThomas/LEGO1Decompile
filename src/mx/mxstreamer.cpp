@@ -27,31 +27,11 @@ long MxStreamer::Close(const char*)
 
 MxResult MxStreamer::sub_100B9190()
 {
-  NEARPERFECT;
+  PERFECT;
 
-  int eax = unk14_.unk4_;
-
-  int edx = eax + eax * 4;
-  eax = eax + edx * 2;
-
-  eax *= 2048;
-
-  char* eax2 = new char[eax];
-
-  unk14_.unk0_ = eax2;
-
-  if (eax2) {
-    eax = unk20_.unk4_;
-
-    eax *= 2048;
-
-    eax2 = new char[eax];
-
-    unk20_.unk0_ = eax2;
-
-    if (eax2) {
-      return SUCCESS;
-    }
+  if ((unk14_.unk0_ = new char[unk14_.unk4_ * 11 * 2048])
+      && (unk20_.unk0_ = new char[unk20_.unk4_ * 2048])) {
+    return SUCCESS;
   }
 
   return FAILURE;
